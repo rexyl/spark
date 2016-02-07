@@ -1,0 +1,100 @@
+E-Science or eScience is computationally intensive science that is carried out in highly distributed network environments, or science that uses immense data sets that require grid computing; the term sometimes includes technologies that enable distributed collaboration, such as the Access Grid. The term was created by John Taylor, the Director General of the United Kingdom's Office of Science and Technology in 1999 and was used to describe a large funding initiative starting in November 2000. E-science has been more broadly interpreted since then, as "the application of computer technology to the undertaking of modern scientific investigation, including the preparation, experimentation, data collection, results dissemination, and long-term storage and accessibility of all materials generated through the scientific process. These may include data modeling and analysis, electronic/digitized laboratory notebooks, raw and fitted data sets, manuscript production and draft versions, pre-prints, and print and/or electronic publications." In 2014, IEEE eScience Conference Series condensed the definition to "eScience promotes innovation in collaborative, computationally- or data-intensive research across all disciplines, throughout the research lifecycle" in one of the working definitions used by the organizers. E-science encompasses "what is often referred to as big data [which] has revolutionized science... [such as] the Large Hadron Collider (LHC) at CERN... [that] generates around 780 terabytes per year... highly data intensive modern fields of science...that generate large amounts of E-science data include: computational biology, bioinformatics, genomics" and the human digital footprint for the social sciences.
+E-Science revolutionizes both fundamental legs of the scientific method: empirical research, especially through digital big data; and scientific theory, especially through computer simulation model building. These ideas were reflected by The White House's Office and Science Technology Policy in February 2013, which slated many of the aforementioned e-Science output products for preservation and access requirements under the memorandum's directive. E-sciences include particle physics, earth sciences and social simulations.
+
+
+== Characteristics and examples ==
+Most of the research activities into e-Science have focused on the development of new computational tools and infrastructures to support scientific discovery. Due to the complexity of the software and the backend infrastructural requirements, e-Science projects usually involve large teams managed and developed by research laboratories, large universities or governments. Currently there is a large focus in e-Science in the United Kingdom, where the UK e-Science programme provides significant funding. In Europe the development of computing capabilities to support the CERN Large Hadron Collider has led to the development of e-Science and Grid infrastructures which are also used by other disciplines.
+
+
+=== Consortiums ===
+Example e-Science infrastructures include the Worldwide LHC Computing Grid, a federation with various partners including the European Grid Infrastructure, the Open Science Grid and the Nordic DataGrid Facility.
+To support e-Science applications, Open Science Grid combines interfaces to more than 100 nationwide clusters, 50 interfaces to geographically distributed storage caches, and 8 campus grids (Purdue, Wisconsin-Madison, Clemson, Nebraska-Lincoln, FermiGrid at FNAL, SUNY-Buffalo, and Oklahoma in the United States; and UNESP in Brazil). Areas of science benefiting from Open Science Grid include:
+Astrophysics, Gravitational Physics, High-energy Physics, Neutrino Physics, and Nuclear Physics.
+Molecular Dynamics, Materials Science and Engineering, Computer Science and Engineering, and Nanotechnology.
+Structural Biology, Computational Biology, Genomics, Proteomics, and Medicine.
+
+
+=== UK programme ===
+After his appointment as Director General of the Research Councils in 1999 John Taylor, with the support of the Science Minister David Sainsbury and the Chancellor of the Exchequer Gordon Brown, bid to HM Treasury to fund a programme of e-infrastructure development for science which would provide the foundation for UK science and industry to be a world leader in the knowledge economy which motivated the Lisbon Strategy for sustainable economic growth that the UK government committed to in March 2000.
+In November 2000 John Taylor announced £98 million for a national UK e-Science programme. An additional £20 million contribution was planned from UK industry in matching funds to projects that they participated in. From this budget of £120 million over three years, £75 million was to be spent on grid application pilots in all areas of science, administered by the Research Council responsible for each area, while £35 million was to be administered by the EPSRC as a Core Programme to develop "industrial strength" Grid middleware. Phase 2 of the programme for 2004-2006 was supported by a further £96 million for application projects, and £27 million for the EPSRC core programme. Phase 3 of the programme for 2007-2009 was supported by a further £14 million for the EPSRC core programme and a further sum for applications. Additional funding for UK e-Science activities was provided from European Union funding, from university funding council SRIF funding for hardware, and from Jisc for networking and other infrastructure.
+The UK e-Science programme comprised a wide range of resources, centres and people including the National e-Science Centre (NeSC) which is managed by the Universities of Glasgow and Edinburgh, with facilities in both cities. Tony Hey led the core programme from 2001 to 2005.
+Within the UK regional e-Science centres support their local universities and projects, including:
+White Rose Grid e-Science Centre (WRGeSC)
+Belfast e-Science Centre (BeSC)
+Centre for eResearch Bristol (CeRB)
+Cambridge e-Science Centre (CeSC)
+STFC e-Science Centre (STFCeSC)
+e-Science North West (eSNW)
+National Grid Service (NGS)
+OMII-UK
+Lancaster University Centre for e-Science
+London e-Science Centre (LeSC)
+North East Regional e-Science Centre (NEReSC)
+Oxford e-Science Centre (OeSC)
+Southampton e-Science Centre (SeSC)
+Welsh e-Science Centre (WeSC)
+Midlands e-Science Centre (MeSC)
+There are also various centres of excellence and research centres.
+In addition to centres, the grid application pilot projects were funded by the Research Council responsible for each area of UK science funding.
+The EPSRC funded 11 pilot e-Science projects in three phases (for about £3 million each in the first phase):
+First Phase (2001–2005) were CombEchem, DAME, Discovery Net, GEODISE, myGrid and RealityGrid.
+Second phase (2004–2008) were GOLD and Integrative biology
+Third phase (2005–2010) were PMSEG (MESSAGE), CARMEN and NanoCMOS
+The PPARC/STFC funded two projects: GridPP (phase 1 for £17 million, phase 2 for £5.9 million, phase 3 for £30 million and a 4th phase running from 2011 to 2014) and Astrogrid (£14 million over 3 phases).
+The remaining £23 million of phase one funding was divided between the application projects funded by BBSRC, MRC and NERC:
+BBSRC: Biomolecular Grid, Proteome Annotation Pipeline, High-Throughput Structural Biology, Global Biodiversity
+MRC: Biology of Ageing, Sequence and Structure Data, Molecular Genetics, Cancer Management, Clinical e-Science Framework, Neuroinformatics Modeling Tools
+NERC: Climateprediction.com, Oceanographic Grid, Molecular Environmental Grid, NERC DataGrid
+The funded UK e-Science programme was reviewed on its completion in 2009 by an international panel led by Daniel E. Atkins, director of the Office of Cyberinfrastructure of the US NSF. The report concluded that the programme had developed a skilled pool of expertise, some services, and had led to cooperation between academia and industry, but that these achievements were at a project level rather than by generating infrastructure or transforming disciplines to adopt e-Science as a normal method of work, and that they were not self-sustainable without further investment.
+
+
+=== United States ===
+US-based initiatives, where the term cyberinfrastructure is typically used to define e-Science projects, are primarily funded by the National Science Foundation office of cyberinfrastructure (NSF OCI) and Department of Energy (in particular the Office of Science).
+
+
+=== The Netherlands ===
+Dutch eScience research is coordinated by the Netherlands eScience Center in Amsterdam, an initiative founded by NWO and SURF.
+
+
+=== Europe ===
+Plan-Europe is a Platform of National e-Science/Data Research Centers in Europe, as established during the constituting meeting 29–30 October 2014 in Amsterdam, The Netherlands, and which is based on agreed Terms of Reference. PLAN-E has a kernel group of active members and convenes twice annually. More can be found on PLAN-E.
+
+
+== Traditional Science vs. e-Science ==
+Traditional science is representative of two distinct philosophical traditions within the history of science, but e-Science, it is being argued, requires a paradigm shift, and the addition of a third branch of the sciences. "The idea of open data is not a new one; indeed, when studying the history and philosophy of science, Robert Boyle is credited with stressing the concepts of skepticism, transparency, and reproducibility for independent verification in scholarly publishing in the 1660s. The scientific method later was divided into two major branches, deductive and empirical approaches. Today, a theoretical revision in the scientific method should include a new branch, Victoria Stodden advocate[s], that of the computational approach, where like the other two methods, all of the computational steps by which scientists draw conclusions are revealed. This is because within the last 20 years, people have been grappling with how to handle changes in high performance computing and simulation." As such, e-science aims at combining both empirical and theoretical traditions, while computer simulations can create artificial data, and real-time big data can be used to calibrate theoretical simulation models. Conceptually, e-Science revolves around developing new methods to support scientists in conducting scientific research with the aim of making new scientific discoveries by analyzing vast amounts of data accessible over the internet using vast amounts of computational resources. However, discoveries of value cannot be made simply by providing computational tools, a cyberinfrastructure or by performing a pre-defined set of steps to produce a result. Rather, there needs to be an original, creative aspect to the activity that by its nature cannot be automated. This has led to various research that attempts to define the properties that e-Science platforms should provide in order to support a new paradigm of doing science, and new rules to fulfill the requirements of preserving and making computational data results available in a manner such that they are reproducible in traceable, logical steps, as an intrinsic requirement for the maintenance of modern scientific integrity that allows an extenuation of "Boyle's tradition in the computational age."
+
+
+=== Modelling e-Science Processes ===
+One view  argues that since a modern discovery process instance serves a similar purpose to a mathematical proof it should have similar properties, namely it allows results to be deterministically reproduced when re-executed and that intermediate results can be viewed to aid examination and comprehension. In this case, simply modelling the provenance of data is not sufficient. One has to model the provenance of the hypotheses and results generated from analyzing the data as well so as to provide evidence that support new discoveries.Scientific workflows have thus been proposed and developed to assist scientists to track the evolution of their data, intermediate results and final results as a means to document and track the evolution of discoveries within a piece of scientific research.
+
+
+=== Science 2.0 ===
+Other views include Science 2.0 where e-Science is considered to be a shift from the publication of final results by well-defined collaborative groups towards a more open approach, which includes the public sharing of raw data, preliminary experimental results, and related information. To facilitate this shift, the Science 2.0 view is on providing tools that simplify communication, cooperation and collaboration between interested parties. Such an approach has the potential to: speed up the process of scientific discovery; overcome problems associated with academic publishing and peer review; and remove time and cost barriers, limiting the process of generating new knowledge.
+
+
+== See also ==
+Citizen science
+Cyberinfrastructure
+Distributed computing
+E-research
+e-Science librarianship
+e-Social Science
+Grid computing
+Science 2.0
+Scientific workflow system
+
+
+== References ==
+
+
+== External links ==
+DOE and NSF Open Science Grid
+The eScience Institute at the University of Washington
+The Dutch Virtual Laboratory for e-science (VL-e) project
+UK Research Council's e-Science program
+UK National Centre for e-Social Science and their Wiki on e-Social Science
+NSF TeraGrid Project
+Arts and Humanities E-Science Support Centre (AHESSC)
+E-Science and Data Services Collaborative (EDSC)
+The European Commission's e-Infrastructures activity
+Swedish e-Science Research Centre

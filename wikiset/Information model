@@ -1,0 +1,55 @@
+An information model in software engineering is a representation of concepts and the relationships, constraints, rules, and operations to specify data semantics for a chosen domain of discourse. Typically it specifies relations between kinds of things, but may also include relations with individual things. It can provide sharable, stable, and organized structure of information requirements or knowledge for the domain context.
+
+
+== OverviewEdit ==
+The term information model in general is used for models of individual things, such as facilities, buildings, process plants, etc. In those cases the concept is specialised to facility information model, building information model, plant information model, etc. Such an information model is an integration of a model of the facility with the data and documents about the facility.
+Within the field of software engineering and data modeling an information model is usually an abstract, formal representation of entity types that may include their properties, relationships and the operations that can be performed on them. The entity types in the model may be kinds of real-world objects, such as devices in a network, or occurrences, or they may themselves be abstract, such as for the entities used in a billing system. Typically, they are used to model a constrained domain that can be described by a closed set of entity types, properties, relationships and operations.
+An information model provides formalism to the description of a problem domain without constraining how that description is mapped to an actual implementation in software. There may be many mappings of the information model. Such mappings are called data models, irrespective of whether they are object models (e.g. using UML), entity relationship models or XML schemas.
+
+
+== Information modeling languagesEdit ==
+
+In 1976, an entity-relationship (ER) graphic notation was introduced by Peter Chen. He stressed that it was a "semantic" modelling technique and independent of any database modelling techniques such as Hierarchical, CODASYL, Relational etc. Since then, languages for information models have continued to evolve. Some examples are the Integrated Definition Language 1 Extended (IDEF1X), the EXPRESS language and the Unified Modeling Language (UML).
+Research by contemporaries of Peter Chen such as J.R.Abrial (1974) and G.M Nijssen (1976) led to today's Fact Oriented Modeling languages which are based on linguistic propositions rather than on "entities". FOM Tools can be used to generate an ER model which means that the modeler can avoid the time-consuming and error prone practice of manual normalization. Object-Role Modeling language (ORM) and Fully Communication Oriented Information Modeling (FCO-IM) are both research results, based upon earlier research.
+In the 1980s there were several approaches to extend Chen’s Entity Relationship Model. Also important in this decade is REMORA by Colette Rolland.
+The ICAM Definition (IDEF) Language was developed from the U.S. Air Force ICAM Program during the 1976 to 1982 timeframe. The objective of the ICAM Program, according to Lee (1999), was to increase manufacturing productivity through the systematic application of computer technology. IDEF includes three different modeling methods: IDEF0, IDEF1, and IDEF2 for producing a functional model, an information model, and a dynamic model respectively. IDEF1X is an extended version of IDEF1. The language is in the public domain. It is a graphical representation and is designed using the ER approach and the relational theory. It is used to represent the “real world” in terms of entities, attributes, and relationships between entities. Normalization is enforced by KEY Structures and KEY Migration. The language identifies property groupings (Aggregation) to form complete entity definitions.
+EXPRESS was created as ISO 10303-11 for formally specifying information requirements of product data model. It is part of a suite of standards informally known as the STandard for the Exchange of Product model data (STEP). It was first introduced in the early 1990s. The language, according to Lee (1999), is a textual representation. In addition, a graphical subset of EXPRESS called EXPRESS-G is available. EXPRESS is based on programming languages and the O-O paradigm. A number of languages have contributed to EXPRESS. In particular, Ada, Algol, C, C++, Euler, Modula-2, Pascal, PL/1, and SQL. EXPRESS consists of language elements that allow an unambiguous object definition and specification of constraints on the objects defined. It uses SCHEMA declaration to provide partitioning and it supports specification of data properties, constraints, and operations.
+UML is a modeling language for specifying, visualizing, constructing, and documenting the artifacts, rather than processes, of software systems. It was conceived originally by Grady Booch, James Rumbaugh, and Ivar Jacobson. UML was approved by the Object Management Group (OMG) as a standard in 1997. The language, according to Lee (1999), is non-proprietary and is available to the public. It is a graphical representation. The language is based on the objected-oriented paradigm. UML contains notations and rules and is designed to represent data requirements in terms of O-O diagrams. UML organizes a model in a number of views that present different aspects of a system. The contents of a view are described in diagrams that are graphs with model elements. A diagram contains model elements that represent common O-O concepts such as classes, objects, messages, and relationships among these concepts.
+IDEF1X, EXPRESS, and UML all can be used to create a conceptual model and, according to Lee (1999), each has its own characteristics. Although some may lead to a natural usage (e.g., implementation), one is not necessarily better than another. In practice, it may require more than one language to develop all information models when an application is complex. In fact, the modeling practice is often more important than the language chosen.
+Information models can also be expressed in formalized natural languages, such as Gellish. Gellish, which has natural language variants Gellish Formal English, Gellish Formal Dutch (Gellish Formeel Nederlands), etc. is an information representation language or modeling language that is defined in the Gellish smart Dictionary-Taxonomy, which has the form of a Taxonomy/Ontology. A Gellish Database is not only suitable to store information models, but also knowledge models, requirements models and dictionaries, taxonomies and ontologies. Information models in Gellish English use Gellish Formal English expressions. For example, a geographic information model might consist of a number of Gellish Formal English expressions, such as:
+
+- the Eiffel tower <is located in> Paris
+- Paris <is classified as a> city
+
+whereas information requirements and knowledge can expressed for example as follows:
+
+- tower <shall be located in a> geographical area
+- city <is a kind of> geographical area
+
+Such Gellish expressions use names of concepts (such as 'city') and relation types (such as <is located in> and <is classified as a>) that should be selected from the Gellish Formal English Dictionary-Taxonomy (or of your own domain dictionary). The Gellish English Dictionary-Taxonomy enables the creation of semantically rich information models, because the dictionary contains definitions of more than 40000 concepts, including more than 600 standard relation types. Thus, an information model in Gellish consists of a collection of Gellish expressions that use those phrases and dictionary concepts to express facts or make statements, queries and answers.
+
+
+== Standard sets of information modelsEdit ==
+The Distributed Management Task Force (DMTF) provides a standard set of information models for various enterprise domains under the general title of the Common Information Model (CIM). Specific information models are derived from CIM for particular management domains.
+The TeleManagement Forum (TMF) has defined an advanced model for the Telecommunication domain (the Shared Information/Data model, or SID) as another. This includes views from the business, service and resource domains within the Telecommunication industry. The TMF has established a set of principles that an OSS integration should adopt, along with a set of models that provide standardized approaches.
+The models interact with the information model (the Shared Information/Data Model, or SID), via a process model (the Business Process Framework (eTOM), or eTOM) and a life cycle model.
+
+
+== See alsoEdit ==
+Building Information Modeling
+
+
+== ReferencesEdit ==
+ This article incorporates public domain material from websites or documents of the National Institute of Standards and Technology.
+
++ ISO/IEC TR9007 Conceptual Schema, 1986
+Andries van Renssen, Gellish, A Generic Extensible Ontological Language, (PhD, Delft University of Technology, 2005)
+
+
+== Further readingEdit ==
+Richard Veryard (1992). Information modelling : practical guidance. New York : Prentice Hall.
+Repa, Vaclav (2012). Information Modeling of Organizations. Bruckner Publishing. ISBN 978-80-904661-3-5. 
+
+
+== External linksEdit ==
+RFC 3198 - Terminology for Policy-Based Management

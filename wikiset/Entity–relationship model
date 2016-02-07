@@ -1,0 +1,188 @@
+In software engineering, an entity–relationship model (ER model) is a data model for describing the data or information aspects of a business domain or its process requirements, in an abstract way that lends itself to ultimately being implemented in a database such as a relational database. The main components of ER models are entities (things) and the relationships that can exist among them.
+Entity–relationship modeling was developed by Peter Chen and published in a 1976 paper. However, variants of the idea existed previously, and have been devised subsequently such as supertype and subtype data entities and commonality relationships.
+
+
+== Introduction ==
+An entity–relationship model is the result of using a systematic process to describe and define a subject area of business data. It does not define business process; only visualize business data. The data is represented as components (entities) that are linked with each other by relationships that express the dependencies and requirements between them, such as: one building may be divided into zero or more apartments, but one apartment can only be located in one building. Entities may have various properties (attributes) that characterize them. Diagrams created to represent these entities, attributes, and relationships graphically are called entity–relationship diagrams.
+An ER model is typically implemented as a database. In the case of a relational database, which stores data in tables, every row of each table represents one instance of an entity. Some data fields in these tables point to indexes in other tables; such pointers are the physical implementation of the relationships.
+The three schema approach to software engineering uses three levels of ER models that may be developed.
+Conceptual data model
+This is the highest level ER model in that it contains the least granular detail but establishes the overall scope of what is to be included within the model set. The conceptual ER model normally defines master reference data entities that are commonly used by the organization. Developing an enterprise-wide conceptual ER model is useful to support documenting the data architecture for an organization.
+A conceptual ER model may be used as the foundation for one or more logical data models (see below). The purpose of the conceptual ER model is then to establish structural metadata commonality for the master data entities between the set of logical ER models. The conceptual data model may be used to form commonality relationships between ER models as a basis for data model integration.
+Logical data model
+A logical ER model does not require a conceptual ER model, especially if the scope of the logical ER model includes only the development of a distinct information system. The logical ER model contains more detail than the conceptual ER model. In addition to master data entities, operational and transactional data entities are now defined. The details of each data entity are developed and the relationships between these data entities are established. The logical ER model is however developed independent of technology into which it can be implemented.
+Physical data model
+One or more physical ER models may be developed from each logical ER model. The physical ER model is normally developed to be instantiated as a database. Therefore, each physical ER model must contain enough detail to produce a database and each physical ER model is technology dependent since each database management system is somewhat different.
+The physical model is normally instantiated in the structural metadata of a database management system as relational database objects such as database tables, database indexes such as unique key indexes, and database constraints such as a foreign key constraint or a commonality constraint. The ER model is also normally used to design modifications to the relational database objects and to maintain the structural metadata of the database.
+The first stage of information system design uses these models during the requirements analysis to describe information needs or the type of information that is to be stored in a database. The data modeling technique can be used to describe any ontology (i.e. an overview and classifications of used terms and their relationships) for a certain area of interest. In the case of the design of an information system that is based on a database, the conceptual data model is, at a later stage (usually called logical design), mapped to a logical data model, such as the relational model; this in turn is mapped to a physical model during physical design. Note that sometimes, both of these phases are referred to as "physical design". It is also used in database management system.
+
+
+== Entity–relationship modeling ==
+
+An entity may be defined as a thing capable of an independent existence that can be uniquely identified. An entity is an abstraction from the complexities of a domain. When we speak of an entity, we normally speak of some aspect of the real world that can be distinguished from other aspects of the real world. 
+An entity is a thing that exists either physically or logically. An entity may be a physical object such as a house or a car (they exist physically), an event such as a house sale or a car service, or a concept such as a customer transaction or order (they exist logically—as a concept). Although the term entity is the one most commonly used, following Chen we should really distinguish between an entity and an entity-type. An entity-type is a category. An entity, strictly speaking, is an instance of a given entity-type. There are usually many instances of an entity-type. Because the term entity-type is somewhat cumbersome, most people tend to use the term entity as a synonym for this term.
+Entities can be thought of as nouns. Examples: a computer, an employee, a song, a mathematical theorem.
+A relationship captures how entities are related to one another. Relationships can be thought of as verbs, linking two or more nouns. Examples: an owns relationship between a company and a computer, a supervises relationship between an employee and a department, a performs relationship between an artist and a song, a proves relationship between a mathematician and a conjecture.
+The model's linguistic aspect described above is utilized in the declarative database query language ERROL, which mimics natural language constructs. ERROL's semantics and implementation are based on reshaped relational algebra (RRA), a relational algebra that is adapted to the entity–relationship model and captures its linguistic aspect.
+Entities and relationships can both have attributes. Examples: an employee entity might have a Social Security Number (SSN) attribute; the proved relationship may have a date attribute.
+Every entity (unless it is a weak entity) must have a minimal set of uniquely identifying attributes, which is called the entity's primary key.
+Entity–relationship diagrams don't show single entities or single instances of relations. Rather, they show entity sets(all entities of the same entity type) and relationship sets(all relationships of the same relationship type). Example: a particular song is an entity. The collection of all songs in a database is an entity set. The eaten relationship between a child and her lunch is a single relationship. The set of all such child-lunch relationships in a database is a relationship set. In other words, a relationship set corresponds to a relation in mathematics, while a relationship corresponds to a member of the relation.
+Certain cardinality constraints on relationship sets may be indicated as well.
+
+
+=== Mapping natural language ===
+Chen proposed the following "rules of thumb" for mapping natural language descriptions into ER diagrams: "English, Chinese and ER diagrams" by Peter Chen.
+Physical view show how data is actually stored.
+
+
+=== Relationships, roles and cardinalities ===
+In Chen's original paper he gives an example of a relationship and its roles. He describes a relationship "marriage" and its two roles "husband" and "wife".
+A person plays the role of husband in a marriage (relationship) and another person plays the role of wife in the (same) marriage. These words are nouns. That is no surprise; naming things requires a noun.
+However as is quite usual with new ideas, many eagerly appropriated the new terminology but then applied it to their own old ideas. Thus the lines, arrows and crows-feet of their diagrams owed more to the earlier Bachman diagrams than to Chen's relationship diamonds. And they similarly misunderstood other important concepts.
+In particular, it became fashionable (now almost to the point of exclusivity) to "name" relationships and roles as verbs or phrases.
+
+
+=== Role naming ===
+It has also become prevalent to name roles with phrases such as is the owner of and is owned by. Correct nouns in this case are owner and possession. Thus person plays the role of owner and car plays the role of possession rather than person plays the role of, is the owner of, etc.
+The use of nouns has direct benefit when generating physical implementations from semantic models. When a person has two relationships with car then it is possible to generate names such as owner_person and driver_person, which are immediately meaningful.
+
+
+=== Cardinalities ===
+Modifications to the original specification can be beneficial. Chen described look-across cardinalities. As an aside, the Barker–Ellis notation, used in Oracle Designer, uses same-side for minimum cardinality (analogous to optionality) and role, but look-across for maximum cardinality (the crows foot).
+In Merise, Elmasri & Navathe and others there is a preference for same-side for roles and both minimum and maximum cardinalities. Recent researchers (Feinerer, Dullea et al.) have shown that this is more coherent when applied to n-ary relationships of order greater than 2.
+In Dullea et al. one reads "A 'look across' notation such as used in the UML does not effectively represent the semantics of participation constraints imposed on relationships where the degree is higher than binary."
+In Feinerer it says "Problems arise if we operate under the look-across semantics as used for UML associations. Hartmann investigates this situation and shows how and why different transformations fail." (Although the "reduction" mentioned is spurious as the two diagrams 3.4 and 3.5 are in fact the same) and also "As we will see on the next few pages, the look-across interpretation introduces several difficulties that prevent the extension of simple mechanisms from binary to n-ary associations."
+
+Chen's notation for entity–relationship modeling uses rectangles to represent entity sets, and diamonds to represent relationships appropriate for first-class objects: they can have attributes and relationships of their own. If an entity set participates in a relationship set, they are connected with a line.
+Attributes are drawn as ovals and are connected with a line to exactly one entity or relationship set.
+Cardinality constraints are expressed as follows:
+a double line indicates a participation constraint, totality or surjectivity: all entities in the entity set must participate in at least one relationship in the relationship set;
+an arrow from entity set to relationship set indicates a key constraint, i.e. injectivity: each entity of the entity set can participate in at most one relationship in the relationship set;
+a thick line indicates both, i.e. bijectivity: each entity in the entity set is involved in exactly one relationship.
+an underlined name of an attribute indicates that it is a key: two different entities or relationships with this attribute always have different values for this attribute.
+Attributes are often omitted as they can clutter up a diagram; other diagram techniques often list entity attributes within the rectangles drawn for entity sets.
+Related diagramming convention techniques:
+Bachman notation
+Barker's notation
+EXPRESS
+IDEF1X
+Martin notation
+(min, max)-notation of Jean-Raymond Abrial in 1974
+UML class diagrams
+Merise
+Object-role modeling
+
+
+=== Crow's foot notation ===
+Crow's foot notation is used in Barker's Notation, Structured Systems Analysis and Design Method (SSADM) and information engineering. Crow's foot diagrams represent entities as boxes, and relationships as lines between the boxes. Different shapes at the ends of these lines represent the cardinality of the relationship.
+Crow's foot notation was used in the consultancy practice CACI. Many of the consultants at CACI (including Richard Barker) subsequently moved to Oracle UK, where they developed the early versions of Oracle's CASE tools, introducing the notation to a wider audience. The following tools use Crow's foot notation: ARIS, System Architect, Visio, PowerDesigner, Toad Data Modeler, DeZign for Databases, Devgems Data Modeler, OmniGraffle, MySQL Workbench and SQL Developer Data Modeler. CA's ICASE tool, CA Gen aka Information Engineering Facility also uses this notation. Historically XA Systems Silverrun-LDM (logical data model) also supported this notation.
+
+
+== ER diagramming tools ==
+There are many ER diagramming tools. A freeware ER tool that can generate database and application layer code (webservices) is the RISE Editor. SQL Power Architect while proprietary also has a free community edition.
+Proprietary ER diagramming tools are
+Avolution
+Creately
+ER/Studio
+ERwin
+DeZign for Databases
+LucidChart
+MagicDraw
+MEGA International
+ModelRight
+Navicat Data Modeler
+OmniGraffle
+Oracle Designer
+PowerDesigner
+Prosa Structured Analysis Tool
+Rational Rose
+Software Ideas Modeler
+Sparx Enterprise Architect
+SQLyog
+System Architect
+Toad Data Modeler
+Visual Paradigm
+yEd
+LucidChart will generate an ERD from different schema types, but you can't generate SQL from an ERD.
+
+
+=== Free/open-source tools ===
+Free software ER diagramming tools that can interpret and generate ER models and SQL and do database analysis are:
+ER2SQL
+MySQL Workbench (formerly DBDesigner)
+Open ModelSphere (open-source)
+Free software diagram tools that just draw the shapes without having any knowledge of what they mean, nor do they generate SQL, include:
+Calligra Flow
+Dia
+
+
+== Entity–relationships and semantic modeling ==
+
+
+=== Semantic model ===
+A semantic model is a model of concepts, it is sometimes called a "platform independent model". It is an intensional model. At the latest since Carnap, it is well known that:
+"...the full meaning of a concept is constituted by two aspects, its intension and its extension. The first part comprises the embedding of a concept in the world of concepts as a whole, i.e. the totality of all relations to other concepts. The second part establishes the referential meaning of the concept, i.e. its counterpart in the real or in a possible world".
+
+
+=== Extension model ===
+An extensional model is one that maps to the elements of a particular methodology or technology, and is thus a "platform specific model". The UML specification explicitly states that associations in class models are extensional and this is in fact self-evident by considering the extensive array of additional "adornments" provided by the specification over and above those provided by any of the prior candidate "semantic modelling languages"."UML as a Data Modeling Notation, Part 2"
+
+
+=== Entity–relationship origins ===
+Peter Chen, the father of ER modeling said in his seminal paper:
+"The entity-relationship model adopts the more natural view that the real world consists of entities and relationships. It incorporates some of the important semantic information about the real world." 
+In his original 1976 article Chen explicitly contrasts entity–relationship diagrams with record modelling techniques:
+"The data structure diagram is a representation of the organisation of records and is not an exact representation of entities and relationships."
+Several other authors also support Chen's program:    
+
+
+==== Philosophical alignment ====
+Chen is in accord with philosophic and theoretical traditions from the time of the Ancient Greek philosophers: Socrates, Plato and Aristotle (428 BC) through to modern epistemology, semiotics and logic of Peirce, Frege and Russell.
+Plato himself associates knowledge with the apprehension of unchanging Forms (The forms, according to Socrates, are roughly speaking archetypes or abstract representations of the many types of things, and properties) and their relationships to one another.
+
+
+== Limitations ==
+ER assume information content that can readily be represented in a relational database. They describe only a relational structure for this information.
+They are inadequate for systems in which the information cannot readily be represented in relational form, such as with semi-structured data.
+For many systems, possible changes to information contained are nontrivial and important enough to warrant explicit specification.
+Some authors have extended ER modeling with constructs to represent change, an approach supported by the original author; an example is Anchor Modeling. An alternative is to model change separately, using a process modeling technique. Additional techniques can be used for other aspects of systems. For instance, ER models roughly correspond to just 1 of the 14 different modeling techniques offered by UML.
+ER modeling is aimed at specifying information from scratch. This suits the design of new, standalone information systems, but is of less help in integrating pre-existing information sources that already define their own data representations in detail.
+Even where it is suitable in principle, ER modeling is rarely used as a separate activity. One reason for this is today's abundance of tools to support diagramming and other design support directly on relational database management systems. These tools can readily extract database diagrams that are very close to ER diagrams from existing databases, and they provide alternative views on the information contained in such diagrams.
+In a survey, Brodie and Liu could not find a single instance of entity–relationship modeling inside a sample of ten Fortune 100 companies. Badia and Lemire blame this lack of use on the lack of guidance but also on the lack of benefits, such as lack of support for data integration.
+The enhanced entity–relationship model (EER modeling) introduces several concepts not in ER modeling, but are closely related to object-oriented design, like is-a relationships.
+For modelling temporal databases, numerous ER extensions have been considered. Similarly, the ER model was found unsuitable for multidimensional databases (used in OLAP applications); no dominant conceptual model has emerged in this field yet, although they generally revolve around the concept of OLAP cube (also known as data cube within the field).
+
+
+== See also ==
+Associative entity
+Concept map
+Database design
+Data structure diagram
+Enhanced entity–relationship model
+Enterprise architecture framework
+Value range structure diagrams
+Comparison of data modeling tools
+Ontology
+Object-role modeling
+Three schema approach
+Structured-Entity-Relationship-Model
+
+
+== References ==
+
+
+== Further reading ==
+Chen, Peter (2002). "Entity-Relationship Modeling: Historical Events, Future Trends, and Lessons Learned" (PDF). Software pioneers. Springer-Verlag. pp. 296–310. ISBN 3-540-43081-4. 
+Barker, Richard (1990). CASE Method: Entity Relationship Modelling. Addison-Wesley. ISBN 0201416964. 
+Barker, Richard (1990). CASE Method: Tasks and Deliverables. Addison-Wesley. ISBN 0201416972. 
+Mannila, Heikki; Räihä, Kari-Jouko (1992). The Design of Relational Databases. Addison-Wesley. ISBN 0201565234. 
+Thalheim, Bernhard (2000). Entity-Relationship Modeling: Foundations of Database Technology. Springer. ISBN 978-3-540-65470-4. 
+Bagui, Sikha; Earp, Richard (2011). Database Design Using Entity-Relationship Diagrams (2nd ed.). CRC Press. ISBN 978-1-4398-6176-9. 
+
+
+== External links ==
+"The Entity Relationship Model: Toward a Unified View of Data"
+Entity Relationship Modelling
+Logical Data Structures (LDSs) - Getting started by Tony Drewry.
+Crow's Foot Notation
+Kinds of Data Models -- and How to Name Them presentation by David Hay

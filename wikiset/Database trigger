@@ -1,0 +1,136 @@
+A database trigger is procedural code that is automatically executed in response to certain events on a particular table or view in a database. The trigger is mostly used for maintaining the integrity of the information on the database. For example, when a new record (representing a new worker) is added to the employees table, new records should also be created in the tables of the taxes, vacations and salaries.
+
+
+== Triggers in DBMS ==
+Below follows a series of descriptions of how some popular DBMS support triggers.
+
+
+=== Oracle ===
+In addition to triggers that fire when data is modified, Oracle 10g supports triggers that fire when schema level objects (that is, tables) are modified and when user logon or logoff events occur. These trigger types are referred to as "Schema-level triggers".
+
+
+==== Schema-level triggers ====
+After Creation
+Before Alter
+After Alter
+Before Drop
+After Drop
+The four main types of triggers are:
+Row Level Trigger: This gets executed before or after any column value of a row changes
+Column Level Trigger: This gets executed before or after the specified column changes
+For Each Row Type: This trigger gets executed once for each row of the result set affected by an insert/update/delete
+For Each Statement Type: This trigger gets executed only once for the entire result set, but fires each time the statement is executed.
+
+
+=== Microsoft SQL Server ===
+Microsoft SQL Server supports triggers either after or instead of (but not before: http://msdn.microsoft.com/en-us//library/ms189799.aspx) an insert, update or delete operation. They can be set on tables and views with the constraint that a view can be referenced only by an INSTEAD OF trigger.
+Microsoft SQL Server 2005 introduced support for Data Definition Language (DDL) triggers, which can fire in reaction to a very wide range of events, including:
+Drop table
+Create table
+Alter table
+Login events
+A full list is available on MSDN.
+Performing conditional actions in triggers (or testing data following modification) is done through accessing the temporary Inserted and Deleted tables.
+
+
+=== PostgreSQL ===
+Introduced support for triggers in 1997. The following functionality in SQL:2003 was previously not implemented in PostgreSQL:
+SQL allows triggers to fire on updates to specific columns; As of version 9.0 of PostgreSQL this feature is also implemented in PostgreSQL.
+The standard allows the execution of a number of SQL statements other than SELECT, INSERT, UPDATE, such as CREATE TABLE as the triggered action. This can be done through creating a stored procedure or function to call CREATE TABLE.
+Synopsis:
+
+
+=== Firebird ===
+Firebird supports multiple row-level, BEFORE or AFTER, INSERT, UPDATE, DELETE (or any combination thereof) triggers per table, where they are always "in addition to" the default table changes, and the order of the triggers relative to each other can be specified where it would otherwise be ambiguous (POSITION clause.) Triggers may also exist on views, where they are always "instead of" triggers, replacing the default updatable view logic. (Before version 2.1, triggers on views deemed updatable would run in addition to the default logic.)
+Firebird does not raise mutating table exceptions (like Oracle), and triggers will by default both nest and recurse as required (SQL Server allows nesting but not recursion, by default.) Firebird's triggers use NEW and OLD context variables (not Inserted and Deleted tables,) and provide UPDATING, INSERTING, and DELETING flags to indicate the current usage of the trigger.
+
+As of version 2.1, Firebird additionally supports the following database-level triggers:
+CONNECT (exceptions raised here prevent the connection from completing)
+DISCONNECT
+TRANSACTION START
+TRANSACTION COMMIT (exceptions raised here prevent the transaction from committing, or preparing if a two-phase commit is involved)
+TRANSACTION ROLLBACK
+Database-level triggers can help enforce multi-table constraints, or emulate materialized views. If an exception is raised in a TRANSACTION COMMIT trigger, the changes made by the trigger so far are rolled back and the client application is notified, but the transaction remains active as if COMMIT had never been requested; the client application can continue to make changes and re-request COMMIT.
+Syntax for database triggers:
+
+
+=== MySQL ===
+MySQL 5.0.2 introduced support for triggers. MySQL supports these trigger types:
+Insert Trigger
+Update Trigger
+Delete Trigger
+Note: In versions prior to 5.7.n, MySQL allows only one trigger of each type on each table (i.e. one before insert, one after insert, one before update, one after update, one before delete and one after delete). From version 5.7 onwards, multiple triggers of each type can be created and optionally positioned in relation to an existing trigger of the same type.
+Note: MySQL does NOT fire triggers outside of a statement (i.e. API's, foreign key cascades)
+The SQL:2003 standard mandates that triggers give programmers access to record variables by means of a syntax such as REFERENCING NEW AS n. For example, if a trigger is monitoring for changes to a salary column one could write a trigger like the following:
+
+Sample Mytrigger as follows:
+
+
+=== IBM DB2 LUW ===
+IBM DB2 for distributed systems known as DB2 for LUW (LUW means Linux Unix Windows) supports three trigger types: Before trigger, After trigger and Instead of trigger. Both statement level and row level triggers are supported. If there are more triggers for same operation on table then firing order is determined by trigger creation data. Since version 9.7 IBM DB2 supports autonomous transactions.
+Before trigger is for checking data and deciding if operation should be permitted. If exception is thrown from before trigger then operation is aborted and no data are changed. In DB2 before triggers are read only — you can't modify data in before triggers. After triggers are designed for post processing after requested change was performed. After triggers can write data into tables and unlike some other databases you can write into any table including table on which trigger operates. Instead of triggers are for making views writeable.
+Triggers are usually programmed in SQL PL language.
+
+
+=== SQLite ===
+
+SQLite only supports row-level triggers, not statement-level triggers.
+Updateable views, which are not supported in SQLite, can be emulated with INSTEAD OF triggers.
+
+
+=== XML databases ===
+An example of implementation of triggers in non-relational database can be Sedna, that provides support for triggers based on XQuery. Triggers in Sedna were designed to be analogous to SQL:2003 triggers, but natively base on XML query and update languages (XPath, XQuery and XML update language).
+A trigger in Sedna is set on any nodes of an XML document stored in database. When these nodes are updated, the trigger automatically executes XQuery queries and updates specified in its body. For example, the following trigger cancels person node deletion if there are any open auctions referenced by this person:
+
+
+== Row and statement level triggers ==
+To understand how trigger behavior works, you need to be aware of the two main types of triggers; these are Row and Statement level triggers. The distinction between the two is how many times the code within the trigger is executed, and at what time.
+Suppose you have a trigger that is made to be called on an UPDATE to a certain table. Row level triggers would execute each time a row is affected by the UPDATE. It is important to keep in mind if no rows are affected by the UPDATE command the trigger will not execute any code within the trigger. Statement level triggers work similarly but they will be called once regardless of how many rows are affected by the UPDATE. Here it is important to note that even if the UPDATE command didn’t affect any rows, the code within the trigger will still be executed once.
+Using the BEFORE and AFTER options determine when the trigger is called. Suppose you have a trigger that is called on an INSERT to a certain table. If your trigger is using the BEFORE option, the code within the trigger will be executed before the INSERT into the table occurs. A common use of the BEFORE trigger is to verify the input values of the INSERT, or modify the values accordingly. Now let’s say we have a trigger that uses AFTER instead. The code within the trigger is executed after the INSERT happens to the table. An example use of this trigger is creating an audit history of who has made inserts into the database, keeping track of the changes made. When using these options you need to keep a few things in mind. The BEFORE option does not allow you to modify tables, that is why input validation is a practical use. Using AFTER triggers allows you to modify tables such as inserting into an audit history table.
+When creating a trigger to determine if it is statement or row level simply include the FOR EACH ROW clause for a row level, or omit the clause for a statement level. Be cautious of using additional INSERT/UPDATE/DELETE commands within your trigger, because trigger recursion is possible, causing unwanted behavior. In the examples below each trigger is modifying a different table, by looking at what is being modified you can see some common applications of when different trigger types are used.
+Here is an Oracle syntax example of a row level trigger that is called AFTER an update FOR EACH ROW affected. This trigger is called on an update to a phone book database. When the trigger called it adds an entry into a separate table named phone_book_audit. Also take note of triggers being able to take advantage of schema objects like sequences, in this example audit_id_sequence.nexVal is used to generate unique primary keys in the phone_book_audit table.
+
+Now calling an UPDATE on the phone_book table for people with the last name 'Jones'.
+
+Notice that the phone_number_audit table is now populated with two entries. This is due to the database having two entries with the last name of 'Jones'. Since the update modified two separate row values, the created trigger was called twice after each modification.
+
+
+=== After - statement-level trigger ===
+An Oracle syntax statement trigger that is called after an UPDATE to the phone_book table. When the trigger gets called it makes an insert into phone_book_edit_history table
+
+Now lets do exactly the same update as the above example, however this time we have a statement level trigger.
+
+You can see that the trigger was only called once, even though the update did change two rows.
+
+
+=== Before each - row-level trigger ===
+In this example we have a BEFORE EACH ROW trigger that modifies the INSERT using a WHEN conditional. If the last name is larger than 10 letters, using the SUBSTR function we change the last_name column value to an abbreviation.
+
+Now lets perform an INSERT of someone with a large name.
+
+You can see that the trigger worked, modifying the value of the INSERT before it was executed.
+
+
+=== Before - statement-level trigger ===
+Using a BEFORE statement trigger is particularly useful when enforcing database restrictions. For this example I am going to enforce a restriction upon someone named "SOMEUSER" on the table phone_book.
+
+Now when "SOMEUSER" is logged in after attempting any INSERT this error message will show:
+
+SQL Error: ORA-20050: Error message goes here.
+
+Custom errors such as this one has a restriction on what the num variable can be defined as. Because of the numerous other pre-defined errors this variable must be in the range of -20000 to -20999.
+
+
+== References ==
+
+
+== External links ==
+Microsoft SQL Server DROP TRIGGER
+MySQL Database triggers
+MySQL DB Create Triggers
+DB2 CREATE TRIGGER statement
+Oracle CREATE TRIGGER
+PostgreSQL CREATE TRIGGER
+Oracle Mutating Table Problems with DELETE CASCADE
+SQLite Query Language: CREATE TRIGGER
+Oracle's Documentation on Triggers

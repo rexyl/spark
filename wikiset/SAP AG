@@ -1,0 +1,112 @@
+SAP SE (/ɛseɪˈpi/) (Systemanalyse und Programmentwicklung; Systems, Applications & Products in Data Processing) is a German multinational software corporation that makes enterprise software to manage business operations and customer relations. SAP is headquartered in Walldorf, Baden-Württemberg, Germany, with regional offices in 130 countries. The company has over 293,500 customers in 190 countries. The company is a component of the Euro Stoxx 50 stock market index.
+
+
+== History ==
+
+
+=== Formation ===
+When Xerox aimed to exit the computer industry in 1975, they asked IBM to migrate their business systems to IBM technology. As part of IBM's compensation for the migration, IBM was given the rights to the Scientific Data Systems (SDS)/SAPE software, reportedly for a contract credit of $80,000.
+Five IBM engineers from the AI department (Dietmar Hopp, Klaus Tschira, Hans-Werner Hector, Hasso Plattner, and Claus Wellenreuther, all from Mannheim, Baden-Württemberg) were working in an enterprise-wide system based on this software, only to be told that it would be no longer necessary. Rather than abandon the project, they decided to leave IBM Tech and start another company.
+In June 1970, they founded Systemanalyse und Programmentwicklung ("System Analysis and Program Development") company, as a private partnership under the German Civil Code.
+Their first client was the German branch of Imperial Chemical Industries in Östringen, where they developed mainframe programs for payroll and accounting. Instead of storing the data on punch cards mechanically, as IBM did, they stored it locally. Therefore, they called their software a real-time system, since there was no need to process the punch cards overnight (for this reason their flagship product carried an R in its name until the late 1990s). This first version was also a standalone software that could be offered to other interested parties.
+
+
+=== Enterprise resource planning ===
+In 1973, the first commercial product was launched. It was called SAP R/98, and offered a common system for multiple tasks. This permitted the use of a centralized data storage, improving the maintenance of data. From a technical point of view, therefore, a database was necessary.
+In 1976, SAP GmbH was founded, and moved its headquarters the following year to Walldorf, Germany. Three years later, in 1979, SAP launched SAP R/2, expanding the capabilities of the system to other areas, such as material management and production planning. In 1981, SAP brought a re-designed product to market. However, SAP R/2 did not improve until the period between 1985 and 1990. SAP released the new SAP R/3 in 1992. SAP developed and released several versions of R/3 through 1995. By the mid-1990s, SAP followed the trend from mainframe computing to client/server architectures. The development of SAP’s internet strategy with mySAP.com redesigned the concept of business processes (integration via Internet). SAP was awarded Industry Week's Best Managed Companies in 1999.
+
+
+=== Corporate restructuring ===
+In August 1988, SAP GmbH became SAP AG, and public trading started on 4 November 1988. Shares were listed on the Frankfurt and Stuttgart stock exchanges. In 1995, SAP was included in the German stock index DAX and, on 22 September 2003, SAP was included in the Dow Jones STOXX 50.
+The company's official name became SAP AG (a public limited company) after the 2005 annual general meeting. In 2014, SAP changed from an AG to a European Company (Societas Europaea or SE).
+
+
+=== SAP S/4HANA ===
+Written natively for the SAP HANA platform, SAP S/4HANA is the new generation of SAP Business Suite launched in 2015. It offers cloud, on-premises and hybrid deployment options to provide more choice to customers. Some benefits include: a smaller data footprint, higher throughput, faster analytics and reports, SAP HANA Cloud Platform extension, multitenancy, and faster access to data (social, text, geo, graph and processing). It also allows existing SAP Business Suite customers to upgrade to this product from SAP Business Suite instead of re-implementing.
+Bill McDermott, CEO of SAP, compared the release of SAP S/4HANA to a "moonshot", describing it as the most important launch in the company’s history. Partners have expressed readiness to implement S/4HANA because of the benefits it offers. Customers have said they've been waiting for such a solution, according to the Americas' SAP Users' Group (ASUG): "What SAP is promising with S/4HANA is a new suite of applications, a new user experience and a new offering of deployment models, all the things that we, as SAP customers, have been clamoring for so long."
+Analysts at J.P. Morgan have predicted that the new software could help SAP achieve more than a 30-percent compound annual growth rate. Yet some analysts, such as Peter Goldmacher of Cowen and Co., question whether it will be adopted as quickly as the company says, and create the massive growth that SAP foresees.
+
+
+=== Focus on cloud ===
+Since 2012, SAP has acquired several companies that sell cloud-based products, with several multibillion-dollar acquisitions seen by analysts as an attempt to challenge competitor Oracle. In 2014 SAP bought Concur Technologies, a provider of cloud-based travel and expense management software, for $8.3 billion, SAP's most expensive purchase to that date. Analysts' reactions to the purchase were mixed, with Thomas Becker of Commerzbank questioning whether Concur was the right choice for SAP, while Credit Suisse called the acquisition an "aggressive" move.
+In 2014, IBM and SAP began a partnership to sell cloud-based services. IBM provides the infrastructure services to SAP, and SAP runs its SAP HANA cloud solution on top. The alliance gives both companies broader reach in the market. SAP has announced additional partnerships with Microsoft in order to give customers tools for data visualization, as well as improved mobile applications.
+SAP exceeded its revenue projections due to the expansion in its cloud business and the success of SAP HANA. The growth can also be partially attributed to the acquisitions of Concur and Fieldglass.
+
+
+=== Acquisitions ===
+
+
+== Business and Markets ==
+As of 2007, SAP is the world's largest business software company and the third-biggest independent software provider by revenue. The corporation operates in four geographic regions: EMEA (Europe, Middle East, Africa), NA (United States and Canada), LAC (Latin America and Caribbean), and APJ (Asia Pacific and Japan).
+SAP focuses upon 25 industries and six industry sectors: process industries, discrete industries, consumer industries, service industries, financial services and public services. It offers integrated product sets for large enterprises, mid-sized companies and small businesses.
+
+
+== Enterprise Service-Oriented Architecture ==
+Service-oriented architecture has been incorporated into the SAP ERP (Enterprise Resource Planning) system and other products defined within the SAP Enterprise Services Architecture (Enterprise SOA).
+
+
+=== Enterprise SOA ===
+SAP Enterprise Service Oriented Architecture (or Enterprise SOA) is SAP SE's service-oriented architecture implementation. Enterprise SOA is enabled by the SAP NetWeaver platform, and builds on the benefits of Web services. SAP has positioned Enterprise SOA to deliver the benefits offered by service-oriented architecture, including enabling both flexibility and business efficiency. SAP markets Enterprise SOA as a cost-effective way of adding new applications to existing infrastructure. SAP Solutions that currently use Enterprise SOA are mySAP CRM, mySAP ERP, and mySAP SRM.
+
+
+== Partnerships ==
+SAP partners include Global Services Partners with cross-industry multinational consulting capabilities, Global Software Partners providing integrated products that complement SAP Business Suite solutions, and Global Technology Partners providing user companies with a wide range of products to support SAP technology, including vendors of hardware, database, storage systems, networks, and mobile computing technology.
+Extensions partners: this is a small number of companies which provide functionality that complements SAP product capabilities. Their products are certified, sold, and supported by SAP. These partner companies include Adobe, CA Technologies, GK Software, Hewlett-Packard, IDS Scheer, OpenText, Redwood Software, Vistex Inc., Insync Techfin Solution Ltd, Meridian Global Services, Knoa Software, Nakisa Inc, ICON-SCM, BackOffice Associates, Prometheus Group and SmartOps.
+
+
+== SAP PartnerEdge ==
+SAP products for small businesses and midsize companies are delivered through its global partner network. In 2008, SAP signed SAP Global Service partnership with HCL Technologies, a $6 billion technology service provider, headquartered in India.
+SAP PartnerEdge signed with ENFOS, Inc., a software as a service company, to develop their EcoHub Partner Sustainability Solution platform. The SAP PartnerEdge program, SAP's partner program, offers a set of business enablement resources and program benefits to help partners including value added resellers (VARs) and independent software vendors (ISVs) be profitable and successful in implementing, selling, marketing, developing and delivering SAP products to a broad range of customers.
+
+
+== Communities ==
+SAP Community Network (SCN) is a community of SAP customers, partners, employees, and influencers – typically in roles such as: developers, consultants, integrators, and business analysts – who gain and share knowledge about ABAP, Java, .NET, SOA, and other technologies, plus analytics and dashboards, business process best practices, cloud, mobile, big data, and a range of other topics via expert blogs, discussion forums, exclusive downloads and code samples, training materials, and a technical library.
+
+
+== Organization ==
+SAP uses a two-tier structure of boards, with an executive board and a supervisory board. As of 2015, members of the executive board were Bill McDermott (CEO and Chairman, joined in 2008), Robert Enslin (2014) Bernd Leukert (2014), Luka Mucic (CFO and COO, 2014), and Gerhard Oswald (1996). Functional units of SAP are split across different organizational units for R&D needs, field activities and customer support. SAP Labs are mainly responsible for product development whereas the field organizations spread across each country are responsible for field activities such Sales, Marketing, Consulting etc. Head office located in SAP SE is responsible for overall management as well as core Engineering activities related to Product Development. SAP customer support, also called Active Global Support (AGS) is a global organization to provide support to SAP customers worldwide.
+
+
+=== SAP Labs locations ===
+
+SAP Labs is the research and development organization of the parent company. As of January 2011, some, but not all, labs locations hosted SAP Research groups.
+The labs are located in Germany, France, Ireland, Bulgaria and Hungary (in Europe); Palo Alto, California and La Crosse, Wisconsin in the United States; Bangalore, Pune and Gurgaon (in India); São Leopoldo, Rio Grande do Sul (in Brazil); Ra'anana (in Israel); Montreal, Vancouver, Toronto and Waterloo (in Canada), and Shanghai, Nanjing, Chengdu, Xi'an and Beijing (in China). SAP Labs India is the largest development unit in terms of number of employees outside the SAP headquarters located in Walldorf, Germany.
+SAP opened in June 2009 its new SAP Labs campus in Brazil, representing the first SAP Labs Center in Latin America and the eighth worldwide. SAP Labs Latin America has just received Leadership in Energy and Environmental Design (LEED) Gold certification for the building.
+
+
+== SAP User Groups ==
+SAP User Groups are independent, non-profit organizations of SAP customers and SAP partners. They serve as communications channel for their members towards SAP and for SAP towards the markets. The Americas' SAP Users’ Group (ASUG) is the company’s largest user group, with 100,000 individuals at 3,800 companies. ASUG members are professionals who work in more than 17 industries. Many are technical and business process experts in the SAP ecosystem; they have varied levels of experience, and come from small businesses to global corporations, as well as universities. In 2007, the SAP User Group Executive Network (SUGEN) was established.
+SAP provoked controversy and frustration among its users in 2008 by raising the cost of its maintenance contracts. The issue was the subject of intense discussion among user groups.
+
+
+== Conferences ==
+SAP has two annual conferences: SAPPHIRE and SAP TechEd. SAPPHIRE is SAP's customer-facing event. It is generally where SAP announces major product changes and strategic direction. It is typically held in the spring in North America.
+SAP TechEd is the more technical conference, aimed at SAP's ecosystem of consultants and software development partners. SAP TechEd has been held since 1995, usually in four locations in the fall. In 2014-15, SAP TechEd was held in three locations, between fall and early spring.
+
+
+== Competitive landscape ==
+SAP competitors are primarily in the enterprise resource planning software industry. In this field, Oracle Corporation is SAP's major competitor. SAP also competes in the customer relationship management, marketing & sales software, manufacturing, warehousing & industrial software, and supply chain management & logistics software sectors.
+Oracle Corporation filed a lawsuit against SAP for malpractice and unfair competition in the California courts in 2007. SAP lost the case in 2010 and was ordered to pay a sum of US $1.3 billion, which was cited as the largest copyright infringement judgment in history. The verdict was overturned in 2011 and the lawsuit was finally settled in 2014 for $356.7 million.
+The resulting pressure saw SAP and SUGEN (SAP User Group Executive Network) agree to a major benchmarking exercise to prove the value of the new support pricing policy to customers. In December 2009, SAP delayed its Enterprise Support price rises until agreement had been reached on the benchmarks and KPIs (Key Performance Indicators).
+In January 2010, SAP reversed its direction on Enterprise Support and reintroduced its standard support package for customers. The move to reinstate standard support – at 18 percent of annual license fees, "will enable all customers to choose the option that best meets their requirements", the company said.
+In August 2013, SAP acquired Hybris publicly for eCommerce capabilities after failing in a bid for Neolane. The rationale for the acquisition of Hybris was really for product catalog and product information management.
+
+
+== Philanthropic efforts ==
+In 2012, SAP was listed as a partner of the (RED) campaign, together with other brands such as Nike Inc., Girl, American Express and Converse. The campaign's mission is to prevent the transmission of the HIV virus from mother to child by 2015 (the campaign's byline is "Fighting for an AIDS Free Generation").
+SAP is funding a project to assess and educate autistic children. It has also launched an initiative to hire employees with autism and Asperger syndrome, citing their intelligence in the IT field and attention to detail; SAP aims to compose 1% of its workforce with autistic people by the year 2020. In May 2013, 6 people had been employed.
+
+
+== See also ==
+
+List of SAP products
+SAP Fiori
+SAP Implementation
+List of ERP software packages
+
+
+== References ==
+
+
+== External links ==
+Official website

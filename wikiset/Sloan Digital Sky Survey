@@ -1,0 +1,120 @@
+The Sloan Digital Sky Survey or SDSS is a major multi-filter imaging and spectroscopic redshift survey using a dedicated 2.5-m wide-angle optical telescope at Apache Point Observatory in New Mexico, United States. The project was named after the Alfred P. Sloan Foundation, which contributed significant funding.
+Data collection began in 2000, and the final imaging data release covers over 35% of the sky, with photometric observations of around 500 million objects and spectra for more than 3 million objects. The main galaxy sample has a median redshift of z = 0.1; there are redshifts for luminous red galaxies as far as z = 0.7, and for quasars as far as z = 5; and the imaging survey has been involved in the detection of quasars beyond a redshift z = 6.
+Data release 8 (DR8), released in January 2011, includes all photometric observations taken with the SDSS imaging camera, covering 14,555 square degrees on the sky (just over 35% of the full sky). Data release 9 (DR9), released to the public on 31 July 2012, includes the first results from the Baryon Oscillation Spectroscopic Survey (BOSS) spectrograph, including over 800,000 new spectra. Over 500,000 of the new spectra are of objects in the Universe 7 billion years ago (roughly half the age of the universe). Data release 10 (DR10), released to the public on 31 July 2013, includes all data from previous releases, plus the first results from the APO Galactic Evolution Experiment (APOGEE) spectrograph, including over 57,000 high-resolution infrared spectra of stars in the Milky Way. DR10 also includes over 670,000 new BOSS spectra of galaxies and quasars in the distant universe. The publicly available images from the survey were made between 1998 and 2009.
+
+
+== ObservationsEdit ==
+SDSS uses a dedicated 2.5-m wide-angle optical telescope; from 2000-2009 it observed in both imaging and spectroscopic modes. The imaging camera was retired in late 2009, since when the telescope has observed entirely in spectroscopic mode.
+Images were taken using a photometric system of five filters (named u, g, r, i and z). These images are processed to produce lists of objects observed and various parameters, such as whether they seem pointlike or extended (as a galaxy might) and how the brightness on the CCDs relates to various kinds of astronomical magnitude.
+For imaging observations, the SDSS telescope used the drift scanning technique, which tracks the telescope along a great circle on the sky and continuously records small strips of the sky. The image of the stars in the focal plane drifts along the CCD chip, and the charge is electronically shifted along the detectors at exactly the same rate, instead of staying fixed as in tracked telescopes. (Simply parking the telescope as the sky moves is only workable on the celestial equator, since stars at different declination move at different apparent speed). This method allows consistent astrometry over the widest possible field, and minimises overheads from reading out the detectors. The disadvantage is minor distortion effects.
+The telescope's imaging camera is made up of thirty CCD chips each with a resolution of 2048×2048 pixels, totaling approximately 120 Megapixels. The chips are arranged in five rows of six chips. Each row has a different optical filter with average wavelengths of 355.1, 468.6, 616.5, 748.1 and 893.1 nm, with 95% completeness in typical seeing to magnitudes of 22.0, 22.2, 22.2, 21.3, and 20.5, for u, g, r, i, z, respectively. The filters are placed on the camera in the order r,i,u,z,g. To reduce noise the camera is cooled to 190 kelvin (about −80 °C) by liquid nitrogen.
+
+Using these photometric data, stars, galaxies, and quasars are also selected for spectroscopy. The spectrograph operates by feeding an individual optical fibre for each target through a hole drilled in an aluminum plate. Each hole is positioned specifically for a selected target, so every field in which spectra are to be acquired requires a unique plate. The original spectrograph attached to the telescope was capable of recording 640 spectra simultaneously, while the updated spectrograph for SDSS III can record 1000 spectra at once. Over the course of each night, between six and nine plates are typically used for recording spectra. In spectroscopic mode, the telescope tracks the sky in the standard way, keeping the objects focused on their corresponding fibre tips.
+Every night the telescope produces about 200 GB of data.
+
+
+== ProjectsEdit ==
+
+
+=== SDSS-I: 2000–2005Edit ===
+During its first phase of operations, 2000–2005, the SDSS imaged more than 8,000 square degrees of the sky in five optical bandpasses, and it obtained spectra of galaxies and quasars selected from 5,700 square degrees of that imaging. It also obtained repeated imaging (roughly 30 scans) of a 300 square degree stripe in the southern Galactic cap.
+
+
+=== SDSS-II: 2005–2008Edit ===
+In 2005 the survey entered a new phase, the SDSS-II, by extending the observations to explore the structure and stellar makeup of the Milky Way, the SEGUE and the Sloan Supernova Survey, which watches after supernova Ia events to measure the distances to far objects.
+
+
+==== Sloan Legacy SurveyEdit ====
+The survey covers over 7,500 square degrees of the Northern Galactic Cap with data from nearly 2 million objects and spectra from over 800,000 galaxies and 100,000 quasars. The information on the position and distance of the objects has allowed the large-scale structure of the Universe, with its voids and filaments, to be investigated for the first time. Almost all of these data were obtained in SDSS-I, but a small part of the footprint was finished in SDSS-II.
+
+
+==== Sloan Extension for Galactic Understanding and Exploration (SEGUE)Edit ====
+The Sloan Extension for Galactic Understanding and Exploration obtained spectra of 240,000 stars (with typical radial velocity of 10 km/s) in order to create a detailed three-dimensional map of the Milky Way. SEGUE data provide evidence for the age, composition and phase space distribution of stars within the various Galactic components, providing crucial clues for understanding the structure, formation and evolution of our Galaxy.
+The stellar spectra, imaging data, and derived parameter catalogs for this survey are publicly available as part of SDSS Data Release 7 (DR7).
+
+
+==== Sloan Supernova SurveyEdit ====
+Running until the end of the year 2007, the Supernova Survey searched for Type Ia supernovae. The survey rapidly scanned a 300 square degree area to detect variable objects and supernovae. It detected 130 confirmed supernovae Ia events in 2005 and a further 197 in 2006. In 2014 an even larger catalogue was released containing 10,258 variable and transient sources. Of these, 4,607 sources are either confirmed or likely supernovae, which makes this the largest set of supernovae so far compiled.
+
+
+=== SDSS III: 2008–2014Edit ===
+In mid-2008, SDSS-III was started. It comprises four separate surveys, each conducted on the same 2.5m telescope:
+
+
+==== APO Galactic Evolution Experiment (APOGEE)Edit ====
+The APO Galactic Evolution Experiment (APOGEE) will use high-resolution, high signal-to-noise infrared spectroscopy to penetrate the dust that obscures the inner Galaxy. APOGEE will survey 100,000 red giant stars across the full range of the galactic bulge, bar, disk, and halo. APOGEE will increase the number of stars observed at high spectroscopic resolution (R ~ 20,000 at λ ~ 1.6μm) and high signal-to-noise ratio (S/N ~ 100) by more than a factor of 100. The high resolution spectra will reveal the abundances of about 15 elements which gives information on the composition of the gas clouds they formed from. APOGEE should be collecting data from 2011 to 2014 with first release of data in July 2013.
+
+
+==== Baryon Oscillation Spectroscopic Survey (BOSS)Edit ====
+The SDSS-III's Baryon Oscillation Spectroscopic Survey (BOSS) was designed to measure the expansion rate of the Universe. It will map the spatial distribution of luminous red galaxies (LRGs) and quasars to map the spatial distribution and detect the characteristic scale imprinted by baryon acoustic oscillations in the early universe. Sound waves that propagate in the early universe, like spreading ripples in a pond, imprint a characteristic scale on the positions of galaxies relative to each other. In January 2014 it was announced that BOSS had measured the scale of the universe to an accuracy of one percent, and would be scheduled for completion in June 2014.
+
+
+==== Multi-object APO Radial Velocity Exoplanet Large-area Survey (MARVELS)Edit ====
+The Multi-object APO Radial Velocity Exoplanet Large-area Survey (MARVELS) will monitor the radial velocities of 11,000 bright stars, with the precision and cadence needed to detect gas giant planets that have orbital periods ranging from several hours to two years. This ground-based Doppler survey  will use the SDSS telescope and new multi-object Doppler instruments to monitor radial velocities. It is one of four astronomical surveys conducted by SDSS-III, part of the Sloan Digital Sky Survey (SDSS).
+The main goal of the project is to generate a large-scale, statistically well-defined sample of giant planets. It will search for gaseous planets that have orbital periods ranging from hours to 2 years, and are between 0.5 and 10 Jupiter masses. A total of 11,000 stars will be analyzed with 25-35 observations per star over an 18-month period. It is expected to detect between 150 and 200 new exoplanets, and will be able to study rare systems, such as planets with extreme eccentricity, and objects in the "brown dwarf desert".
+The collected data will be used as a statistical sample for the theoretical comparison and discovery of rare systems. The project started in the fall of 2008, and continued until spring 2014.
+
+
+==== SEGUE-2Edit ====
+The original Sloan Extension for Galactic Understanding and Exploration (SEGUE-1) obtained spectra of nearly 240,000 stars of a range of spectral types. Building on this success, SEGUE-2 spectroscopically observed around 120,000 stars, focusing on the in situ stellar halo of the Galaxy, from distances of 10 to 60 kpc.
+Combining SEGUE-1 and 2 reveals the complex kinematic and chemical substructure of the Galactic halo and disks, providing essential clues to the assembly and enrichment history of the Galaxy. In particular, the outer halo is expected to be dominated by late-time accretion events. SEGUE can help constrain existing models for the formation of the stellar halo and inform the next generation of high resolution simulations of Galaxy formation. In addition, SEGUE-1 and SEGUE-2 help uncover rare, chemically primitive stars that are fossils of the earliest generations of cosmic star formation.
+It is an astronomical survey designed to map the outer reaches of the Milky Way with a spectra of 240,000 stars. This survey will double the sample size of SEGUE-1.
+
+
+=== SDSS IV: 2014–2020Edit ===
+The latest generation of the SDSS (SDSS-IV, 2014–2020) is extending precision cosmological measurements to a critical early phase of cosmic history (eBOSS), expanding its revolutionary infrared spectroscopic survey of the Galaxy in the northern and southern hemispheres (APOGEE-2), and for the first time using the Sloan spectrographs to make spatially resolved maps of individual galaxies (MaNGA).
+
+
+==== APO Galactic Evolution Experiment (APOGEE-2)Edit ====
+A stellar survey of the Milky Way, with two major components: a northern survey using the bright time at APO, and a southern survey using the 2.5m du Pont Telescope at Las Campanas.
+
+
+==== extended Baryon Oscillation Spectroscopic Survey (eBOSS)Edit ====
+A cosmological survey of quasars and galaxies, also encompassing subprograms to survey variable objects (TDSS) and X-Ray sources (SPIDERS).
+
+
+==== Mapping Nearby Galaxies at APO (MaNGA)Edit ====
+Nicknamed "the galaxy survey for people who love galaxies", MaNGA (Mapping Nearby Galaxies at Apache Point Observatory), will explore the detailed internal structure of nearly 10,000 nearby galaxies using spatially resolved spectroscopy.
+
+
+== Data accessEdit ==
+
+The survey makes the data releases available over the Internet. The SkyServer provides a range of interfaces to an underlying Microsoft SQL Server. Both spectra and images are available in this way, and interfaces are made very easy to use so that, for example, a full color image of any region of the sky covered by an SDSS data release can be obtained just by providing the coordinates. The data are available for non-commercial use only, without written permission. The SkyServer also provides a range of tutorials aimed at everyone from schoolchildren up to professional astronomers. The tenth major data release, DR10, released in July 2013, provides images, imaging catalogs, spectra, and redshifts via a variety of search interfaces.
+The raw data (from before being processed into databases of objects) are also available through another Internet server, and through the NASA World Wind program.
+Sky in Google Earth includes data from the SDSS, for those regions where such data are available. There are also KML plugins for SDSS photometry and spectroscopy layers, allowing direct access to SkyServer data from within Google Sky.
+The data is also available on Hayden Planetarium with a 3D visualizer.
+There is also the ever growing list of data for the Stripe 82 region of the SDSS.
+Following from Technical Fellow Jim Gray's contribution on behalf of Microsoft Research with the SkyServer project, Microsoft's WorldWide Telescope makes use of SDSS and other data sources.
+MilkyWay@home also used SDSS's data for creating a highly accurate three dimensional model of the Milky Way galaxy.
+
+
+== ResultsEdit ==
+
+Along with publications describing the survey itself, SDSS data have been used in publications over a huge range of astronomical topics. The SDSS website has a full list of these publications covering distant quasars at the limits of the observable universe, the distribution of galaxies, the properties of stars in our own galaxy and also subjects such as dark matter and dark energy in the universe.
+
+
+=== MapsEdit ===
+Based on the release of Data Release 9 a new 3D map of massive galaxies and distant black holes was published on August 8, 2012.
+
+
+== See alsoEdit ==
+
+
+== ReferencesEdit ==
+
+
+== Further readingEdit ==
+Ann K. Finkbeiner. A Grand and Bold Thing: An Extraordinary New Map of the Universe Ushering In A New Era of Discovery (2010), a journalistic history of the project
+
+
+== External linksEdit ==
+SDSS Homepage
+The SkyServer
+SDSS imagery in NASA World Wind
+SDSS imagery in WikiSky
+"More of the Universe" article in symmetry magazine
+SEGUE Homepage
+The Sloan Great Wall: Largest Known Structure? on APOD
+A Flight Through The Universe on APOD
+J-PAS is a new astronomical facility dedicated to mapping the observable Universe in 56 colors.
+Sloan Digital Sky Survey Non-commercial use

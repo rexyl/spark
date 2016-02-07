@@ -1,0 +1,14 @@
+This is a comparison of notable object database management systems, showing what fundamental object database features are implemented natively.
+
+
+== Benchmarks ==
+Benchmark was done by Database Benchmark 3.0.0.0, using 1 flow with 100'000 records and 100% randomness on an Intel quad-core system with an SSD as a storage drive.
+
+
+== See also ==
+Comparison of object-relational database management systems
+Comparison of relational database management systems
+Object-relational database
+
+
+== References ==

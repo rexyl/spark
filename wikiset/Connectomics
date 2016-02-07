@@ -1,0 +1,43 @@
+Connectomics is the production and study of connectomes: comprehensive maps of connections within an organism's nervous system, typically its brain or eye. Because these structures are extremely complex, methods within this field use a high-throughput application of neural imaging and histological techniques in order to increase the speed, efficiency, and resolution of maps of the multitude of neural connections in a nervous system. While the principal focus of such a project is the brain, any neural connections could theoretically be mapped by connectomics, including, for example, neuromuscular junctions.
+
+
+== Tools ==
+One of the main tools used for connectomics research at the macroscale level is diffusion MRI. The main tool for connectomics research at the microscale level is 3D electron microscopy. To see one of the first micro-connectomes at full-resolution, visit the Open Connectome Project, which is hosting several connectome datasets, including the 12TB dataset from Bock et al. (2011).
+
+
+== Model systems ==
+Aside from the human brain, some of the model systems used for connectomics research are the mouse, the fruit fly, the nematode C. elegans, and the barn owl.
+
+
+== Applications ==
+By comparing diseased connectome and healthy connectomes, we should gain insight into certain psychopathologies, such as neuropathic pain, and potential therapies for them. Generally, the field of neuroscience would benefit from standardization and raw data. For example, connectome maps can be used to inform computational models of whole-brain dynamics. Current neural networks mostly rely on probabilistic representations of connectivity patterns. Connectograms (circular diagrams of connectomics) have been used in traumatic brain injury cases to document the extent of damage to neural networks.
+
+
+== Criticism ==
+The use of the word -omics to describe this system has been criticized. The coinage of the word is seen in two sources, in an article by Olaf Sporns and a PhD thesis by Patric Hagmann.
+Others have criticized attempts towards a microscale connectome, arguing that we don't have enough knowledge about where to look for insights, or that it cannot be completed within a realistic time frame.
+
+
+== Comparison to genomics ==
+The human genome project initially faced many of the above criticisms, but was nevertheless completed ahead of schedule and has led to many advances in genetics. Some have argued that analogies can be made between genomics and connectomics, and therefore we should be at least slightly more optimistic about the prospects in connectomics.
+
+
+== See also ==
+Connectome
+Human Connectome Project
+Connectogram
+
+
+== References ==
+
+
+== Further reading ==
+Hagmann, Patric; Cammoun, Leila; Gigandet, Xavier; Meuli, Reto; Honey, Christopher J.; Wedeen, Van J.; Sporns, Olaf (2008). Friston, Karl J., ed. "Mapping the Structural Core of Human Cerebral Cortex". PLoS Biology 6 (7): e159. doi:10.1371/journal.pbio.0060159. PMC 2443193. PMID 18597554. Lay summary. 
+
+
+== External links ==
+Open Connectome Project
+The Connectome Project at Harvard
+Connectome Research by EPFL/CHUV, Lausanne, Switzerland
+The NIH Blueprint for Neuroscience Research
+TED talk by Sebastian Seung: "I am my connectome".

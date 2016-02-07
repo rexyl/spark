@@ -1,0 +1,55 @@
+Requirements engineering (RE) refers to the process of defining, documenting and maintaining requirements to the sub-fields of systems engineering and software engineering concerned with this process.
+The first use of the term 'requirements engineering' was probably in 1979 in a TRW technical report but did not come into general use until the 1990s with the publication of an IEEE Computer Society tutorial and the establishment of a conference series on requirements engineering that has evolved into the current International Requirements Engineering Conference.
+In the waterfall model, requirements engineering is presented as the first phase of the development process. Later software development methods, including the Rational Unified Process (RUP), extreme programming (XP) and Scrum assume that requirements engineering continues through the lifetime of a system.
+Alan M. Davis maintains an extensive bibliography of requirements engineering.
+Requirement management which is a sub-function of Systems Engineering practices are also indexed in the INCOSE (International Council on Systems Engineering) manuals.
+
+
+== Requirements engineering activities ==
+The activities involved in requirements engineering vary widely, depending on the type of system being developed and the specific practices of the organization(s) involved. These may include:
+Requirements inception or requirements elicitation -
+Requirements identification - identifying new requirements
+Requirements analysis and negotiation - checking requirements and resolving stakeholder conflicts
+Requirements specification (e.g., software requirements specification; SRS) - documenting the requirements in a requirements document
+Systems modeling - deriving models of the system, often using a notation such as the Unified Modeling Language (UML)
+Requirements validation - checking that the documented requirements and models are consistent and meet stakeholder needs
+Requirements management - managing changes to the requirements as the system is developed and put into use
+These are sometimes presented as chronological stages although, in practice, there is considerable interleaving of these activities.
+
+
+== Problems ==
+Requirements engineering is a difficult process having to deal with interdisciplinary issues and uncertainty. The most important problems experienced by practitioners are:
+Incomplete/hidden requirements
+Moving targets
+Time boxing
+Not separating requirements from known solutions
+Underspecified requirements
+Communication flaws with the customer
+Inconsistent requirements
+Communication flaws inside the team
+Missing traceability
+Gold plating
+
+
+== Criticism ==
+Some recent research suggests that software requirements are often an illusion misrepresenting design decisions as requirements in situations where no real requirements are evident.
+
+
+== See also ==
+Requirements Engineering Specialist Group (RESG)
+International Requirements Engineering Board (IREB)
+IEEE 12207
+Concept of operations (ConOps)
+Software requirements
+Software requirements specification
+Software Engineering Body of Knowledge (SWEBOK)
+Design specification
+Specification (technical standard)
+Formal specification
+
+
+== References ==
+
+
+== External links ==
+29148-2011 - Systems and software engineering — Life cycle processes — Requirements engineering. 2011. pp. 1–94. doi:10.1109/IEEESTD.2011.6146379. ISBN 978-0-7381-6591-2. ("This standard replaces IEEE 830-1998, IEEE 1233-1998, IEEE 1362-1998 - http://standards.ieee.org/findstds/standard/29148-2011.html")

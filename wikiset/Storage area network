@@ -1,0 +1,115 @@
+A storage area network (SAN) is a network which provides access to consolidated, block level data storage. SANs are primarily used to enhance storage devices, such as disk arrays, tape libraries, and optical jukeboxes, accessible to servers so that the devices appear to the operating system as locally attached devices. A SAN typically has its own network of storage devices that are generally not accessible through the local area network (LAN) by other devices. The cost and complexity of SANs dropped in the early 2000s to levels allowing wider adoption across both enterprise and small to medium-sized business environments.
+A SAN does not provide file abstraction, only block-level operations. However, file systems built on top of SANs do provide file-level access, and are known as shared-disk file systems.
+
+
+== StorageEdit ==
+Historically, data centers first created "islands" of SCSI disk arrays as direct-attached storage (DAS), each dedicated to an application, and visible as a number of "virtual hard drives" (i.e. LUNs). Essentially, a SAN consolidates such storage islands together using a high-speed network.
+Operating systems maintain their own file systems on their own dedicated, non-shared LUNs, as though they were local to themselves. If multiple systems were simply to attempt to share a LUN, these would interfere with each other and quickly corrupt the data. Any planned sharing of data on different computers within a LUN requires advanced solutions, such as SAN file systems or clustered computing.
+Despite such issues, SANs help to increase storage capacity utilization, since multiple servers consolidate their private storage space onto the disk arrays.
+Common uses of a SAN include provision of transactionally accessed data that require high-speed block-level access to the hard drives such as email servers, databases, and high usage file servers.
+
+
+=== SAN compared to NASEdit ===
+Network-attached storage (NAS) was designed before the emergence of SAN as a solution to the limitations of the traditionally used direct-attached storage (DAS), in which individual storage devices such as disk drives are connected directly to each individual computer and not shared. In both a NAS and SAN solution the various computers in a network, such as individual users' desktop computers and dedicated servers running applications ("application servers"), can share a more centralized collection of storage devices via a network connection through the LAN.
+Concentrating the storage on one or more NAS servers or in a SAN instead of placing storage devices on each application server allows application server configurations to be optimized for running their applications instead of also storing all the related data and moves the storage management task to the NAS or SAN system. Both NAS and SAN have the potential to reduce the amount of excess storage that must be purchased and provisioned as spare space. In a DAS-only architecture, each computer must be provisioned with enough excess storage to ensure that the computer does not run out of space at an untimely moment. In a DAS architecture the spare storage on one computer cannot be utilized by another. With a NAS or SAN architecture, where storage is shared across the needs of multiple computers, one normally provisions a pool of shared spare storage that will serve the peak needs of the connected computers, which typically is less than the total amount of spare storage that would be needed if individual storage devices were dedicated to each computer.
+In a NAS solution the storage devices are directly connected to a "NAS-Server" that makes the storage available at a file-level to the other computers across the LAN. In a SAN solution the storage is made available via a server or other dedicated piece of hardware at a lower "block-level", leaving file system concerns to the "client" side. SAN protocols include Fibre Channel, iSCSI, ATA over Ethernet (AoE) and HyperSCSI. One way to loosely conceptualize the difference between a NAS and a SAN is that NAS appears to the client OS (operating system) as a file server (the client can map network drives to shares on that server) whereas a disk available through a SAN still appears to the client OS as a disk, visible in disk and volume management utilities (along with client's local disks), and available to be formatted with a file system and mounted..
+One drawback to both the NAS and SAN architecture is that the connection between the various CPUs and the storage units are no longer dedicated high-speed busses tailored to the needs of storage access. Instead the CPUs use the LAN to communicate, potentially creating bandwidth as well as performance bottlenecks. Additional data security considerations are also required for NAS and SAN setups, as information is now being transmitted via network that potentially include design flaws, security exploits and other vulnerabilities that may not exist in a DAS setup.
+While it is possible to use the NAS or SAN approach to eliminate all storage at user or application computers, typically those computers still have some local Direct Attached Storage for the operating system, various program files and related temporary files used for a variety of purposes, including caching content locally.
+To understand their differences, a comparison of DAS, NAS and SAN architectures may be helpful.
+
+
+=== SAN-NAS hybridEdit ===
+
+Despite their differences, SAN and NAS are not mutually exclusive, and may be combined as a SAN-NAS hybrid, offering both file-level protocols (NAS) and block-level protocols (SAN) from the same system. An example of this is Openfiler, a free software product running on Linux-based systems. A shared disk file system can also be run on top of a SAN to provide filesystem services.
+
+
+== BenefitsEdit ==
+Sharing storage usually simplifies storage administration and adds flexibility since cables and storage devices do not have to be physically moved to shift storage from one server to another.
+Other benefits include the ability to allow servers to boot from the SAN itself. This allows for a quick and easy replacement of faulty servers since the SAN can be reconfigured so that a replacement server can use the LUN of the faulty server. While this area of technology is still new, many view it as being the future of the enterprise datacenter.
+SANs also tend to enable more effective disaster recovery processes. A SAN could span a distant location containing a secondary storage array. This enables storage replication either implemented by disk array controllers, by server software, or by specialized SAN devices. Since IP WANs are often the least costly method of long-distance transport, the Fibre Channel over IP (FCIP) and iSCSI protocols have been developed to allow SAN extension over IP networks. The traditional physical SCSI layer could support only a few meters of distance - not nearly enough to ensure business continuance in a disaster.
+The economic consolidation of disk arrays has accelerated the advancement of several features including I/O caching, snapshotting, and volume cloning (Business Continuance Volumes or BCVs).
+
+
+== Network typesEdit ==
+Most storage networks use the SCSI protocol for communication between servers and disk drive devices. A mapping layer to other protocols is used to form a network:
+ATA over Ethernet (AoE), mapping of ATA over Ethernet
+Fibre Channel Protocol (FCP), the most prominent one, is a mapping of SCSI over Fibre Channel
+Fibre Channel over Ethernet (FCoE)
+ESCON over Fibre Channel (FICON), used by mainframe computers
+HyperSCSI, mapping of SCSI over Ethernet
+iFCP or SANoIP mapping of FCP over IP
+iSCSI, mapping of SCSI over TCP/IP
+iSCSI Extensions for RDMA (iSER), mapping of iSCSI over InfiniBand
+Storage networks may also be built using SAS and SATA technologies. SAS evolved from SCSI direct-attached storage. SATA evolved from IDE direct-attached storage. SAS and SATA devices can be networked using SAS Expanders.
+Examples of stacked protocols using SCSI:
+
+
+== SAN infrastructureEdit ==
+
+SANs often use a Fibre Channel fabric topology - an infrastructure specially designed to handle storage communications. It provides faster and more reliable access than higher-level protocols used in NAS. A fabric is similar in concept to a network segment in a local area network. A typical Fibre Channel SAN fabric is made up of a number of Fibre Channel switches.
+Today, all major SAN equipment vendors also offer some form of Fibre Channel routing solution, and these bring substantial scalability benefits to the SAN architecture by allowing data to cross between different fabrics without merging them. These offerings use proprietary protocol elements, and the top-level architectures being promoted are radically different. They often enable mapping Fibre Channel traffic over IP or over SONET/SDH.
+
+
+== CompatibilityEdit ==
+One of the early problems with Fibre Channel SANs was that the switches and other hardware from different manufacturers were not compatible. Although the basic storage protocols FCP were always quite standard, some of the higher-level functions did not interoperate well. Similarly, many host operating systems would react badly to other operating systems sharing the same fabric. Many solutions were pushed to the market before standards were finalized and vendors have since innovated around the standards.
+
+
+== SANs in media and entertainmentEdit ==
+Video editing workgroups require very high data transfer rates and very low latency. Outside of the enterprise market, this is one area that greatly benefits from SANs.
+SANs in Media and Entertainment are often referred to as Serverless SANs due to the nature of the configuration which places the video workflow (ingest, editing, playout) clients directly on the SAN rather than attaching to servers. Control of data flow is managed by a distributed file system such as StorNext by Quantum.
+Per-node bandwidth usage control, sometimes referred to as Quality of Service (QoS), is especially important in video workgroups as it ensures fair and prioritized bandwidth usage across the network, if there is insufficient open bandwidth available.
+
+
+== Storage virtualizationEdit ==
+
+Storage virtualization is the process of abstracting logical storage from physical storage. The physical storage resources are aggregated into storage pools, from which the logical storage is created. It presents to the user a logical space for data storage and transparently handles the process of mapping it to the physical location, a concept called location transparency. This is implemented in modern disk arrays, often using vendor proprietary solutions. However, the goal of storage virtualization is to group multiple disk arrays from different vendors, scattered over a network, into a single storage device. The single storage device can then be managed uniformly.
+
+
+== SAN Storage QoS (Quality of Service)Edit ==
+SAN Storage QoS (Quality of Service) is the coordination of capacity and performance in a dedicated storage area network. This enables the desired storage performance to be calculated and maintained for network customers accessing the device.
+Key factors that affect Storage Area Network QoS(Quality of Service) are:
+Bandwidth – The rate of data throughput available on the system.
+Latency – The time delay for a read/write operation to execute.
+Queue depth – The number of outstanding operations waiting to execute to the underlying disks (Traditional or SSD).
+QoS can be impacted in a SAN storage system by unexpected increase in data traffic (usage spike) from one network user that can cause performance to decrease for other users on the same network. This can be known as the “Noisy Neighbor Effect.” When QoS services are enabled in a SAN storage system, the “Noisy Neighbor Effect” can be prevented and network storage performance can be accurately predicted.
+Using SAN storage QoS is in contrast to using disk over-provisioning in a SAN environment. Over-provisioning can be used to provide additional capacity to compensate for peak network traffic loads. However, where network loads are not predictable, over-provisioning can eventually cause all bandwidth to be fully consumed and latency to increase significantly resulting in SAN performance degradation.
+
+
+== See alsoEdit ==
+ATA over Ethernet (AoE)
+Direct-attached storage (DAS)
+Disk array
+Fibre Channel
+Fibre Channel over Ethernet
+File Area Network
+iSCSI
+iSCSI Extensions for RDMA
+List of networked storage hardware platforms
+List of storage area network management systems
+Massive array of idle disks (MAID)
+Network-attached storage (NAS)
+Redundant array of independent disks (RAID)
+SCSI RDMA Protocol (SRP)
+Storage Management Initiative – Specification — (SMI-S)
+Storage hypervisor
+Storage Resource Management (SRM)
+Storage virtualization
+System area network
+
+
+== ReferencesEdit ==
+^ "Novel Doc: OES 1 - Direct Attached Storage Solutions". 
+^ "Storage Architectures graphic". http://www.evaluatorgroup.com/document/storage-architectures/. Evaluator Group.   
+^ "SAN vs DAS: A Cost Analysis of Storage in the Enterprise". SAN vs DAS: A Cost Analysis of Storage in the Enterprise. 31 October 2008. Retrieved 2010-01-28. 
+^ "TechEncyclopedia: IP Storage". Retrieved 2007-12-09. 
+^ "TechEncyclopedia: SANoIP". Retrieved 2007-12-09. 
+^ "StorNext Storage Manager - High-speed file sharing, Data Management and Digital Archiving Software". Quantum.com. Retrieved 2013-07-08. 
+5. Evaluator Group Storage Architectures Graphic http://www.evaluatorgroup.com/document/storage-architectures/
+
+
+== External linksEdit ==
+Introduction to Storage Area Networks Exhaustive Introduction into SAN, IBM Redbook
+SAN vs. DAS: A Cost Analysis of Storage in the Enterprise
+SAS and SATA, solid-state storage lower data center power consumption
+SAN NAS Videos
+Storage Area Network Info

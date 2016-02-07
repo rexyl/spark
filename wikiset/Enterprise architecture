@@ -1,0 +1,123 @@
+Enterprise architecture (EA) is "a well-defined practice for conducting enterprise analysis, design, planning, and implementation, using a holistic approach at all times, for the successful development and execution of strategy. Enterprise architecture applies architecture principles and practices to guide organizations through the business, information, process, and technology changes necessary to execute their strategies. These practices utilize the various aspects of an enterprise to identify, motivate, and achieve these changes.".
+Practitioners of enterprise architecture, enterprise architects, are responsible for performing the analysis of business structure and processes and are often called upon to draw conclusions from the information collected to address the goals of enterprise architecture: effectiveness, efficiency, agility, and durability.
+
+
+== Overview ==
+In the enterprise architecture literature and community, there are various perspectives in regards to the meaning of the term enterprise architecture. As of 2015, no official definition exists; rather, various organizations (public and private) promote their understanding of the term. Consequently, the enterprise architecture literature offers many definitions for the term enterprise architecture; some of which are complementary, others nuances, and others yet are in opposition.
+The MIT Center for Information Systems Research (MIT CISR) in 2007 defined enterprise architecture as the specific aspects of a business that are under examination:
+Enterprise architecture is the organizing logic for business processes and IT infrastructure reflecting the integration and standardization requirements of the company's operating model. The operating model is the desired state of business process integration and business process standardization for delivering goods and services to customers.
+The Enterprise Architecture Body of Knowledge defines enterprise architecture as a practice, which
+analyzes areas of common activity within or between organizations, where information and other resources are exchanged to guide future states from an integrated viewpoint of strategy, business and technology.
+IT analysis firm Gartner defines the term as a discipline where an enterprise is led through change. According to their glossary,
+"Enterprise architecture (EA) is a discipline for proactively and holistically leading enterprise responses to disruptive forces by identifying and analyzing the execution of change toward desired business vision and outcomes. EA delivers value by presenting business and IT leaders with signature-ready recommendations for adjusting policies and projects to achieve target business outcomes that capitalize on relevant business disruptions. EA is used to steer decision making toward the evolution of the future state architecture."
+Each of the definitions above underplay the historical reality that enterprise architecture emerged from methods for documenting and planning information systems architectures, and the current reality that most enterprise architecture practitioners report to a CIO or other IT department manager. In a business organization structure today, the enterprise architecture team performs an ongoing business function that helps business and IT managers to figure out the best strategies to support and enable business development and business change – in relation to the business information systems the business depends on.
+
+
+== Enterprise architecture topics ==
+
+
+=== The term enterprise and architecture ===
+The term enterprise can be defined as describing an organizational unit, organization, or collection of organizations that share a set of common goals and collaborate to provide specific products or services to customers.
+In that sense, the term enterprise covers various types of organizations, regardless of their size, ownership model, operational model, or geographical distribution. It includes those organizations' complete socio-technical systems, including people, information, processes and technologies.
+The term architecture refers to fundamental concepts or properties of a system in its environment embodied in its elements, relationships, and in the principles of its design and evolution.
+An enterprise, understood as a socio-technical system, defines the scope of the enterprise architecture.
+
+
+=== Scope of enterprise architecture ===
+Current perspectives, or beliefs, held by enterprise architecture practitioners and scholars, with regards to the meaning of the enterprise architecture, typically gravitate towards one or a hybrid of three schools of thought:
+Enterprise IT design – the purpose of EA is the greater alignment between IT and business concerns. The main purpose of enterprise architecture is to guide the process of planning and design the IT/IS capabilities of an enterprise in order to meet desired organizational objectives. Typically, architecture proposals and decisions are limited to the IT/IS aspects of the enterprise; other aspects only serve as inputs.
+Enterprise integrating – According to this school, the purpose of EA is to achieve greater coherency between the various concerns of an enterprise (HR, IT, Operations, etc.) including the linking between strategy formulation and execution. Typically, architecture proposals and decisions encompass all the aspects of the enterprise.
+Enterprise ecological adaptation – the purpose of EA is to foster and maintain the learning capabilities of enterprises so that they may be sustainable. Consequently, a great deal of emphasis is put on improving the capabilities of the enterprise to improve itself, to innovate and to coevolve with its environment. Typically, proposals and decisions encompass both the enterprise and its environment.
+One’s belief with regards to the meaning of enterprise architecture will impact how one sees its purpose, its scope, the means of achieving it, the skills needed to conduct it, and the locus of responsibility for conducting it
+
+
+=== Architectural description of an enterprise ===
+According to the standard ISO/IEC/IEEE 42010, the product used to describe the architecture of a system is called an architectural description. In practice, an architectural description contains a variety of lists, tables and diagrams. These are models known as views. In the case of Enterprise Architecture, these models describe the logical business functions or capabilities, business processes, human roles and actors, the physical organization structure, data flows and data stores, business applications and platform applications, hardware and communications infrastructure.
+The UK National Computing Centre EA best practice guidance states
+
+Normally an EA takes the form of a comprehensive set of cohesive models that describe the structure and functions of an enterprise... The individual models in an EA are arranged in a logical manner that provides an ever-increasing level of detail about the enterprise.
+
+The architecture of an enterprise is described with a view to improving the manageability, effectiveness, efficiency or agility of the business, and ensuring that money spent on information technology (IT) is justified.
+Paramount to changing the enterprise architecture is the identification of a sponsor, his/her mission, vision and strategy and the governance framework to define all roles, responsibilities and relationships involved in the anticipated transformation. Changes considered by enterprise architects typically include:
+innovations in the structure or processes of an organization
+innovations in the use of information systems or technologies
+the integration and/or standardization of business processes,
+improving the quality and timeliness of business information.
+A methodology for developing and using architecture to guide the transformation of a business from a baseline state to a target state, sometimes through several transition states, is usually known as an enterprise architecture framework. A framework provides a structured collection of processes, techniques, artifact descriptions, reference models and guidance for the production and use of an enterprise-specific architecture description.
+
+
+== Benefits of enterprise architecture ==
+The benefits of enterprise architecture are achieved through its direct and indirect contributions to organizational goals. It has been found that the most notable benefits of enterprise architecture can be observed in the following areas:
+Organizational design - Enterprise architecture provides support in the areas related to design and re-design of the organizational structures during mergers, acquisitions or during general organizational change.
+Organizational processes and process standards - Enterprise architecture helps enforce discipline and standardization of business processes, and enable process consolidation, reuse and integration.
+Project portfolio management - Enterprise architecture supports investment decision-making and work prioritization.
+Project management - Enterprise architecture enhances the collaboration and communication between project stakeholders. Enterprise architecture contributes to efficient project scoping, and to definition of more complete and consistent project deliverables.
+Requirements Engineering - Enterprise architecture increases the speed of requirement elicitation and the accuracy of requirement definitions, through publishing of the enterprise architecture documentation.
+System development - Enterprise architecture contributes to optimal system designs and efficient resource allocation during system development and testing.
+IT management and decision making - Enterprise architecture is found to help enforce discipline and standardization of IT planning activities and to contribute to reduction in time for technology-related decision making.
+IT value - Enterprise architecture helps reduce the systems implementation and operational costs, and minimize replication of IT infrastructure services across business units.
+IT complexity - Enterprise architecture contributes to reduction in IT complexity, consolidation of data and applications, and to better interoperability of the systems.
+IT openness - Enterprise architecture contributes to more open and responsive IT as reflected through increased accessibility of data for regulatory compliance, and increased transparency of infrastructure changes.
+IT risk management - Enterprise architecture contributes to reduction of business risk from system failures and security breaches. Enterprise architecture helps reduce risks of project delivery.
+
+
+== Examples of enterprise architecture use ==
+Documenting the architecture of enterprises is done within the U.S. Federal Government in the context of the Capital Planning and Investment Control (CPIC) process.
+The Federal Enterprise Architecture (FEA) reference models guides federal agencies in the development of their architectures.
+Companies such as Independence Blue Cross, Intel, Volkswagen AG and InterContinental Hotels Group use enterprise architecture to improve their business architectures as well as to improve business performance and productivity.
+For various understandable reasons, commercial organizations rarely publish substantial enterprise architecture descriptions. However, government agencies have begun to publish architectural descriptions they have developed. Examples include:
+US Department of the Interior
+US Department of Defense Business Enterprise Architecture, or the 2008 BEAv5.0 version
+Treasury Enterprise Architecture Framework
+
+
+== Relationship to other disciplines ==
+According to the Federation of EA Professional Organizations (FEAPO), Enterprise Architecture interacts with a wide array of other disciplines commonly found in business settings. According to FEAPO:
+An Enterprise Architecture practice collaborates with many inter-‐connected disciplines including performance engineering and management, process engineering and management, IT and enterprise portfolio management, governance and compliance, IT strategic planning, risk analysis, information management, metadata management, and a wide variety of technical disciplines as well as organizational disciplines such as organizational development, transformation, innovation, and learning. Increasingly, many practitioners have stressed the important relationship of Enterprise Architecture with emerging holistic design practices such as design thinking, systems thinking, and user experience design.
+As Enterprise Architecture has emerged in various organizations, the broad reach has resulted in this business role being included in information technology governance process in many organizations. While this may imply that enterprise architecture is closely tied to IT, it should be viewed in the broader context of business optimization in that it addresses business architecture, performance management and process architecture as well as more technical subjects.
+Discussions of the intersection of Enterprise Architecture and various IT practices have been published by various IT analysis firms. Gartner and Forrester have stressed the important relationship of Enterprise Architecture with emerging holistic design practices such as Design Thinking and User Experience Design. Analyst firm Real Story Group suggested that Enterprise Architecture and the emerging concept of the Digital workplace were "two sides to the same coin." The Cutter Consortium describes Enterprise Architecture as an information and knowledge-based discipline.
+The enterprise architecture of an organization is too complex and extensive to document in its entirety, so knowledge management techniques provide a way to explore and analyze these hidden, tacit or implicit areas. In return, enterprise architecture provides a way of documenting the components of an organization and their interaction in a systemic and holistic way that complements knowledge management.
+Enterprise Architecture has been discussed, in various venues, as having a relationship with Service Oriented Architecture, a particular style of application integration. Current research points to Enterprise Architecture as a key enabler to the success of efforts to use SOA as an enterprise-wide integration pattern.
+
+
+== Notable enterprise architecture tools ==
+The following table lists the most notable enterprise architecture tools as recognized by Gartner and Forrester Research in their most recent reports.
+
+
+== Criticism ==
+Despite the benefits that enterprise architecture claims to provide, for more than a decade a number of industry leaders, writers, and leading organizations have raised concerns about enterprise architecture as an effective practice. Here is a partial list:
+In 2007, noted computer scientist Ivar Jacobson (a major contributor to UML and pioneer in OO software development) gave his assessment of enterprise architecture: "Around the world introducing an Enterprise Architecture EA has been an initiative for most financial institutions (banks, insurance companies, government, etc.) for the last five years or so, and it is not over. I have been working with such companies and helped some of them to avoid making the worst mistakes. Most EA initiatives failed. My guess is that more than 90% never really resulted in anything useful."
+In a 2007 report, on enterprise architecture, Gartner predicted that "... by 2012 40% of [2007’s] enterprise architecture programs will be stopped."
+A 2008 study, by performed by Erasmus University Rotterdam and software company IDS Scheer concluded that two-thirds of enterprise architecture projects failed to improve business and IT alignment.
+In a 2009 article, industry commentator Dion Hinchcliffe wrote that traditional enterprise architecture might be "broken": "At its very best, enterprise architecture provides the bright lines that articulate the full range of possibilities for a business, even describing how to go about getting there. ... Recently there’s a growing realization that traditional enterprise architecture as it’s often practiced today might be broken in some important way. What might be wrong and how to fix it are the questions du jour."
+In 2011, federal enterprise architecture consultant Stanley Gaver released a report that examined problems within the United States federal government’s enterprise architecture program. Mr. Gaver concluded that the federal enterprise architecture program had mostly failed; this conclusion was corroborated by a similar one made by the federal government at an October 2010 meeting that was held to determine why the federal enterprise architecture program was not "as influential and successful as in the past."
+A key concern about EA has been the difficulty in arriving at metrics of success, because of the broad-brush and often opaque nature of EA projects.
+
+
+== See also ==
+Architectural pattern (computer science)
+Architecture of Integrated Information Systems, Architecture of Interoperable Information Systems
+Enterprise Architect
+Enterprise Architecture Assessment Framework
+Enterprise Architecture framework
+Enterprise Architecture Planning
+Enterprise Architecture Management
+History of Enterprise Architecture
+Enterprise engineering
+Enterprise Life Cycle
+Enterprise Unified Process
+Federation of Enterprise Architecture Professional Organizations
+Global Information Network Architecture
+Information Architecture
+Information Framework
+John Zachman
+Enterprise Architecture Service Life Cycle - SOMF
+
+
+== References ==
+
+
+== External links ==
+ The dictionary definition of enterprise architecture at Wiktionary
+ Media related to Enterprise architecture at Wikimedia Commons
+ Quotations related to Enterprise architecture at Wikiquote

@@ -1,0 +1,80 @@
+Data acquisition is the process of sampling signals that measure real world physical conditions and converting the resulting samples into digital numeric values that can be manipulated by a computer. Data acquisition systems, abbreviated by the acronyms DAS or DAQ, typically convert analog waveforms into digital values for processing. The components of data acquisition systems include:
+Sensors, to convert physical parameters to electrical signals.
+Signal conditioning circuitry, to convert sensor signals into a form that can be converted to digital values.
+Analog-to-digital converters, to convert conditioned sensor signals to digital values.
+Data acquisition applications are usually controlled by software programs developed using various general purpose programming languages such as Assembly, BASIC, C, C++, C#, Fortran, Java, LabVIEW, Lisp, Pascal, etc. Stand-alone data acquisition systems are often called data loggers.
+There are also open-source software packages providing all the necessary tools to acquire data from different hardware equipment. These tools come from the scientific community where complex experiment requires fast, flexible and adaptable software. Those packages are usually custom fit but more general DAQ package like the Maximum Integrated Data Acquisition System can be easily tailored and is used in several physics experiments worldwide.
+
+
+== History ==
+In 1963, IBM produced computers which specialized in data acquisition. These include the IBM 7700 Data Acquisition System, and its successor, the IBM 1800 Data Acquisition and Control System. These expensive specialized systems were surpassed in 1974 by general purpose S-100 computers and data acquisitions cards produced by Tecmar/Scientific Solutions Inc. In 1981 IBM introduced the IBM Personal Computer and Scientific Solutions introduced the first PC data acquisition products.
+    
+
+
+== Methodology ==
+
+
+=== Sources and systems ===
+Data acquisition begins with the physical phenomenon or physical property to be measured. Examples of this include temperature, light intensity, gas pressure, fluid flow, and force. Regardless of the type of physical property to be measured, the physical state that is to be measured must first be transformed into a unified form that can be sampled by a data acquisition system. The task of performing such transformations falls on devices called sensors. A data acquisition system is a collection of software and hardware that lets you measure or control physical characteristics of something in the real world. A complete data acquisition system consists of DAQ hardware, sensors and actuators, signal conditioning hardware, and a computer running DAQ software.
+A sensor, which is a type of transducer, is a device that converts a physical property into a corresponding electrical signal (e.g., strain gauge, thermistor). An acquisition system to measure different properties depends on the sensors that are suited to detect those properties. Signal conditioning may be necessary if the signal from the transducer is not suitable for the DAQ hardware being used. The signal may need to be filtered or amplified in most cases. Various other examples of signal conditioning might be bridge completion, providing current or voltage excitation to the sensor, isolation, linearization. For transmission purposes, single ended analog signals, which are more susceptible to noise can be converted to differential signals. Once digitized, the signal can be encoded to reduce and correct transmission errors.
+
+
+=== DAQ hardware ===
+DAQ hardware is what usually interfaces between the signal and a PC. It could be in the form of modules that can be connected to the computer's ports (parallel, serial, USB, etc.) or cards connected to slots (S-100 bus, AppleBus, ISA, MCA, PCI, PCI-E, etc.) in the motherboard. Usually the space on the back of a PCI card is too small for all the connections needed, so an external breakout box is required. The cable between this box and the PC can be expensive due to the many wires, and the required shielding.
+DAQ cards often contain multiple components (multiplexer, ADC, DAC, TTL-IO, high speed timers, RAM). These are accessible via a bus by a microcontroller, which can run small programs. A controller is more flexible than a hard wired logic, yet cheaper than a CPU so that it is permissible to block it with simple polling loops. For example: Waiting for a trigger, starting the ADC, looking up the time, waiting for the ADC to finish, move value to RAM, switch multiplexer, get TTL input, let DAC proceed with voltage ramp.
+
+
+=== DAQ device drivers ===
+DAQ device drivers are needed in order for the DAQ hardware to work with a PC. The device driver performs low-level register writes and reads on the hardware, while exposing API for developing user applications in a variety of programming environments.
+
+
+=== Input devices ===
+3D scanner
+Analog-to-digital converter
+Time-to-digital converter
+
+
+=== Hardware ===
+Computer Automated Measurement and Control (CAMAC)
+Industrial Ethernet
+Industrial USB
+LAN eXtensions for Instrumentation
+NIM
+PowerLab
+PCI eXtensions for Instrumentation
+VMEbus
+VXI
+
+
+=== DAQ software ===
+Specialized DAQ software may be delivered with the DAQ hardware. Software tools used for building large-scale data acquisition systems include EPICS. Other programming environments that are used to build DAQ applications include ladder logic, Visual C++, Visual Basic, LabVIEW, and MATLAB. See also:
+LabChart
+MIDAS
+
+
+== References ==
+
+
+== Further reading ==
+Simon McBeath (2002). Competition Car Data Logging: A Practical Handbook. J. H. Haynes & Co. ISBN 1-85960-653-9. 
+Simon S. Young (2001). Computerized Data Acquisition and Analysis for the Life Sciences. Cambridge University Press. ISBN 0-521-56570-7. 
+W. R. Leo (1994). Techniques for Nuclear and Particle Physics Experiments. Springer. ISBN 3-540-57280-5. 
+Charles D. Spencer (1990). Digital Design for Computer Data Acquisition. Cambridge University Press. ISBN 0-521-37199-6. 
+B.G. Thompson & A. F. Kuckes (1989). IBM-PC in the laboratory. Cambridge University Press. ISBN 0-521-32199-9. 
+Buddy Fey (1996). Data Power: Using Racecar Data Acquisition. Towery Pub. ISBN 1-881096-01-7. 
+Francesco Fornetti (2013). Instrumentation Control, Data Acquisition and Processing with MATLAB. Explore RF Ltd. ISBN 978-0957663503. 
+Tomaž Kos, Tomaž Kosar, and Marjan Mernik. Development of data acquisition systems by using a domain-specific modeling language. Computers in Industry, 63(3):181–192, 2012. [1] doi:10.1016/j.compind.2011.09.004
+
+
+== See also ==
+Black box
+Data logger
+Data storage device
+Sensor
+Signal processing
+Transducer
+
+
+== External links ==
+Visual DAQ - An Analytics Platform (Software) for Connecting DAQ Systems
+DAS DATA - Cloud Platform (Software) for Connecting Internet of Things

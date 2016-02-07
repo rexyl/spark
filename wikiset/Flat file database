@@ -1,0 +1,61 @@
+A flat file database is a database which is stored on its host computer system as an ordinary "flat file". To access the structure of the data and manipulate it, the file must be read in its entirety into the computer's memory. Upon completion of the database operations, the file is again written out in its entirety to the host's file system. In this stored mode the database is "flat", which means it has no structure for indexing and there are usually no structural relationships between the records. A flat file can be a plain text file or a binary file.
+The term has generally implied a small, simple database. As computer memory has become cheaper, larger and more sophisticated databases can now be held in memory in their entirety for faster access, but these would not generally be referred to as flat-file databases.
+
+
+== Overview ==
+Plain text files usually contain one record per line, There are different conventions for depicting data. In comma-separated values and delimiter-separated values files, fields can be separated by delimiters such as comma or tab characters. In other cases, each field may have a fixed length; short values may be padded with space characters. Extra formatting may be needed to avoid delimiter collision. More complex solutions are markup languages and programming languages.
+Using delimiters incurs some overhead in locating them every time they are processed (unlike fixed-width formatting), which may have performance implications. However, use of character delimiters (especially commas) is also a crude form of data compression which may assist overall performance by reducing data volumes — especially for data transmission purposes. Use of character delimiters which include a length component (Declarative notation) is comparatively rare but vastly reduces the overhead associated with locating the extent of each field.
+Typical examples of flat files are /etc/passwd and /etc/group on Unix-like operating systems. Another example of a flat file is a name-and-address list with the fields Name, Address, and Phone Number.
+A list of names, addresses, and phone numbers written by hand on a sheet of paper is a flat file database. This can also be done with any typewriter or word processor. A spreadsheet or text editor program may be used to implement a flat file database, which may then be printed or used online for improved search capabilities.
+
+
+== History ==
+Herman Hollerith conceived the idea that data could be represented by holes punched in paper cards then tabulated by machine. He implemented this concept for the US Census Bureau; thus the 1890 United States Census processing created the first database—consisting of thousands of boxes full of punched cards.
+Hollerith's enterprise grew into the computer giant IBM, which dominated the data processing market for most of the 20th century. IBM's fixed-length field, 80-column punch cards became the ubiquitous means of inputting electronic data until the 1970s.
+In the 1980s, configurable flat-file database computer applications were popular on DOS and the Macintosh. These programs were designed to make it easy for individuals to design and use their own databases, and were almost on par with word processors and spreadsheets in popularity. Examples of flat-file database products were early versions of FileMaker and the shareware PC-File. Some of these, like dBase II, offered limited relational capabilities, allowing some data to be shared between files.
+In the 2010s flat file databases were used in content management systems. Instead of using a database, web developers were able to change the content directly in the file system or at the command line.
+
+
+=== Contemporary implementations ===
+FairCom's c-tree is an example of a modern enterprise-level solution, and spreadsheet software and text editors can be used for this purpose. WebDNA is a scripting language designed for the World Wide Web, with a hybrid flat file in-memory database system making it easy to build resilient database-driven websites. With the in-memory concept, WebDNA searches and database updates are almost realtime while the data is stored as text files within the website itself. Otherwise, flat file database is implemented in Microsoft Works and Apple Works. Over time, products like Borland's Paradox, and Microsoft's Access started offering some relational capabilities, as well as built-in programming languages. Database Management Systems (DBMS) like MySQL or Oracle generally require programmers to build applications.
+Faceless flat file database engines are used internally by Mac OS X, Firefox, and other computer software to store configuration data. Programs to manage collections of books or appointments and address book are essentially single-purpose flat file database applications, allowing users to store and retrieve information from flat files using a predefined set of fields. As of 2011, one of the most popular flat file database engines is SQLite, which is the engine used by Firefox and Android and is part of the standard library for PHP and Python languages.
+
+
+== Data transfer operations ==
+Flat files are used not only as data storage tools in DB and CMS systems, but also as data transfer tools to remote servers (in which case they become known as information streams).
+In recent years, this latter implementation has been replaced with XML files, which not only contain but also describe the data. Those still using flat files to transfer information are mainframes employing specific procedures which are too expensive to modify.
+One criticism often raised against the XML format as a way to perform mass data transfer operations is that file size is significantly larger than that of flat files, which is generally reduced to the bare minimum. The solution to this problem consists in XML file compression (a solution that applies equally well to flat files), which has nowadays gained EXI standards (i.e., Efficient XML Interchange, which is often used by mobile devices).
+It is advisable that transfer data be performed via EXI rather than flat files because defining the compression method is not required, because libraries reading the file contents are readily available, and because there is no need for the two communicating systems to preliminarily establish a protocol describing data properties such as position, alignment, type, and format. However, in those circumstances where the sheer mass of data and/or the inadequacy of legacy systems becomes a problem, the only viable solution remains the use of flat files. In order to successfully handle those problems connected with data communication, format, validation, control and much else (be it a flat file or an XML file data source), it is advisable to adopt a Data Quality Firewall.
+
+
+== Terminology ==
+"Flat file database" may be defined very narrowly, or more broadly. The narrower interpretation is correct in database theory; the broader covers the term as generally used.
+Strictly, a flat file database should consist of nothing but data and, if records vary in length, delimiters. More broadly, the term refers to any database which exists in a single file in the form of rows and columns, with no relationships or links between records and fields except the table structure.
+Terms used to describe different aspects of a database and its tools differ from one implementation to the next, but the concepts remain the same. FileMaker uses the term "Find", while MySQL uses the term "Query"; but the concept is the same. FileMaker "files", in version 7 and above, are equivalent to MySQL "databases", and so forth. To avoid confusing the reader, one consistent set of terms is used throughout this article.
+However, the basic terms "record" and "field" are used in nearly every flat file database implementation.
+
+
+== Example database ==
+The following example illustrates the basic elements of a flat-file database. The data arrangement consists of a series of columns and rows organized into a tabular format. This specific example uses only one table.
+The columns include: name (a person's name, second column); team (the name of an athletic team supported by the person, third column); and a numeric unique ID, (used to uniquely identify records, first column).
+Here is an example textual representation of the described data:
+
+id    name    team
+1     Amy     Blues
+2     Bob     Reds
+3     Chuck   Blues
+4     Dick    Blues
+5     Ethel   Reds
+6     Fred    Blues
+7     Gilly   Blues
+8     Hank    Reds
+9     Hank    Blues
+
+This type of data representation is quite standard for a flat-file database, although there are some additional considerations that are not readily apparent from the text:
+Data types: each column in a database table such as the one above is ordinarily restricted to a specific data type. Such restrictions are usually established by convention, but not formally indicated unless the data is transferred to a relational database system.
+Separated columns: In the above example, individual columns are separated using whitespace characters. This is also called indentation or "fixed-width" data formatting. Another common convention is to separate columns using one or more delimiter characters. More complex solutions are markup and programming languages.
+Relational algebra: Each row or record in the above table meets the standard definition of a tuple under relational algebra (the above example depicts a series of 3-tuples). Additionally, the first row specifies the field names that are associated with the values of each row.
+Database management system: Since the formal operations possible with a text file are usually more limited than desired, the text in the above example would ordinarily represent an intermediary state of the data prior to being transferred into a database management system.
+
+
+== References ==

@@ -1,0 +1,56 @@
+Ivar Hjalmar Jacobson (born 1939) is a Swedish computer scientist and software engineer, known as major contributor to UML, Objectory, Rational Unified Process (RUP), aspect-oriented software development and Essence.
+
+
+== Biography ==
+Ivar Jacobson was born in Ystad, Sweden on 2 September 1939. He received his Master of Electrical Engineering degree at Chalmers Institute of Technology in Gothenburg in 1962 and a Ph.D. at the Royal Institute of Technology in Stockholm in 1985 on a thesis on Language Constructs for Large Real Time Systems.
+After university, Jacobson worked at Ericsson until April 1987, when he started Objective Systems. A majority stake of the company was acquired by Ericsson in 1991, and the company was renamed Objectory AB. Jacobson developed the software method OOSE published 1992, which matured to become the software process Objectory.
+In October 1995 Ericsson divested Objectory to Rational Software and Jacobson started working with Grady Booch and James Rumbaugh, known collectively as the Three Amigos.
+Rational was bought by IBM in 2003 and Jacobson decided to quit, but he stayed on until May 2004 as an executive technical consultant.
+In mid-2003 Jacobson formed Ivar Jacobson International (IJI)  which operates across three continents with offices in the UK, the US, Sweden, Switzerland, China, and Singapore.
+
+
+== Work ==
+
+
+=== Ericsson ===
+In 1967 at Ericsson Jacobson proposed the use of software components in the new generation of software controlled telephone switches Ericsson was developing. In doing this he invented sequence diagrams, and developed collaboration diagrams. He also used state transition diagrams to describe the message flows between components.
+Jacobson saw a need for blueprints for software development. He was one of the original developers of the Specification and Design Language (SDL). In 1975, SDL became a standard in the telecoms industry.
+At Objectory he also invented use cases as a way to specify functional software requirements.
+
+
+=== Rational Software ===
+At Rational, Jacobson and his friends, Grady Booch and James Rumbaugh, designed the UML and his Objectory Process evolved to become the Rational Unified Process under the leadership of Philippe Kruchten.
+
+
+=== Essential Unified Process ===
+In November 2005, Jacobson announced the Essential Unified Process or “EssUP” for short. EssUP was a new “Practice” centric software development process that stood on the shoulders of modern but established software development practices. It was a fresh new start, integrating successful practices sourced from the three leading process camps: the unified process camp, the agile software development camp and the process improvement camp. Each one of them contributed different capabilities: structure, agility and process improvement.
+Ivar has described EssUP as a "super light and agile" RUP, and IJI have integrated EssUP into Microsoft Visual Studio Team System and Eclipse.
+
+
+=== EssWork ===
+Standing on the experience of EssUP Ivar and his team, in particular Ian Spence and Pan Wei Ng, developed EssWork starting in 2006. EssWork is a framework for working with methods. It is based on a kernel of universal elements always prevalent in software development endeavors. On top of the kernel some fifteen practices has been defined. A team can create their own method by composing practices.
+
+
+=== SEMAT ===
+In November 2009, Jacobson, Bertrand Meyer and Richard Soley ("the Troika") started an initiative called SEMAT (Software Engineering Method and Theory) to seek to develop a rigorous, theoretically sound basis for software engineering practice, and its wide adoption by industry and academia. SEMAT has been inspired by the work at IJI, but it is a fresh new start. It has resulted in Essence, which at the time of this writing has been recommended as an OMG standard.
+
+
+== Publications ==
+Jacobson has published several books and articles, a selection:
+1992. Object-Oriented Software Engineering: A Use Case Driven Approach (ACM Press) With Marcus Christerson, Patrik Jonsson & Gunnar Overgaard. Addison-Wesley, 1992, ISBN 0-201-54435-0
+1994. The Object Advantage: Business Process Reengineering With Object Technology (ACM Press). With M. Ericsson & A. Jacobson. Addison-Wesley, ISBN 0-201-42289-1
+1997. Software Reuse: Architecture, Process, and Organization for Business Success (ACM Press). With Martin Griss & Patrik Jonsson. Addison-Wesley, 1997, ISBN 0-201-92476-5
+1999. The Unified Software Development Process. With Grady Booch & James Rumbaugh. Addison-Wesley Professional, 1999, ISBN 0-201-57169-2
+2004. The Unified Modeling Language Reference Manual (2nd Edition). With Grady Booch & James Rumbaugh. Addison-Wesley Professional, 2004, ISBN 0-321-24562-8
+2004. Aspect-Oriented Software Development With Use Cases (Addison-Wesley Object Technology Series). With Pan-Wei Ng. Addison-Wesley, ISBN 0-321-26888-1
+2005. The Unified Modeling Language User Guide (2nd Edition). With Grady Booch & James Rumbaugh. Addison-Wesley Professional, 2005, ISBN 0-321-26797-4
+2013. The Essence of Software Engineering - Applying the SEMAT Kernel. With Pan Wei Ng, Paul Mc Mahon, Ian Spence and Svante Lidman. Addison-Wesley, 2013, ISBN
+
+
+== References ==
+
+
+== External links ==
+Ivar Jacobson International
+Ivar Jacobson's Blog
+EssWork Website

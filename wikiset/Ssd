@@ -1,0 +1,297 @@
+A solid-state drive (SSD, also known as a solid-state disk although it contains neither an actual disk nor a drive motor to spin a disk) is a solid-state storage device that uses integrated circuit assemblies as memory to store data persistently. SSD technology primarily uses electronic interfaces compatible with traditional block input/output (I/O) hard disk drives, which permit simple replacements in common applications. Additionally, new I/O interfaces, like SATA Express, have been designed to address specific requirements of the SSD technology.
+SSDs have no moving (mechanical) components. This distinguishes them from traditional electromechanical magnetic disks such as hard disk drives (HDDs) or floppy disks, which contain spinning disks and movable read/write heads. Compared with electromechanical disks, SSDs are typically more resistant to physical shock, run silently, have lower access time, and less latency. However, while the price of SSDs has continued to decline over time, consumer-grade SSDs are still roughly eight to nine times more expensive per unit of storage than consumer-grade HDDs.
+As of 2014, most SSDs use NAND-based flash memory, which is a type of non-volatile memory that retains data when power is lost. For applications requiring fast access but not necessarily data persistence after power loss, SSDs may be constructed from random-access memory (RAM). Such devices may employ batteries as integrated power sources to retain data for a certain amount of time after external power is lost.
+Hybrid drives or solid-state hybrid drives (SSHDs) combine the features of SSDs and HDDs in the same unit, containing a large hard disk drive and an SSD cache to improve performance of frequently accessed data.
+
+
+== Development and history ==
+
+
+=== Early SSDs using RAM and similar technology ===
+SSDs had origins in the 1950s with two similar technologies: magnetic core memory and charged capacitor read-only storage (CCROS). These auxiliary memory units (as contemporaries called them) emerged during the era of vacuum-tube computers. But with the introduction of cheaper drum storage units their use ceased.
+Later, in the 1970s and 1980s, SSDs were implemented in semiconductor memory for early supercomputers of IBM, Amdahl and Cray, but they were seldom used because of their prohibitively high price. In the late 1970s, General Instruments produced an electrically alterable ROM (EAROM) which operated somewhat like the later NAND flash memory. Unfortunately, a ten-year life was not achievable and many companies abandoned the technology. In 1976 Dataram started selling a product called Bulk Core, which provided up to 2 MB of solid state storage compatible with Digital Equipment Corporation (DEC) and Data General (DG) computers. In 1978, Texas Memory Systems introduced a 16 kilobyte RAM solid-state drive to be used by oil companies for seismic data acquisition. The following year, StorageTek developed the first RAM solid-state drive.
+The Sharp PC-5000, introduced in 1983, used 128-kilobyte solid-state storage cartridges containing bubble memory. In 1984 Tallgrass Technologies Corporation had a tape backup unit of 40 MB with a solid state 20 MB unit built in. The 20 MB unit could be used instead of a hard drive. In September 1986, Santa Clara Systems introduced BatRam, a 4 megabyte mass storage system expandable to 20 MB using 4 MB memory modules. The package included a rechargeable battery to preserve the memory chip contents when the array was not powered. 1987 saw the entry of EMC Corporation (EMC) into the SSD market, with drives introduced for the mini-computer market. However, by 1993 EMC had exited the SSD market.
+Software-based RAM disks were still used as of 2009 because they are an order of magnitude faster than other technology, though they consume CPU resources and cost much more on a per-GB basis.
+
+
+=== Flash-based SSDs ===
+In 1989, the Psion MC 400 Mobile Computer included four slots for removable storage in the form of flash-based "solid-state disk" cards, using the same type of flash memory cards as used by the Psion Series 3. The flash modules did have the limitation of needing to be re-formatted entirely to reclaim space from deleted or modified files; old versions of files which were deleted or modified continued to take up space until the module was formatted.
+In 1991 SanDisk Corporation created a 20 MB solid state drive (SSD) which sold for $1,000.
+In 1994, STEC, Inc. bought Cirrus Logic's flash controller operation, allowing the company to enter the flash memory business for consumer electronic devices.
+In 1995, M-Systems introduced flash-based solid-state drives. They had the advantage of not requiring batteries to maintain the data in the memory (required by the prior volatile memory systems), but were not as fast as the DRAM-based solutions. Since then, SSDs have been used successfully as HDD replacements by the military and aerospace industries, as well as for other mission-critical applications. These applications require the exceptional mean time between failures (MTBF) rates that solid-state drives achieve, by virtue of their ability to withstand extreme shock, vibration and temperature ranges.
+In 1999, BiTMICRO made a number of introductions and announcements about flash-based SSDs, including an 18 GB 3.5-inch SSD.
+In 2007, Fusion-io announced a PCIe-based SSD with 100,000 input/output operations per second (IOPS) of performance in a single card, with capacities up to 320 gigabytes.
+At Cebit 2009, OCZ Technology demonstrated a 1 terabyte (TB) flash SSD using a PCI Express ×8 interface. It achieved a maximum write speed of 654 megabytes per second (MB/s) and maximum read speed of 712 MB/s.
+In December 2009, Micron Technology announced an SSD using a 6 gigabits per second (Gbit/s) SATA interface.
+
+
+=== Enterprise flash drives ===
+
+Enterprise flash drives (EFDs) are designed for applications requiring high I/O performance (IOPS), reliability, energy efficiency and, more recently, consistent performance. In most cases, an EFD is an SSD with a higher set of specifications, compared with SSDs that would typically be used in notebook computers. The term was first used by EMC in January 2008, to help them identify SSD manufacturers who would provide products meeting these higher standards. There are no standards bodies who control the definition of EFDs, so any SSD manufacturer may claim to produce EFDs when they may not actually meet the requirements.
+In the fourth quarter of 2012, Intel introduced its SSD DC S3700 series of drives, which focuses on achieving consistent performance, an area that had previously not received much attention but which Intel claimed was important for the enterprise market. In particular, Intel claims that at steady state the S3700 drives would not vary their IOPS by more than 10–15%, and that 99.9% of all 4 KB random IOs are serviced in less than 500 µs.
+
+
+== Architecture and function ==
+The key components of an SSD are the controller and the memory to store the data. The primary memory component in an SSD was traditionally DRAM volatile memory, but since 2009 it is more commonly NAND flash non-volatile memory.
+
+
+=== Controller ===
+Every SSD includes a controller that incorporates the electronics that bridge the NAND memory components to the host computer. The controller is an embedded processor that executes firmware-level code and is one of the most important factors of SSD performance. Some of the functions performed by the controller include:
+Error-correcting code (ECC)
+Wear leveling
+Bad block mapping
+Read scrubbing and read disturb management
+Read and write caching
+Garbage collection
+Encryption
+The performance of an SSD can scale with the number of parallel NAND flash chips used in the device. A single NAND chip is relatively slow, due to the narrow (8/16 bit) asynchronous I/O interface, and additional high latency of basic I/O operations (typical for SLC NAND, ~25 μs to fetch a 4 KB page from the array to the I/O buffer on a read, ~250 μs to commit a 4 KB page from the IO buffer to the array on a write, ~2 ms to erase a 256 KB block). When multiple NAND devices operate in parallel inside an SSD, the bandwidth scales, and the high latencies can be hidden, as long as enough outstanding operations are pending and the load is evenly distributed between devices.
+Micron and Intel initially made faster SSDs by implementing data striping (similar to RAID 0) and interleaving in their architecture. This enabled the creation of ultra-fast SSDs with 250 MB/s effective read/write speeds with the SATA 3 Gbit/s interface in 2009. Two years later, SandForce continued to leverage this parallel flash connectivity, releasing consumer-grade SATA 6 Gbit/s SSD controllers which supported 500 MB/s read/write speeds. SandForce controllers compress the data prior to sending it to the flash memory. This process may result in less writing and higher logical throughput, depending on the compressibility of the data.
+
+
+=== Memory ===
+
+
+==== Flash-memory-based ====
+Most SSD manufacturers use non-volatile NAND flash memory in the construction of their SSDs because of the lower cost compared with DRAM and the ability to retain the data without a constant power supply, ensuring data persistence through sudden power outages. Flash memory SSDs are slower than DRAM solutions, and some early designs were even slower than HDDs after continued use. This problem was resolved by controllers that came out in 2009 and later.
+Flash memory-based solutions are typically packaged in standard disk drive form factors (1.8-, 2.5-, and 3.5-inch), but also in smaller unique and compact layouts made possible by the small size of flash memory.
+Lower priced drives usually use multi-level cell (MLC) flash memory, which is slower and less reliable than single-level cell (SLC) flash memory. This can be mitigated or even reversed by the internal design structure of the SSD, such as interleaving, changes to writing algorithms, and higher over-provisioning (more excess capacity) with which the wear-leveling algorithms can work.
+
+
+==== DRAM-based ====
+
+SSDs based on volatile memory such as DRAM are characterized by ultrafast data access, generally less than 10 microseconds, and are used primarily to accelerate applications that would otherwise be held back by the latency of flash SSDs or traditional HDDs. DRAM-based SSDs usually incorporate either an internal battery or an external AC/DC adapter and backup storage systems to ensure data persistence while no power is being supplied to the drive from external sources. If power is lost, the battery provides power while all information is copied from random access memory (RAM) to back-up storage. When the power is restored, the information is copied back to the RAM from the back-up storage, and the SSD resumes normal operation (similar to the hibernate function used in modern operating systems). SSDs of this type are usually fitted with DRAM modules of the same type used in regular PCs and servers, which can be swapped out and replaced by larger modules. Such as i-RAM, HyperOs HyperDrive, DDRdrive X1, etc. Some manufacturers of DRAM SSDs solder the DRAM chips directly to the drive, and do not intend the chips to be swapped out—such as ZeusRAM, Aeon Drive, etc.
+A remote, indirect memory-access disk (RIndMA Disk) uses a secondary computer with a fast network or (direct) Infiniband connection to act like a RAM-based SSD, but the new, faster, flash-memory based, SSDs already available in 2009 are making this option not as cost effective.
+While the price of DRAM continues to fall, the price of Flash memory falls even faster. The "Flash becomes cheaper than DRAM" crossover point occurred approximately 2004.
+
+
+==== Other ====
+Some SSDs, called NVDIMM or Hyper DIMM devices, use both DRAM and flash memory. When the power goes down, the SSD copies all the data from its DRAM to flash; when the power comes back up, the SSD copies all the data from its flash to its DRAM. In a somewhat similar way, some SSDs use form factors and buses actually designed for DIMM modules, while using only flash memory and making it appear as if it were DRAM. Such SSDs are usually known as UltraDIMM devices.
+Drives known as hybrid drives or solid-state hybrid drives (SSHDs) use a hybrid of spinning disks and flash memory. Some SSDs use magnetoresistive random-access memory (MRAM) for storing data.
+In 2015, Intel and Micron announced 3D XPoint as a new non-volatile memory technology. Intel plans to produce 3D XPoint SSDs with PCI Express interface in 2016, which will operate faster and with higher endurance than NAND-based SSDs, while the areal density will be comparable at 128 gigabits per chip. For the price per bit, 3D XPoint will be more expensive than NAND, but cheaper than DRAM.
+
+
+=== Cache or buffer ===
+A flash-based SSD typically uses a small amount of DRAM as a volatile cache, similar to the buffers in hard disk drives. A directory of block placement and wear leveling data is also kept in the cache while the drive is operating. One SSD controller manufacturer, SandForce, does not use an external DRAM cache on their designs but still achieves high performance. Such an elimination of the external DRAM reduces the power consumption and enables further size reduction of SSDs.
+
+
+=== Battery or super capacitor ===
+Another component in higher-performing SSDs is a capacitor or some form of battery, which are necessary to maintain data integrity so the data in the cache can be flushed to the drive when power is lost; some may even hold power long enough to maintain data in the cache until power is resumed. In the case of MLC flash memory, a problem called lower page corruption can occur when MLC flash memory loses power while programming an upper page. The result is that data written previously and presumed safe can be corrupted if the memory is not supported by a super capacitor in the event of a sudden power loss. This problem does not exist with SLC flash memory.
+Most consumer-class SSDs do not have built-in batteries or capacitors; among the exceptions are the Crucial M500 and MX100 series, the Intel 320 series, and the more expensive Intel 710 and 730 series. Enterprise-class SSDs, such as the Intel DC S3700 series, usually have built-in batteries or capacitors.
+
+
+=== Host interface ===
+
+Apart from associated connectors, the host interface is not physically a component of the SSD, but it is a key part of the drive. The interface is usually incorporated into the above-discussed controller, and is many times one of the interfaces found in HDDs. They include:
+Serial attached SCSI (SAS, > 3.0 Gbit/s) –  generally found on servers
+Serial ATA (SATA, > 1.5 Gbit/s)
+PCI Express (PCIe, > 2.0 Gbit/s)
+Fibre Channel (> 1.0 Gbit/s) –  almost exclusively found on servers
+USB (> 1.5 Mbit/s)
+Parallel ATA (IDE, > 26.4 Mbit/s) –  mostly replaced by SATA
+(Parallel) SCSI (> 40 Mbit/s) –  generally found on servers, mostly replaced by SAS; last SCSI-based SSD was introduced in 2004
+Besides the host interface, SSDs also use different logical device interfaces, including Advanced Host Controller Interface (AHCI), NVM Express (NVMe), and certain proprietary interfaces. Logical device interfaces define the command sets used by operating systems to communicate with SSDs and host bus adapters (HBAs).
+
+
+== Configurations ==
+The size and shape of any device is largely driven by the size and shape of the components used to make that device. Traditional HDDs and optical drives are designed around the rotating platter or optical disc along with the spindle motor inside. If an SSD is made up of various interconnected integrated circuits (ICs) and an interface connector, then its shape is no longer limited to the shape of rotating media drives. Some solid state storage solutions come in a larger chassis that may even be a rack-mount form factor with numerous SSDs inside. They would all connect to a common bus inside the chassis and connect outside the box with a single connector.
+For general computer use, the 2.5-inch form factor (typically found in laptops) is the most popular. For desktop computers with 3.5-inch hard disk slots, a simple adapter plate can be used to make such a disk fit. Other types of form factors are more common in enterprise applications. An SSD can also be completely integrated in the other circuitry of the device, as in the Apple MacBook Air (starting with the fall 2010 model). As of 2014, mSATA and M.2 form factors are also gaining popularity, primarily in laptops.
+
+
+=== Standard HDD form factors ===
+The benefit of using a current HDD form factor would be to take advantage of the extensive infrastructure already in place to mount and connect the drives to the host system. These traditional form factors are known by the size of the rotating media, e.g., 5.25-inch, 3.5-inch, 2.5-inch, 1.8-inch, not by the dimensions of the drive casing.
+
+
+=== Standard card form factors ===
+
+For applications where space is at premium, like for ultrabooks or tablets, a few compact form factors were standardized for flash-based SSDs.
+There is the mSATA form factor, which uses the PCI Express Mini Card physical layout. It remains electrically compatible with the PCI Express Mini Card interface specification, while requiring an additional connection to the SATA host controller through the same connector.
+M.2 form factor, formerly known as the Next Generation Form Factor (NGFF), is a natural transition from the mSATA and physical layout it used, to a more usable and more advanced form factor. While mSATA took advantage of an existing form factor and connector, M.2 has been designed to maximize usage of the card space, while minimizing the footprint. The M.2 standard allows both SATA and PCI Express SSDs to be fitted onto M.2 modules.
+
+
+=== Disk-on-a-module form factors ===
+
+A disk-on-a-module (DOM) is a flash drive with either 40/44-pin Parallel ATA (PATA) or SATA interface, intended to be plugged directly into the motherboard and used as a computer hard disk drive (HDD). DOM devices emulate a traditional hard disk drive, resulting in no need for special drivers or other specific operating system support. DOMs are usually used in embedded systems, which are often deployed in harsh environments where mechanical HDDs would simply fail, or in thin clients because of small size, low power consumption and silent operation.
+As of 2010, storage capacities range from 32 MB to 64 GB with different variations in physical layouts, including vertical or horizontal orientation.
+
+
+=== Box form factors ===
+Many of the DRAM-based solutions use a box that is often designed to fit in a rack-mount system. The number of DRAM components required to get sufficient capacity to store the data along with the backup power supplies requires a larger space than traditional HDD form factors.
+
+
+=== Bare-board form factors ===
+
+Form factors which were more common to memory modules are now being used by SSDs to take advantage of their flexibility in laying out the components. Some of these include PCIe, mini PCIe, mini-DIMM, MO-297, and many more. The SATADIMM from Viking Technology uses an empty DDR3 DIMM slot on the motherboard to provide power to the SSD with a separate SATA connector to provide the data connection back to the computer. The result is an easy-to-install SSD with a capacity equal to drives that typically take a full 2.5-inch drive bay. At least one manufacturer, Innodisk, has produced a drive that sits directly on the SATA connector (SATADOM) on the motherboard without any need for a power cable. Some SSDs are based on the PCIe form factor and connect both the data interface and power through the PCIe connector to the host. These drives can use either direct PCIe flash controllers or a PCIe-to-SATA bridge device which then connects to SATA flash controllers.
+
+
+=== Ball grid array form factors ===
+In the early 2000s, a few companies introduced SSDs in Ball Grid Array (BGA) form factors, such as M-Systems' (now SanDisk) DiskOnChip and Silicon Storage Technology's NANDrive (now produced by Greenliant Systems), and Memoright's M1000 for use in embedded systems. The main benefits of BGA SSDs are their low power consumption, small chip package size to fit into compact subsystems, and that they can be soldered directly onto a system motherboard to reduce adverse effects from vibration and shock.
+
+
+== Comparison with other technologies ==
+
+
+=== Hard disk drives ===
+
+Making a comparison between SSDs and ordinary (spinning) HDDs is difficult. Traditional HDD benchmarks tend to focus on the performance characteristics that are poor with HDDs, such as rotational latency and seek time. As SSDs do not need to spin or seek to locate data, they may prove vastly superior to HDDs in such tests. However, SSDs have challenges with mixed reads and writes, and their performance may degrade over time. SSD testing must start from the (in use) full disk, as the new and empty (fresh out of the box) disk may have much better write performance than it would show after only weeks of use.
+Most of the advantages of solid-state drives over traditional hard drives are due to their ability to access data completely electronically instead of electromechanically, resulting in superior transfer speeds and mechanical ruggedness. On the other hand, hard disk drives offer significantly higher capacity for their price.
+Field failure rates indicate that SSDs are significantly more reliable than HDDs. However, SSDs are uniquely sensitive to sudden power interruption, resulting in aborted writes or even cases of the complete loss of the drive. The reliability of both HDDs and SSDs varies greatly amongst models.
+As with HDDs, there is a tradeoff between cost and performance of different SSDs. Single-level cell (SLC) SSDs, while significantly more expensive than multi-level (MLC) SSDs, offer a significant speed advantage. At the same time, DRAM-based solid-state storage is currently considered the fastest and most costly, with average response times of 10 microseconds instead of the average 100 microseconds of other SSDs. Enterprise flash devices (EFDs) are designed to handle the demands of tier-1 application with performance and response times similar to less-expensive SSDs.
+In traditional HDDs, a re-written file will generally occupy the same location on the disk surface as the original file, whereas in SSDs the new copy will often be written to different NAND cells for the purpose of wear leveling. The wear-leveling algorithms are complex and difficult to test exhaustively; as a result, one major cause of data loss in SSDs is firmware bugs.
+The following table shows a detailed overview of the advantages and disadvantages of both technologies. Comparisons reflect typical characteristics, and may not hold for a specific device.
+
+
+=== Memory cards ===
+
+While both memory cards and most SSDs use flash memory, they serve very different markets and purposes. Each has a number of different attributes which are optimized and adjusted to best meet the needs of particular users. Some of these characteristics include power consumption, performance, size, and reliability.
+SSDs were originally designed for use in a computer system. The first units were intended to replace or augment hard disk drives, so the operating system recognized them as a hard drive. Originally, solid state drives were even shaped and mounted in the computer like hard drives. Later SSDs became smaller and more compact, eventually developing their own unique form factors. The SSD was designed to be installed permanently inside a computer.
+In contrast, memory cards (such as Secure Digital (SD), CompactFlash (CF) and many others) were originally designed for digital cameras and later found their way into cell phones, gaming devices, GPS units, etc. Most memory cards are physically smaller than SSDs, and designed to be inserted and removed repeatedly. There are adapters which enable some memory cards to interface to a computer, allowing use as an SSD, but they are not intended to be the primary storage device in the computer. The typical CompactFlash card interface is three to four times slower than an SSD. As memory cards are not designed to tolerate the amount of reading and writing which occurs during typical computer use, their data may get damaged unless special procedures are taken to reduce the wear on the card to a minimum.
+
+
+== Applications ==
+Until 2009, SSDs were mainly used in those aspects of mission critical applications where the speed of the storage system needed to be as high as possible. Since flash memory has become a common component of SSDs, the falling prices and increased densities have made it more cost-effective for many other applications. Organizations that can benefit from faster access of system data include equity trading companies, telecommunication corporations, streaming media and video editing firms. The list of applications which could benefit from faster storage is vast.
+Flash-based solid-state drives can be used to create network appliances from general-purpose personal computer hardware. A write protected flash drive containing the operating system and application software can substitute for larger, less reliable disk drives or CD-ROMs. Appliances built this way can provide an inexpensive alternative to expensive router and firewall hardware.
+SSDs based on an SD card with a live SD operating system are easily write-locked. Combined with a cloud computing environment or other writable medium, to maintain persistence, an OS booted from a write-locked SD card is robust, rugged, reliable, and impervious to permanent corruption. If the running OS degrades, simply turning the machine off and then on returns it back to its initial uncorrupted state and thus is particularly solid. The SD card installed OS does not require removal of corrupted components since it was write-locked though any written media may need to be restored.
+
+
+=== Hard drives caching ===
+In 2011, Intel introduced a caching mechanism for their Z68 chipset (and mobile derivatives) called Smart Response Technology, which allows a SATA SSD to be used as a cache (configurable as write-through or write-back) for a conventional, magnetic hard disk drive. A similar technology is available on HighPoint's RocketHybrid PCIe card.
+Solid-state hybrid drives (SSHDs) are based on the same principle, but integrate some amount of flash memory on board of a conventional drive instead of using a separate SSD. The flash layer in these drives can be accessed independently from the magnetic storage by the host using ATA-8 commands, allowing the operating system to manage it. For example, Microsoft's ReadyDrive technology explicitly stores portions of the hibernation file in the cache of these drives when the system hibernates, making the subsequent resume faster.
+Dual-drive hybrid systems are combining the usage of separate SSD and HDD devices installed in the same computer, with overall performance optimization managed by the computer user, or by the computer's operating system software. Examples of this type of system are bcache and dm-cache on Linux, and Apple’s Fusion Drive.
+
+
+== Wear leveling ==
+
+If a particular block was programmed and erased repeatedly without writing to any other blocks, that block would wear out before all the other blocks — thereby prematurely ending the life of the SSD. For this reason, SSD controllers use a technique called wear leveling to distribute writes as evenly as possible across all the flash blocks in the SSD.
+In a perfect scenario, this would enable every block to be written to its maximum life so they all fail at the same time. Unfortunately, the process to evenly distribute writes requires data previously written and not changing (cold data) to be moved, so that data which are changing more frequently (hot data) can be written into those blocks. Each time data are relocated without being changed by the host system, this increases the write amplification and thus reduces the life of the flash memory. The key is to find an optimum algorithm which maximizes them both.
+
+
+== Data recovery and secure deletion ==
+Solid state drives have set new challenges for data recovery companies, as the way of storing data is non-linear and much more complex than that of hard disk drives. The strategy the drive operates by internally can largely vary between manufacturers, and the TRIM command zeroes the whole range of a deleted file. Wear leveling also means that the physical address of the data and the address exposed to the operating system are different.
+As for secure deletion of data, using the ATA Secure Erase command is recommended, as the drive itself knows the most effective method to truly reset its data. A program such as Parted Magic can be used for this purpose. In 2014, Asus was the first company to introduce a Secure Erase feature built into the UEFI of its Republic of Gamers series of PC motherboards.
+
+
+== File systems suitable for SSDs ==
+
+Typically the same file systems used on hard disk drives can also be used on solid state disks. It is usually expected for the file system to support the TRIM command which helps the SSD to recycle discarded data. There is no need for the file system to take care of wear leveling or other flash memory characteristics, as they are handled internally by the SSD. Some flash file systems using log-based designs (F2FS, JFFS2) help to reduce write amplification on SSDs, especially in situations where only very small amounts of data are changed, such as when updating file system metadata.
+While not a file system feature, operating systems must also align partitions correctly to avoid excessive read-modify-write cycles. A typical practice for personal computers is to have each partition aligned to start at a 1 MB mark, which covers all common SSD page and block size scenarios, as it is divisible by 1 MB, 512 KB, 128 KB, 4 KB and 512 bytes. Modern operating system installation software and disk tools handle this automatically.
+Listed below are some notable computer file systems that work well with solid-states drives.
+
+
+=== Linux systems ===
+The ext4, Btrfs, XFS, JFS and F2FS file systems include support for the discard (TRIM) function. As of November 2013, ext4 can be recommended as a safe choice. F2FS is a modern file system optimized for flash-based storage, and from a technical perspective is a very good choice, but is still in experimental stage.
+Kernel support for the TRIM operation was introduced in version 2.6.33 of the Linux kernel mainline, released on 24 February 2010. To make use of it, a filesystem must be mounted using the discard parameter. Linux swap partitions are by default performing discard operations when the underlying drive supports TRIM, with the possibility to turn them off, or to select between one-time or continuous discard operations. Support for queued TRIM, which is a SATA 3.1 feature that results in TRIM commands not disrupting the command queues, was introduced in Linux kernel 3.12, released on November 2, 2013.
+An alternative to the kernel-level TRIM operation is to use a user-space utility called fstrim that goes through all of the unused blocks in a filesystem and dispatches TRIM commands for those areas. fstrim utility is usually run by cron as a scheduled task. As of November 2013, it is used by the Ubuntu Linux distribution, in which it is enabled only for Intel and Samsung solid-state drives for reliability reasons; vendor check can be disabled by editing file /etc/cron.weekly/fstrim using instructions contained within the file itself.
+Since 2010, standard Linux disk utilities have taken care of appropriate partition alignment by default.
+
+
+==== Performance considerations ====
+
+During installation, Linux distributions usually do not configure the installed system to use TRIM and thus the /etc/fstab file requires manual modifications. This is because of the notion that the current Linux TRIM command implementation might not be optimal. It has been proven to cause a performance degradation instead of a performance increase under certain circumstances. As of January 2014, Linux sends an individual TRIM command to each sector, instead of a vectorized list defining a TRIM range as recommended by the TRIM specification. This deficiency has existed for years and there are currently no known plans to improve Linux TRIM strategy to fix the issue.
+For performance reasons, it is recommended to switch the I/O scheduler from the default CFQ (Completely Fair Queuing) to Noop or Deadline. CFQ was designed for traditional magnetic media and seek optimizations, thus many of those I/O scheduling efforts are wasted when used with SSDs. As part of their designs, SSDs are offering much bigger levels of parallelism for I/O operations, so it is preferable to leave scheduling decisions to their internal logic –  especially for high-end SSDs.
+ A scalable block layer for high-performance SSD storage, known as blk-multiqueue or blk-mq and developed primarily by Fusion-io engineers, was merged into the Linux kernel mainline in kernel version 3.13, released on 19 January 2014. This leverages the performance offered by SSDs and NVM Express, by allowing much higher I/O submission rates. With this new design of the Linux kernel block layer, internal queues are split into two levels (per-CPU and hardware-submission queues), thus removing bottlenecks and allowing much higher levels of I/O parallelization. As of version 4.0 of the Linux kernel, released on 12 April 2015, VirtIO block driver, the SCSI layer (which is used by Serial ATA drivers), device mapper framework, loop device driver, unsorted block images (UBI) driver (which implements erase block management layer for flash memory devices) and RBD driver (which exports Ceph RADOS objects as block devices) have been modified to actually use this new interface; other drivers will be ported in the following releases.
+
+
+=== OS X ===
+OS X versions since 10.6.8 (Snow Leopard) support TRIM but only when used with an Apple-purchased SSD. TRIM is not automatically enabled for third-party drives, although it can be enabled by using third-party utilities such as Trim Enabler. The status of TRIM can be checked in the System Information application or in the system_profiler command-line tool.
+OS X version 10.11 (El Capitan) and 10.10.4 (Yosemite) include sudo trimforce enable as a Terminal command that enables TRIM on non-Apple SSDs.
+There is also a technique to enable TRIM in earlier versions of OS X than 10.6.8, though it remains uncertain whether TRIM is actually utilized properly in those cases.
+
+
+=== Microsoft Windows ===
+Versions of Microsoft Windows prior to 7 do not take any special measures to support solid state drives. Starting from Windows 7, the standard NTFS file system provides TRIM support (other file systems do not support TRIM).
+By default, Windows 7 and newer versions execute TRIM commands automatically if the device is detected to be a solid-state drive. To change this behavior, in the registry key HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem the value DisableDeleteNotification can be set to 1 to prevent the mass storage driver from issuing the TRIM command. This can be useful in situations where data recovery is preferred over wear leveling (in most cases, TRIM irreversibly resets all freed space).
+Windows implements TRIM command for more than just file delete operations. The TRIM operation is fully integrated with partition- and volume-level commands like format and delete, with file system commands relating to truncate and compression, and with the System Restore (also known as Volume Snapshot) feature.
+
+
+==== Windows 7 and later ====
+Windows 7 and later versions have native support for SSDs. The operating system detects the presence of an SSD and optimizes operation accordingly. For SSD devices Windows disables SuperFetch and ReadyBoost, boot-time and application prefetching operations. Despite the initial statement by Steven Sinofsky prior to the release of Windows 7, however, defragmentation is not disabled, even though its behavior on SSDs defers. One reason is the low performance of Volume Shadow Copy Service on fragmented SSDs. The second reason is to avoid reaching the practical maximum number of file fragments that a volume can handle. If this maximum is reached, subsequent attempts to write to the disk will fail with an error message.
+Windows 7 also includes support for the TRIM command to reduce garbage collection for data which the operating system has already determined is no longer valid. Without support for TRIM, the SSD would be unaware of this data being invalid and would unnecessarily continue to rewrite it during garbage collection causing further wear on the SSD. On certain systems, it may be beneficial to make some changes that prevent SSDs from being treated more like HDDs.
+
+
+==== Windows Vista ====
+Windows Vista generally expects hard disk drives rather than SSDs. Windows Vista includes ReadyBoost to exploit characteristics of USB-connected flash devices, but for SSDs it only improves the default partition alignment to prevent read-modify-write operations that reduce the speed of SSDs. Most SSDs are typically split into 4 kB sectors, while most systems are based on 512 byte sectors with their default partition setups unaligned to the 4 KB boundaries. The proper alignment does not help the SSD's endurance over the life of the drive; however, some Vista operations, if not disabled, can shorten the life of the SSD.
+Disk defragmentation should be disabled because the location of the file components on an SSD doesn't significantly impact its performance, but moving the files to make them contiguous using the Windows Defrag routine will cause unnecessary write wear on the limited number of P/E cycles on the SSD. The Superfetch feature will not materially improve the performance of the system and causes additional overhead in the system and SSD, although it does not cause wear. There is no official information to confirm whether Windows Vista sends TRIM commands to a solid state drive.
+
+
+=== ZFS ===
+Solaris as of version 10 Update 6 (released in October 2008), and recent versions of OpenSolaris, Solaris Express Community Edition, Illumos, Linux with ZFS on Linux and FreeBSD all can use SSDs as a performance booster for ZFS. A low-latency SSD can be used for the ZFS Intent Log (ZIL), where it is named the SLOG. This is used every time a synchronous write to the disk occurs. An SSD (not necessarily with a low-latency) may also be used for the level 2 Adaptive Replacement Cache (L2ARC), which is used to cache data for reading. When used either alone or in combination, large increases in performance are generally seen.
+
+
+=== FreeBSD ===
+ZFS for FreeBSD introduced support for TRIM on September 23, 2012. The code builds a map of regions of data that were freed; on every write the code consults the map and eventually removes ranges that were freed before, but are now overwritten. There is a low-priority thread that TRIMs ranges when the time comes.
+Also the Unix File System (UFS) supports the TRIM command.
+
+
+=== Swap partitions ===
+According to Microsoft's former Windows division president Steven Sinofsky, "there are few files better than the pagefile to place on an SSD". According to collected telemetry data, Microsoft had found the pagefile.sys to be an ideal match for SSD storage.
+Linux swap partitions are by default performing TRIM operations when the underlying block device supports TRIM, with the possibility to turn them off, or to select between one-time or continuous TRIM operations.
+If an operating system does not support using TRIM on discrete swap partitions, it might be possible to use swap files inside an ordinary file system instead. For example, OS X does not support swap partitions; it only swaps to files within a file system, so it can use TRIM when, for example, swap files are deleted.
+DragonFly BSD allows SSD-configured swap to also be used as file system cache. This can be used to boost performance on both desktop and server workloads. The bcache, dm-cache and Flashcache projects provide a similar concept for the Linux kernel.
+
+
+== Standardization organizations ==
+The following are noted standardization organizations and bodies that work to create standards for solid-state drives (and other computer storage devices). The table below also includes organizations which promote the use of solid-state drives. This is not necessarily an exhaustive list.
+
+
+== Commercialization ==
+
+
+=== Availability ===
+Solid-state drive technology has been marketed to the military and niche industrial markets since the mid-1990s.
+Along with the emerging enterprise market, SSDs have been appearing in ultra-mobile PCs and a few lightweight laptop systems, adding significantly to the price of the laptop, depending on the capacity, form factor and transfer speeds. For low-end applications, a USB flash drive may be obtainable for anywhere from $10 to $100 or so, depending on capacity and speed; alternatively, a CompactFlash card may be paired with a CF-to-IDE or CF-to-SATA converter at a similar cost. Either of these requires that write-cycle endurance issues be managed, either by refraining from storing frequently written files on the drive or by using a flash file system. Standard CompactFlash cards usually have write speeds of 7 to 15 MB/s while the more expensive upmarket cards claim speeds of up to 60 MB/s.
+One of the first mainstream releases of SSD was the XO Laptop, built as part of the One Laptop Per Child project. Mass production of these computers, built for children in developing countries, began in December 2007. These machines use 1,024 MiB SLC NAND flash as primary storage which is considered more suitable for the harsher than normal conditions in which they are expected to be used. Dell began shipping ultra-portable laptops with SanDisk SSDs on April 26, 2007. Asus released the Eee PC subnotebook on October 16, 2007, with 2, 4 or 8 gigabytes of flash memory. On January 31, 2008, Apple released the MacBook Air, a thin laptop with an optional 64 GB SSD. The Apple Store cost was $999 more for this option, as compared with that of an 80 GB 4200 RPM hard disk drive. Another option, the Lenovo ThinkPad X300 with a 64 gigabyte SSD, was announced by Lenovo in February 2008. On August 26, 2008, Lenovo released ThinkPad X301 with 128 GB SSD option which adds approximately $200 US.
+
+In 2008, low-end netbooks appeared with SSDs. In 2009, SSDs began to appear in laptops.
+On January 14, 2008, EMC Corporation (EMC) became the first enterprise storage vendor to ship flash-based SSDs into its product portfolio when it announced it had selected STEC, Inc.'s Zeus-IOPS SSDs for its Symmetrix DMX systems. In 2008, Sun released the Sun Storage 7000 Unified Storage Systems (codenamed Amber Road), which use both solid state drives and conventional hard drives to take advantage of the speed offered by SSDs and the economy and capacity offered by conventional hard disks.
+Dell began to offer optional 256 GB solid state drives on select notebook models in January 2009. In May 2009, Toshiba launched a laptop with a 512 GB SSD.
+Since October 2010, Apple's MacBook Air line has used a solid state drive as standard. In December 2010, OCZ RevoDrive X2 PCIe SSD was available in 100 GB to 960 GB capacities delivering speeds over 740 MB/s sequential speeds and random small file writes up to 120,000 IOPS. In November 2010, Fusion-io released its highest performing SSD drive named ioDrive Octal utilising PCI-Express x16 Gen 2.0 interface with storage space of 5.12 TB, read speed of 6.0 GB/s, write speed of 4.4 GB/s and a low latency of 30 microseconds. It has 1.19 M Read 512 byte IOPS and 1.18 M Write 512 byte IOPS.
+In 2011, computers based on Intel's Ultrabook specifications became available. These specifications dictate that Ultrabooks use an SSD. These are consumer-level devices (unlike many previous flash offerings aimed at enterprise users), and represent the first widely available consumer computers using SSDs aside from the MacBook Air. At CES 2012, OCZ Technology demonstrated the R4 CloudServ PCIe SSDs capable of reaching transfer speeds of 6.5 GB/s and 1.4 million IOPS. Also announced was the Z-Drive R5 which is available in capacities up to 12 TB, capable of reaching transfer speeds of 7.2 GB/s and 2.52 million IOPS using the PCI Express x16 Gen 3.0.
+In December 2013, Samsung introduced and launched the industry's first 1 TB mSATA SSD. In August 2015, Samsung announced a 16 TB SSD, at the time the world's highest-capacity single storage device of any type.
+
+
+=== Quality and performance ===
+
+In general, performance of any particular device can vary significantly in different operating conditions. For example, the number of parallel threads accessing the storage device, the I/O block size, and the amount of free space remaining can all dramatically change the performance (i.e. transfer rates) of the device.
+SSD technology has been developing rapidly. Most of the performance measurements used on disk drives with rotating media are also used on SSDs. Performance of flash-based SSDs is difficult to benchmark because of the wide range of possible conditions. In a test performed in 2010 by Xssist, using IOmeter, 4 kB random 70% read/30% write, queue depth 4, the IOPS delivered by the Intel X25-E 64 GB G1 started around 10,000 IOPs, and dropped sharply after 8 minutes to 4,000 IOPS, and continued to decrease gradually for the next 42 minutes. IOPS vary between 3,000 to 4,000 from around 50 minutes onwards for the rest of the 8+ hour test run.
+Write amplification is the major reason for the change in performance of an SSD over time. Designers of enterprise-grade drives try to avoid this performance variation by increasing over-provisioning, and by employing wear-leveling algorithms that move data only when the drives are not heavily utilized.
+
+
+=== Sales ===
+SSD shipments were 11 million units in 2009, 17.3 million units in 2011 for a total of US$5 billion, 39 million units in 2012, and are expected to rise to 83 million units in 2013 to 201.4 million units in 2016 and to 227 million units in 2017.
+Revenues for the SSD market (including low-cost PC solutions) worldwide totalled $585 million in 2008, rising over 100% from $259 million in 2007.
+
+
+== See also ==
+
+List of solid-state drive manufacturers
+RAID
+
+
+== References ==
+
+
+== Further reading ==
+"Solid-state revolution: in-depth on how SSDs really work". Lee Hutchinson. Ars Technica. June 4, 2012.
+Mai Zheng, Joseph Tucek, Feng Qin, Mark Lillibridge, "Understanding the Robustness of SSDs under Power Fault", FAST'13
+Cheng Li, Philip Shilane, Fred Douglis, Hyong Shim, Stephen Smaldone, Grant Wallace, "Nitro: A Capacity-Optimized SSD Cache for Primary Storage", USENIX ATC'14
+Cheng Li, Philip Shilane, Fred Douglis, Grant Wallace, "Pannier: A Container-based Flash Cache for Compound Objects", ACM/IFIP/USENIX Middleware'15
+
+
+== External links ==
+Background and general
+StorageReview.com SSD Guide
+A guide to understanding Solid State Drives
+SSDs versus laptop HDDs and upgrade experiences
+Understanding SSDs and New Drives from OCZ
+Charting the 30 Year Rise of the Solid State Disk Market
+Investigation: Is Your SSD More Reliable Than A Hard Drive? - long term SSD reliability review
+SSD return rates review by manufacturer (2012), hardware.fr - French (English) a 2012 update of a 2010 report based on data from a leading French tech retailer
+Enterprise SSD Form Factor Version 1.0a, SSD Form Factor Work Group, December 12, 2012
+Other
+Ted Tso - Aligning filesystems to an SSD's erase block size
+JEDEC Continues SSD Standardization Efforts
+Linux & NVM: File and Storage System Challenges (PDF)
+Linux and SSD Optimization
+Understanding the Robustness of SSDs under Power Fault (USENIX 2013, by Mai Zheng, Joseph Tucek, Feng Qin and Mark Lillibridge)
+SSD vs. HDD
+Embedded USB (eUSB) SSD

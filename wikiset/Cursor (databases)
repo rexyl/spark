@@ -1,0 +1,129 @@
+In computer science, a database cursor is a control structure that enables traversal over the records in a database. Cursors facilitate subsequent processing in conjunction with the traversal, such as retrieval, addition and removal of database records. The database cursor characteristic of traversal makes cursors akin to the programming language concept of iterator.
+Cursors are used by database programmers to process individual rows returned by database system queries. Cursors enable manipulation of whole result sets at once. In this scenario, a cursor enables the rows in a result set to be processed sequentially.
+In SQL procedures, a cursor makes it possible to define a result set (a set of data rows) and perform complex logic on a row by row basis. By using the same mechanics, an SQL procedure can also define a result set and return it directly to the caller of the SQL procedure or to a client application.
+A cursor can be viewed as a pointer to one row in a set of rows. The cursor can only reference one row at a time, but can move to other rows of the result set as needed.
+
+
+== Usage ==
+To use cursors in SQL procedures, you need to do the following:
+Declare a cursor that defines a result set.
+Open the cursor to establish the result set.
+Fetch the data into local variables as needed from the cursor, one row at a time.
+Close the cursor when done.
+To work with cursors you must use the following SQL statements
+This section introduces the ways the SQL:2003 standard defines how to use cursors in applications in embedded SQL. Not all application bindings for relational database systems adhere to that standard, and some (such as CLI or JDBC) use a different interface.
+A programmer makes a cursor known to the DBMS by using a DECLARE ... CURSOR statement and assigning the cursor a (compulsory) name:
+
+ DECLARE cursor_name CURSOR IS SELECT ... FROM ...
+
+Before code can access the data, it must open the cursor with the OPEN statement. Directly following a successful opening, the cursor is positioned before the first row in the result set.
+
+ OPEN cursor_name
+
+Programs position cursors on a specific row in the result set with the FETCH statement. A fetch operation transfers the data of the row into the application.
+
+ FETCH cursor_name INTO ...
+
+Once an application has processed all available rows or the fetch operation is to be positioned on a non-existing row (compare scrollable cursors below), the DBMS returns a SQLSTATE '02000' (usually accompanied by an SQLCODE +100) to indicate the end of the result set.
+The final step involves closing the cursor using the CLOSE statement:
+
+ CLOSE cursor_name
+
+After closing a cursor, a program can open it again, which implies that the DBMS re-evaluates the same query or a different query and builds a new result set.
+
+
+== Scrollable cursors ==
+Programmers may declare cursors as scrollable or not scrollable. The scrollability indicates the direction in which a cursor can move.
+With a non-scrollable (or forward-only) cursor, you can FETCH each row at most once, and the cursor automatically moves to the next row. After you fetch the last row, if you fetch again, you will put the cursor after the last row and get the following code: SQLSTATE 02000 (SQLCODE +100).
+A program may position a scrollable cursor anywhere in the result set using the FETCH SQL statement. The keyword SCROLL must be specified when declaring the cursor. The default is NO SCROLL, although different language bindings like JDBC may apply a different default.
+
+ DECLARE cursor_name sensitivity SCROLL CURSOR FOR SELECT ... FROM ...
+
+The target position for a scrollable cursor can be specified relatively (from the current cursor position) or absolutely (from the beginning of the result set).
+
+ FETCH [ NEXT | PRIOR | FIRST | LAST ] FROM cursor_name
+
+ FETCH ABSOLUTE n FROM cursor_name
+
+ FETCH RELATIVE n FROM cursor_name;
+
+Scrollable cursors can potentially access the same row in the result set multiple times. Thus, data modifications (insert, update, delete operations) from other transactions could have an impact on the result set. A cursor can be SENSITIVE or INSENSITIVE to such data modifications. A sensitive cursor picks up data modifications impacting the result set of the cursor, and an insensitive cursor does not. Additionally, a cursor may be INSENSITIVE, in which case the DBMS tries to apply sensitivity as much as possible.
+
+
+== "WITH HOLD" ==
+Cursors are usually closed automatically at the end of a transaction, i.e. when a COMMIT or ROLLBACK (or an implicit termination of the transaction) occurs. That behavior can be changed if the cursor is declared using the WITH HOLD clause. (The default is WITHOUT HOLD.) A holdable cursor is kept open over COMMIT and closed upon ROLLBACK. (Some DBMS deviate from this standard behavior and also keep holdable cursors open over ROLLBACK.)
+
+ DECLARE  cursor_name CURSOR  WITH HOLD  FOR SELECT .... FROM ....
+
+When a COMMIT occurs, a holdable cursor is positioned before the next row. Thus, a positioned UPDATE or positioned DELETE statement will only succeed after a FETCH operation occurred first in the transaction.
+Note that JDBC defines cursors as holdable per default. This is done because JDBC also activates auto-commit per default. Due to the usual overhead associated with auto-commit and holdable cursors, both features should be explicitly deactivated at the connection level.
+
+
+== Positioned update/delete statements ==
+Cursors can not only be used to fetch data from the DBMS into an application but also to identify a row in a table to be updated or deleted. The SQL:2003 standard defines positioned update and positioned delete SQL statements for that purpose. Such statements do not use a regular WHERE clause with predicates. Instead, a cursor identifies the row. The cursor must be opened and already positioned on a row by means of FETCH statement.
+
+ UPDATE table_name
+ SET    ...
+ WHERE  CURRENT OF cursor_name
+
+ DELETE
+ FROM   table_name
+ WHERE  CURRENT OF cursor_name
+
+The cursor must operate on an updatable result set in order to successfully execute a positioned update or delete statement. Otherwise, the DBMS would not know how to apply the data changes to the underlying tables referred to in the cursor.
+
+
+== Cursors in distributed transactions ==
+Using cursors in distributed transactions (X/Open XA Environments), which are controlled using a transaction monitor, is no different from cursors in non-distributed transactions.
+One has to pay attention when using holdable cursors, however. Connections can be used by different applications. Thus, once a transaction has been ended and committed, a subsequent transaction (running in a different application) could inherit existing holdable cursors. Therefore, an application developer has to be aware of that situation.
+
+
+== Cursors in XQuery ==
+The XQuery language allows cursors to be created using the subsequence() function.
+The format is:
+
+Where $result is the result of the initial XQuery, $start is the item number to start and $item-count is the number of items to return.
+Equivalently this can also be done using a predicate:
+
+Where $end is the end sequence.
+For complete examples see the XQuery Wikibook.
+
+
+== Disadvantages of cursors ==
+The following information may vary depending on the specific database system.
+Fetching a row from the cursor may result in a network round trip each time. This uses much more network bandwidth than would ordinarily be needed for the execution of a single SQL statement like DELETE. Repeated network round trips can severely impact the speed of the operation using the cursor. Some DBMSs try to reduce this impact by using block fetch. Block fetch implies that multiple rows are sent together from the server to the client. The client stores a whole block of rows in a local buffer and retrieves the rows from there until that buffer is exhausted.
+Cursors allocate resources on the server, such as locks, packages, processes, and temporary storage. For example, Microsoft SQL Server implements cursors by creating a temporary table and populating it with the query's result set. If a cursor is not properly closed (deallocated), the resources will not be freed until the SQL session (connection) itself is closed. This wasting of resources on the server can lead to performance degradations and failures.
+
+
+== Example ==
+EMPLOYEES TABLE
+
+
+== See also ==
+Iterator
+SQL problems requiring cursors
+
+
+== References ==
+Christopher J. Date: Database in Depth, O'Reilly & Associates, ISBN 0-596-10012-4
+Thomas M. Connolly, Carolyn E. Begg: Database Systems, Addison-Wesley, ISBN 0-321-21025-5
+Ramiz Elmasri, Shamkant B. Navathe: Fundamentals of Database Systems, Addison-Wesley, ISBN 0-201-54263-3
+Neil Matthew, Richard Stones: Beginning Databases with PostgreSQL: From Novice to Professional, Apress, ISBN 1-59059-478-9
+Thomas Kyte: Expert One-On-One: Oracle, Apress, ISBN 1-59059-525-4
+Kevin Loney: Oracle Database 10g: The Complete Reference, Oracle Press, ISBN 0-07-225351-7
+
+
+== External links ==
+Cursor Optimization Tips (for MS SQL Server)
+Descriptions from Portland Pattern Repository
+PostgreSQL Documentation
+Berkeley DB Reference Guide: Cursor operations
+Java SE 8
+Q3SqlCursor Class Reference
+OCI Scrollable Cursor
+function oci_new_cursor
+MySQL's Cursor Documentation
+FirebirdSQL cursors documentation
+Cursors in DB2 CLI applications; Cursors in DB2 SQL stored procedures
+A Simple Example of a MySQL Stored Procedure that uses a cursor
+MariaDB/MySQL Cursors: a brief Tutorial

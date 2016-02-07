@@ -1,0 +1,120 @@
+MIKE2.0 (Method for an Integrated Knowledge Environment) is an open source delivery methodology for Enterprise information management. MIKE2.0 was released to the public in December, 2006, by BearingPoint, a management and technology consulting company, under the Creative Commons Attribution License. The project is now run by the MIKE2.0 Governance Association , a non-profit organisation based in Switzerland, with BearingPoint and Deloitte as the founding members. In March 2013 the book "Information Development Using MIKE2.0"  was published as a companion guide to the online community.
+The methodology provides a comprehensive framework for Information Management, including:
+Information governance
+Data quality improvement
+Data integration
+Data migration
+Data warehousing
+Master data management
+Data-driven IT transformation
+Enterprise search
+Enterprise 2.0
+In summary, MIKE2.0 is a framework for information management best practices – linked into common business issues and technology-specific solutions. Its scope covers the complete information supply chain within an organisation: from how it is created, accessed, presented and used in decision-making to how it is kept secure, stored and destroyed.
+
+
+== Key concepts of MIKE2.0 ==
+A few concepts introduced in MIKE2.0 are important to explaining the purpose of the framework and how it can be applied.
+
+
+=== Information development ===
+While initially focused around structured data, the goal of MIKE2.0 is to provide a comprehensive methodology for any type of information development. Information development is about:
+Driving an overall approach through an organization's information strategy
+Enabling people with the right skills to build and manage new information systems while creating a culture of information excellence
+Moving to a new organisational model that delivers an improved information management competency
+Improving processes around information compliance, policies, practices and measurement
+Delivering contemporary technology solutions that meet the needs of highly federated organizations
+The MIKE2.0 approach is based on the premise that traditional software delivery has under-focused on the information management. The goal of MIKE2.0 is to create a new competency, specifically for managing information , 
+
+
+=== Integrated content repository ===
+
+MIKE2.0 introduces the concept of an Integrated Content Repository for building information management solutions .
+This repository is a federated hub of shared assets from the internet, the MIKE2.0 open standard and content held internally within an organization. Using this concept, organizations can create mashups to the MIKE2.0 standard and the best information management assets on the web. Although they are not required to share any of their assets with the open source community, they are encouraged to contribute. This approach is generally referred to as Governance 2.0 as part of the solution.
+The content repository architecture is based on using wiki-pages created in MIKE2.0, assets that are linked from other sites using a social bookmarking tools and common tagging and extensions that allows users to create mashups into their organization.
+
+
+=== Open methodology framework ===
+MIKE2.0 claims to be the world’s first open and collaborative methodology . It proposes to be an approach which sits between a completely open Wikipedia-style model and a more rigorous development approach seen with software development. The collaborative technology, the structure of the content model and a number of content governance articles are used to enable this concept. The methodology states that this model is likely to evolve over time .
+
+
+== Content model for MIKE2.0 ==
+
+MIKE2.0 is made up of a number of building blocks. Solution Capabilities provide the common information management competency for MIKE2.0; Solution Offerings utilize the underlying capabilities and bring them together in a composite form to solve typical projects or major business issues. As MIKE2.0 is often applied for specific projects, Solution Offerings may be thought of the starting point, although most of the content within MIKE2.0 are actually within Solution Capabilities.
+
+
+=== Solution offerings ===
+Solutions relate to business and technology problems related to information management. Solution offerings tend to focus on a certain type of problem as opposed to being generalized for information management like the overall implementation guide. Solution offerings are mapped to activities in the overall implementation guide.
+There are multiple types of solutions that make up the MIKE2.0 Methodology:
+Core solution offerings are logical best practices used to common problems in information management.
+Business solution offerings are applied to common business problems for which information management practices are a key success factor.
+product solution offerings provide integrated approaches to solving issues from a technology-specific perspective.
+The SAFE Architecture and information governance solution offering are foundational aspects of mike2.0 that are also solution offerings.
+
+
+=== SAFE Architecture ===
+
+The approach of the MIKE2 Methodology is to drive implementation of information management projects through a conceptual architecture framework known as SAFE (Strategic Architecture for the Federated Enterprise). SAFE goes across applications, data, and infrastructure and is designed to accommodate the inherent complexities of a highly federated organisation. Using a Conceptual Architecture helps align projects to a target vision for the future and to take the complexity out of the myriad of vendor choices around integration and information management.
+
+
+=== Information governance ===
+Information governance is a solution offering for MIKE2.0 and also a foundation of the overall approach. As the goal of MIKE2.0 is to provide a common competency for information management, the governance as aspects of the approach are particularly important. The governance model provides assessment tools, information standards, organizational structures and roles and responsibilities in relation to managing information assets. The Governance 2.0 approach introduced in MIKE2.0 is the enhancement of this approach with Enterprise 2.0 techniques and technologies.
+
+
+=== Solution capabilities ===
+Solution capabilities are the assets that bring together the MIKE2.0 methodology by proving the foundation of activities, reusable assets and common architecture and governance models.
+
+
+==== Overall task list ====
+Overview and Key Concepts frame the overall approach as well as the rationale for why MIKE2.0 was created.
+The overall task list is a project management and project implementation methodology consisting of 5 Phases, activities for each phase, tasks for each activity and inputs/outputs for each task. These are:
+
+Phase 1 – Business Assessment and Strategy Definition Blueprint
+Phase 2 – Technology Assessment and Selection Blueprint
+Phase 3 – Information Management Roadmap and Foundation Activities
+Phase 4 – Design Increment
+Phase 5 – Incremental Development, Testing, Deployment and Improvement
+
+The task list is underpinned by the information development approach and tightly integrated with SAFE Architecture.
+Usage Models show how the different tasks are applied for different solutions. Usage models use an indicator approach to show the relevance of an activity.
+
+
+==== Supporting assets ====
+Supporting assets complement the overall methodology with:
+Tools and technique papers (such as Information Maturity Quickscan)
+Deliverable templates
+Capability statements
+Software assets
+Other tools and guides
+Supporting Assets are typically the lowest-level assets of the overall approach.
+
+
+== Collaboration environment ==
+
+The MIKE2.0 collaboration environment is provided through omCollab, an open source collaboration product that provides the following capabilities:
+A Wiki to collaboratively create and share content (based on the same MediaWiki software that powers Wikipedia)
+Blogs to publish individual or group-based information (based on WordPress)
+Social Bookmarking for storing, sharing and discovering web bookmarks
+Social Networking for the MIKE2.0 community to store basic profile information and to interact with one another.
+Tag (metadata) and categories are used to classify articles, blogs and bookmarks into a common taxonomy. MIKE2.0 brings these two concepts together in the bookmarking component.
+Techniques and technologies to mashup to MIKE2.0, to build integrated solutions based on open content and internally held assets
+Search for users to discover content across federated repositories. MIKE2.0 uses Google Custom Search.
+A rich user interface with advanced navigational components an integrated skin and single sign on to provide common look and feel across the platform
+An Open Methodology Compliance (OMC) capability to link an organisation into the MIKE2.0 open standard
+The MIKE2.0 Methodology uses a foundation of open source technologies with a number of extensions and customizations. The overall product is referred to as "omCollab" and is released in its entirety to the open source community as part of the project.
+
+
+== Impact on the information management community ==
+Since its release to the open source community, MIKE2.0 has been referenced a number of times as a case study on Web 2.0 communities   , including a recently released book Groundswell. The content has also been taught through a number of online webinars and as a part of a Melbourne University lecture series on data warehousing , of which some of the training materials are available on the MIKE2.0 site. AIIM have based their Enterprise 2.0 specialist certification program around the MIKE2.0 Solution Offering and use the overall approach as a training case study. ,
+
+
+== Criticisms of the approach ==
+
+
+== References ==
+
+
+== External links ==
+MIKE2.0 Homepage
+MIKE2.0 within the MDM-CDI Ecoystem, initially published by Zornes, DM Review
+Taking Data Quality to the Enterprise through Data Governance, presentation at the 2007 Database Grand Conference in Korea on Data Quality Management that presents MIKE2.0 and other Data Quality Methodologies
+Overview from Initiate Systems on Master Data Management, includes an overview on MIKE2.0 as the methodology for implementation

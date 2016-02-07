@@ -1,0 +1,12 @@
+Relational calculus consists of two calculi, the tuple relational calculus and the domain relational calculus, that are part of the relational model for databases and provide a declarative way to specify database queries. This in contrast to the relational algebra which is also part of the relational model but provides a more procedural way for specifying queries.
+The relational algebra might suggest these steps to retrieve the phone numbers and names of book stores that supply Some Sample Book:
+Join book stores and titles over the BookstoreID.
+Restrict the result of that join to tuples for the book Some Sample Book.
+Project the result of that restriction over StoreName and StorePhone.
+The relational calculus would formulate a descriptive, declarative way:
+Get StoreName and StorePhone for supplies such that there exists a title BK with the same BookstoreID value and with a BookTitle value of Some Sample Book.
+The relational algebra and the relational calculus are essentially logically equivalent: for any algebraic expression, there is an equivalent expression in the calculus, and vice versa. This result is known as Codd's theorem.
+
+
+== References ==
+Date, Christopher J. (2004). An Introduction to Database Systems (8th ed.). Addison Wesley. ISBN 0-321-19784-4.

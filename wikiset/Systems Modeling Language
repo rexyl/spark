@@ -1,0 +1,73 @@
+The Systems Modeling Language (SysML) is a general-purpose modeling language for systems engineering applications. It supports the specification, analysis, design, verification and validation of a broad range of systems and systems-of-systems.
+SysML was originally developed by an open source specification project, and includes an open source license for distribution and use. SysML is defined as an extension of a subset of the Unified Modeling Language (UML) using UML's profile mechanism.
+
+
+== Overview ==
+SysML offers systems engineers several noteworthy improvements over UML, which tends to be software-centric. These improvements include the following:
+SysML's semantics are more flexible and expressive. SysML reduces UML's software-centric restrictions and adds two new diagram types, requirement and parametric diagrams. The former can be used for requirements engineering; the latter can be used for performance analysis and quantitative analysis. Consequent to these enhancements, SysML is able to model a wide range of systems, which may include hardware, software, information, processes, personnel, and facilities.
+SysML is a comparatively little language that is easier to learn and apply. Since SysML removes many of UML's software-centric constructs, the overall language measures smaller both in diagram types and total constructs.
+SysML allocation tables support common kinds of allocations. Whereas UML provides only limited support for tabular notations, SysML furnishes flexible allocation tables that support requirements allocation, functional allocation, and structural allocation. This capability facilitates automated verification and validation (V&V) and gap analysis.
+SysML model management constructs support models, views, and viewpoints. These constructs extend UML's capabilities and are architecturally aligned with IEEE-Std-1471-2000 (IEEE Recommended Practice for Architectural Description of Software Intensive Systems).
+SysML reuses seven of UML 2's fourteen diagrams, and adds two diagrams (requirement and parametric diagrams) for a total of nine diagram types. SysML also supports allocation tables, a tabular format that can be dynamically derived from SysML allocation relationships. A table which compares SysML and UML 2 diagrams is available in the SysML FAQ.
+The advantages of SysML over UML for systems engineering become obvious if you consider a concrete example, like modeling an automotive system. With SysML you can use Requirement diagrams to efficiently capture functional, performance, and interface requirements, whereas with UML you are subject to the limitations of Use Case Diagram to define high-level functional requirements. Likewise, with SysML you can use Parametric diagrams to precisely define performance and quantitative constraints like maximum acceleration, minimum curb weight, and total air conditioning capacity. UML provides no straightforward mechanism to capture this sort of essential performance and quantitative information.
+Concerning the rest of the automotive system, enhanced activity diagrams and state machine diagrams can be used to specify the embedded software control logic and information flows for the on-board automotive computers. Other SysML structural and behavioral diagrams can be used to model factories that build the automobiles, as well as the interfaces between the organizations that work in the factories.
+
+
+== History ==
+The SysML initiative originated in a January 2001 decision by the International Council on Systems Engineering (INCOSE) Model Driven Systems Design workgroup to customize the UML for systems engineering applications. Following this decision, INCOSE and the Object Management Group (OMG), which maintains the UML specification, jointly chartered the OMG Systems Engineering Domain Special Interest Group (SE DSIG) in July 2001. The SE DSIG, with support from INCOSE and the ISO AP 233 workgroup, developed the requirements for the modeling language, which were subsequently issued by the OMG parting in the UML for Systems Engineering Request for Proposal (UML for SE RFP; OMG document ad/03-03-41) in March 2003.
+In 2003 Cris Kobryn and Sanford Friedenthal organized and co-chaired the SysML Partners, an informal association of industry leaders and tool vendors, which initiated an open source specification project to develop the SysML in response to the UML for Systems Engineering RFP. The original technical contributors and co-authors of the SysML 1.0a specification were Laurent Balmelli, Conrad Bock, Rick Steiner, Alan Moore and Roger Burkhart. The SysML Partners distributed their first open source SysML specification drafts in 2004, and submitted SysML 1.0a to the OMG for technology adoption in November 2005.
+
+
+=== OMG SysML ===
+After a series of competing SysML specification proposals, a SysML Merge Team was proposed to the OMG in April 2006. This proposal was voted upon and adopted by the OMG in July 2006 as OMG SysML, to differentiate it from the original open source specification from which it was derived. Because OMG SysML is derived from open source SysML, it also includes an open source license for distribution and use.
+The OMG SysML v. 1.0 specification was issued by the OMG as an Available Specification in September 2007. The current version of OMG SysML is v1.4, which was issued by the OMG in September 2015.
+
+
+== Limitations and Criticisms ==
+
+SysML is intended to be a conventional language for conducting Model Based System Engineering but it has some important limitations that reduce its efficiency and limit its widespread acceptance. This limited usage is, in itself, a limitation as the SysML language can be considered a hermetic language that non-initiated find difficult to exploit.
+SysML is incomplete. In SysML, there is no provision for several diagrams and graphically-oriented tools that are commonly used in system engineering. Some of these diagrams can be built, for example, by extending the intended use of block definition diagrams but the results are not always adequate and often not in concordance with the rules of the SysML language. Missing elements include functional block diagram, N2 chart , House of Quality, Ishikawa diagram (fishbone), parameter diagram and others.
+The diagrams generated by SysML are complicated and very difficult to understand by people that do not know the language. Some elements are even counter-intuitive and may lead to confusion and errors. This is often aggravated by the fact that SysML users often believe they are using a widespread convention and fail to include explanatory notes and legends in their diagrams to ease their interpretation. As system-engineering diagrams are primarily intended for other members of an imbedded team and people outside the team that, more often than not, are not system engineers and less likely to know SysML, this is a major limitation.
+Diagrams that respect the rules of SySML are often cluttered by useless or redundant pieces of information that impair their interpretation.
+
+
+== Tools ==
+There are several modeling tool vendors already offering SysML support, or are in the process of updating their tools to comply with the OMG SysML specification. Lists of tool vendors who support, or have announced support of, SysML or OMG SysML can be found on the SysML Forum or SysML websites, respectively.
+
+
+=== Model Exchange ===
+As an OMG UML 2.0 profile, SysML models are designed to be exchanged using the XML Metadata Interchange (XMI) standard. In addition, architectural alignment work is underway to support the ISO 10303 (also known as STEP, the Standard for the Exchange of Product model data) AP-233 standard for exchanging and sharing information between systems engineering software applications and tools.
+
+
+== List of SysML Tools ==
+There are various SysML modeling tools.  The following software can be used with SysML:
+
+
+== See also ==
+SysML Quick Reference Guide
+SoaML
+Energy Systems Language
+Universal Systems Language
+
+
+== Further reading ==
+Balmelli, Laurent (2007). An Overview of the Systems Modeling Language for Products and Systems Development (PDF). Journal of Object Technology, vol. 6, no. 6, July–August 2007, pp. 149-177. 
+Delligatti, Lenny (2013). SysML Distilled: A Brief Guide to the Systems Modeling Language. Addison-Wesley Professional. ISBN 978-0-321-92786-6. 
+Holt, Jon (2008). SysML for Systems Engineering. The Institution of Engineering and Technology. ISBN 978-0-86341-825-9. 
+Weilkiens, Tim (2008). Systems Engineering with SysML/UML: Modeling, Analysis, Design. Morgan Kaufmann / The OMG Press. ISBN 0-12-374274-9. 
+Friedenthal, Sanford (2008). A Practical Guide to SysML: The Systems Modeling Language. Morgan Kaufmann / The OMG Press. ISBN 978-0-12-378607-4. 
+
+
+== References and notes ==
+Notes
+
+Citations
+
+
+== External links ==
+Introduction to Systems Modeling Language (SysML), Part 1 and Part 2. YouTube.
+SysML Open Source Specification Project Provides information related to SysML open source specifications, FAQ, mailing lists, and open source licenses.
+OMG SysML Website Furnishes information related to the OMG SysML specification, SysML tutorial, papers, and tool vendor information.
+Article "EE Times article on SysML (May 8, 2006)"
+SE^2 MBSE Challenge team: "Telescope Modeling"
+Paper "System Modelling Language explained" (PDF format)

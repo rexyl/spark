@@ -1,0 +1,23 @@
+A statistic is biased if it is calculated in such a way that it is only systematically different from the population parameter of interest. The following lists some types of biases, which can overlap.
+Selection bias involves individuals being more likely to be selected for study than others, biasing the sample. This can also be termed Berksonian bias.Spectrum bias arises from evaluating diagnostic tests on biased patient samples, leading to an overestimate of the sensitivity and specificity of the test.
+
+The bias of an estimator is the difference between an estimator's expectations and the true value of the parameter being estimated.
+Omitted-variable bias is the bias that appears in estimates of parameters in a regression analysis when the assumed specification omits an independent variable that should be in the model.
+
+In statistical hypothesis testing, a test is said to be unbiased when the probability of committing a type I error (i.e. false positive) is less than the significance level, and that of getting a true positive (rejecting the null hypothesis when the alternative hypothesis is true) is at least that of the significance level.
+Detection bias occurs when a phenomenon is more likely to be observed for a particular set of study subjects. For instance, the syndemic involving obesity and diabetes may mean doctors are more likely to look for diabetes in obese patients than in thinner patients, leading to an inflation in diabetes among obese patients because of skewed detection efforts.
+Funding bias may lead to selection of outcomes, test samples, or test procedures that favor a study's financial sponsor.
+Reporting bias involves a skew in the availability of data, such that observations of a certain kind are more likely to be reported.
+Analytical bias arise due to the way that the results are evaluated.
+Exclusion bias arise due to the systematic exclusion of certain individuals from the study.
+Attrition bias arises due to a loss of participants e.g. loss to follow up during a study.
+Recall bias arises due to differences in the accuracy or completeness of participant recollections of past events. e.g. a patient cannot recall how many cigarettes they smoked last week exactly, leading to over-estimation or under-estimation.
+Observer bias arises when the researcher unconsciously influences the experiment due to cognitive bias where judgement may alter how an experiment is carried out / how results are recorded.
+
+
+== See also ==
+Trueness
+Systematic error
+
+
+== References ==

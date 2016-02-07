@@ -1,0 +1,201 @@
+Infonomics is the theory, study and discipline of asserting economic significance to information. It provides the framework for businesses to value, manage and wield information as a real asset. Infonomics endeavors to apply both economic and asset management principles and practices to the valuation, handling and deployment of information assets.
+The term is a composite of “information” and “economics.”
+
+
+== Origination and History ==
+In the late 1990s, then META Group and now Gartner IT industry analyst Doug Laney coined the term Infonomics to describe his proprietary research and consulting around quantifying information’s value and defining how to manage information as an actual enterprise asset. This concept stemmed from his work with data warehouse pioneer Prism Solutions (now part of IBM) at which he and his professional services colleagues developed information auditing techniques to validate and qualify and quantify source data quality characteristics and potential business value. These methods were formalized into Prism's commercial ITERATIONS data warehouse methodology still offered by IBM.
+Laney’s work builds on and intersects with other disciples including:
+Claude Shannon’s Information Theory
+Paul Strassmann' s work on valuing IT 
+macro economics
+asset valuation
+asset management
+intangible assets
+Generally Accepted Accounting Principles
+
+
+== Principles ==
+The seven principles of infonomics are as follows:
+
+
+=== 1. Information is an asset ===
+The primary principle of infonomics is the recognition of information as an enterprise asset. Although generally accepted accounting principles (GAAP) as yet do not require the reporting of information assets on the balance sheet, infonomics deems that organizations acknowledge that information is more than merely a resource.
+
+
+=== 2. Information has both potential and realized value ===
+While it is generally accepted that information has value when used in decision making or to fuel business operations, infonomics posits that information, just as GAAP-recognized assets, has a definitive value even when not in-use. The accounting definition of a balance sheet asset being an item of ‘’probable future economic value’’ applies as well to information. Information's value can also be determined in terms of its realized value and potential value.
+
+
+=== 3. Information’s value can be quantified ===
+Similar methods for quantifying the value of accepted intangible assets can and should be applied to valuing information assets. These valuation (finance) methods include as applicable and relevant: market approach, the cost approach, and the income approach. As well, non-economic valuation methods that quantify information’s relative value, business process relevance and data quality-related value have application in helping organizations make strategic information-related IT and business decisions.
+
+
+=== 4. Information should be accounted for as an asset ===
+Although information is not yet a recognized balance sheet asset, organizations should consider it one for internal reporting purposes. This includes an applying valuation methods on a scheduled basis and when a given information's value may be impaired, and internally reporting information asset value on a supplemental balance sheet.
+
+
+=== 5. Information’s realized value should be maximized ===
+Infonomics valuation exercises typically disclose that information is a vastly underutilized asset and that organizations should consider opportunities to improve their capture and deployment of information in generating top-line and bottom-line benefits. This includes decision-making, business process automation, innovation, and even the packaging and direct marketing the organization’s information assets.
+
+
+=== 6. Information’s value should be used for prioritizing and budgeting IT and business initiatives ===
+IT and business related initiatives that leverage or secure information assets should be budgeted against the quantified economic value of the information and the cost to acquire, administer and apply the information. Currently such initiatives tend to proceed without this degree of fiscal diligence.
+
+
+=== 7. Information should be managed as an asset ===
+Traditional physical and financial assets have a definitive lifecyle and procedures for their effective handling throughout. Infonomics principles suggest that organizations should apply their own expertise, policies and practices in asset management toward the management of information assets.
+
+
+== Benefits of Infonomics ==
+Benefits of applying infonomics principles and practices include but are not limited to:
+Improving the collection, management, governance and usage of information throughout the organization
+Instituting an organizational culture that values information to the fullest extent
+Quantifiably justifying and validating the ROI of information-related business or IT initiatives
+Determining how much to spend on information security for each class of information asset
+Being able to claim (or assessing) a premium corporate valuation during mergers and acquisitions negotiations
+Assessing contract risks due to their lack of or inclusion of indemnification against the loss, damage or misuse of electronic data
+The future potential for securing loans using information assets as collateral
+Improving the organization’s ability to trade its information assets for goods or services
+Improving relations with customers, employees, suppliers and partners by sharing more and improved information with them
+Improving the organization’s ability to package and market information assets as a saleable product
+Encouraging internal ownership and stewardship of information assets
+
+
+== Thought Leadership ==
+Throughout the 2000s Doug Laney and his colleagues developed and deployed information asset valuation models, information auditing methods, and information asset management practices. In 2010 Laney formed the Center for Infonomics, a non-profit think tank to collaborate on and further the principles and practices, and the associated the Center for Infonomics LinkedIn Group. The same year he began lecturing on Infonomics at leading business schools holding Infonomics workshops and conducting press interviews on the topic.
+John Ladley, author and expert on enterprise information management also collaborates with Laney on infonomics research, and lectures on the topic.
+In 2010, Informatica's John Schmidt authored a blog series on Data as an Asset.
+IT research analysts from Gartner (e.g. Andrew White, Debra Logan, Joe Bugajski, Mei Selvage and Michael Smith, Nigel Rayner), and Forrester (e.g. Andre Kindness, Holger Kisker, Rob Karel) have also written and advised on information value-related topics.
+Douglas Hubbard's book, How to Measure Anything features a method for valuing information based on its decision-making ability.
+The open source MIKE2.0 Methodology, based on Prism Solutions' ITERATIONS methodology, includes methods and tools for information asset management and a broad-spectrum corporate value-based information valuation.
+Deidre Paknad, former Head of Information Lifecycle Governance at IBM has promoted and has written extensively about the emerging concept of defensible disposal.
+E.G. Nadahan, HP Distinguished Technologist authors a blog that frequently features information value related topics.
+Dave McCrory, SVP at Warner Music Group authors the DataGravity blog (launched July 2013) in which he has posited a formula for data gravity that considers the size of a data set, and its compression ratio (density), the "application mass" (i.e. memory and disk usage, CPU utilization), bandwidth, latency, and number and size of data requests. He suggests reasons to increase or decrease data gravity along with some uses for it.
+In 2013, AIIM hosted a Value of Information #infochat on which its editor and community manager Bryant Duhon posted a slideshare entitled: Information as an Asset: 9 Essential Steps.
+Chris Walker's Info Nuggets blog included a couple posts in late 2013 (I Can't, Can You? Valuing Information and I think I Can - Valuing Information Pt 2) along with some follow-on discussion.
+In the late 1980s, Marilyn Parker of the IBM Los Angeles Research Center and Robert Benson of Washington State University respectively defined an approach to the evaluation of information systems, called information economics.
+
+
+== Related Academic Programs and Research ==
+The Geneva School of Business Administration (Haute école de Gestion de Genève), part of the University of Applied Sciences Western Switzerland, in 2015 produced the preliminary results of a study on Infonomics dimensions, methods and metrics, The Theory of Infonomics: Valuating Corporate Information Assets. This study was conducted by Prof Basma Makhlouf Shabou and Prof Nathalie Brender in partnership with RSD and in collaboration with public and private Swiss administration.
+At the University of Illinois Accountancy September 2014 Lyceum, Doug Laney of Gartner lectured on Infonomics: How the Value of Information Assets are Hidden in Plain Sight. (See Article)
+The 21st Symposium on Audit Research held at The University of Illinois 11-13 Sep 2014 featured a dinner keynote address by Doug Laney of Gartner on The Impact of Big Data on Auditing, including a discussion of how information itself has become a legitimate corporate asset.
+Lazarski University in Poland offers an masters of science (MSc) degree in economics with a specialization in Information Economics.
+University of Heidelberg offers a course in Information Economics for its 2014-2015 school year.
+State University of New York's University at Buffalo offers an M.A. and Advanced Certificate in Information and Internet Economics.
+Boston University's School of Management launched a research project to study Information Economics & Intellectual Property in August 2014.
+University of Michigan's School of Information began offering an Information Economics for Management (IEM) specialization as of its 2014-2015 school year.
+Istanbul University held an Infonomics in Frame of Informatics Conference and Workshop on 13 November 2013 to gather different experiences in infonomics from public and private sector and present an international outlook from academy.
+Zuyd University in the Netherlands has a Infonomics and New Media Research Centre founded in 2003 to engage in research concerning IT, digitisation and society.
+Kühne Logistics University offers an academic seminar for PhD students and others on "Intermodal Network Services: Value of Information and Pricing" in which Prof. Dr. Rob Zuidwijk shares his models for assessing the value of information in container transport in terms of efficiency and reliability.
+Erasmus University in Rotterdam featured a guest lecture by Diderik van Wingerden on Information Economics in Practice (Slideshare) on 8 December 2010.
+University of Indonesia's Graduate Program in Information Technology featured a lecture by Dr. Ir. Benny Ranti on Applying Information Economics (Slideshare) in 2009
+Maastricht University began offering Infonomics in 2000 as a specialisation within economics and business. In 2004 this programme was transformed into an Infonomics specialisation within the BSc Economics and Business Economics and a separate MSc Infonomics. Infonomics at Maastricht University has a focus on the economic and business impact of information, networks and information technology.
+American University Info-Metrics Institute offers periodic graduate and post-graduate conferences, workshops and papers on interdisciplinary topics related to the philosophy, economics, and science of information.
+University of Tulsa has offered a graduate seminar on The Value of Information.
+Elsevier has published The Information Economics and Policy (IEP) Journal, since 1983. It is a peer-reviewed policy-oriented international journal that compiles research about the production, distribution and use of information.
+
+
+== Related Articles, Papers and Presentations ==
+2016
+Infonomics and You, Eric Leohner, IRI CoSort, January, 2016
+The Fair Price to Pay a Spy: An Introduction to the Value of Information, Sebastian Nowozin, Nowozin.net blog, 09 January 2016
+2015
+IBM Storms Information, IoT Markets by Buying The Weather Company, Douglas Laney, Gartner, 4 November 2015
+How to Adopt Open Data for Business Data and Analytics — And Why You Should, Alan D. Duncan & Douglas Laney, Gartner, 28 October 2015
+Seven Steps to Monetizing Your Information Assets, Douglas Laney, Gartner, 15 October 2015
+Why and How to Value Your Information as an Asset Heather Levy & Douglas Laney, Smarter With Gartner blog, 3 September 2015
+Hackers Know the Value of Health Information, So Why Don't HDOs Appreciate Healthcare Infonomics?, Laura Craft & Douglas Laney, Gartner, 5 August 2015
+Why and How to Measure the Value of Your Information Assets, Douglas Laney, Gartner, 5 August 2015
+Applied Infonomics: Measuring the Economic Value of Information Assets, MIT Chief Data Officer Symposium, Doug Laney, Gartner, 22 July 2015
+Data and Analytics: A New Driver of Performance and Valuation, Institutional Investor Research and KPMG, July 2015
+The Convergence of Information Economics and Economic Information Corp Development Summit presentation replay, Doug Laney, Gartner, 1 July 2015
+Data = Opportunity: But Are You Monetizing Information? Smart Data Collective, RK Paleru, 28 May 2015
+Keeping Busy with Data Strategy, Gartner Blog Network, Doug Laney, 26 May 2015
+Dollar Value of Data: RadioShack, Other Bankrupt Firms Auction Customer Data to Pay Debt, Wall Street Journal, Kim Nash, 20 May 2015
+The Benefits and Risks of Using Open Data, Doug Laney, Gartner, 8 April 2015
+Consider this: Does all data have value? Good Strategy blog, Martyn Jones, 30 January 2015
+The Theory of Infonomics: Valuating Corporate Information Assets - white paper, RSD, January 2015
+Customer data is a valuable asset. Why not treat it that way?, F.Business, Ajay Kelkar, 14 January 2015
+The Rise of Data Capital (video), Oracle, 8 January 2015
+2014
+Quantifying the Value of Your Data, CMS Wire, Bassam Zarkout, 30 September 2014
+What is Infonomics?, Ed Hallock, RSD blog, 9 September 2014
+Cashing In on Your Data, MIT Sloan Center for Information Systems Research, Barbara H. Wixom, Volume XIV, Number 8, August 2014
+Increase the Return on Your Information Investments With the Information Yield Curve, Gartner, Andrew White and Douglas Laney, 31 July 2014
+The Hidden Shareholder Boost from Information Assets, Forbes, Doug Laney, 21 July 2014
+CIO Decisions: The new infonomics reality: Determining the value of data, TechTarget SearchCIO, June 2014
+Bigger is Better, But At What Cost? Estimating the Economic Value of Incremental Data Assets, Big Data Journal, Vol. 2, No. 2, Brian Dalessandro, Claudia Perlich and Troy Raeder, June 2014
+Putting a price on information: The nascent field of infonomics, TechTarget SearchCIO, Linda Tucci, 13 May 2014
+Six ways to measure the value of your information assets, TechTarget SearchCIO, Nicole Laskowski, 13 May 2014
+Infonomics treats data as a business asset, TechTarget SearchCIO, Nicole Laskowski, 13 May 2014
+The economics of information management, PVTL Blog, Felix Barbalet, 13 April 2014
+The Hidden Tax Advantage of Monetizing Your Data, Forbes, Doug Laney, 27 March 2014
+The Chief Data Officer – Managing the Value of Data, Teradata ANZ Blog, Renato Manongdo, March 2014
+How Organizations Can Monetize Customer Data, Gartner, Olive Huang, Doug Laney, 6 March 2014
+Improving the Value of Customer Data Through Applied Infonomics, Gartner Research Publication, Douglas Laney, Olive Huang, 6 March 2014
+Information Value Accrual and Its Asymmetry, Gartner Blog Network, Andrew White, 14 February 2014
+Does Information Utility Suffer a Half Life?, Gartner Blog Network, Andrew White, 29 January 2014
+2013
+What is the "Information" in "Information Governance"?, RSD Blog, James Amsler, 30 December 2013
+To Twitter You're Worth $101.70 Gartner Blog Network, by Douglas Laney, 12 November 2013
+Treat data like money. CMO's Advice: Marketers must develop an investment strategy for data, The Economist Group, Jim Davis, SVP & CMO, SAS, October 2013
+Infonomics: The New Economics of Information, The Financial Times, Doug Laney, VP Research, Gartner, September 2013
+Value of Information, GigaOM presentation by Dave McCrory, SVP at Warner Music Group, July 2013
+Accounting for the value of (big) data, Banking Technology Magazine, David Bannister, 11 June 2013
+Putting a price on information: The nascent field of infonomics, SearchCIO Journal, Linda Tucci, May 2013
+2012
+What's Your Big Data Worth, InformationWeek, Ellis Booker, 17 December 2012
+Future of Money: Infonomics Monetizing Value in Big Data Information Assets, Mary Knox, Gartner, 14 December 2012
+An Introduction to Infonomics, InformationAge, Pete Swabey, 26 November 2012
+The Birth of Infonomics: the New Economics of Information, Gartner research publication, Douglas Laney, 3 October 2012 (public summary, full text available to Gartner clients)
+Tobin’s Q & A: Evidence of Information’s Real Market Value, Gartner Blog Network, Douglas Laney, 14 Aug 2012
+Extracting Value from Information, Financial Times, interview with Douglas Laney by Paul Taylor, 25 May 2012 (free registration required)
+Infonomics: The Practice of Information Economics, Forbes, by Douglas Laney, 22 May 2012
+To Facebook You're Worth $80.95, Wall Street Journal, by Douglas Laney, 3 May 2012
+Introducing Infonomics: Valuing Information as a Corporate Asset, Gartner research publication, Douglas Laney, 21 March 2012 (public summary, full text available to Gartner clients)
+Barriers to the Effective Deployment of Information Assets: An Executive Management Perspective, Interdisciplinary Journal of Information, Knowledge, and Management, Nina Evans and James Price, Volume 7, 2012
+Older
+What is Enterprise Information Management (EIM) by John Ladley, Morgan Kaufmann, 2010
+Data as an Asset blog series by John Schmidt, 2010
+Information Driven Business: How to Manage Data and Information for Maximum Advantage by Rob Hillard, Wiley 2010
+How to Measure Anything: Finding the Value of Intangibles in Business by Douglas W. Hubbard, Wiley 2010
+Intangible Assets: Valuation and Economic Benefit by Jeffrey A. Cohen, Wiley 2005
+Value Driven Intellectual Capital: How to Convert Intangible Corporate Assets Into Market Value by Patrick H. Sullivan, Wiley, 2000
+Bank of America Case Study: The Information Currency Advantage, Teradata, Felipe Carino and Mark Jahnke, Proceedings of the 24th VLDB Conference, New York, NY, 1998
+Information Payoff: The Transformation of Work in the Electronic Age by Paul A. Strassmann, The Free Press, 1985
+
+
+== Related Books ==
+The Analytics of Uncertainty and Information, Hirshleifer and Riley, 2013
+Infonomics and the Business of Free: Modern Value Creation for Information Services, Regazzi, 2013
+The Value of Information, Laxminarayan and Macauley, 2012
+Making Enterprise Information Management (EIM) Work for Business, Ladley, 2010
+How to Measure Anything: Finding the Value of Intangibles in Business, Hubbard, 2007, 2010, 2014
+Information Economics, Bütler, 2007
+The Economics of Information: A Guide to Economic and Cost-Benefit Analysis for Information Professionals, Kingma, 2001
+An Introduction to the Economics of Information, Stadler and Castrillo, 8 March 2001
+Blown to Bits: How the New Economics of Information Transforms Strategy, Evans and Wurster, 1999
+Information Rules: A Strategic Guide to the Network Economy, Shapiro and Varian, 1998
+
+
+== Alternate and Incidental Uses of the Term ==
+Examples of other organizations using the “infonomics” moniker in one form or another include:
+Applied information economics is a general decision analysis concept developed by Douglas Hubbard which injects certain discipline (e.g. Monte Carlo probabilities) into existing analytic methods
+Infonomics.Today is an automatically curated, dynamic compilation and Twitter feed on big data, data science and related topics started in 2015
+Infonomics UK Ltd, Robin Gower's one-person UK consultancy formed in 2007
+Infonomics, a Norwegian firm specializing in interactive marketing and technology formed in 2013
+The International Institute of Infonomics was formed in 2000 by Luc Soete to focus on research related to information digitization. Although the institute no longer functions, it was a progenitor of the Maastricht University Infonomics specialisation.
+The Infonomics and New Media Research Centre was founded in 2003 to engage in research concerning IT, digitisation and society.
+The Association for Information and Image Management (AIIM) published an online newsletter entitled “Infonomics” for almost two years, folding in early 2010.
+An Australian IT corporate governance consultancy can be found at http://www.Infonomics.com.au
+The Infonomics Society aggregates research and publications on a variety of business, technical and other topics.
+Infonomics Ltd is a UK based economic policy consultancy.
+Infonomics Consulting is a German sales consultancy.
+INFONOMICS | Internet & Marketing Agentur is an Austrian-based Internet & Marketing agency focusing on Webdesign, SEM, SEO, PPC and Social Media Marketing.
+
+
+== See also ==
+
+
+== References ==

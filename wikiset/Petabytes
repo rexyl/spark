@@ -1,0 +1,32 @@
+The petabyte is a multiple of the unit byte for digital information. The prefix peta indicates the fifth power of 1000 and means 1015 in the International System of Units (SI), and therefore 1 petabyte is one quadrillion (short scale) bytes, or 1 billiard (long scale) bytes. The unit symbol for the petabyte is PB.
+1 PB = 1000000000000000B = 1015bytes = 1000terabytes.
+A related unit, the pebibyte (PiB), using a binary prefix, is equal to 10245 bytes, which is more than 12% greater (250 bytes = 1125899906842624bytes).
+
+
+== Usage examples ==
+Examples of the use of the petabyte to describe data sizes in different fields are:
+Telecommunications (capacity): The world's effective capacity to exchange information through two-way telecommunication networks was 281 petabytes of information in 1986, 471 petabytes in 1993, 2,200 petabytes in 2000, and 65,000 petabytes in 2007 (this is the informational equivalent to every person exchanging 6 newspapers per day).
+Telecommunications (usage): AT&T transfers about 30 petabytes of data through its networks each day.
+Internet: Google processed about 24 petabytes of data per day in 2009. The BBC's iPlayer is reported to have transferred up to 7 petabytes each month in 2010. Imgur transfers about 4 petabytes of data per month.
+Supercomputers: In January 2012, Cray began construction of the Blue Waters Supercomputer, which will have a capacity of 500 petabytes making it the largest storage array ever if released.
+Data storage system: In August 2011, IBM was reported to have built the largest storage array ever, with a capacity of 120 petabytes.
+Databases: Teradata Database 12 has a capacity of 50 petabytes of compressed data.
+Data mining: In August 2012, Facebook's Hadoop clusters include the largest single HDFS cluster known, with more than 100 PB physical disk space in a single HDFS filesystem. Yahoo stores 2 petabytes of data on behavior.
+Digital archives: The Internet Archive surpassed 15 petabytes as of May 2014.
+Email: In May 2013, Microsoft announces that as part of their migration of Hotmail accounts to the new Outlook.com email system, they migrated over 150 petabytes of user data in six weeks.
+File sharing (centralized): At its 2012 closure of file storage services, Megaupload held ~28 petabytes of user uploaded data.
+File sharing (peer-to-peer): 2013 - BitTorrent Sync has transferred over 30 petabytes of data since its pre-alpha release in January 2013.
+Film: The 2009 movie Avatar is reported to have taken over 1 petabyte of local storage at Weta Digital for the rendering of the 3D CGI effects.
+Video streaming: As of May 2013, Netflix had 3.14 petabytes of video "master copies," which it compresses and converts into 100 different formats for streaming.
+Photos: As of January 2013, Facebook users had uploaded over 240 billion photos, with 350 million new photos every day. For each uploaded photo, Facebook generates and stores four images of different sizes, which translated to a total of 960 billion images and an estimated 357 petabytes of storage.
+Music: One petabyte of average MP3-encoded songs (for mobile, roughly one megabyte per minute), would require 2000 years to play.
+Games: World of Warcraft uses 1.3 petabytes of storage to maintain its game.
+Steam, a digital distribution service, delivers over 16 petabytes of content to American users weekly.
+Cloud backup: Multiple backup vendors, including Code42, Backblaze, and Mozy claim to store 90 or more petabytes of user backup data.
+Physics: The experiments in the Large Hadron Collider produce about 15 petabytes of data per year, which are distributed over the Worldwide LHC Computing Grid. In July 2012 it was revealed that CERN amassed about 200 petabytes of data from the more than 800 trillion collisions looking for the Higgs boson.
+Neurology: It is estimated that the human brain's ability to store memories is equivalent to about 2.5 petabytes of binary data.
+Climate science: The German Climate Computing Centre (DKRZ) has a storage capacity of 60 petabytes of climate data.
+Folding@home (Scientific Data): Folding@home has generated 0.5 petabytes of simulated data.
+
+
+== References ==

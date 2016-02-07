@@ -1,0 +1,15 @@
+Big memory is a software and hardware approach that facilitates storing/retrieval/processing of large data sets (terabytes and higher). The term is akin to big data and in some instances is a form of big data processing architecture implemented in memory rather than in disks/storage. Different caches are one of the usage of the big memory.
+The computer memory, namely RAM, works orders of magnitude faster than hard drives or even solid state drives, which is usually due to higher raw data throughput from tighter coupling of CPU and RAM chips (wider bus, CPU and RAM are usually installed on the same motherboard).
+Locality of reference is another important characteristic for caches and fast access.
+The price of the computer memory chips has significantly declined since the late 2000s, as of 2015 it is affordable to have 256 gigabytes of RAM on a server. 
+Currently, not many vendors have solid software big memory solutions while there are plentiful hardware options (i.e. cheap RAM planks). Terracotta has developed a "in-memory data management suite" 
+The contemporary software platforms that are based on a garbage collected models, such as .NET CLR , JAVA and others can not usually store hundreds of millions resident objects (object staying in RAM for minutes+ and get promoted to older generations) directly as this results in GC stalls that significantly affect the performance.  As of 2015 there are still no efficient simple GC solutions that would have allowed to store 16Gb+ object in a language-native-heaps so there are hybrid approaches emerging for memory-hungry apps in the managed environments.
+NFX Unistack framework provides a concept of a large managed memory 'Pile' on a .NET CLR platform based on pre-allocated large byte[] that do not slow GC down. The solution allows to easily store 300,000,000 business objects on a machine with 64 Gb RAM while allowing for millions object put/get transactions a second. The solution was purposely provided for processing Big Memory data sets without going to disk/network.   
+
+
+== References ==
+
+
+== External links ==
+ Media related to Big data at Wikimedia Commons
+ The dictionary definition of big data at Wiktionary

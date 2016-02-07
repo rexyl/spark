@@ -1,0 +1,38 @@
+A query plan (or query execution plan) is an ordered set of steps used to access data in a SQL relational database management system. This is a specific case of the relational model concept of access plans.
+Since SQL is declarative, there are typically a large number of alternative ways to execute a given query, with widely varying performance. When a query is submitted to the database, the query optimizer evaluates some of the different, correct possible plans for executing the query and returns what it considers the best option. Because query optimizers are imperfect, database users and administrators sometimes need to manually examine and tune the plans produced by the optimizer to get better performance.
+
+
+== Generating query plans ==
+A given database management system may offer one or more mechanisms for returning the plan for a given query. Some packages feature tools which will generate a graphical representation of a query plan. Other tools allow a special mode to be set on the connection to cause the DBMS to return a textual description of the query plan. Another mechanism for retrieving the query plan involves querying a virtual database table after executing the query to be examined. In Oracle, for instance, this can be achieved using the EXPLAIN PLAN statement.
+
+
+=== Graphical plans ===
+
+
+=== Textual plans ===
+The textual plan given for the same query in the screenshot is shown here:
+
+It indicates that the query engine will do a scan over the primary key index on the Employee table and a matching seek through the primary key index (the ContactID column) on the Contact table to find matching rows. The resulting rows from each side will be shown to a nested loops join operator, sorted, then returned as the result set to the connection.
+In order to tune the query, the user must understand the different operators that the database may use, and which ones might be more efficient than others while still providing semantically correct query results.
+
+
+== Database tuning ==
+
+Reviewing the query plan can present opportunities for new indexes or changes to existing indexes. It can also show that the database is not properly taking advantage of existing indexes (see query optimizer).
+
+
+== Query tuning ==
+
+A query optimizer will not always choose the most efficient query plan for a given query. In some databases the query plan can be reviewed, problems found, and then the query optimizer gives hints on how to improve it. In other databases alternatives to express the same query (other queries that return the same results) can be tried. Some query tools can generate embedded hints in the query, for use by the optimizer.
+Some databases - like Oracle - provide a plan table for query tuning. This plan table will return the cost and time for executing a query. Oracle offers two optimization approaches:
+CBO or Cost Based Optimization
+RBO or Rule Based Optimization
+RBO is slowly being deprecated. For CBO to be used, all the tables referenced by the query must be analyzed. To analyze a table, a DBA can launch code from the DBMS_STATS package.
+Other tools for query optimization include:
+SQL Trace
+Oracle Trace
+TKPROF
+
+
+== External links ==
+Video tutorial on how to perform SQL performance tuning with reference to Oracle

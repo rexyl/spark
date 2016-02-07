@@ -1,0 +1,66 @@
+Oracle NoSQL Database is a NoSQL-type distributed key-value database by Oracle Corporation.It provides transactional semantics for data manipulation, horizontal scalability, and simple administration and monitoring.
+Oracle NoSQL Database provides a very simple data model to the application developer. Each row is identified by a unique key, and also has a value, of arbitrary length, which is interpreted by the application. The application can manipulate (insert, delete, update, read) a single row in a transaction. The application can also perform an iterative, non-transactional scan of all the rows in the database.
+
+
+== Licensing ==
+The Oracle NoSQL Database is distributed in two editions, Oracle NoSQL Database Server Community Edition under an AGPL license and Oracle NoSQL Enterprise Edition under the Oracle Commercial License.
+The Oracle NoSQL Database is licensed using a freemium model: Open source versions of Oracle NoSQL Community Edition available, but end users can pay for additional features and support from Oracle Stores. If you are integrating with other Oracle Products such as Oracle Enterprise Manager, Oracle Coherence then Oracle NoSQL Enterprise Edition should be purchased.
+The Oracle NoSQL Database drivers are licensed pursuant to the Apache 2.0 License and used with both the community and enterprise editions.
+
+
+== Main features ==
+Architecture
+Oracle NoSQL Database is built upon the Oracle Berkeley DB Java Edition high-availability storage engine. In addition to that it adds a layer of services for use in distributed environments to provide a distributed, highly available key/value storage, suited for large-volume, latency-sensitive applications.
+In this respect, an Infoworld review mentions that Oracle bought the company which developed the Berkeley DB, Sleepycat Software.
+Sharding and replication
+Oracle NoSQL Database is a client-server, sharded, shared-nothing system. The data in each shard are replicated on each of the nodes which comprise the shard. It provides a simple key-value paradigm to the application developer. The major key for a record is hashed to identify the shard that the record belongs to.Oracle NoSQL Database is designed to support changing the number of shards dynamically in response to availability of additional hardware. If the number of shards changes, key-value pairs are redistributed across the new set of shards dynamically, without requiring a system shutdown and restart. A shard is made up of a single electable master node which can serve read and write requests,and several replicas (usually two or more) which can serve read requests. Replicas are kept up to date using streaming replication. Each change on the master node is committed locally to disk and also propagated to the replicas.
+High availability and fault-tolerance
+Oracle NoSQL Database provides single-master,multi-replica database replication. Transactional data is delivered to all replica nodes with flexible durability policies per transaction. In the event the master replica node fails, a consenus based PAXOS -based automated fail-over election process minimizes downtime. As soon as the failed node is repaired, it rejoins the shard, is brought up to date and then becomes available for processing read requests.Thus, the Oracle NoSQL Database server can tolerate failures of nodes within a shard and also multiple failures of nodes in distinct shards.
+Proper placement of masters and replicas on server hardware (racks and interconnect switches) by Oracle NoSQL Database is intended to increase the availability on commodity servers.
+Transparent load balancing
+Oracle NoSQL Database Driver partitions the data in real time and evenly distributes it across the storage nodes. It is network topology and latency-aware, routing read and write operations to the most appropriate storage node in order to optimize load distribution and performance.
+ACID compliant transaction
+Oracle NoSQL Database provides ACID compliant transactions for full Create, Read, Update and Delete (CRUD) operations, with adjustable durability and consistency transactional guarantees.You can also execute a sequence of operations as a single atomic unit as long as all the records that are going to be operated upon share the same Major Key Path.
+JSON data format
+Oracle NoSQL Database has support for the Avro data serialization, which provides a compact, schema-based binary data format. Avro allows you to define a schema (using JSON) for the data contained in a record's value and it also supports schema evolution. Configurable Smart Topology System administrators indicate how much capacity is available on a given storage node,allowing more capable storage nodes to host multiple replication nodes. Once the system knows about the capacity for the storage nodes in a configuration, it automatically allocates replication nodes intelligently. This is intended for better load balancing for the system, better use of system resources and minimizing system impact in the event of storage node failure. Smart Topology also supports Data Centers, ensuring that a full set of replicas is initially allocated to each data center.
+Elastic configuration
+"Elasticity" refers to dynamic online expansion of the deployed cluster. One can add more storage nodes to increase the capacity, performance, reliability, or all of the above Oracle NoSQL Database includes a topology planning feature, with which an administrator can now modify the configuration of a NoSQL database, while the database is still online. This allows the administrator to:
+Increase Data Distribution: by increasing number of shards in the cluster, which increases write throughput.
+Increase Replication Factor: by assigning additional replication nodes to each shard, which increases read throughput and system availability.
+Rebalance Data Store: by modifying the capacity of a storage node(s), the system can be rebalanced, re-allocating replication nodes to the available storage nodes, as appropriate.
+The topology rebalance command allows the administrator to move replication nodes and/or partitions from over utilized nodes onto underutilized storage nodes or vice versa
+Administration and system monitoring
+Oracle NoSQL Database provides an administration service, which can be accessed either from a web console or a command-line interface (CLI). This service supports core functionality such as the ability to configure, start, stop and monitor a storage node, without requiring manual effort with configuration files, shell scripts, or explicit database operations. In addition it also allows Java Management Extensions (JMX) or Simple Network Management Protocol (SNMP) agents to be available for monitoring. This allows management clients to poll information about the status, performance metrics and operational parameters of the storage node and its managed services.
+CAP
+Oracle NoSQL Database is configurable to be either C/P or A/P in CAP. In particular, if writes are configured to be performed synchronously to all replicas, it is C/P in CAP i.e. a partition or node failure causes the system to be unavailable for writes. If replication is performed asynchronously, and reads are configured to be served from any replica, it is A/P in CAP i.e. the system is always available, but there is no guarantee of consistency.
+Table data model
+Release 3.0 introduces tabular data structure, which simplifies application data modeling by leveraging existing schema design core concepts. Table model is layered on top of the distributed key-value structure, inheriting all its advantages and simplifying application design even further by enabling seamless integration with familiar SQL-based applications
+Secondary index
+Primary key only based indexing limits number of low latency access paths. Sometime application needs a few non-primary-key based paths to support the whole solution for the real-time system. Being able to define secondary index on any value field improves performance for queries.
+APIs
+Oracle NoSQL Database includes support for Java, C, Python, REST APIs. These simple APIs allow the application developer to perform CRUD operations on Oracle NoSQL Database. These libraries also include Avro support, so that developers can serialize key-value records and de-serialize keyvalue records interchangeably between C and Java applications.
+Oracle Big Data SQL and Hive Integration
+Oracle Big Data SQL is common SQL access layer to data stored in Hadoop,HDFS,Hive and Oracle NoSQL database. This allows customers to run query Oracle NoSQL Data from Hive or Oracle Database. Users can also run map reduce jobs against data stored in Oracle NoSQL Database that's configured for secure access. The latest release also supports both primitive and complex data types
+Oracle RESTful Services
+With Oracle NoSQL Database 12.1.3.2.5, Oracle Corporation has added support for Oracle REST Data Services (ORDS). This allows customers to build a REST-based application that can access data in either Oracle Database or Oracle NoSQL Database.
+Large Object support
+Stream based APIs are provided in the product to read and write Large Objects (LOBs) such as audio and video files, without having to materialize the value in its entirety in memory. This is intended to decrease the latency of operations across mixed workloads of objects of varying sizes.
+Apache Hadoop integration
+KVAvroInputFormat and KVInputFormat classes are available to read data from Oracle NoSQL Database natively into Hadoop Map/Reduce jobs. One use for this class is to read NoSQL Database records into Oracle Loader for Hadoop.
+Oracle Database integration via external tables (EE only)
+Support for external table allows fetching Oracle NoSQL data from Oracle database using SQL statements such as Select, Select Count(*) etc. Once NoSQL data is exposed through external tables, one can access the data via standard JDBC drivers and/or visualize it through enterprise Business Intelligence tools.
+Integration with other Oracle products (EE only)
+Oracle Event Processing (OEP) provides read access to Oracle NoSQL Database via the NoSQL Database cartridge. Once the cartridge is configured, CQL queries can be used to query the data.Oracle Semantic Graph has developed a Jena Adapter for Oracle NoSQL Database to store large volumes of RDF data (as triplets/quadruplets). This adapter enables fast access to graph data stored in Oracle NoSQL Database via SPARQL queries. An integration with Oracle Coherence has been provided that allows Oracle NoSQL Database to be used as a cache for Oracle Coherence applications, also allowing applications to directly access cached data from Oracle NoSQL Database.
+Online rolling upgrade
+Oracle NoSQL Database provides facilities to perform a rolling upgrade, allowing a system administrator to upgrade all of the nodes in the NoSQL Database cluster while the database continues to remain online and available to clients.
+Multi zone deployment
+Oracle NoSQL Database supports the definition of multiple zones from within the topology deployment planner. It leverages the definition of these zones internally to intelligently allocate replication of processes and data, in order to improve reliability during hardware,network & power related failure scenarios.There are two types of zones: Primary zones contain nodes that can be served as masters or replicas and are typically connected by fast interconnects. Secondary zones contain nodes which can only be served as replicas. Secondary zones can be used to provide low latency read access to data at a distant location, or to offload read-only workloads, like analytics, report generation, and data exchange for improved workload management.
+Enterprise security (EE only)
+OS-independent, cluster-wide password-based user authentication and Oracle Wallet integration, enables greater protection from unauthorized access to sensitive data. Additionally, session-level Secure Sockets Layer (SSL) encryption and network port restrictions aim to improve protection from network intrusion.
+
+
+== Performance ==
+The Oracle NoSQL DB team has worked with several key Oracle partners, including Intel and Cisco, performed benchmark testing using Yahoo! Cloud Serving Benchmarks (YCSB) on various hardware configurations, and published its results through blogs or white papers. For example, in 2012 Oracle reported that Oracle NoSQL Database exceeded 1 million mixed YCSB Ops/Sec.
+
+
+== References ==

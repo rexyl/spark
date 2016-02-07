@@ -1,0 +1,56 @@
+Sir Charles Antony Richard Hoare FRS FREng (born 11 January 1934), commonly known as Tony Hoare or C. A. R. Hoare, is a British computer scientist. He developed the sorting algorithm quicksort in 1959/1960. He also developed Hoare logic for verifying program correctness, and the formal language Communicating Sequential Processes (CSP) to specify the interactions of concurrent processes (including the dining philosophers problem) and the inspiration for the occam programming language.
+
+
+== Biography ==
+Born in Colombo, Ceylon (now Sri Lanka) to British parents, Tony Hoare's father was a colonial civil servant and his mother was the daughter of a tea planter. Hoare was educated in England at the Dragon School in Oxford and the King's School in Canterbury. He then studied Classics and Philosophy ("Greats") at Merton College, Oxford. On graduating in 1956 he did 18 months National Service in the Royal Navy, where he learned Russian. He returned to Oxford University in 1958 to study for a postgraduate certificate in Statistics, and it was here that he began computer programming, having been taught Autocode on the Ferranti Mercury by Leslie Fox. He then went to Moscow State University as a British Council exchange student, where he studied machine translation under Andrey Kolmogorov.
+In 1960, he left the Soviet Union and began working at Elliott Brothers, Ltd, a small computer manufacturing firm, where he implemented ALGOL 60 and began developing major algorithms. He became the Professor of Computing Science at the Queen's University of Belfast in 1968, and in 1977 returned to Oxford as the Professor of Computing to lead the Programming Research Group in the Oxford University Computing Laboratory (now Department of Computer Science, University of Oxford), following the death of Christopher Strachey. He is now an Emeritus Professor there, and is also a principal researcher at Microsoft Research in Cambridge, England.
+Hoare's most significant work has been in the following areas: his sorting and selection algorithm (Quicksort and Quickselect), Hoare logic, the formal language Communicating Sequential Processes (CSP) used to specify the interactions between concurrent processes, structuring computer operating systems using the monitor concept, and the axiomatic specification of programming languages.
+In 1982, he was elected a Fellow of the Royal Society. He was elected in 2005 as a Fellow of the Royal Academy of Engineering.
+
+
+== Apologies and retractions ==
+Speaking at a conference in 2009, he apologised for inventing the null reference:
+
+I call it my billion-dollar mistake. It was the invention of the null reference in 1965. At that time, I was designing the first comprehensive type system for references in an object oriented language (ALGOL W). My goal was to ensure that all use of references should be absolutely safe, with checking performed automatically by the compiler. But I couldn't resist the temptation to put in a null reference, simply because it was so easy to implement. This has led to innumerable errors, vulnerabilities, and system crashes, which have probably caused a billion dollars of pain and damage in the last forty years.
+
+For many years under his leadership his Oxford department worked on formal specification languages such as CSP and Z. These did not achieve the expected take-up by industry, and in 1995 Hoare was led to reflect upon the original assumptions:
+
+Ten years ago, researchers into formal methods (and I was the most mistaken among them) predicted that the programming world would embrace with gratitude every assistance promised by formalisation to solve the problems of reliability that arise when programs get large and more safety-critical. Programs have now got very large and very critical – well beyond the scale which can be comfortably tackled by formal methods. There have been many problems and failures, but these have nearly always been attributable to inadequate analysis of requirements or inadequate management control. It has turned out that the world just does not suffer significantly from the kind of problem that our research was originally intended to solve.
+
+
+== Awards ==
+ACM Turing Award for "fundamental contributions to the definition and design of programming languages". The award was presented to him at the ACM Annual Conference in Nashville, Tennessee, on 27 October 1980, by Walter Carlson, chairman of the Awards committee. A transcript of Hoare's speech was published in Communications of the ACM.
+Harry H. Goode Memorial Award (1981)
+Fellow of the Royal Society (1982)
+Honorary Doctorate of Science by the Queen's University Belfast (1987)
+Honorary Doctorate of Science, from the University of Bath (1993)
+Honorary Fellow, Kellogg College, Oxford University (1998)
+Knighted for services to education and computer science (2000)
+Kyoto Prize for Information science (2000)
+Fellow of the Royal Academy of Engineering (2005)
+Computer History Museum (CHM) in Mountain View, California Fellow of the Museum "for development of the Quicksort algorithm and for lifelong contributions to the theory of programming languages" (2006)
+Honorary Doctorate of Science from the Department of Informatics of the Athens University of Economics and Business (AUEB) (2007)
+Programming Languages Achievement Award (2011)
+IEEE John von Neumann Medal (2011)
+Honorary Doctorate, University of Warsaw (2012)
+Honorary Doctorate, Complutense University of Madrid (2013)
+
+
+== Books ==
+O.-J. Dahl, E. W. Dijkstra and C. A. R. Hoare (1972). Structured Programming. Academic Press. ISBN 0-12-200550-3. OCLC 23937947. 
+C. A. R. Hoare (1985). Communicating Sequential Processes. Prentice Hall International Series in Computer Science. ISBN 978-0131532717 (hardback) or ISBN 978-0131532892 (paperback). (Available online at http://www.usingcsp.com/ in PDF format.)
+C. A. R. Hoare and M. J. C. Gordon (1992). Mechanised Reasoning and Hardware Design. Prentice Hall International Series in Computer Science. ISBN 0-13-572405-8. OCLC 25712842. 
+C. A. R. Hoare and He Jifeng (1998). Unifying Theories of Programming. Prentice Hall International Series in Computer Science. ISBN 0-13-458761-8. OCLC 38199961. 
+
+
+== References ==
+
+
+== Further reading ==
+Bowen, Jonathan (8 September 2006). Oral History of Sir Antony Hoare (PDF). Hoare (Sir Antony, C.A.R.) Oral History, CHM Reference number: X3698.2007 (Report) (Computer History Museum). Retrieved 18 April 2014.  
+
+
+== External links ==
+Microsoft home page – short biography
+Oral history interview with C. A. R. Hoare at Charles Babbage Institute, University of Minnesota, Minneapolis.
+The classic article on monitors – The original article on monitors

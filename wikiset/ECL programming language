@@ -1,0 +1,34 @@
+The ECL programming language and system were an extensible high-level programming language and development environment developed at Harvard University in the 1970s. The name 'ECL' stood for 'Extensible Computer Language' or 'EClectic Language'. Some publications used the name 'ECL' for the entire system and 'EL/1' (Extensible Language) for the language itself.
+ECL was an interactive system where programs were represented within the system; there was a compatible compiler and interpreter. It had an ALGOL-like syntax and an extensible data type system, with data types as first-class citizens. Data objects were values, not references, and the calling conventions gave a choice between call by value and call by reference for each argument.
+ECL was primarily used for research and teaching in programming language design, programming methodology (in particular programming by transformational refinement), and programming environments at Harvard, though it was said to be used at some government agencies as well. It was first implemented on the PDP-10, with a later (interpreted-only) implementation on the PDP-11 written in BLISS-11 and cross-compiled on the PDP-10.
+
+
+== Procedures and bind-classes ==
+An ECL procedure for computing the greatest common divisor of two integers according to the Euclidean algorithm could be defined as follows:
+
+This is an assignment of a procedure constant to the variable gcd. The line
+
+EXPR(m:INT BYVAL, n: INT BYVAL; INT)
+
+indicates that the procedure takes two parameters, of type INT, named m and n, and returns a result of type INT. (Data types are called modes in ECL.) The bind-class BYVAL in each parameter declaration indicates that that parameter is passed by value. The computational components of an ECL program are called forms. Some forms resemble the expressions of other programming languages and others resemble statements. The execution of a form always yields a value. The REPEAT ... END construct is a loop form. Execution of the construct
+
+r = 0 => n
+
+when the form r = 0 evaluates to TRUE causes execution of the loop to terminate with the value n. The value of the last statement in a block (BEGIN ... END) form becomes the value of the block form. The value of the form in a procedure declaration becomes the result of the procedure call.
+In addition to the bind-class BYVAL, ECL has bind-classes SHARED, LIKE, UNEVAL, and LISTED. Bind-class SHARED indicates that a parameter is to be passed by reference. Bind-class LIKE causes a parameter to be passed by reference if possible and by value if not (e.g., if the actual parameter is a pure value, or a variable to which a type conversion must be applied). Bind-class UNEVAL specifies that an abstract syntax tree for the actual parameter is to be passed to the formal parameter; this provides extraordinary flexibility for programmers to invent their own notations, with their own evaluation semantics, for certain procedure parameters. Bind-class LISTED is similar to UNEVAL, but provides a capability similar to that of varargs in C: the LISTED bind-class can only appear in the last formal parameter of the procedure, and that formal parameter is bound to a list of abstract syntax tree representations, one for each remaining actual parameter. ECL has an EVAL built-in function for evaluating an abstract syntax tree; alternatively, there are functions by which programmers can explore the nodes of the abstract syntax tree and process them according to their own logic.
+
+
+== See also ==
+Fexpr
+
+
+== References ==
+PISEL = Proceedings of the international symposium on Extensible languages, Grenoble, France, 1971, published in ACM SIGPLAN Notices 6:12, December 1971.
+Benjamin M. Brosgol, "An implementation of ECL data types", PISEL, pp. 87–95.
+Thomas E. Cheatham, Jr., Glenn H. Holloway, Judy A. Townley, "Program refinement by transformation", Proceedings of the 5th international conference on Software engineering, 1981, pp. 430–437. ISBN 0-89791-146-6
+Glenn H. Holloway, "Interpreter/compiler integration in ECL", PISEL, pp. 129–134.
+Charles J. Prenner, "The control structure facilities of ECL", PISEL, pp. 104–112.
+Ben Wegbreit, "An overview of the ECL programming system", PISEL, pp. 26–28.
+Ben Wegbreit, "Studies in extensible programming languages." Technical Report ESD-TR-70-297. Harvard University, Cambridge, Massachusetts, May 1970.
+Glenn Holloway, Judy Townley, Jay Spitzen, Ben Wegbreit, "ECL Programmer's Manual", Report 23-74, Center for Research in Computing Technology, Harvard University, December 1974.
+Larry Denenberg, "The implementation of PDP-11 ECL", Technical Report 29-77, Center for Research in Computing Technology, Harvard University, June 1977.

@@ -1,0 +1,180 @@
+A view model or viewpoints framework in systems engineering, software engineering, and enterprise engineering is a framework which defines a coherent set of views to be used in the construction of a system architecture, software architecture, or enterprise architecture. A view is a representation of a whole system from the perspective of a related set of concerns.
+Since the early 1990s there have been a number of efforts to prescribe approaches for describing and analyzing system architectures. These recent efforts define a set of views (or viewpoints). They are sometimes referred to as architecture frameworks or enterprise architecture frameworks, but are not usually called "view models".
+Usually a view is a work product that presents specific architecture data for a given system. However, the same term is sometimes used to refer to a view definition, including the particular viewpoint and the corresponding guidance that defines each concrete view. The term view model is related to view definitions.
+
+
+== Overview ==
+The purpose of views and viewpoints is to enable humans to comprehend very complex systems, to organize the elements of the problem and the solution around domains of expertise and to separate concerns. In the engineering of physically intensive systems, viewpoints often correspond to capabilities and responsibilities within the engineering organization.
+Most complex system specifications are so extensive that no single individual can fully comprehend all aspects of the specifications. Furthermore, we all have different interests in a given system and different reasons for examining the system's specifications. A business executive will ask different questions of a system make-up than would a system implementer. The concept of viewpoints framework, therefore, is to provide separate viewpoints into the specification of a given complex system in order to facilitate communication with the stakeholders. Each viewpoint satisfies an audience with interest in a particular set of aspects of the system. Each viewpoint may use a specific viewpoint language that optimizes the vocabulary and presentation for the audience of that viewpoint. Viewpoint modeling has become an effective approach for dealing with the inherent complexity of large distributed systems.
+Architecture description practices, as described in IEEE Std 1471-2000, utilize multiple views to address several areas of concerns, each one focusing on a specific aspect of the system. Examples of architecture frameworks using multiple views include Kruchten's "4+1" view model, the Zachman Framework, TOGAF, DoDAF, RM-ODP, and Hamdaqa's "5+1" view model.
+
+
+== History ==
+In the 1970s, methods began to appear in software engineering for modeling with multiple views. Douglas T. Ross and K.E. Schoman in 1977 introduce the constructs context, viewpoint, and vantage point to organize the modeling process in systems requirements definition. According to Ross and Schoman, a viewpoint "makes clear what aspects are considered relevant to achieving ... the overall purpose [of the model]" and determines How do we look at [a subject being modelled]?
+As examples of viewpoints, the paper offers: Technical, Operational and Economic viewpoints. In 1992, Anthony Finkelstein and others published a very important paper on viewpoints. In that work: "A viewpoint can be thought of as a combination of the idea of a “actor”, “knowledge source”, “role” or “agent” in the development process and the idea of a “view” or “perspective” which an actor maintains." An important idea in this paper was to distinguish "a representation style, the scheme and notation by which the viewpoint expresses what it can see" and "a specification, the statements expressed in the viewpoint's style describing particular domains". Subsequent work, such as IEEE 1471, preserved this distinction by utilizing two separate terms: viewpoint and view, respectively.
+Since the early 1990s there have been a number of efforts to codify approaches for describing and analyzing system architectures. These are often terms architecture frameworks or sometimes viewpoint sets. Many of these have been funded by the United States Department of Defense, but some have sprung from international or national efforts in ISO or the IEEE. Among these, the IEEE Recommended Practice for Architectural Description of Software-Intensive Systems (IEEE Std 1471-2000) established useful definitions of view, viewpoint, stakeholder and concern and guidelines for documenting a system architecture through the use of multiple views by applying viewpoints to address stakeholder concerns.
+IEEE 1471 (now ISO/IEC/IEEE 42010:2011, Systems and software engineering — Architecture description) prescribes the contents of architecture descriptions and describes their creation and use under a number of scenarios, including precedented and unprecedented design, evolutionary design, and capture of design of existing systems. In all of these scenarios the overall process is the same: identify stakeholders, elicit concerns, identify a set of viewpoints to be used, and then apply these viewpoint specifications to develop the set of views relevant to the system of interest. Rather than define a particular set of viewpoints, the standard provides uniform mechanisms and requirements for architects and organizations to define their own viewpoints. In 1996 the ISO Reference Model for Open Distributed Processing (RM-ODP) was published to provide a useful framework for describing the architecture and design of large-scale distributed systems.
+
+
+== View model topics ==
+
+
+=== View ===
+A view of a system is a representation of the system from the perspective of a viewpoint. This viewpoint on a system involves a perspective focusing on specific concerns regarding the system, which suppresses details to provide a simplified model having only those elements related to the concerns of the viewpoint. For example, a security viewpoint focuses on security concerns and a security viewpoint model contains those elements that are related to security from a more general model of a system.
+A view allows a user to examine a portion of a particular interest area. For example, an Information View may present all functions, organizations, technology, etc. that use a particular piece of information, while the Organizational View may present all functions, technology, and information of concern to a particular organization. In the Zachman Framework views comprise a group of work products whose development requires a particular analytical and technical expertise because they focus on either the “what,” “how,” “who,” “where,” “when,” or “why” of the enterprise. For example, Functional View work products answer the question “how is the mission carried out?” They are most easily developed by experts in functional decomposition using process and activity modeling. They show the enterprise from the point of view of functions. They also may show organizational and information components, but only as they relate to functions.
+
+
+=== Viewpoints ===
+Viewpoint is a systems engineering concept that describes a partitioning of concerns in system restricted to a particular set of concerns. Adoption of a viewpoint is usable so that issues in those aspects can be addressed separately. A good selection of viewpoints also partitions the design of the system into specific areas of expertise.
+Viewpoints provide the conventions, rules, and languages for constructing, presenting and analysing views. In ISO/IEC 42010:2007 (IEEE-Std-1471-2000) a viewpoint is a specification for an individual view. A view is a representation of a whole system from the perspective of a viewpoint. A view may consist of one or more architectural models. Each such architectural model is developed using the methods established by its associated architectural system, as well as for the system as a whole. 
+
+
+=== Modeling perspectives ===
+Modeling perspectives is a set of different ways to represent pre-selected aspects of a system. Each perspective has a different focus, conceptualization, dedication and visualization of what the model is representing.
+In information systems, the traditional way to divide modeling perspectives is to distinguish the structural, functional and behavioral/processual perspectives. This together with rule, object, communication and actor and role perspectives is one way of classifying modeling approaches 
+
+
+=== Viewpoint model ===
+In any given viewpoint, it is possible to make a model of the system that contains only the objects that are visible from that viewpoint, but also captures all of the objects, relationships and constraints that are present in the system and relevant to that viewpoint. Such a model is said to be a viewpoint model, or a view of the system from that viewpoint.
+A given view is a specification for the system at a particular level of abstraction from a given viewpoint. Different levels of abstraction contain different levels of detail. Higher-level views allow the engineer to fashion and comprehend the whole design and identify and resolve problems in the large. Lower-level views allow the engineer to concentrate on a part of the design and develop the detailed specifications.
+
+In the system itself, however, all of the specifications appearing in the various viewpoint models must be addressed in the realized components of the system. And the specifications for any given component may be drawn from many different viewpoints. On the other hand, the specifications induced by the distribution of functions over specific components and component interactions will typically reflect a different partitioning of concerns than that reflected in the original viewpoints. Thus additional viewpoints, addressing the concerns of the individual components and the bottom-up synthesis of the system, may also be useful.
+
+
+=== Architecture description ===
+An architecture description is a representation of a system architecture, at any time, in terms of its component parts, how those parts function, the rules and constraints under which those parts function, and how those parts relate to each other and to the environment. In an architecture description the architecture data is shared across several views and products.
+At the data layer are the architecture data elements and their defining attributes and relationships. At the presentation layer are the products and views that support a visual means to communicate and understand the purpose of the architecture, what it describes, and the various architectural analyses performed. Products provide a way for visualizing architecture data as graphical, tabular, or textual representations. Views provide the ability to visualize architecture data that stem across products, logically organizing the data for a specific or holistic perspective of the architecture.
+
+
+== Types of System View Models ==
+
+
+=== Three schema approach ===
+
+The Three schema approach for data modeling, introduced in 1977, can be considered one of the first view models. It is an approach to building information systems and systems information management, that promotes the conceptual model as the key to achieving data integration. The Three schema approach defines three schemas and views:
+External schema for user views
+Conceptual schema integrates external schemata
+Internal schema that defines physical storage structures
+At the center, the conceptual schema defines the ontology of the concepts as the users think of them and talk about them. The physical schema describes the internal formats of the data stored in the database, and the external schema defines the view of the data presented to the application programs. The framework attempted to permit multiple data models to be used for external schemata.
+Over the years, the skill and interest in building information systems has grown tremendously. However, for the most part, the traditional approach to building systems has only focused on defining data from two distinct views, the "user view" and the "computer view". From the user view, which will be referred to as the “external schema,” the definition of data is in the context of reports and screens designed to aid individuals in doing their specific jobs. The required structure of data from a usage view changes with the business environment and the individual preferences of the user. From the computer view, which will be referred to as the “internal schema,” data is defined in terms of file structures for storage and retrieval. The required structure of data for computer storage depends upon the specific computer technology employed and the need for efficient processing of data.
+
+
+=== 4+1 view model of architecture ===
+
+4+1 is a view model designed by Philippe Kruchten in 1995 for describing the architecture of software-intensive systems, based on the use of multiple, concurrent views. The views are used to describe the system in the viewpoint of different stakeholders, such as end-users, developers and project managers. The four views of the model are logical, development, process and physical view:
+The four views of the model are concerned with :
+Logical view : is concerned with the functionality that the system provides to end-users.
+Development view : illustrates a system from a programmers perspective and is concerned with software management.
+Process view : deals with the dynamic aspect of the system, explains the system processes and how they communicate, and focuses on the runtime behavior of the system.
+Physical view : depicts the system from a system engineer's point of view. It is concerned with the topology of software components on the physical layer, as well as communication between these components.
+In addition selected use cases or scenarios are utilized to illustrate the architecture. Hence the model contains 4+1 views.
+
+
+== Types of Enterprise Architecture View ==
+Enterprise Architecture framework defines how to organize the structure and views associated with an Enterprise Architecture. Because the discipline of Enterprise Architecture and Engineering is so broad, and because enterprises can be large and complex, the models associated with the discipline also tend to be large and complex. To manage this scale and complexity, an Architecture Framework provides tools and methods that can bring the task into focus and allow valuable artifacts to be produced when they are most needed.
+Architecture Frameworks are commonly used in Information technology and Information system governance. An organization may wish to mandate that certain models be produced before a system design can be approved. Similarly, they may wish to specify certain views be used in the documentation of procured systems - the U.S. Department of Defense stipulates that specific DoDAF views be provided by equipment suppliers for capital project above a certain value.
+
+
+=== Zachman Framework ===
+
+The Zachman Framework, originally conceived by John Zachman at IBM in the 1987, is a framework for enterprise architecture, which provides a formal and highly structured way of viewing and defining an enterprise.
+The Framework is used for organizing architectural "artifacts" in a way that takes into account both who the artifact targets (for example, business owner and builder) and what particular issue (for example, data and functionality) is being addressed. These artifacts may include design documents, specifications, and models.
+The Zachman Framework is often referenced as a standard approach for expressing the basic elements of enterprise architecture. The Zachman Framework has been recognized by the U.S. Federal Government as having "... received worldwide acceptance as an integrated framework for managing change in enterprises and the systems that support them."
+
+
+=== RM-ODP views ===
+
+The International Organization for Standardization (ISO) Reference Model for Open Distributed Processing (RM-ODP)  specifies a set of viewpoints for partitioning the design of a distributed software/hardware system. Since most integration problems arise in the design of such systems or in very analogous situations, these viewpoints may prove useful in separating integration concerns. The RMODP viewpoints are:
+the enterprise viewpoint, which is concerned with the purpose and behaviors of the system as it relates to the business objective and the business processes of the organization
+the information viewpoint, which is concerned with the nature of the information handled by the system and constraints on the use and interpretation of that information
+the computational viewpoint, which is concerned with the functional decomposition of the system into a set of components that exhibit specific behaviors and interact at interfaces
+the engineering viewpoint, which is concerned with the mechanisms and functions required to support the interactions of the computational components
+the technology viewpoint, which is concerned with the explicit choice of technologies for the implementation of the system, and particularly for the communications among the components
+RMODP further defines a requirement for a design to contain specifications of consistency between viewpoints, including:
+the use of enterprise objects and processes in defining information units
+the use of enterprise objects and behaviors in specifying the behaviors of computational components, and use of the information units in defining computational interfaces
+the association of engineering choices with computational interfaces and behavior requirements
+the satisfaction of information, computational and engineering requirements in the chosen technologies
+
+
+=== DoDAF views ===
+The Department of Defense Architecture Framework (DoDAF) defines a standard way to organize an enterprise architecture (EA) or systems architecture into complementary and consistent views. It is especially suited to large systems with complex integration and interoperability challenges, and is apparently unique in its use of "operational views" detailing the external customer's operating domain in which the developing system will operate.
+
+The DoDAF defines a set of products that act as mechanisms for visualizing, understanding, and assimilating the broad scope and complexities of an architecture description through graphic, tabular, or textual means. These products are organized under four views:
+Overarching All View (AV),
+Operational View (OV),
+Systems View (SV), and the
+Technical Standards View (TV).
+Each view depicts certain perspectives of an architecture as described below. Only a subset of the full DoDAF viewset is usually created for each system development. The figure represents the information that links the operational view, systems and services view, and technical standards view. The three views and their interrelationships driven – by common architecture data elements – provide the basis for deriving measures such as interoperability or performance, and for measuring the impact of the values of these metrics on operational mission and task effectiveness.
+
+
+=== Federal Enterprise Architecture views ===
+In the US Federal Enterprise Architecture enterprise, segment, and solution architecture provide different business perspectives by varying the level of detail and addressing related but distinct concerns. Just as enterprises are themselves hierarchically organized, so are the different views provided by each type of architecture. The Federal Enterprise Architecture Practice Guidance (2006) has defined three types of architecture:
+
+Enterprise architecture,
+Segment architecture, and
+Solution architecture.
+By definition, Enterprise Architecture (EA) is fundamentally concerned with identifying common or shared assets – whether they are strategies, business processes, investments, data, systems, or technologies. EA is driven by strategy; it helps an agency identify whether its resources are properly aligned to the agency mission and strategic goals and objectives. From an investment perspective, EA is used to drive decisions about the IT investment portfolio as a whole. Consequently, the primary stakeholders of the EA are the senior managers and executives tasked with ensuring the agency fulfills its mission as effectively and efficiently as possible.
+By contrast, segment architecture defines a simple roadmap for a core mission area, business service, or enterprise service. Segment architecture is driven by business management and delivers products that improve the delivery of services to citizens and agency staff. From an investment perspective, segment architecture drives decisions for a business case or group of business cases supporting a core mission area or common or shared service. The primary stakeholders for segment architecture are business owners and managers. Segment architecture is related to EA through three principles: structure, reuse, and alignment. First, segment architecture inherits the framework used by the EA, although it may be extended and specialized to meet the specific needs of a core mission area or common or shared service. Second, segment architecture reuses important assets defined at the enterprise level including: data; common business processes and investments; and applications and technologies. Third, segment architecture aligns with elements defined at the enterprise level, such as business strategies, mandates, standards, and performance measures.
+
+
+=== Nominal set of views ===
+In search of "Framework for Modeling Space Systems Architectures" Peter Shames and Joseph Skipper (2006) defined a "nominal set of views", Derived from CCSDS RASDS, RM-ODP, ISO 10746 and compliant with IEEE 1471.
+
+This "set of views", as described below, is a listing of possible modeling viewpoints. Not all of these views may be used for any one project and other views may be defined as necessary. Note that for some analyses elements from multiple viewpoints may be combined into a new view, possibly using a layered representation.
+In a latter presentation this nominal set of views was presented as an Extended RASDS Semantic Information Model Derivation. Hereby RASDS stands for Reference Architecture for Space Data Systems. see second image.
+Enterprise Viewpoint
+Organization view – Includes organizational elements and their structures and relationships. May include agreements, contracts, policies and organizational interactions.
+Requirements view – Describes the requirements, goals, and objectives that drive the system. Says what the system must be able to do.
+Scenario view – Describes the way that the system is intended to be used, see scenario planning. Includes user views and descriptions of how the system is expected to behave.
+Information viewpoint
+Metamodel view – An abstract view that defines information model elements and their structures and relationships. Defines the classes of data that are created and managed by the system and the data architecture.
+Information view – Describes the actual data and information as it is realized and manipulated within the system. Data elements are defined by the metamodel view and they are referred to by functional objects in other views.
+
+Functional viewpoint
+Functional Dataflow view – An abstract view that describes the functional elements in the system, their interactions, behavior, provided services, constraints and data flows among them. Defines which functions the system is capable of performing, regardless of how these functions are actually implemented.
+Functional Control view – Describes the control flows and interactions among functional elements within the system. Includes overall system control interactions, interactions between control elements and sensor / effector elements and management interactions.
+Physical viewpoint
+Data System view – Describes instruments, computers, and data storage components, their data system attributes and the communications connectors (busses, networks, point to point links) that are used in the system.
+Telecomm view – Describes the telecomm components (antenna, transceiver), their attributes and their connectors (RF or optical links).
+Navigation view – Describes the motion of the major elements within the system (trajectory, path, orbit), including their interaction with external elements and forces that are outside of the control of the system, but that must be modeled with it to understand system behavior (planets, asteroids, solar pressure, gravity)
+Structural view – Describes the structural components in the system (s/c bus, struts, panels, articulation), their physical attributes and connectors, along with the relevant structural aspects of other components (mass, stiffness, attachment)
+Thermal view – Describes the active and passive thermal components in the system (radiators, coolers, vents) and their connectors (physical and free space radiation) and attributes, along with the thermal properties of other components (i.e. antenna as sun shade)
+Power view – Describes the active and passive power components in the system (solar panels, batteries, RTGs) within the system and their connectors, along with the power properties of other components (data system and propulsion elements as power sinks and structural panels as grounding plane)
+Propulsion view – Describes the active and passive propulsion components in the system (thrusters, gyros, motors, wheels) within the system and their connectors, along with the propulsive properties of other components
+
+Engineering viewpoint
+Allocation view – Describes the allocation of functional objects to engineered physical and computational components within the system, permits analysis of performance and used to verify satisfaction of requirements
+Software view - Describes the software engineering aspects of the system, software design and implementation of functionality within software components, select languages and libraries to be used, define APIs, do the engineering of abstract functional objects into tangible software elements. Some functional elements, described using a software language, may actually be implemented as hardware (FPGA, ASIC)
+Hardware views – Describes the hardware engineering aspects of the system, hardware design, selection and implementation of all of the physical components to be assembled into the system. There may be many of these views, each specific to a different engineering discipline.
+Communications Protocol view – Describes the end to end design of the communications protocols and related data transport and data management services, shows the protocol stacks as they are implemented on each of the physical components of the system.
+Risk view – Describes the risks associated with the system design, processes, and technologies, assigns additional risk assessment attributes to other elements described in the architecture
+Control Engineering view - Analyzes system from the perspective of its controllability, allocation of elements into system under control and control system
+Integration and Test view – Looks at the system from the perspective of what must be done to assemble, integrate and test system and sub-systems, and assemblies. Includes verification of proper functionality, driven by scenarios, in satisfaction of requirements.
+IV&V view – independent validation and verification of functionality and proper operation of the system in satisfaction of requirements. Does system as designed and developed meet goals and objectives.
+Technology viewpoint
+Standards view – Defines the standards to be adopted during design of the system (e.g. communication protocols, radiation tolerance, soldering). These are essentially constraints on the design and implementation processes.
+Infrastructure view – Defines the infrastructure elements that are to support the engineering, design, and fabrication process. May include data system elements (design repositories, frameworks, tools, networks) and hardware elements (chip fabrication, thermal vacuum facility, machine shop, RF testing lab)
+Technology Development & Assessment view – Includes description of technology development programs designed to produce algorithms or components that may be included in a system development project. Includes evaluation of properties of selected hardware and software components to determine if they are at a sufficient state of maturity to be adopted for the mission being designed.
+In contrast to the previous listed view models, this "nominal set of views" lists a whole range of views, possible to develop powerful and extensible approaches for describing a general class of software intensive system architectures.
+
+
+== See also ==
+Enterprise Architecture framework
+Organizational architecture
+Software development methodology
+Treasury Enterprise Architecture Framework
+TOGAF
+Zachman Framework
+Ontology (information science)
+Knowledge Acquisition
+
+
+== References ==
+
+Attribution
+ This article incorporates public domain material from websites or documents of the National Institute of Standards and Technology.
+
+
+== External links ==
+ Media related to View models at Wikimedia Commons

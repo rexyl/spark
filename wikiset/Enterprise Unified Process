@@ -1,0 +1,73 @@
+The Enterprise Unified Process (EUP) is an extended variant of the Unified Process and was developed by Scott W. Ambler and Larry Constantine in 2000, eventually reworked in 2005 by Ambler, John Nalbone and Michael Vizdos. EUP was originally introduced to overcome some shortages of RUP, namely the lack of production and eventual retirement of a software system. So two phases and several new disciplines were added. EUP sees software development not as a standalone activity, but embedded in the lifecycle of the system (to be built or enhanced or replaced), the IT lifecycle of the enterprise and the organization/business lifecycle of the enterprise itself. It deals with software development as seen from the customer's point of view.
+In 2013 work began to evolve EUP to be based on Disciplined Agile Delivery instead of the Unified Process.
+
+
+== PhasesEdit ==
+The Unified Process defines four project phases
+Inception
+Elaboration
+Construction
+Transition
+To these EUP adds two additional phases
+Production
+Retirement
+
+
+== DisciplinesEdit ==
+The Rational Unified Process defines nine project disciplines
+Business Modeling
+Requirements
+Analysis and Design
+Implementation
+Test
+Deployment
+Configuration and Change Management
+Project Management
+Environment
+To these EUP adds one additional project discipline
+Operations and Support
+and seven enterprise disciplines
+Enterprise Business Modeling
+Portfolio Management
+Enterprise Architecture
+Strategic Reuse
+People Management
+Enterprise Administration
+Software Process Improvement
+
+
+== Best Practices of EUPEdit ==
+The EUP provide following best practices:-
+Develop iteratively
+Manage requirements
+Proven architecture
+Modeling
+Continuously verify quality.
+Manage change
+Collaborative development
+Look beyond development.
+Deliver working software on a regular basis
+Manage risk
+
+
+== See alsoEdit ==
+Disciplined Agile Delivery
+Rational Unified Process
+Software development process
+Extreme programming
+
+
+== ReferencesEdit ==
+
+
+== BibliographyEdit ==
+Ambler, Scott W.; Constantine, Larry L. (2000), The unified process inception phase: best practices in implementing the UP, Focal Press, ISBN 978-1-929629-10-7 
+Ambler, Scott W.; Constantine, Larry L. (2000), The unified process elaboration phase: best practices in implementing the UP, Focal Press, ISBN 978-1-929629-05-3 
+Ambler, Scott W.; Constantine, Larry L. (2000), The unified process construction phase: best practices for completing the unified process, Focal Press, ISBN 978-1-929629-01-5 
+Ambler, Scott W.; Constantine, Larry L. (2002), The Unified process transition and production phase, Focal Press, ISBN 978-1-57820-092-4 
+Ambler, Scott W; Nalbone, John; Vizdos, Michael J (2005), The Enterprise Unified Process : extending the Rational Unified Process, Prentice Hall PTR, ISBN 978-0-13-191451-3 
+Ramsin, Raman (2008). "Process-centered review of object oriented software development methodologies". ACM Computing Surveys (CSUR) (Association of Computing Machinery ACM) 40 (1): 1–89. doi:10.1145/1322432.1322435.  
+
+
+== External linksEdit ==
+Scott W. Ambler's website on the Enterprise Unified Process

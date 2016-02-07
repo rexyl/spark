@@ -1,0 +1,31 @@
+A table is a collection of related data held in a structured format within a database. It consists of fields (columns), and rows.
+In relational databases and flat file databases, a table is a set of data elements (values) using a model of vertical columns (identifiable by name) and horizontal rows, the cell being the unit where a row and column intersect. A table has a specified number of columns, but can have any number of rows. Each row is identified by one or more values appearing in a particular column subset. The columns subset which uniquely identifies a row is called the primary key.
+"Table" is another term for "relation"; although there is the difference in that a table is usually a multiset (bag) of rows where a relation is a set and does not allow duplicates. Besides the actual data rows, tables generally have associated with them some metadata, such as constraints on the table or on the values within particular columns.
+The data in a table does not have to be physically stored in the database. Views also function as relational tables, but their data are calculated at query time. External tables (in Informix or Oracle, for example) store data outside standard database structures but accessible to database commands.
+
+
+== Tables versus relations ==
+In terms of the relational model of databases, a table can be considered a convenient representation of a relation, but the two are not strictly equivalent. For instance, an SQL table can potentially contain duplicate rows, whereas a true relation cannot contain duplicate tuples. Similarly, representation as a table implies a particular ordering to the rows and columns, whereas a relation is explicitly unordered. However, the database system does not guarantee any ordering of the rows unless an ORDER BY clause is specified in the SELECT statement that queries the table.
+An equally valid representations of a relation is as an n-dimensional chart, where n is the number of attributes (a table's columns). For example, a relation with two attributes and three values can be represented as a table with two columns and three rows, or as a two-dimensional graph with three points. The table and graph representations are only equivalent if the ordering of rows is not significant, and the table has no duplicate rows.
+
+
+== Comparisons ==
+
+
+=== Hierarchical Databases ===
+In non-relational systems, hierarchical databases, the distant counterpart of a table is a structured file, representing the rows of a table in each record of the file and each column in a record. This structure implies that a record can have repeating information, generally in the child data segments. Data are stored in sequence of records, which are equivalent to table term of a relational database, with each record having equivalent rows.
+
+
+=== Spreadsheets ===
+Unlike a spreadsheet, the datatype of field is ordinarily defined by the schema describing the table. Some SQL systems, such as SQLite, are less strict about field datatype definitions.
+
+
+== See also ==
+Relation (database)
+Row (database)
+Column (database)
+Virtual column
+Table (information)
+
+
+== References ==

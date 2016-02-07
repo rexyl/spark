@@ -1,0 +1,82 @@
+Software deployment is all of the activities that make a software system available for use.
+The general deployment process consists of several interrelated activities with possible transitions between them. These activities can occur at the producer side or at the consumer side or both. Because every software system is unique, the precise processes or procedures within each activity can hardly be defined. Therefore, "deployment" should be interpreted as a general process that has to be customized according to specific requirements or characteristics. A brief description of each activity will be presented later.
+
+
+== Deployment activities ==
+Release 
+The release activity follows from the completed development process. It includes all the operations to prepare a system for assembly and transfer to the customer site. Therefore, it must determine the resources required to operate at the customer site and collect information for carrying out subsequent activities of deployment process.
+Install and activate 
+Activation is the activity of starting up the executable component of software. For simple systems, it involves establishing some form of command for execution. For complex systems, it should make all the supporting systems ready to use. (Not to be confused with the common use of the term activation concerning a software license, which is a function of Digital Rights Management systems.)
+In larger software deployments, the working copy of the software might be installed on a production server in a production environment. Other versions of the deployed software may be installed in a test environment, development environment and disaster recovery environment.
+
+Deactivate 
+Deactivation is the inverse of activation, and refers to shutting down any executing components of a system. Deactivation is often required to perform other deployment activities, e.g., a software system may need to be deactivated before an update can be performed. The practice of removing infrequently used or obsolete systems from service is often referred to as application retirement or application decommissioning.
+Adapt 
+The adaptation activity is also a process to modify a software system that has been previously installed. It differs from updating in that adaptations are initiated by local events such as changing the environment of customer site, while updating is mostly started from remote software producer.
+Update 
+The update process replaces an earlier version of all or part of a software system with a newer release.
+Built-In 
+Mechanisms for installing updates are built into some software systems. Automation of these update processes ranges from fully automatic to user initiated and controlled. Norton Internet Security is an example of a system with a semi-automatic method for retrieving and installing updates to both the antivirus definitions and other components of the system. Other software products provide query mechanisms for determining when updates are available.
+Version tracking 
+Version tracking systems help the user find and install updates to software systems installed on PCs and local networks.
+Web based version tracking systems notify the user when updates are available for software systems installed on a local system. For example: VersionTracker Pro checks software versions on a user's computer and then queries its database to see if any updates are available.
+Local version tracking system notifies the user when updates are available for software systems installed on a local system. For example: Software Catalog stores version and other information for each software package installed on a local system. One click of a button launches a browser window to the upgrade web page for the application, including auto-filling of the user name and password for sites that require a login.
+Browser based version tracking systems notify the user when updates are available for software packages installed on a local system. For example: wfx-Versions is a Firefox extension which helps the user find the current version number of any program listed on the web.
+
+Uninstall 
+Uninstallation is the inverse of installation. It is the removal of a system that is no longer required. It also involves some reconfiguration of other software systems in order to remove the uninstalled system’s files and dependencies.
+Retire 
+Ultimately, a software system is marked as obsolete and support by the producers is withdrawn. It is the end of the life cycle of a software product.
+
+
+== Deployment roles ==
+
+The complexity and variability of software products has fostered the emergence of specialized roles for coordinating and engineering the deployment process. For desktop systems, end-users frequently also become the "software deployers" when they install a software package on their machine. The deployment of enterprise software involves many more roles, and those roles typically change as the application progresses from test (pre-production) to production environments. Typical roles involved in software deployments for enterprise applications may include:
+in pre-production environments:
+application developers: see Software development process
+build-and-release engineers: see Release engineering
+release managers: see Release management
+deployment coordinators: see DevOps
+
+in production environments:
+system administrator
+database administrator
+release coordinators: see DevOps
+operations project managers: see Information Technology Infrastructure Library
+
+
+== See also ==
+Application lifecycle management
+Product lifecycle management
+Systems management
+System deployment
+Software release
+Definitive Media Library
+Readme
+
+
+=== Deployment tools ===
+OSGi
+JNLP
+RPM
+Apt
+Capistrano
+Octopus Deploy
+OpenMake Software Meister
+Total Software Deployment
+ElectricFlow Deploy
+
+
+== External links ==
+Standardization efforts
+Solution Installation Schema Submission request to W3C
+OASIS Solution Deployment Descriptor TC
+OMG Specification for Deployment and Configuration of Component-based Distributed Applications (OMG D&C)
+JSR 88: Java EE Application Deployment
+
+Articles
+The Future of Software Delivery - free developerWorks whitepaper
+Carzaniga A., Fuggetta A., Hall R. S., Van Der Hoek A., Heimbigner D., Wolf A. L. — A Characterization Framework for Software Deployment Technologies — Technical Report CU-CS-857-98, Dept. of Computer Science, University of Colorado, April 1998. http://serl.cs.colorado.edu/~carzanig/papers/CU-CS-857-98.pdf
+
+Resources
+Microsoft's resource page on Client Deployment

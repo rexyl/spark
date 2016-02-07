@@ -1,0 +1,86 @@
+In context of relational databases, a foreign key is a field (or collection of fields) in one table that uniquely identifies a row of another table. In simpler words, the foreign key is defined in a second table, but it refers to the primary key in the first table. For example, a table called Employee has a primary key called employee_id. Another table called Employee Details has a foreign key which references employee_id in order to uniquely identify the relationship between both the tables.
+The table containing the foreign key is called the child table, and the table containing the candidate key is called the referenced or parent table. In database relational modeling and implementation, a unique key is a set of zero, one or more attributes, the value(s) of which are guaranteed to be unique for each tuple (row) in a relation. The value or combination of values of unique key attributes for any tuple cannot be duplicated for any other tuple in that relation.
+When more than one column is combined to form a unique key, their combined value is used to access each row and maintain uniqueness. Values are not combined, they are compared using their data types.
+Since the purpose of the foreign key is to identify a particular row of the referenced table, it is generally required that the foreign key is equal to the candidate key in some row of the primary table, or else have no value (the NULL value.). This rule is called a referential integrity constraint between the two tables. Because violations of these constraints can be the source of many database problems, most database management systems provide mechanisms to ensure that every non-null foreign key corresponds to a row of the referenced table.
+For example, consider a database with two tables: a CUSTOMER table that includes all customer data and an ORDER table that includes all customer orders. Suppose the business requires that each order must refer to a single customer. To reflect this in the database, a foreign key column is added to the ORDER table (e.g., CUSTOMERID), which references the primary key of CUSTOMER (e.g. ID). Because the primary key of a table must be unique, and because CUSTOMERID only contains values from that primary key field, we may assume that, when it has a value, CUSTOMERID will identify the particular customer which placed the order. However, this can no longer be assumed if the ORDER table is not kept up to date when rows of the CUSTOMER table are deleted or the ID column altered, and working with these tables may become more difficult. Many real world databases work around this problem by 'inactivating' rather than physically deleting master table foreign keys, or by complex update programs that modify all references to a foreign key when a change is needed.
+Foreign keys play an essential role in database design. One important part of database design is making sure that relationships between real-world entities are reflected in the database by references, using foreign keys to refer from one table to another. Another important part of database design is database normalization, in which tables are broken apart and foreign keys make it possible for them to be reconstructed.
+Multiple rows in the referencing (or child) table may refer to the same row in the referenced (or parent) table. In this case, the relationship between the two tables is called a one to many relationship between the referenced table and the referencing table.
+In addition, the child and parent table may, in fact, be the same table, i.e. the foreign key refers back to the same table. Such a foreign key is known in SQL:2003 as a self-referencing or recursive foreign key. In database management systems, this is often accomplished by linking a first and second reference to the same table.
+A table may have multiple foreign keys, and each foreign key can have a different parent table. Each foreign key is enforced independently by the database system. Therefore, cascading relationships between tables can be established using foreign keys.
+
+
+== Defining foreign keys ==
+Foreign keys are defined in the ISO SQL Standard, through a FOREIGN KEY constraint. The syntax to add such a constraint to an existing table is defined in SQL:2003 as shown below. Omitting the column list in the REFERENCES clause implies that the foreign key shall reference the primary key of the referenced table.
+
+Likewise, foreign keys can be defined as part of the CREATE TABLE SQL statement.
+
+If the foreign key is a single column only, the column can be marked as such using the following syntax:
+
+Foreign keys can be defined with a stored procedure statement.
+
+tabname: the name of the table or view that contains the foreign key to be defined.
+pktabname: the name of the table or view that has the primary key to which the foreign key applies. The primary key must already be defined.
+col1: the name of the first column that makes up the foreign key. The foreign key must have at least one column and can have a maximum of eight columns.
+
+
+== Referential actions ==
+
+Because the database management system enforces referential constraints, it must ensure data integrity if rows in a referenced table are to be deleted (or updated). If dependent rows in referencing tables still exist, those references have to be considered. SQL:2003 specifies 5 different referential actions that shall take place in such occurrences:
+CASCADE
+RESTRICT
+NO ACTION
+SET NULL
+SET DEFAULT
+
+
+=== CASCADE ===
+Whenever rows in the master (referenced) table are deleted (or updated), the respective rows of the child (referencing) table with a matching foreign key column will be deleted (or updated) as well. This is called a cascade delete (or update).
+
+
+=== RESTRICT ===
+A value cannot be updated or deleted when a row exists in a referencing or child table that references the value in the referenced table.
+Similarly, a row cannot be deleted as long as there is a reference to it from a referencing or child table.
+To understand RESTRICT (and CASCADE) better, it may be helpful to notice the following difference, which might not be immediately clear. The referential action CASCADE modifies the "behavior" of the (child) table itself where the word CASCADE is used. For example, ON DELETE CASCADE effectively says "When the referenced row is deleted from the other table (master table), then delete also from me". However, the referential action RESTRICT modifies the "behavior" of the master table, not the child table, although the word RESTRICT appears in the child table and not in the master table! So, ON DELETE RESTRICT effectively says: "When someone tries to delete the row from the other table (master table), prevent deletion from that other table (and of course, also don't delete from me, but that's not the main point here)."
+RESTRICT is not supported by Microsoft SQL 2012 and earlier.
+
+
+=== NO ACTION ===
+NO ACTION and RESTRICT are very much alike. The main difference between NO ACTION and RESTRICT is that with NO ACTION the referential integrity check is done after trying to alter the table. RESTRICT does the check before trying to execute the UPDATE or DELETE statement. Both referential actions act the same if the referential integrity check fails: the UPDATE or DELETE statement will result in an error.
+In other words, when an UPDATE or DELETE statement is executed on the referenced table using the referential action NO ACTION, the DBMS verifies at the end of the statement execution that none of the referential relationships are violated. This is different from RESTRICT, which assumes at the outset that the operation will violate the constraint. Using NO ACTION, the triggers or the semantics of the statement itself may yield an end state in which no foreign key relationships are violated by the time the constraint is finally checked, thus allowing the statement to complete successfully.
+
+
+=== SET DEFAULT , SET NULL ===
+In general, the action taken by the DBMS for SET NULL or SET DEFAULT is the same for both ON DELETE or ON UPDATE: The value of the affected referencing attributes is changed to NULL for SET NULL, and to the specified default value for SET DEFAULT.
+
+
+=== Triggers ===
+Referential actions are generally implemented as implied triggers (i.e. triggers with system-generated names, often hidden.) As such, they are subject to the same limitations as user-defined triggers, and their order of execution relative to other triggers may need to be considered; in some cases it may become necessary to replace the referential action with its equivalent user-defined trigger to ensure proper execution order, or to work around mutating-table limitations.
+Another important limitation appears with transaction isolation: your changes to a row may not be able to fully cascade because the row is referenced by data your transaction cannot "see", and therefore cannot cascade onto. An example: while your transaction is attempting to renumber a customer account, a simultaneous transaction is attempting to create a new invoice for that same customer; while a CASCADE rule may fix all the invoice rows your transaction can see to keep them consistent with the renumbered customer row, it won't reach into another transaction to fix the data there; because the database cannot guarantee consistent data when the two transactions commit, one of them will be forced to roll back (often on a first-come-first-served basis.)
+
+
+== Example ==
+As a first example to illustrate foreign keys, suppose an accounts database has a table with invoices and each invoice is associated with a particular supplier. Supplier details (such as name and address) are kept in a separate table; each supplier is given a 'supplier number' to identify it. Each invoice record has an attribute containing the supplier number for that invoice. Then, the 'supplier number' is the primary key in the Supplier table. The foreign key in the Invoices table points to that primary key. The relational schema is the following. Primary keys are marked in bold, and foreign keys are marked in italics.
+
+  Supplier ( SupplierNumber, Name, Address, Type )
+  Invoices ( InvoiceNumber, SupplierNumber, Text )
+
+The corresponding Data Definition Language statement is as follows.
+
+
+== See also ==
+Candidate key
+Compound key
+Superkey
+Junction table
+
+
+== References ==
+
+
+== External links ==
+SQL-99 Foreign Keys
+PostgreSQL Foreign Keys
+MySQL Foreign Keys
+FirebirdSQL Foreign Keys
+SQLite support for Foreign Keys
+Microsoft SQL 2012 table_constraint (Transact-SQL)

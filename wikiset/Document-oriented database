@@ -1,0 +1,85 @@
+A document-oriented database or document store is a computer program designed for storing, retrieving, and managing document-oriented information, also known as semi-structured data. Document-oriented databases are one of the main categories of NoSQL databases and the popularity of the term "document-oriented database" has grown with the use of the term NoSQL itself.
+Document-oriented databases are inherently a subclass of the key-value store, another NoSQL database concept. The difference lies in the way the data is processed; in a key-value store the data is considered to be inherently opaque to the database, whereas a document-oriented system relies on internal structure in the document order to extract metadata that the database engine uses for further optimization. Although the difference is often moot due to tools in the systems, conceptually the document-store is designed to offer a richer experience with modern programming techniques. XML databases are a specific subclass of document-oriented databases that are optimized to extract their metadata from XML documents.
+Document databases contrast strongly with the traditional relational database (RDB). Relational databases are strongly typed during database creation, and store repeated data in separate tables that are defined by the programmer. In an RDB, every instance of data has the same format as every other, and changing that format is generally difficult. Document databases get their type information from the data itself, normally store all related information together, and allow every instance of data to be different from any other. This makes them more flexible in dealing with change and optional values, maps more easily into program objects, and often reduces database size. This makes them attractive for programming modern web applications, which are subject to continual change in place, and speed of deployment is an important issue.
+
+
+== Documents ==
+The central concept of a document-oriented database are the documents, which is used in usual English sense of a group of data that encodes some sort of user-readable information. This contrasts with the value in the key-value store, which is assumed to be opaque data. The basic concept that makes a database document-oriented as opposed to key-value is the idea that the documents include internal structure, or metadata, that the database engine can use to further automate the storage and provide more value.
+To understand the difference, consider this text document:
+
+ Bob Smith
+ 123 Back St.
+ Boys, AR, 32225
+ US
+
+Although it is clear to the reader that this document contains the address for a contact, there is no information within the document that indicates that, nor information on what the individual fields represent. This file could be stored in a key-value store, but the semantic content that this is an address may be lost, and the database has no way to know how to optimize or index this data by itself. For instance, there is no way for the database to know that "AR" is the state and add it to an index of states, it is simply a piece of data in a string that also includes the city and zip code. It is possible to add additional logic to deconstruct the string into fields, to extract the state by looking for the middle item of three comma separated values in the 3rd line, but this is not a simple task. For instance, if another line is added to the address, adding a PO Box or suite number for instance, the state information is in the 4th line instead of 3rd. Without additional information, parsing free form data of this sort can be complex.
+Now consider the same document marked up in pseudo-XML:
+
+In this case, the document includes both data and the metadata explaining each of the fields. A key-value store receiving this document would simply store it. In the case of a document-store, the system understands that contact documents may have a state field, allowing the programmer to "find all the <contact>s where the <state> is 'AR'". Additionally, the programmer can provide hints based on the document type or fields within it, for instance, they may tell the engine to place all <contact> documents in a separate physical store, or to make an index on the state field for performance reasons. All of this can be done in a key-value store as well, and the difference lies primarily in how much programming effort is needed to add these indexes and other features; in a document-store this is normally almost entirely automated.
+Now consider a slightly more complex example:
+
+In this case a number of the fields are either repeated or split out into separate containers in the case of <address>. With similar hints, the document store will allow searches for things like "find all my <contact>s with a <phone> of type <work> but does not have an <email> of type <work>". This is not unlike other database systems in terms of retrieval. What is different is that these fields are defined by the metadata in the document itself. There is no need to pre-define these fields in the database.
+This is another major advantage of the document-oriented concept; a single database can contain both of these <contact> objects in the same store, and more generally, every document in the database can have a different format. It is very common for a particular type of document to differ from instance to instance; one <contact> might have a work email, another might not, one might have a single address, another might have several. More widely, the database can store completely unrelated documents, yet still understand that parts of the data within them are the same. For instance, one could construct a query that would look for any document that has the <state> 'AR', it doesn't matter that the documents might be <contact>s or <business>es, or if the <state> is within an <address> or not.
+In addition to making it easier to handle different types of data, the metadata also allows the document format to be changed at any time without affecting the existing records. If one wishes to add an <image> field to their contact book application some time in the future, they simply add it. Existing documents will still work fine without being changed in the database, they simply won't have an image. Fields can be added at any time, anywhere, with no need to change the physical storage.
+The usefulness of this sort of introspection of the data is not lost on the designers of other database systems. Many key-value stores include some or all of the functionality of dedicated from the start document stores, and a number of relational databases, notably PostgreSQL and Informix, have added functionality to make these sorts of operations possible. It is not the ability to provide these functions that define the document-orientation, but the ease with which these functions can be implemented and used; a document-oriented database is designed from the start to work with complex documents, and will (hopefully) make it easier to access this functionality than a system where this was added after the fact.
+Practically any "document" containing metadata can be managed in this fashion, and common examples include XML, YAML, JSON, and BSON. Some document-oriented databases include functionality to help map data lacking clearly defined metadata. For instance, many engines include functionality to index PDF or TeX documents, or may include predefined document formats that are in turn based on XML, like MathML, JATS or DocBook. Some allow documents to be mapped onto a more suitable format using a schema language such as DTD, XSD, Relax NG, or Schematron. Others may include tools to map enterprise data, like column-delimited text files, into formats that can be read more easily by the database engine. Still others take the opposite route, and are dedicated to one type of data format, JSON. JSON is widely used in online programming for interactive web pages and mobile apps, and a niche has appeared for document stores dedicated to efficiently handling them.
+Some of the most popular Web sites are document databases, including the many collections of articles at pubmed.gov or major journal publishers; Wikipedia and its kin; and even search engines (though many of those store links to indexed documents, rather than the full documents themselves).
+
+
+=== Keys and retrieval ===
+Documents may be addressed in the database via a unique key that represents that document. This key is often a simple string, a URI, or a path. The key can be used to retrieve the document from the database. Typically, the database retains an index on the key to speed up document retrieval. The most primitive document databases may do little more than that. However, modern document-oriented databases provide far more, because they extract and index all kinds of metadata, and usually also the entire data content, of the documents. Such databases offer a query language that allows the user to retrieve documents based on their content. For example, you may want to retrieve all the documents whose date falls within some range, that contains a citation to another document, etc.. The set of query APIs or query language features available, as well as the expected performance of the queries, varies significantly from one implementation to the next.
+
+
+=== Organization ===
+Implementations offer a variety of ways of organizing documents, including notions of:
+Collections
+Tags
+Non-visible Metadata
+Directory hierarchies
+Buckets
+
+
+== Comparison with relational databases ==
+In a relational database, data is first categorized into a number of predefined types, and tables are created to hold individual entries, or records, of each type. The tables define the data within each record's fields, meaning that every record in the table has the same overall form. The administrator also defines the relations between the tables, and selects certain fields that they believe will be most commonly used for searching and defines indexes on them. A key concept in the relational design is that any data that may be repeated is placed in its own table, and if these instances are related to each other, a field is selected to group them together, the foreign key.
+For example, an address book application will generally need to store the contact name, an optional image, one or more phone numbers, one or more mailing addresses, and one or more email addresses. In a canonical relational database solution, tables would be created for each of these records with predefined fields for each bit of data: the CONTACT table might include FIRST_NAME, LAST_NAME and IMAGE fields, while the PHONE_NUMBER table might include COUNTRY_CODE, AREA_CODE, PHONE_NUMBER and TYPE (home, work, etc.). The PHONE_NUMBER table also contains a foreign key field, "CONTACT_ID", which holds the unique ID number assigned to the contact when it was created. In order to recreate the original contact, the system has to search through all of the tables and collect the information back together using joins.
+In contrast, in a document-oriented database there may be no internal structure that maps directly onto the concept of a table, and the fields and relations generally don't exist as predefined concepts. Instead, all of the data for an object is placed in a single document, and stored in the database as a single entry. In the address book example, the document would contain the contact's name, image, and any contact info, all in a single record. That entry is accessed through a key, some unique bit of data, which allows the database to retrieve and return the document to the application. No additional work is needed to retrieve the related data; all of this is returned in a single object.
+A key difference between the document-oriented and relational models is that the data formats are not predefined in the document case. In most cases, any sort of document can be stored in any database, and those documents can change in type and form at any time. If one wishes to add a COUNTRY_FLAG to a CONTACT, simply add this field to new documents as they are inserted, this will have no effect on the database or the existing documents already stored, they simply won't have this field. This indicates an advantage of the document-based model: optional fields are truly optional, so a contact that does not include a mailing address simply does not have a mailing address, and there is no need to check another table to see if there are entries.
+To aid retrieval of information from the database, document-oriented systems generally allow the administrator to provide hints to the database to look for certain types of information. In the address book example, the design might add hints for the first and last name fields. When the document is inserted into the database (or later modified), the database engine looks for these bits of information and indexes them, in the same fashion as the relational model. Additionally, most document-oriented databases allow documents to have a type associated with them, like "address book entry", which allows the programmer to retrieve related types of information, like "all the address book entries". This provides functionality similar to a table, but separates the concept (categories of data) from its physical implementation (tables).
+All of this is predicated on the ability of the database engine to examine the data in the document and extract fields from the formatting, its metadata. This is easy in the case of, for example, an XML document or HTML page, where markup tags clearly identify various bits of data. Document-oriented databases may include functionality to automatically extract this sort of information from a variety of document types, even those that were not originally designed for easy access in this manner. In other cases the programmer has to provide this information using their own code. In contrast, a relational database relies on the programmer to handle all of these tasks, breaking down the document into fields and providing those to the database engine, which may require separate instructions if the data spans tables.
+Document-oriented databases normally map more cleanly onto existing programming concepts, like object-oriented programming (OOP). OOP systems have a structure somewhere between the relational and document models; they have predefined fields but they may be empty, they have a defined structure but that may change, they have related data store in other objects, but they may be optional, and collections of other data are directly linked to the "master" object; there is no need to look in other collections to gather up related information. Generally, any object that can be archived to a document can be stored directly in the database and directly retrieved. Most modern OOP systems include archiving systems as a basic feature.
+The relational model stores each part of the object as a separate concept and has to split out this information on storage and recombine it on retrieval. This leads to a problem known as object-relational impedance mismatch, which requires considerable effort to overcome. Object-relational mapping systems, which solve these problems, are often complex and have a considerable performance overhead. This problem simply doesn't exist in a document-oriented system, and more generally, in NoSQL systems as a whole.
+
+
+== Implementations ==
+
+
+=== XML database implementations ===
+
+Most XML databases are document-oriented databases.
+
+
+== See also ==
+Database theory
+Data hierarchy
+Full text search
+In-memory database
+Internet Message Access Protocol (IMAP)
+NoSQL
+Object database
+Online database
+Real time database
+Relational database
+
+
+== Notes ==
+
+
+== References ==
+
+
+== Further reading ==
+Assaf Arkin. (2007, September 20). Read Consistency: Dumb Databases, Smart Services. Labnotes:Don’t let the bubble go to your head!
+
+
+== External links ==
+DB-Engines Ranking of Document Stores by popularity, updated monthly

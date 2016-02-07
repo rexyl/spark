@@ -1,0 +1,45 @@
+Data defined storage (also referred to as a data centric approach) is a new approach to managing, protecting, and realizing value from data by uniting application, information and storage tiers into an integrated data centric management architecture. This is achieved through a process of unification, where users, applications and devices gain access to a repository of captured metadata that empowers organizations to access, query and manipulate the critical components of the data to transform it into information, while providing a flexible and scalable platform for storage of the underlying data. The technology abstracts the data entirely from the storage, allowing full transparent access to users.
+
+
+== Core technology ==
+Data defined storage focuses on metadata with an emphasis on the content, meaning and value of information over the media, type and location of data. Data centric management enables organizations to take a single, unified approach to managing data across large, distributed locations which includes the use of content and metadata indexing.The technology pillars include:
+Media Independent Data Storage: Data defined storage removes media centric data storage boundaries within and across solid-state drive, hard disk drive, cloud storage and tape storage platforms, enables linear scale out functionality through a grid based Map Reduce architecture that leverages enterprise object storage technology and provides transparent data access across globally distributed repositories for high volume storage performance.
+Data Security & Identity Management: Data defined storage allows organizations to gain end-to-end identity management down to the individual user and device level to address growing enterprise mobility requirements and enhanced data security and information governance.
+Distributed Metadata Repository: Data defined storage enables organizations to virtualize aggregate file systems into a single global namespace. At ingestion; file, full text index and custom metadata is collected and stored in a distributed metadata repository. This repository is leveraged to enable speed and accuracy of search and discovery, and to extract value leading to informed business decisions and analytics.
+Data defined storage builds on the benefits of both object storage and software-defined storage technologies, however, object and software-defined storage can only be mapped to the first of data defined storage's three main pillars: media independent data storage, which enables a media agnostic infrastructure - utilizing any type of storage, including low cost commodity storage to scale out to petabyte-level capacities. Data defined storage unifies all data repositories and exposes globally distributed stores through the global namespace, eliminating data silos and improving storage utilization.
+
+
+== Typical implementation ==
+The first implementation of data defined storage was pioneered by Tarmin, in its GridBank Data Management Platform. This technology was developed after Tarmin founders Shahbaz Ali and Steve Simpson experienced the challenges associated with storing, capturing and processing massive volumes of financial transactions first hand at MasterCard. GridBank was designed around the three technology pillars of data defined storage.
+
+
+== Market status ==
+The data defined storage market is still in its early days, there is wide acknowledgement amongst key storage and data management industry players that the future of the market is in emphasizing the value of data through scalable distributed metadata management techniques Additionally, data defined storage has received strong support from leading analyst firms including ESG and IDC. Pioneering customers have begun deploying data defined storage solutions in industries such as upstream oil and gas, healthcare, financial services and managed service providers.
+
+
+== Technology ==
+Data defined storage takes the approach of unifying object storage with open protocol access for file system virtualization, such as CIFS, NFS, FTP as well as REST APIs and other cloud protocols such as Amazon S3, CDMI and OpenStack, integrating an information governance policy management and data mover engine and consolidating unstructured metadata into a distributed repository.
+
+
+== See also ==
+Scale out storage
+Object storage
+Content-addressable storage
+Block storage
+Information governance
+Enterprise search
+Metadata management
+Big data analytics
+Software defined storage
+Cloud storage
+
+
+== References ==
+
+
+== External links ==
+New Storage Platforms: What's the Difference?
+Top Tips for Object Storage
+Object Storage Buying Guide
+A Data-Centric Approach to Managing Data in the Cloud
+Stop Buying Storage. Start Managing Information

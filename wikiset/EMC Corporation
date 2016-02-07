@@ -1,0 +1,54 @@
+EMC Corporation (stylized as EMC²) is an American multinational corporation headquartered in Hopkinton, Massachusetts, United States. EMC sells data storage, information security, virtualization, analytics, cloud computing and other products and services that enable businesses to store, manage, protect, and analyze data. EMC's target markets include large companies and small- and medium-sized businesses across various vertical markets. The stock was added to the New York Stock Exchange on April 6, 1986, and is also listed on the S&P 500 index.
+EMC has over 70,000 employees and is the world’s largest provider of data storage systems by market share, competing against NetApp, IBM, Hewlett-Packard, and Hitachi Data Systems (arranged in descending order of external data storage market share). Joseph M. Tucci has been EMC's chief executive since January 2001 and chairman of the board of directors since January 2006; he joined the company in 2000 as president and chief operating officer. Tucci is also chairman of the board of VMware Corporation and chairman of the board of Pivotal Software, which are partially owned by EMC. On October 12, 2015, Dell Inc. announced that it would acquire EMC in a cash-and-stock deal valued at $67 billion—the largest-ever acquisition in the technology industry.
+
+
+== HistoryEdit ==
+
+EMC, founded in 1979 by Richard Egan and Roger Marino (the E and M in EMC), introduced its first 64-kilobyte memory boards for the Prime Computer in 1981 and continued with the development of memory boards for other computer types. In the mid-1980s the company expanded beyond memory to other computer data storage types and networked storage platforms. EMC began shipping its flagship product, the Symmetrix, in 1990. Symmetrix was the main reason for EMC's rapid growth in the 1990s, both in size and value, from a company valued in the hundreds of millions of dollars to a multi-billion company.
+Michael Ruettgers joined EMC in 1988 and served as CEO from 1992 until January 2001. Under Ruettgers’ leadership, EMC revenues grew from $120 million to nearly $9 billion 10 years later, and the company shifted its focus from memory boards to storage systems. Ruettgers was named one of BusinessWeek's "World's Top 25 Executives"; one of the "Best Chief Executive Officers in America" by Worth magazine; and one of Network World's "25 Most Powerful People in Networking".
+In 2001, Joe Tucci was named chief executive officer of EMC. He has been credited with transforming EMC's business model from a focus on high-end storage platforms to a portfolio of platforms, software, and services that enable organizations to deliver IT as a service through cloud computing. Under Tucci's leadership, EMC grew to $21.7 billion in revenues in 2012.
+In 2009, EMC and Cisco, with investments from VMware and Intel, formed a joint venture called VCE to develop products and services for the converged infrastructure and cloud computing markets.
+EMC announced its 450,000 square foot Center of Excellence (COE) in Durham, North Carolina in 2011. The COE houses a virtualized data center and includes 130,000 square feet of global research and development labs. The company also has COEs in India, China, Egypt, Israel, Ireland, and Russia, which perform engineering, research and development, customer, and translation services for EMC business units.
+In 2013, EMC launched a new company named Pivotal. Led by Paul Maritz, the organization combines technologies from VMware and EMC and is focused on delivering Platform-as-a-Service products.
+EMC has been growing in part through aggressively making acquisitions of small companies, and starting to bring those products to market.
+
+
+=== Acquisition by DellEdit ===
+On October 12, 2015, Dell Inc. announced its intent to acquire EMC in a cash-and-stock deal valued at $67 billion, which has been considered the largest-ever acquisition in the technology sector. Dell CEO Michael Dell explained that the purchase was meant to "evolve the company into the most relevant areas where IT is moving", combining Dell's enterprise server, personal computer, and mobile businesses with EMC's enterprise storage business. The deal is structured so that Dell will pay $24.05 per share of EMC, and $9.05 per share of tracking stock in VMware.
+
+
+== Products and servicesEdit ==
+In addition to those of the majority-owned VMware and Pivotal companies, EMC sells products and services designed to allow IT departments to move to a cloud computing model and to analyze big data.
+
+
+== Major acquisitionsEdit ==
+The following table includes the listing and timeline of EMC Corporation's major acquisitions of other companies since 1996.
+
+
+== Big data projectsEdit ==
+In 2012, EMC sponsored The Human Face of Big Data, a globally crowd-sourced media project focusing on the ability to collect, analyze, triangulate and visualize vast amounts of data in real time. The Human Face of Big Data, produced by Rick Smolan and Jennifer Erwitt, includes “a number of fascinating stories…(that) represent some of the most innovative applications of data that are shaping our future.”
+EMC sponsors The Digital Universe, a study by IDC “measuring and characterizing all the digital data created, replicated, and consumed worldwide in a single year.” The Digital Universe 2012 report anticipates that "during the next eight years, the amount of digital data produced will exceed 40 zettabytes, which is the equivalent of 5,200 GB of data for every man, woman and child on Earth. To hit that figure, all data is expected to double every two years through 2020."
+
+
+== Recognition and awardsEdit ==
+In 2015, EMC was ranked no. 2 on Fortune’s list of the World’s Most Admired Computer Companies for the fifth consecutive year. EMC was included on the 2012 Thompson Reuters Top 100 Global Innovators list. In 2013, four EMC and RSA channel executives were named CRN’s 2013 Channel Chiefs for “trying to make sure their company’s partners succeed."
+EMC has ranked on several global best places to work lists. EMC was ranked the 19th Best Multinational Workplace in Europe by Great Places to Work in 2012. EMC was included on Crain’s 2012 Best Places to Work in New York City, The Boston Globe’s 2012 Top Places to Work, and Washington's Best Workplaces 2012. EMC has also been recognized for diversity and inclusion as one of Careers & the disABLED Magazine’s 2013 Top 50 employers and received a score of 100 on the Human Rights Campaign 2013 Corporate Equality Index.
+
+
+== Corporate responsibility and sustainabilityEdit ==
+EMC supports a variety of corporate responsibility initiatives around the world, and in 2012 EMC ranked 47th on Corporate Responsibility Magazine's 100 Best Corporate Citizens List. EMC was named the 43rd Greenest Company Globally on Newsweek’s Green Rankings 2012. EMC sponsors programs in the United States that strive to improve education for Science, Technology, Engineering, and Mathematics (STEM). More than 80,000 students have taken EMC Information Storage and Management courses since the program launched in 2006.
+
+
+== Collaboration with colleges and universitiesEdit ==
+EMC's Academic Alliance program, a collaboration with colleges and universities worldwide, sells curriculum-based education on technology topics such as virtualization, cloud computing, big data analytics, and information storage and management. The global program is geared towards arming students with the knowledge necessary to differentiate themselves in the job market and improve their competitive advantage.
+
+
+== Collaboration with NSAEdit ==
+RSA Security, the security division of EMC, has received widespread criticism for accepting $10 million in a secret deal with NSA to make Dual EC DRBG the default cryptographically secure pseudorandom number generator in its prominent BSAFE cryptography library, and continuing to use it until 2013. Though not confirmed in absolute terms, since 2007 Dual_EC_DRBG 2007 has been suspected to contain a backdoor from NSA, with almost-confirmation coming in a 2013 New York Times article following the Snowden leak. The standard FIPS version of Dual_EC_DRBG (which RSA Security implemented) was theoretically and empirically shown to be insecure in 2006 and 2007 (even ignoring the backdoor), and following discoveries by Dan Shumow and Niels Ferguson in 2007, prominent security expert Bruce Schneier published an article in Wired titled "Did NSA Put a Secret Backdoor in New Encryption Standard?". Though Dual_EC_DRBG was highly suspect after 2007, its usage in BSAFE was not widely known until the 2013 New York Times article brought back focus to Dual_EC_DRBG. At the 2014 RSA Conference, RSA Security Executive Chairman Art Coviello defended RSA Security's choice to keep using Dual_EC_DRBG by saying "it became possible that concerns raised in 2007 might have merit" only after the National Institute of Standards and Technology acknowledged the problems in 2013.
+
+
+== ReferencesEdit ==
+
+
+== External linksEdit ==
+EMC Corporation Website

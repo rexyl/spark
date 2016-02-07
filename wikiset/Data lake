@@ -1,0 +1,25 @@
+A data lake is a large storage repository and processing engine. They provide "massive storage for any kind of data, enormous processing power and the ability to handle virtually limitless concurrent tasks or jobs".
+
+
+== Invention ==
+The term was coined by James Dixon, Pentaho chief technology officer. Dixon used the term initially to contrast with "data mart", which is a smaller repository of interesting attributes extracted from the raw data. He wrote: "If you think of a datamart as a store of bottled water – cleansed and packaged and structured for easy consumption – the data lake is a large body of water in a more natural state. The contents of the data lake stream in from a source to fill the lake, and various users of the lake can come to examine, dive in, or take samples."  Dixon argued that data marts have several inherent problems, and that data lakes are the optimal solution.
+Dixon identified 2 shortcomings of data marts: "Only a subset of the attributes are examined, so only pre-determined questions can be answered." and "The data is aggregated so visibility into the lowest levels is lost."  These problems are often referred to as "siloing" and, in agreement with Dixon, PricewaterhouseCoopers says that data lakes could "put an end to data silos". In their study on data lakes they note that "Enterprises across industries are starting to extract and place data for analytics into a single, Hadoop based repository." They note organizations such as UC Irvine Medical Center, Google and Facebook who have embraced the data lake concept.
+PricewaterhouseCoopers also claim that cost is a major reason that organizations adopt data lakes they state that:
+
+Some vendors that advocate the use of Hadoop claim that the cost per terabyte for data warehousing can be as much as $250,000, versus $2,500 per terabyte (or even less than $1,000 per terabyte) for a Hadoop cluster.
+
+
+== Examples ==
+Currently the only viable example of a data lake is Apache Hadoop.
+Many companies also use cloud storage services such as Amazon S3.  There is a gradual academic interest in the concept of data lakes, for instance,Personal DataLake an ongoing project at Cardiff University to create a new type of data lakes which aims at managing big data of individual users by providing a single point of collecting, organizing, and sharing personal data.
+
+
+== Criticism ==
+In June 2015 David Needle characterized "so-called data lakes" as "one of the more controversial ways to manage big data". PricewaterhouseCoopers were also careful to note in their research that not all data lake initiatives are successful. They quote Sean Martin, CTO of Cambridge Semantics,
+
+We see customers creating big data graveyards, dumping everything into HDFS and hoping to do something with it down the road. But then they just lose track of what’s there.
+
+They advise that "The main challenge is not creating a data lake, but taking advantage of the opportunities it presents.". They describe companies that build successful data lakes as gradually maturing their lake as they figure out which data and metadata are interesting to the organization.
+
+
+== References ==

@@ -1,0 +1,57 @@
+Gregory I. Piatetsky-Shapiro (born 7 April 1958) is a data scientist, co-founder of KDD conferences and ACM SIGKDD association for Knowledge Discovery and Data Mining, and President of KDnuggets, a leading site on Business Analytics, Data Mining, and Data Science. For simplicity, he usually abbreviates his name as Gregory Piatetsky.
+
+
+== Early life ==
+Piatetsky was born to a Jewish-Russian family in Moscow, Russia. His father, Ilya Piatetski-Shapiro, was a well-known mathematician. He skipped 6th grade because of anti-semitic attacks and was admitted in 1970 to the Physics-Mathematics School N. 2 in Moscow.
+In March 1974 Piatetsky emigrated to Israel with his mother, Inna. There, he studied mathematics at Tel-Aviv University, where at age 16 he was the youngest student. He also studied computer science for one semester at Technion, where he wrote a program in APL to play the game of Battleship. He was overwhelmingly defeated in the first game by his own program. That increased his interest in the nascent field of Machine Learning.
+In 1977 Piatetsky received a full scholarship for graduate studies at NYU Courant Institute, where he received a MS (1979) and Ph.D. (1984). His first paper, published in SIGMOD in 1984, proved that secondary index selection is NP-complete by reducing it to set cover problem. However, in his dissertation he proved that the greedy method for set cover has a lower bound of 1 - 1/e ~ 63% of the optimal.
+
+
+== Career ==
+After getting his Ph.D. in 1985, he joined GTE Laboratories in 1985, where he worked on intelligent interfaces to databases. In 1989 he proposed a new project at GTE called "Knowledge Discovery in Databases". The project created a number of advanced prototypes, including KEFIR (Key Findings Reporter), a system for analysis and summarization of key changes in large databases, which was a forerunner of systems like Google Analytics Intelligence. A KEFIR prototype was applied to GTE health care data and received GTE's highest technical award.
+In 1997 he left GTE to join Knowledge Stream Partners (KSP), where he was Director and later Vice President and Chief Scientist. He engineered the development of component-based Knowledge Discovery Engine consulting tools, and led the consulting team that provided solutions to several banks, brokerages, telcos, insurance companies, and e-tailers.
+In April 2000, KSP was acquired by Xchange, Inc, where Piatetsky's served as VP and Chief Scientist.
+Piatetsky left Xchange in May 2001 and became a self-employed consultant. He works on a wide variety of projects in Business Analytics, Pharma and Life Science [1]. He has also served as an expert witness in several cases and testified in Federal court in Manhattan on behalf of Tiffany vs eBay.
+Piatetsky remains actively involved in running KDD conferences and KDnuggets.
+
+
+== KDD and SIGKDD ==
+In 1989 Piatetsky organized the first workshop on Knowledge Discovery in Data (KDD-89),held at IJCAI-1989 in Detroit, MI. This workshop had over 60 attendees, including researchers Ross Quinlan and Jaime Carbonell.
+Piatetsky also organized the next two KDD workshops in 1991 (Anaheim) and 1993 (Washington, DC). With Usama Fayyad and Ramasamy (Sam) Uthurusamy, he grew the workshops into an annual international conference on Data Mining and was the General Chair of the KDD-98 conference.
+Piatetsky served as the chair of the KDD Steering committee until 1998, when the SIGKDD group was formed as part of ACM to run the annual KDD conference and help promote research in Knowledge Discovery and Data Mining. Gregory Piatetsky was elected and served as Director of SIGKDD for 2001-2005 and as SIGKDD Chair for 2005-2009.
+In 1997 Piatetsky and Ismail Parsa initiated the KDD Cup competition, which was the first open data mining contest in the world.
+The annual ACM SIG-KDD conference is the leading research conference on Knowledge Discovery and Data Mining, according to Microsoft Academic search and Google Scholar. The 21st ACM SIGKDD conference was held in Sydney, Australia August 2015.
+
+
+== KDnuggets ==
+KDnuggets is recognized as an important resource ("the leading newsletter") for the data mining and knowledge discovery community.
+In 1993, Piatetsky started Knowledge Discovery Nuggets as a newsletter to connect researchers who attended the KDD-93 workshop. With the appearance of World Wide Web and Mosaic, Gregory and Chris Matheus created a website called Knowledge Discovery Mine, hosted at GTE Labs. The newsletter served as an unofficial publication of KDD workshops.
+When Piatetsky left GTE Labs in 1997, he created KDnuggets, which stands for Knowledge Discovery Nuggets, with the mission of covering the field with short, concise "nuggets". KDnuggets started as a directory of main areas of data mining and data science, including Software, Jobs, Academic positions, CFP (calls for papers), Companies, Courses, Datasets,Education, Meetings, Publications, and Webcasts.
+Now KDnuggets' main focus is to cover the news in the field of Business Analytics, Data Mining, and Data Science, including interviews with many key leaders of the field. KDnuggets also offers a free Data Mining Course designed for advanced undergraduates or first-year graduate students.
+@KDnuggets Twitter was
+Voted the Best Big Data Tweeter by Big Data Republic (2013)
+Included in the 7 Business Analytics Gurus on Twitter (2013) by Information Management
+Named one of 10 Big Data Pros To Follow On Twitter (2014) in Information Week
+In February 2015, Piatetsky and Data ScienceTech Institute announced a partnership and he became an Honorary Member of Data ScienceTech Institute Scientific Advisory Board.
+
+
+== Research and publications ==
+In 1991 Piatetsky and William (Bud) Frawley edited the first book on Knowledge Discovery in Databases, and in 1996, Gregory Piatetsky, Usama Fayyad, Padhraic Smyth, and R. Uthurusamy edited a follow-up Advances in Knowledge Discovery and Data Mining
+Piatetsky also helped launch and was a co-editor of Data Mining and Knowledge Discovery journal.
+
+Piatetsky has 9 edited books and collections and over 60 technical papers, articles and book chapters, mostly focusing on data mining and knowledge discovery.
+
+
+== Awards and recognition ==
+1984, NYU Award for Best Dissertation in Computer Sciences, Ph.D. Thesis: "A Self-Organizing Database System - A Different Approach to Query Optimization".
+1985, NYU Award for Best Dissertation in all Natural Sciences (1985).
+1995, Leslie H. Warner award—GTE's highest for technical achievement—for the KEFIR system.
+2000, First SIGKDD Service Award, for contributions to Data Mining and Knowledge Discovery.
+2003, Honorary Mention (2nd best application paper) at KDD-2003: Knowledge Discovery and Data Mining Conference.
+2004-5, Honorary President, EGC, Extraction et de Gestion des Connaissances, (French-speaking conference on Extraction and Management of Knowledge), France.
+2007 IEEE ICDM Outstanding Service Award, for major contributions to data mining field, 2007.
+
+
+== References ==
+
+Journeys to Data Mining: Experiences from 15 Renowned Researchers, edited by Mohamed Medhat Gaber

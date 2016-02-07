@@ -1,0 +1,38 @@
+A triplestore or RDF store is a purpose-built database for the storage and retrieval of triples through semantic queries. A triple is a data entity composed of subject-predicate-object, like "Bob is 35" or "Bob knows Fred".
+Much like a relational database, one stores information in a triplestore and retrieves it via a query language. Unlike a relational database, a triplestore is optimized for the storage and retrieval of triples. In addition to queries, triples can usually be imported/exported using Resource Description Framework (RDF) and other formats.
+
+
+== ImplementationsEdit ==
+
+Some triplestores have been built as database engines from scratch, while others have been built on top of existing commercial relational database engines (e.g., SQL-based), or NoSQL document-oriented database engines. Like the early development of online analytical processing (OLAP) databases, this intermediate approach allowed large and powerful database engines to be constructed for little programming effort in the initial phases of triplestore development. Long-term though it seems likely that native triplestores will have the advantage for performance. A difficulty with implementing triplestores over SQL is that although triples may thus be stored, implementing efficient querying of a graph-based RDF model (e.g., mapping from SPARQL) onto SQL queries is difficult.
+
+
+== Related database typesEdit ==
+Adding a name to the triple makes a "quad store" or named graph.
+A graph database has a more generalized structure than triplestore. Uses graph structures with nodes, edges, and properties to represent and store data. Provides index-free adjacency, meaning every element contains a direct pointer to its adjacent elements and no index lookups are necessary. General graph databases that can store any graph are distinct from specialized graph databases such as triplestores and network databases.
+
+
+== See alsoEdit ==
+Dataspaces - notes that fact-based, subject-predicate-object triples (data entities) rely on existing matching and mapping generation techniques. The triple data structure allows a pay-as-you-go approach to data integration which effectively postpones the labor-intensive aspects of integration to the very end, just before the integrated data is absolutely needed.
+Entity–relationship model - covers entities (things) and the relationships that can exist among them.
+ISO/IEC 19788 - Metadata for learning resources (MLR). In a MLR triple, the subject is always the literal of an identifier of the learning resource, such as a URI or ISBN. The predicate is also a literal, the MLR data element specification identifier. Finally, the object can be a literal or a resource class (a set of accepted values, such as a list of terms identifiers from a controlled vocabulary list).
+Metaweb's Graphd tuple store (owned by Google) used in Freebase and Knowledge Graph
+Metadata - syntax section - subject-predicate-object triple a/k/a class-attribute-value triple. The first two elements of the triple (class, attribute) are pieces of some structural metadata having a defined semantic. The third element is a value, preferably from some controlled vocabulary, some reference (master) data. The combination of the metadata and master data elements results in a statement which is a metacontent statement i.e. "metacontent = metadata + master data". All these elements can be thought of as vocabulary. Both metadata and master data are vocabularies which can be assembled into metacontent statements. There are many sources of these vocabularies, both meta and master data: UML, EDIFACT, XSD, Dewey/UDC/LoC, SKOS, ISO-25964, Pantone, Linnaean Binomial Nomenclature, etc. Using controlled vocabularies for the components of metacontent statements, whether for indexing or finding, is endorsed by ISO-25964: If both the indexer and the searcher are guided to choose the same term for the same concept, then relevant documents will be retrieved.
+Outline of databases
+Semantic data model - covers semantic information, symbols (instance data), meaning from instances, facts as binary relations between data elements. Object-RelationType-Object'
+RDFLib - a Python library for working with RDF including both in-memory and persistent Graph backends. Supports subject-predicate-object triple pattern matching.
+Semantic wiki and Semantic MediaWiki - illustrates subject-predicate-object support for Wikis, advanced query support, and implementations by organizations including: Pfizer, Harvard Pilgrim Health Care, Johnson & Johnson Pharmaceutical Research and Development, Pacific Northwest National Laboratory,Metropolitan Museum of Art, and the U.S. Department of Defense.
+SPARQL W3C specification involving subject-predicate-object triples and List of SPARQL implementations
+
+
+== ReferencesEdit ==
+
+
+== External linksEdit ==
+A list of large triplestores
+Lehigh University Benchmark (LUBM)
+How RDF Databases Differ from Other NoSQL Solutions
+W3C SPARQL Working Group, was RDF Data Access Working Group
+SPARQL Query language
+SPARQL Protocol
+SPARQL 1.1 Update W3C Recommendation 21 March 2013

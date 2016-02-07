@@ -1,0 +1,120 @@
+Structured Analysis (SA) in software engineering and its allied technique, Structured Design (SD), are methods for analyzing and converting business requirements into specifications and ultimately, computer programs, hardware configurations and related manual procedures.
+Structured analysis and design techniques are fundamental tools of systems analysis, and developed from classical systems analysis of the 1960s and 1970s.
+
+
+== Objectives of Structured Analysis ==
+Structured Analysis became popular in the 1980s and is still used by many. The analysis consists of interpreting the system concept (or real world situations) into data and control terminology represented by data flow diagrams. The flow of data and control from bubble to data store to bubble can be very hard to track and the number of bubbles can get to be extremely large. One approach is to first define events from the outside world that require the system to react, then assign a bubble to that event, bubbles that need to interact are then connected until the system is defined. This can be rather overwhelming and so the bubbles are usually grouped into higher level bubbles. Data Dictionaries are needed to describe the data and command flows and a process specification is needed to capture the transaction/transformation information.
+SA and SD were accompanied by notation methods including structure charts, data flow diagrams and data model diagrams, of which there were many variations, including those developed by Tom DeMarco, Ken Orr, Larry Constantine, Vaughn Frick, Ed Yourdon, Steven Ward, Peter Chen, and others.
+These techniques were combined in various published System Development Methodologies, including Structured Systems Analysis and Design Method, Profitable Information by Design (PRIDE), Nastec Structured Analysis & Design, SDM/70 and the Spectrum Structured system development methodology.
+
+
+== History ==
+Structured analysis is part of a series of structured methods, that "represent a collection of analysis, design, and programming techniques that were developed in response to the problems facing the software world from the 1960s to the 1980s. In this timeframe most commercial programming was done in Cobol and Fortran, then C and BASIC. There was little guidance on "good" design and programming techniques, and there were no standard techniques for documenting requirements and designs. Systems were getting larger and more complex, and the information system development became harder and harder to do so". As a way to help manage large and complex software, the following structured methods emerged.
+Since the end of the 1960s multiple Structured Methods emerged:
+Structured programming in circa 1967 with Edsger Dijkstra - "Go To Statement Considered Harmful"
+Niklaus Wirth Stepwise design in 1971
+Nassi–Shneiderman diagram in 1972
+Warnier/Orr diagram in 1974 - "Logical Construction of Programs"
+HIPO in 1974 - IBM Hierarchy input-process-output (though this should really be output-input-process)
+Structured Design around 1975 with Larry Constantine, Ed Yourdon and Wayne Stevens.
+Jackson Structured Programming in circa 1975 developed by Michael A. Jackson
+Structured Analysis in circa 1978 with Tom DeMarco, Yourdon, Gane & Sarson, McMenamin & Palmer.
+Structured Analysis and Design Technique (SADT) developed by Douglas T. Ross
+Yourdon Structured Method developed by Edward Yourdon.
+Structured Analysis and System Specification published in 1979 by Tom DeMarco.
+Structured Systems Analysis and Design Method (SSADM) first presented in 1983 developed by the UK Office of Government Commerce.
+IDEF0 based on SADT, developed by Douglas T. Ross in 1985.
+Hatley-Pirbhai modeling, defined in "Strategies for Real-Time System Specification" by Derek J. Hatley and Imtiaz A. Pirbhai in 1988.
+Information Engineering in circa 1990 with Finkelstein and popularised by James Martin.
+According to Hay(1999) "information engineering was a logical extension of the structured techniques that were developed during the 1970's. Structured programming led to structured design, which in turn led to structured systems analysis. These techniques were characterized by their use of diagrams: structure charts for structured design, and data flow diagrams for structured analysis, both to aid in communication between users and developers, and to improve the analyst's and the designer's discipline. During the 1980's, tools began to appear which both automated the drawing of the diagrams, and kept track of the things drawn in a data dictionary". After the example of computer-aided design and computer-aided manufacturing (CAD/CAM), the use of these tools was named Computer-aided software engineering (CASE).
+
+
+== Structured analysis topics ==
+
+
+=== Single abstraction mechanism ===
+
+Structured analysis typically creates a hierarchy employing a single abstraction mechanism. The structured analysis method can employ IDEF (see figure), is process driven, and starts with a purpose and a viewpoint. This method identifies the overall function and iteratively divides functions into smaller functions, preserving inputs, outputs, controls, and mechanisms necessary to optimize processes. Also known as a functional decomposition approach, it focuses on cohesion within functions and coupling between functions leading to structured data.
+The functional decomposition of the structured method describes the process without delineating system behavior and dictates system structure in the form of required functions. The method identifies inputs and outputs as related to the activities. One reason for the popularity of structured analysis is its intuitive ability to communicate high-level processes and concepts, whether single system or enterprise levels. Discovering how objects might support functions for commercially prevalent object-oriented development is unclear. In contrast to IDEF, the UML is interface driven with multiple abstraction mechanisms useful in describing service-oriented architectures (SOAs).
+
+
+=== Approach ===
+Structured Analysis views a system from the perspective of the data flowing through it. The function of the system is described by processes that transform the data flows. Structured analysis takes advantage of information hiding through successive decomposition (or top down) analysis. This allows attention to be focused on pertinent details and avoids confusion from looking at irrelevant details. As the level of detail increases, the breadth of information is reduced. The result of structured analysis is a set of related graphical diagrams, process descriptions, and data definitions. They describe the transformations that need to take place and the data required to meet a system's functional requirements.
+
+De Marco's approach consists of the following objects (see figure):
+Context diagram
+Data flow diagram
+Process specifications
+Data dictionary
+Hereby the Data flow diagrams (DFDs) are directed graphs. The arcs represent data, and the nodes (circles or bubbles) represent processes that transform the data. A process can be further decomposed to a more detailed DFD which shows the subprocesses and data flows within it. The subprocesses can in turn be decomposed further with another set of DFDs until their functions can be easily understood. Functional primitives are processes which do not need to be decomposed further. Functional primitives are described by a process specification (or mini-spec). The process specification can consist of pseudo-code, flowcharts, or structured English. The DFDs model the structure of the system as a network of interconnected processes composed of functional primitives. The data dictionary is a set of entries (definitions) of data flows, data elements, files. and data bases. The data dictionary enmes are partitioned in a top-down manner. They can be referenced in other data dictionary entries and in data flow diagrams.
+
+
+=== Context diagram ===
+
+Context diagrams are diagrams that represent the actors outside a system that could interact with that system. This diagram is the highest level view of a system, similar to Block Diagram, showing a, possibly software-based, system as a whole and its inputs and outputs from/to external factors.
+This type of diagram according to Kossiakoff (2003) usually "pictures the system at the center, with no details of its interior structure, surrounded by all its interacting systems, environment and activities. The objective of a system context diagram is to focus attention on external factors and events that should be considered in developing a complete set of system requirements and constraints". System context diagram are related to Data Flow Diagram, and show the interactions between a system and other actors with which the system is designed to face. System context diagrams can be helpful in understanding the context in which the system will be part of software engineering.
+
+
+=== Data dictionary ===
+
+A data dictionary or database dictionary is a file that defines the basic organization of a database. A database dictionary contains a list of all files in the database, the number of records in each file, and the names and types of each data field. Most database management systems keep the data dictionary hidden from users to prevent them from accidentally destroying its contents. Data dictionaries do not contain any actual data from the database, only bookkeeping information for managing it. Without a data dictionary, however, a database management system cannot access data from the database.
+Database users and application developers can benefit from an authoritative data dictionary document that catalogs the organization, contents, and conventions of one or more databases. This typically includes the names and descriptions of various tables and fields in each database, plus additional details, like the type and length of each data element. There is no universal standard as to the level of detail in such a document, but it is primarily a distillation of metadata about database structure, not the data itself. A data dictionary document also may include further information describing how data elements are encoded. One of the advantages of well-designed data dictionary documentation is that it helps to establish consistency throughout a complex database, or across a large collection of federated databases.
+
+
+=== Data Flow Diagrams ===
+
+A Data Flow Diagram (DFD) is a graphical representation of the "flow" of data through an information system. It differs from the system flowchart as it shows the flow of data through processes instead of computer hardware. Data flow diagrams were invented by Larry Constantine, developer of structured design, based on Martin and Estrin's "data flow graph" model of computation.
+It is common practice to draw a System Context Diagram first which shows the interaction between the system and outside entities. The DFD is designed to show how a system is divided into smaller portions and to highlight the flow of data between those parts. This context-level Data flow diagram is then "exploded" to show more detail of the system being modeled.
+Data flow diagrams (DFDs) are one of the three essential perspectives of Structured Systems Analysis and Design Method (SSADM). The sponsor of a project and the end users will need to be briefed and consulted throughout all stages of a system's evolution. With a dataflow diagram, users are able to visualize how the system will operate, what the system will accomplish, and how the system will be implemented. The old system's dataflow diagrams can be drawn up and compared with the new system's dataflow diagrams to draw comparisons to implement a more efficient system. Dataflow diagrams can be used to provide the end user with a physical idea of where the data they input ultimately has an effect upon the structure of the whole system from order to dispatch to recook. How any system is developed can be determined through a dataflow diagram.
+
+
+=== Structure Chart ===
+
+A Structure Chart (SC) is a chart, that shows the breakdown of the configuration system to the lowest manageable levels. This chart is used in structured programming to arrange the program modules in a tree structure. Each module is represented by a box which contains the name of the modules. The tree structure visualizes the relationships between the modules.
+In structured analysis structure charts are used to specify the high-level design, or architecture, of a computer program. As a design tool, they aid the programmer in dividing and conquering a large software problem, that is, recursively breaking a problem down into parts that are small enough to be understood by a human brain. The process is called top-down design, or functional decomposition. Programmers use a structure chart to build a program in a manner similar to how an architect uses a blueprint to build a house. In the design stage, the chart is drawn and used as a way for the client and the various software designers to communicate. During the actual building of the program (implementation), the chart is continually referred to as the master-plan.
+
+
+=== Structured Design ===
+Structured Design (SD) is concerned with the development of modules and the synthesis of these modules in a so-called "module hierarchy". In order to design optimal module structure and interfaces two principles are crucial:
+Cohesion which is "concerned with the grouping of functionally related processes into a particular module", and
+Coupling relates to "the flow of information or parameters passed between modules. Optimal coupling reduces the interfaces of modules and the resulting complexity of the software".
+Structured Design was developed by Larry Constantine in the late 1960s, then refined and published with collaborators in the 1970s; see Larry Constantine: Structured Design for details. Page-Jones (1980) has proposed his own approach which consists of three main objects :
+structure charts
+module specifications
+data dictionary.
+The structure chart aims to show "the module hierarchy or calling sequence relationship of modules. There is a module specification for each module shown on the structure chart. The module specifications can be composed of pseudo-code or a program design language. The data dictionary is like that of structured analysis. At this stage in the software development lifecycle, after analysis and design have been performed, it is possible to automatically generate data type declarations", and procedure or subroutine templates.
+
+
+=== Structured query language ===
+The structured query language (SQL) is a standardized language for querying information from a database. SQL was first introduced as a commercial database system in 1979 and has since been the favorite query language for database management systems running on minicomputers and mainframes. Increasingly, however, SQL is being supported by PC database systems because it supports distributed databases (see definition of distributed database). This enables several users on a computer network to access the same database simultaneously. Although there are different dialects of SQL, it is nevertheless the closest thing to a standard query language that currently exists.
+
+
+=== Software tools for Structured analysis ===
+Prosa Structured Analysis Tool
+
+
+== Criticisms ==
+Problems with data flow diagrams have been:
+choosing bubbles appropriately,
+partitioning those bubbles in a meaningful and mutually agreed upon manner,
+the size of the documentation needed to understand the Data Flows,
+still strongly functional in nature and thus subject to frequent change,
+though "data" flow is emphasized, "data" modeling is not, so there is little understanding of just what the subject matter of the system is about, and
+not only is it hard for the customer to follow how the concept is mapped into these data flows and bubbles, it has also been very hard for the designers who must shift the DFD organization into an implementable format
+
+
+== See also ==
+Event partitioning
+HIPO
+Jackson Structured Programming
+Soft Systems Methodology
+Yourdon Structured Method
+Flow-based programming
+
+
+== References ==
+
+
+== External links ==
+Structured Analysis Wiki
+Three views of structured analysis CRaG Systems, 2004.

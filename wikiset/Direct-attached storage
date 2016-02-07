@@ -1,0 +1,27 @@
+Direct-attached storage (DAS) is digital storage directly attached to the computer accessing it, as opposed to storage accessed over a computer network. Examples of DAS include hard drives, optical disc drives, and storage on external drives. The name "DAS" is a retronym to contrast with storage area network (SAN) and network-attached storage (NAS).
+
+
+== FeaturesEdit ==
+A typical DAS system is made of a data storage device (for example enclosures holding a number of hard disk drives) connected directly to a computer through a host bus adapter (HBA). Between those two points there is no network device (like hub, switch, or router), and this is the main characteristic of DAS.
+The main protocols used for DAS connections are ATA, SATA, eSATA, SCSI, SAS, USB, USB 3.0, IEEE 1394 and Fibre Channel.
+
+
+== Storage features common to SAN, DAS and NASEdit ==
+Most functions found in modern storage do not depend on whether the storage is attached directly to servers (DAS), or via a network (SAN and NAS).
+
+
+== Advantages and disadvantagesEdit ==
+The key difference between DAS and NAS (network-attached storage) is that DAS storage is only directly accessible from the host to which the DAS is attached. A DAS does not incorporate any network hardware and related operating environment to provide a facility to share storage resources independently. The storage presented by a DAS to a connected host can of course be shared by that host. A SAN (storage area network) has more in common with a DAS than a NAS with the key difference being that DAS is a 1:1 relationship between storage and host whereas SAN is many to many.
+
+
+== See alsoEdit ==
+Secondary storage device versus tertiary storage device or nearline storage — storage that remains attached versus storage that is attached or detached as needed
+RAID
+JBOD
+Storage area network
+Network-attached storage
+
+
+== ReferencesEdit ==
+
+Englander, I. (2014). The architecture of computer hardware, systems software, & networking: An information technology approach (5th ed.). Retrieved from https://online.vitalsource. com/#/books/9781118803127

@@ -1,0 +1,72 @@
+In database relational modeling and implementation, a unique key is a set of zero, one, or more attributes. The value(s) of these attributes are required to be unique for each tuple (row) in a relation. The value, or combination of values, of unique key attributes for any tuple should not be repeated for any other tuple in that relation.
+When more than one column is combined to form a unique key, their combined value is used to access each row and maintain uniqueness. These keys are referred to as aggregate. or compound keys. Values are not combined, they are compared using their data types.
+When a column or set of columns is defined as unique to the database management system, the system verifies that each set of value(s) is unique before assigning the constraint. After the column(s) are defined as unique, an error will occur if an insertion is attempted with values that already exist. Some systems do not allow key values to be updated, and all systems will not allow duplicates. This ensures that uniqueness is maintained in both the primary table and any relations that are later bound to it.
+
+
+== Summary ==
+In an entity-relationship diagram of a data model, one or more unique keys may be declared for each data entity. Each unique key is composed from one or more data attributes of that data entity. The set of unique keys declared for a data entity is often referred to as the candidate keys for that data entity. From the set of candidate keys, a single unique key is selected and declared the primary key for that data entity. In an entity relationship diagram, each entity relationship uses a unique key, most often the primary key, of one data entity and copies the unique key data attributes to another data entity to which it relates. This inheritance of the unique key data attributes is referred to as a foreign key and is used to provide data access paths between data entities. Once the data model is instantiated into a database, each data entity usually becomes a database table, unique keys become unique indexes associated with their assigned database tables, and entity relationships become foreign key constraints. In integrated data models, commonality relationships do not become foreign key constraints since commonality relationships are a peer-to-peer type of relationship.
+The primary key may consist of a single attribute or a multiple attributes in combination. For example, a birthday could be shared by many people and so would not be a prime candidate for the primary key, but a Social Security Number or driver's license number would be ideal since it correlates to one single data value.
+There are several types of unique keys used in database modeling and implementations.
+At the most basic definition, "a key is a unique identifier", so unique key is redundant. Keys that are within their originating entity are unique within that entity. Keys that migrate to another entity may or may not be unique, depending on the design and how they are used in the other table. Foreign keys may be the primary key in another table; for example a PersonID may become the EmployeeID in the Employee table. In this case, the EmployeeID is both a foreign key and the unique primary key, meaning that the tables have a 1:1 relationship. In the case where the person entity contained the biological father ID, the father ID would not be expected to be unique because a father may have more than one child.
+Here is an example of a primary key becoming a foreign key on a related table. ID migrates from the Author table to the Book table.
+
+Here ID serves as the primary key in the table 'Author', but also as AuthorID serves as a Foreign Key in the table 'Book'. The Foreign Key serves as the link, and therefore the connection, between the two related tables in this sample database.
+In a relational database, a candidate key uniquely identifies each row of data values in a database table. A candidate key comprises a single column or a set of columns in a single database table. No two distinct rows or data records in a database table can have the same data value (or combination of data values) in those candidate key columns since NULL values are not used. Depending on its design, a database table may have many candidate keys but at most one candidate key may be distinguished as the primary key.
+A key constraint applies to the set of tuples in a table at any given point in time. A key is not necessarily a unique identifier across the population of all possible instances of tuples that could be stored in a table but it does imply a data integrity rule that duplicates should not be allowed in the database table. Some possible examples of unique keys are Social Security Numbers, ISBNs, vehicle registration numbers or user login names.
+The relational model, as expressed through relational calculus and relational algebra, does not distinguish between primary keys and other kinds of keys. Primary keys were added to the SQL standard mainly as a convenience to the application programmer.
+Unique keys as well as primary keys may be logically referenced by foreign keys, but most RDBMS only allow a foreign key constraint against a primary key.
+
+
+== Defining primary keys in SQL ==
+Primary keys are defined in the ANSI SQL Standard, through the PRIMARY KEY constraint. The syntax to add such a constraint to an existing table is defined in SQL:2003 like this:
+
+The primary key can also be specified directly during table creation. In the SQL Standard, primary keys may consist of one or multiple columns. Each column participating in the primary key is implicitly defined as NOT NULL. Note that some RDBMS require explicitly marking primary key columns as NOT NULL.
+
+If the primary key consists only of a single column, the column can be marked as such using the following syntax:
+
+Differences between Primary Key constraint and Unique constraint:
+Primary Key constraint
+1. A primary key cannot allow null (a primary key cannot be defined on columns that allow nulls).
+2. Each table cannot have more than one primary key.
+3. On some RDBMS a primary key generates a clustered index by default.
+Unique constraint
+1. A unique constraint can be defined on columns that allow nulls.
+2. Each table can have multiple unique keys.
+3. On some RDBMS a unique key generates a nonclustered index by default.
+
+
+== Defining other keys in SQL ==
+The definition of other unique keys is syntactically very similar to primary keys.
+
+Likewise, unique keys can be defined as part of the CREATE TABLE SQL statement.
+
+Note that unlike the PRIMARY KEY constraint a UNIQUE constraint does not imply NOT NULL for the columns participating in the constraint. NOT NULL must be specified to make the column(s) a key. It is possible to put UNIQUE constraints on nullable columns but the SQL standard states that the constraint does not guarantee uniqueness of nullable columns (uniqueness is not enforced for rows where any of the columns contains a null).
+According to the SQL standard a unique constraint does not enforce uniqueness in the presence of nulls and can therefore contain several rows with identical combinations of nulls and non-null values — however not all RDBMS implement this feature according to the SQL standard.
+
+
+== Surrogate keys ==
+
+In some circumstances the natural key that uniquely identifies a tuple in a relation may be cumbersome to use for software development. For example, it may involve multiple columns or large text fields. In such cases, a surrogate key can be used instead as the primary key. In other situations there may be more than one candidate key for a relation, and no candidate key is obviously preferred. A surrogate key may be used as the primary key to avoid giving one candidate key artificial primacy over the others.
+Since primary keys exist primarily as a convenience to the programmer, surrogate primary keys are often used, in many cases exclusively, in database application design.
+Due to the popularity of surrogate primary keys, many developers and in some cases even theoreticians have come to regard surrogate primary keys as an inalienable part of the relational data model. This is largely due to a migration of principles from the Object-Oriented Programming model to the relational model, creating the hybrid object-relational model. In the ORM, these additional restrictions are placed on primary keys:
+Primary keys should be immutable, that is, never changed or re-used; they should be deleted along with the associated record.
+Primary keys should be anonymous integer or numeric identifiers.
+However, neither of these restrictions is part of the relational model or any SQL standard. Due diligence should be applied when deciding on the immutability of primary key values during database and application design. Some database systems even imply that values in primary key columns cannot be changed using the UPDATE SQL statement.
+
+
+== Alternate key ==
+Typically, one candidate key is chosen as the primary key. Other candidate keys become alternate keys, each of which may have a unique index assigned to it in order to prevent duplicates (a duplicate entry is not valid in a unique column).
+Alternate keys may be used like the primary key when doing a single-table select or when filtering in a where clause, but are not typically used to join multiple tables.
+
+
+== See also ==
+Globally Unique Identifier
+Natural key
+Persistent Object Identifier
+
+
+== References ==
+
+
+== External links ==
+Relation Database terms of reference, Keys: An overview of the different types of keys in an RDBMS

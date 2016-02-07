@@ -1,0 +1,92 @@
+An optical fiber connector terminates the end of an optical fiber, and enables quicker connection and disconnection than splicing. The connectors mechanically couple and align the cores of fibers so light can pass. Better connectors lose very little light due to reflection or misalignment of the fibers. In all, about 100 fiber optic connectors have been introduced to the market.
+
+
+== Application ==
+Optical fiber connectors are used to join optical fibers where a connect/disconnect capability is required. Due to the polishing and tuning procedures that may be incorporated into optical connector manufacturing, connectors are generally assembled onto optical fiber in a supplier’s manufacturing facility. However, the assembly and polishing operations involved can be performed in the field, for example, to make cross-connect jumpers to size.
+Optical fiber connectors are used in telephone company central offices, at installations on customer premises, and in outside plant applications to connect equipment and cables, or to cross-connect cables.
+Most optical fiber connectors are spring-loaded, so the fiber faces are pressed together when the connectors are mated. The resulting glass-to-glass or plastic-to-plastic contact eliminates signal losses that would be caused by an air gap between the joined fibers.
+Every fiber connection has two values:
+Attenuation or insertion loss
+Reflection or return loss.
+Measurements of these parameters are now defined in IEC standard 61753-1. The standard gives five grades for insertion loss from A (best) to D (worst), and M for multimode. The other parameter is return loss, with grades from 1 (best) to 5 (worst).
+A variety of optical fiber connectors are available, but SC and LC connectors are the most common types of connectors on the market. Typical connectors are rated for 500–1,000 mating cycles. The main differences among types of connectors are dimensions and methods of mechanical coupling. Generally, organizations will standardize on one kind of connector, depending on what equipment they commonly use. Different connectors are required for multimode, and for single-mode fibers.
+In many data center applications, small (e.g., LC) and multi-fiber (e.g., MTP) connectors are replacing larger, older styles (e.g., SC), allowing more fiber ports per unit of rack space.
+Features of good connector design:
+Low insertion loss
+High return loss (low amounts of reflection at the interface)
+Ease of installation
+Low cost
+Reliability
+Low environmental sensitivity
+Ease of use
+Outside plant applications may require connectors be located underground, or on outdoor walls or utility poles. In such settings, protective enclosures are often used, and fall into two broad categories: hermetic (sealed) and free-breathing. Hermetic cases prevent entry of moisture and air but, lacking ventilation, can become hot if exposed to sunlight or other sources of heat. Free-breathing enclosures, on the other hand, allow ventilation, but can also admit moisture, insects and airborne contaminants. Selection of the correct housing depends on the cable and connector type, the location, and environmental factors. Careful assembly is required to ensure good protection against the elements.
+Depending on user requirements, housings for outside plant applications may be tested by the manufacturer under various environmental simulations, which could include physical shock and vibration, water spray, water immersion, dust, etc. to ensure the integrity of optical fiber connections and housing seals.
+
+
+== Types ==
+Many types of optical connector have been developed at different times, and for different purposes. Many of them are summarized in the tables below.
+
+
+=== Obsolete connectors ===
+
+
+=== Notes ===
+Modern connectors typically use a "physical contact" polish on the fiber and ferrule end. This is a slightly convex surface with the apex of the curve accurately centered on the fiber, so that when the connectors are mated the fiber cores come into direct contact with one another. Some manufacturers have several grades of polish quality, for example a regular FC connector may be designated "FC/PC" (for physical contact), while "FC/SPC" and "FC/UPC" may denote "super" and "ultra" polish qualities, respectively. Higher grades of polish give less insertion loss and lower back reflection.
+Many connectors are available with the fiber end face polished at an angle to prevent light that reflects from the interface from traveling back up the fiber. Because of the angle, the reflected light does not stay in the fiber core but instead leaks out into the cladding. Angle-polished connectors should only be mated to other angle-polished connectors. Mating to a non-angle polished connector causes very high insertion loss. Generally angle-polished connectors have higher insertion loss than good quality straight physical contact ones. "Ultra" quality connectors may achieve comparable back reflection to an angled connector when connected, but an angled connection maintains low back reflection even when the output end of the fiber is disconnected.
+Angle-polished connections are distinguished visibly by the use of a green strain relief boot, or a green connector body. The parts are typically identified by adding "/APC" (angled physical contact) to the name. For example, an angled FC connector may be designated FC/APC, or merely FCA. Non-angled versions may be denoted FC/PC or with specialized designations such as FC/UPC or FCU to denote an "ultra" quality polish on the fiber end face.
+SMA 906 features a "step" in the ferrule, while SMA 905 uses a straight ferrule. SMA 905 is also available as a keyed connector, used e.g., for special spectrometer applications.
+
+
+=== Mnemonics ===
+LC connectors are sometimes called "Little Connectors".
+MT-RJ connectors look like a miniature RJ-45 connector.
+ST connectors refer to having a "straight tip", as the sides of the ceramic (which has a lower temperature coefficient of expansion than metal) tip are parallel—as opposed to the predecessor bi-conic connector which aligned as two nesting ice cream cones would. Other mnemonics include "Set and Twist", "Stab and Twist", and "Single Twist", referring to how it is inserted (the cable is pushed into the receiver, and the outer barrel is twisted to lock it into place). Also they are known as "Square Top" due to the flat end face.
+SC connectors, being square, have a mnemonic of "Square Connector", which some people believe to be the correct name, rather than the more official "Subscriber Connector". Other terms often used for SC connectors are "Set and Click" or "Stab and Click".
+
+
+=== Field-mountable connectors ===
+Field-mountable optical fiber connectors are used to join optical fiber jumper cables that contain one singlemode fiber. These assemblies can be separated into two major categories: single-jointed connector assemblies and multiple-jointed connector assemblies. According to Telcordia GR-1081, a single-jointed connector assembly is a connector assembly where there is only one spot where two different fibers are joined together. This is the situation generally found when connector assemblies are made from factory-assembled optical fiber connector plugs. A multiple-jointed connector assembly is a connector assembly where there is more than one closely spaced connection joining different fibers together. An example of a multiple-jointed connector assembly is a connector assembly that uses the stub-fiber type of connector plug.
+Field-mountable optical fiber connectors are used for field restoration work and to eliminate the need to stock jumper cords of various sizes.
+
+
+== Analysis ==
+FC connectors' floating ferrule provides good mechanical isolation. FC connectors need to be mated more carefully than the push-pull types due to the need to align the key, and due to the risk of scratching the fiber end face while inserting the ferrule into the jack. FC connectors have been replaced in many applications by SC and LC connectors.
+There are two incompatible standards for key widths on FC/APC and polarization-maintaining FC/PC connectors: 2 mm ("Reduced" or "type R") and 2.14 mm ("NTT" or "type N"). Connectors and receptacles with different key widths either cannot be mated, or will not preserve the angle alignment between the fibers, which is especially important for polarization-maintaining fiber. Some manufacturers mark reduced keys with a single scribe mark on the key, and mark NTT connectors with a double scribe mark.
+SC connectors offer excellent packing density, and their push-pull design reduces the chance of fiber end face contact damage during connection; frequently found on the previous generation of corporate networking gear, using GBICs.
+LC connectors have replaced SC connectors in corporate networking environments due to their smaller size; they are often found on small form-factor pluggable transceivers.
+ST connectors have a key which prevents rotation of the ceramic ferrule, and a bayonet lock similar to a BNC shell. The single index tab must be properly aligned with a slot on the mating receptacle before insertion; then the bayonet interlock can be engaged, by pushing and twisting, locking at the end of travel which maintains spring-loaded engagement force on the core optical junction.
+In general the insertion loss should not exceed 0.75 dB and the return loss should be higher than 20 dB. Typical insertion repeatability, the difference in insertion loss between one plugging and another, is 0.2 dB.
+On all connectors, cleaning the ceramic ferrule before each connection helps prevent scratches and extends the connector life substantially.
+Connectors on polarization-maintaining fiber are sometimes marked with a blue strain relief boot or connector body, although this is far from a universal standard. Sometimes a blue buffer tube is used on the fiber instead.
+MT-RJ (Mechanical Transfer Registered Jack) uses a form factor and latch similar to the 8P8C (RJ45) connectors. Two separate fibers are included in one unified connector. It is easier to terminate and install than ST or SC connectors. The smaller size allows twice the port density on a face plate than ST or SC connectors do. The MT-RJ connector was designed by AMP, but was later standardized as FOCIS 12 (Fiber Optic Connector Intermateability Standards) in EIA/TIA-604-12. There are two variations: pinned and no-pin. The pinned variety, which has two small stainless steel guide pins on the face of the connector, is used in patch panels to mate with the no-pin connectors on MT-RJ patch cords.
+MPO (Multi-fiber Push On) is a connector for ribbon cables with four to twenty-four fibers. Connectors for singlemode fiber have angled ends to minimize back-reflection, while multimode fiber versions typically have flat ends. MTP is a brand name for a version of the MPO connector with improved specifications. MTP and MPO connectors intermate.
+Hardened Fiber Optic Connectors (HFOCs) and Hardened Fiber Optic Adapters (HFOAs) are passive telecommunications components used in an Outside Plant (OSP) environment. They provide drop connections to customers from fiber distribution networks. These components may be provided in pedestal closures, aerial and buried closures and terminals, or equipment located at customer premises such as a Fiber Distribution Hub (FDH) or an Optical Network Terminal or Termination (ONT) unit.
+These connectors, which are field-mateable and hardened for use in the OSP, are needed to support Fiber to the Premises (FTTP) deployment and service offerings. HFOCs are designed to withstand climatic conditions existing throughout the U.S., including rain, flooding, snow, sleet, high winds, and ice and sand storms. Ambient temperatures ranging from –40°C (–40°F) to +70°C (158°F) can be encountered.
+Telcordia GR-3120  contains the industry’s most recent generic requirements for HFOCs and HFOAs.
+
+
+== Testing ==
+Glass fiber optic connector performance is affected both by the connector and by the glass fiber. Concentricity tolerances affect the fiber, fiber core, and connector body. The core optical index of refraction is also subject to variations. Stress in the polished fiber can cause excess return loss. The fiber can slide along its length in the connector. The shape of the connector tip may be incorrectly profiled during polishing. The connector manufacturer has little control over these factors, so in-service performance may well be below the manufacturer's specification.
+Testing fiber optic connector assemblies falls into two general categories: factory testing and field testing.
+Factory testing is sometimes statistical, for example, a process check. A profiling system may be used to ensure the overall polished shape is correct, and a good quality optical microscope to check for blemishes. Optical Loss / Return Loss performance is checked using specific reference conditions, against a reference-standard single mode test lead, or using an "Encircled Flux Compliant" source for multi-mode testing. Testing and rejection ("yield") may represent a significant part of the overall manufacturing cost.
+Field testing is usually simpler. A special hand-held optical microscope is used to check for dirt or blemishes. A power meter and light source or an optical loss test set (OLTS) is used to test end-to-end loss, and an optical time-domain reflectometer may be used to identify significant point losses or return losses.
+
+
+== Notes ==
+
+
+== See also ==
+Optical fiber cable Color coding of connector boot and fiber cable jackets
+Optical attenuator Fiber optic attenuator
+Gap loss Attenuation sources and causes
+Index-matching material liquid/gel to reduce Fresnel reflection
+
+
+== References ==
+
+
+== External links ==
+Fiber Optic Connector Reference
+How To Terminate Fiber Optic Connectors
+Fiber optic connector termination processes
+SC Connector termination anaerobic processes (Video)

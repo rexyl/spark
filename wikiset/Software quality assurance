@@ -1,0 +1,23 @@
+Software quality assurance (SQA) consists of a means of monitoring the software engineering processes and methods used to ensure quality. The methods by which this is accomplished are many and varied, and may include ensuring conformance to one or more standards, such as ISO 9000 or a model such as CMMI.
+SQA encompasses the entire software development process, which includes processes such as requirements definition, software design, coding, source code control, code reviews, software configuration management, testing, release management, and product integration. SQA is organized into goals, commitments, abilities, activities, measurements, and verifications.
+Software quality assurance, according to ISO/IEC 15504 v.2.5 (SPICE), is a supporting process that has to provide the independent assurance in which all the work products, activities and processes comply with the predefined plans and ISO 15504.
+
+
+== See also ==
+DOD-STD-2167
+Quality assurance
+Software assurance
+Software quality analyst
+Software quality management
+Software quality
+
+
+== References ==
+
+730-2014 - IEEE Standard for Software Quality Assurance Processes. 2014. doi:10.1109/IEEESTD.2014.6835311. ISBN 978-0-7381-9168-3. 
+Chemuturi, Murali (2010). Software Quality Assurance: Best Practices, Tools and Techniques for Software Developers. J.Ross Publishing. ISBN 978-1-60427-032-7. 
+Kelemen, Z. D.; Kusters, R.; Trienekens, J. (2012). "Identifying criteria for multimodel software process improvement solutions - based on a review of current problems and initiatives". Journal of Software: Evolution and Process (Wiley and Sons) 24 (8): 895–909. doi:10.1002/smr.549. Retrieved 17 August 2014. 
+
+
+== External links ==
+Software Engineering Body of Knowledge Ch. 11 Sec. 2.1

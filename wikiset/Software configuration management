@@ -1,0 +1,54 @@
+In software engineering, software configuration management (SCM or S/W CM) is the task of tracking and controlling changes in the software, part of the larger cross-disciplinary field of configuration management. SCM practices include revision control and the establishment of baselines. If something goes wrong, SCM can determine what was changed and who changed it. If a configuration is working well, SCM can determine how to replicate it across many hosts.
+The acronym "SCM" is also expanded as source configuration management process and software change and configuration management. However, "configuration" is generally understood to cover changes typically made by a system administrator.
+
+
+== PurposesEdit ==
+The goals of SCM are generally:
+Configuration identification - Identifying configurations, configuration items and baselines.
+Configuration control - Implementing a controlled change process. This is usually achieved by setting up a change control board whose primary function is to approve or reject all change requests that are sent against any baseline.
+Configuration status accounting - Recording and reporting all the necessary information on the status of the development process.
+Configuration auditing - Ensuring that configurations contain all their intended parts and are sound with respect to their specifying documents, including requirements, architectural specifications and user manuals.
+Build management - Managing the process and tools used for builds.
+Process management - Ensuring adherence to the organization's development process.
+Environment management - Managing the software and hardware that host the system.
+Teamwork - Facilitate team interactions related to the process.
+Defect tracking - Making sure every defect has traceability back to the source.
+With the introduction of cloud computing the purposes of SCM tools have become merged in some cases. The SCM tools themselves have become virtual appliances that can be instantiated as virtual machines and saved with state and version. The tools can model and manage cloud-based virtual resources, including virtual appliances, storage units, and software bundles. The roles and responsibilities of the actors have become merged as well with developers now being able to dynamically instantiate virtual servers and related resources.
+
+
+== HistoryEdit ==
+The history of software configuration management (SCM) in computing can be traced back as early as the 1950s, when CM (for Configuration Management), originally for hardware development and production control, was being applied to software development. Early software had a physical footprint, such as cards, tapes, and other media. The first software configuration management was a manual operation. With the advances in language and complexity, software engineering, involving configuration management and other methods, became a major concern due to issues like schedule, budget, and quality. Practical lessons, over the years, had led to the definition, and establishment, of procedures and tools. Eventually, the tools became systems to manage software changes. Industry-wide practices were offered as solutions, either in an open or proprietary manner (such as Revision Control System). With the growing use of computers, systems emerged that handled a broader scope, including requirements management, design alternatives, quality control, and more; later tools followed the guidelines of organizations, such as the Capability Maturity Model of the Software Engineering Institute.
+
+
+== See alsoEdit ==
+Application lifecycle management
+Comparison of open source configuration management software
+Comparison of revision control software
+List of revision control software
+Matrix of pain
+
+
+== ReferencesEdit ==
+
+
+== Further readingEdit ==
+828-2012 IEEE Standard for Configuration Management in Systems and Software Engineering. 2012. doi:10.1109/IEEESTD.2012.6170935. ISBN 978-0-7381-7232-3. 
+Aiello, R. (2010). Configuration Management Best Practices: Practical Methods that Work in the Real World (1st ed.). Addison-Wesley. ISBN 0-321-68586-5.
+Babich, W.A. (1986). Software Configuration Management, Coordination for Team Productivity. 1st edition. Boston: Addison-Wesley
+Berczuk, Appleton; (2003). Software Configuration Management Patterns: Effective TeamWork, Practical Integration (1st ed.). Addison-Wesley. ISBN 0-201-74117-2.
+Bersoff, E.H. (1997). Elements of Software Configuration Management. IEEE Computer Society Press, Los Alamitos, CA, 1-32
+Dennis, A., Wixom, B.H. & Tegarden, D. (2002). System Analysis & Design: An Object-Oriented Approach with UML. Hoboken, New York: John Wiley & Sons, Inc.
+Department of Defense, USA (2001). Military Handbook: Configuration management guidance (rev. A) (MIL-HDBK-61A). Retrieved January 5, 2010, from http://www.everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/MIL-HDBK-61_11531/
+Futrell, R.T. et al. (2002). Quality Software Project Management. 1st edition. Prentice-Hall.
+International Organization for Standardization (2003). ISO 10007: Quality management systems – Guidelines for configuration management.
+Saeki M. (2003). Embedding Metrics into Information Systems Development Methods: An Application of Method Engineering Technique. CAiSE 2003, 374-389.
+Scott, J.A. & Nisse, D. (2001). Software configuration management. In: Guide to Software Engineering Body of Knowledge. Retrieved January 5, 2010, from http://www.computer.org/portal/web/swebok/htmlformat
+Paul M. Duvall, Steve Matyas, and Andrew Glover (2007). Continuous Integration: Improving Software Quality and Reducing Risk. (1st ed.). Addison-Wesley Professional. ISBN 0-321-33638-0.
+
+
+== External linksEdit ==
+SCM and ISO 9001 by Robert Bamford and William Deibler, SSQC
+Use Cases and Implementing Application Lifecycle Management
+Parallel Development Strategies for Software Configuration Management
+iNTCCM, iNTernational Certification for Configuration Management professionals
+SCM Certification, Software Configuration Management: Strategies, Techniques, & Tools

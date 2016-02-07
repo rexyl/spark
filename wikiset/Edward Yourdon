@@ -1,0 +1,69 @@
+Edward Nash Yourdon (April 30, 1944 – January 20, 2016) was an American software engineer, computer consultant, author and lecturer, and pioneer in the software engineering methodology. He was known as one of the lead developers of the structured analysis techniques of the 1970s and as a co-developer of the Yourdon/Whitehead method for object-oriented analysis/design in the late 1980s and the Coad/Yourdon methodology for object-oriented analysis/design in the 1990s.
+
+
+== Biography ==
+Yourdon obtained his B.S. in applied mathematics from Massachusetts Institute of Technology (MIT) in 1965, and did graduate work in electrical engineering and computer science at MIT and the Polytechnic Institute of New York.
+In 1964 Yourdon started working at Digital Equipment Corporation developing FORTRAN programs for the PDP-5 minicomputer and later assembler for the PDP-8. Later in the 1960s and early 1970s after working at a small consulting firm and as independent consultant, in 1974 Yourdon founded his own consulting firm, YOURDON Inc. to provide educational, publishing, and consulting services. After he sold this firm in 1986 he served on the Board of multiple IT consultancy corporations, and was advisor on several research project in the software industry throughout the 1990s.
+In June 1997, Yourdon was inducted into the Computer Hall of Fame, along with such notables as Charles Babbage, James Martin, Grace Hopper, and Gerald Weinberg. In December 1999 the Crosstalk: The Journal of Defense Software Engineering, named him one of the ten most influential people in the software field.
+In the late 1990s, Yourdon became the center of controversy over his beliefs that Y2K-related computer problems could result in severe software failures that would culminate in widespread social collapse. Due to the efforts of Yourdon and thousands of dedicated technologists, developers and project managers, these potential critical system failure points were successfully remediated, thus avoiding the problems Yourdon and others identified early enough to make a difference.
+In the new millennium, Yourdon became Faculty Fellow at the Information Systems Research Center of the University of North Texas as well as Fellow of the Business Technology Trends Council for the Cutter Consortium, where he also was editor of the Cutter IT Journal.
+
+
+== Work ==
+After developing structured analysis techniques of the 1970s, and object-oriented analysis/design in the late 1980s and 1990s, in the new millennium Yourdon has specialized in project management, software engineering methodologies, and Web 2.0 development. He also founded and published American Programmer magazine (now titled Cutter IT Journal). He is the author of the book Decline and Fall of the American Programmer.
+
+
+=== Yourdon Inc. ===
+In 1974, Yourdon founded the consulting firm Yourdon Inc. in New York, which provided consulting, educational and publishing in the field of software engineering. In the early 1980s, the company had multiple offices in North America and Europe and a staff of 150 people. They trained over 250,000 people in the topics of structured programming, structured design, structured analysis, logical data modeling and project management.
+In 1986, Yourdon sold the consulting company. It later became part of the French software company CGI Informatique, which is now itself part of IBM. The publishing division had published over 150 books on software engineering topics before it became part of Prentice Hall.
+
+
+=== Yourdon Structured Method ===
+In the 1980s Yourdon developed the Yourdon Structured Method (YSM) in SSADM based on the functional structuring. The method supports two distinct design phases: analysis and design. YSM includes three discrete steps: the feasibility study; essential modeling; and implementation modeling. It offers a series of models:
+The behavioral model: states that system behavior can be described in three ways: Functions, dynamics and relationships.
+The processor environment model (PEM): describes the allocation of computing functions in processor hardware.
+The software environment model (SEM): defines the software architecture and its effects from each processor.
+The code organizational model (COM): shows the modular structure of each task
+The Yourdon Structured Method (YSM) and Structured Analysis and Design Technique (SADT) are examples of structured design methods.
+
+
+=== Year 2000 (Y2K) problem ===
+During the late 1990s, he was one of the leading proponents of the theory that the 'Y2K Bug' could lead to a collapse of civilization, or at least protracted economic depression and technological breakdown on a wide scale. He wrote several books on the subject, including Time Bomb 2000 (ISBN 0-13-020519-2), and produced at least one video putting forth that theory (and offering advice on how to survive the coming crisis). Yourdon took a lot of heat when his dire predictions (vigorously refuted by many experts in advance) failed to materialize in any form. This blunder may have caused him to lose credibility with many in the software industry.
+
+
+== Final Years and Death ==
+In his final years, Yourdon served as an internationally recognized expert witness and computer consultant specializing in project management, software engineering methodologies, and Web 2.0 development. He died on January 20, 2016, as a result of a post-surgical blood infection.
+
+
+== Publications ==
+Yourdon has authored over 550 technical articles and authored or coauthored 26 computer books since 1967. A selection:
+1967. Real-Time Systems Design. Information & Systems Press.
+1972. Design of On-Line Computer Systems. Prentice Hall.
+Yourdon, Edward; Constantine, Larry L. (1979) [1975]. Structured Design: Fundamentals of a Discipline of Computer Program and Systems Design. Yourdon Press. ISBN 0-13-854471-9. 
+1975. Techniques of Program Structure and Design. Prentice Hall.
+1976. Learning to Program in Structured COBOL, Part I and II. With C. Gane and T. Sarson and T. Lister. Prentice Hall.
+1978. Learning to Program in Structured COBOL, Part II. With Timothy Lister. Prentice Hall.
+1979. Classics in Software Engineering . Prentice Hall.
+1982. Writings of the Revolution. Prentice Hall.
+1988. Managing the System Life Cycle. 2nd ed. Prentice Hall.
+1989. Modern Structured Analysis. Prentice Hall.
+1992. Decline and Fall of the American Programmer. Prentice Hall.
+1994. Object-Oriented Systems Development: An Integrated Approach. Prentice Hall.
+1996. Case Studies in Object-Oriented Analysis and Design. With Carl Argila. Prentice-Hall.
+1996. Rise and Resurrection of the American Programmer. Prentice-Hall.
+1999. The Complete Y2K Home Preparation Guide. With Robert Roskind. Prentice Hall.
+1999. Time Bomb 2000: What the Y2K Computer Crisis means for you!'. With Jennifer Yourdon. Prentice Hall.
+1999. The Y2K Financial Survival Guide. With Jennifer Yourdon and Peter G. Gordon. Prentice Hall.
+2001. Managing High-Intensity Internet Projects. Prentice Hall
+2002. Byte Wars: The Impact of September 11 on Information Technology. Prentice Hall
+2003. Death March (2nd edition). Prentice Hall
+2004. Outsourcing: Competing in the Global Productivity Race. Prentice Hall
+
+
+== References ==
+
+
+== External links ==
+"Ed Yourdon". Retrieved December 4, 2007. 
+Structured Analysis Wiki
+Ed Yourdon at Flickr

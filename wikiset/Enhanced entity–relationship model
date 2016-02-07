@@ -1,0 +1,44 @@
+The enhanced entity–relationship (EER) model (or extended entity–relationship model) in computer science is a high-level or conceptual data model incorporating extensions to the original entity–relationship (ER) model, used in the design of databases.
+It was developed to reflect more precisely the properties and constraints that are found in more complex databases, such as in engineering design and manufacturing (CAD/CAM), telecommunications, complex software systems and geographic information systems (GIS).
+
+
+== MechanicsEdit ==
+
+The EER model includes all of the concepts introduced by the ER model. Additionally it includes the concepts of a subclass and superclass (Is-a), along with the concepts of specialization and generalization. Furthermore, it introduces the concept of a union type or category, which is used to represent a collection of objects that is the union of objects of different entity types.
+
+
+=== Subclass and superclassEdit ===
+Entity type Y is a subtype (subclass) of an entity type X if and only if every Y is necessarily an X. A subclass entity inherits all attributes and relationships of its superclass entity. This property is called the attribute and relationship inheritance. A subclass entity may have its own specific attributes and relationships (together with all the attributes and relationships it inherits from the superclass). Most common superclass examples is a vehicle with subclasses of Car and Truck. There are a number of common attributes between a car and a truck, which would be part of the Superclass, while the attributes specific to a car or a truck (such as max payload, truck type...) would make up two subclasses.
+
+
+== ToolsEdit ==
+The MySQL Workbench offers creating, editing and exporting EER Models. Exporting to PNG and PDF allows easy sharing for presentations.
+Skipper allows to create, import and export from ORM schema definitions to editable EER models.
+
+
+== See alsoEdit ==
+Object-relational database
+Structured type
+
+
+== ReferencesEdit ==
+
+
+== Further readingEdit ==
+Textbooks discussing EER and implementation using purely relational databases:
+Elmasri, Ramez; Navathe, Shamkant B. (2011). Fundamentals of Database Systems (6th ed.). Pearson/Addison Wesley. Chapters 8 and 9. ISBN 0-136-08620-9. 
+Coronel, Carlos; Morris, Steven; Rob, Peter (2011). Database Systems: Design, Implementation, and Management (9th ed.). Cengage Learning. Chapter 5. ISBN 978-0-538-46968-5. 
+Connolly, Thomas M.; Begg, Carolyn E. (2005). Database Systems: A Practical Approach to Design, Implementation, and Management (4th ed.). Addison-Wesley. Chapters 12 and 16. ISBN 978-0-321-21025-8. 
+Booklet discussing EER and implementation using object-oriented and object-relational databases:
+Dietrich, Suzanne W.; Urban, Susan D. (2011). Fundamentals of Object Databases: Object-Oriented and Object-Relational Design. Morgan & Claypool Publishers. ISBN 978-1-60845-476-1. 
+Textbook discussing implementation in relational and object-relational databases:
+Ricardo, Catherine (2011). Databases Illuminated (2nd ed.). Jones & Bartlett Publishers. Chapter 8. ISBN 978-1-4496-0600-8. 
+Shorter survey articles:
+Teorey, Toby J.; Yang, Dongqing; Fry, James P. (1986). "A logical design methodology for relational databases using the extended entity–relationship model". ACM Computing Surveys (CSUR) 18 (2): 197–222. CiteSeerX: 10.1.1.105.7211. 
+Sikha Bagui (2006). "Extended Entity Relationship Modeling". In Laura C. Rivero, Jorge H. Doorn, Viviana E. Ferraggine. Encyclopedia of Database Technologies and Applications. Idea Group Inc (IGI). pp. 233–239. ISBN 978-1-59140-795-9. 
+
+
+== External linksEdit ==
+[1] - Slides for chapter 8 from Fundamentals of Database Systems by Elmasri and Navathe (Pearson, 2011)
+[2] - Lecture notes from the University of Toronto
+[3] - The ER Conference

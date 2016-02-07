@@ -1,0 +1,61 @@
+Winston Walker Royce (August 15, 1929 – June 7, 1995) was an American computer scientist, director at Lockheed Software Technology Center in Austin, Texas. He was a pioneer in the field of software development, known for his 1970 paper from which the Waterfall model for software development was mistakenly drawn.
+
+
+== Biography ==
+Born in 1929, Royce entered the California Institute of Technology, where he received his BS in physics, his MS in aeronautical engineering and in 1959 his PhD in aeronautical engineering under Julian David Cole with the thesis Transonic flow over a non-lifting, slender body of revolution.
+Royce had begun his career as Assistant Professor at the California Institute of Technology. In 1961 he started as project manager in the aerospace division of TRW. His first project concerned the design of a mission planning and orbit selection system for spacecraft. In the following years he was involved in the research and development of several large and complex software systems, and started developing new methodologies for improving the management of software project. In 1970 he published his influential article "Managing the development of large software systems", in which he presented several project management models, including what we now know as waterfall, iterative, and agile. In 1985 he received the AIAA Information Systems Award. During the 1980s he was director at Lockheed Software Technology Center in Austin, Texas. He retired in 1994 and died the following year at his home in Clifton, Virginia.
+His eldest son is Walker Royce, Chief Software Economist of IBM's Rational division, and author of "Software Project Management, A Unified Framework", and a principal contributor to the management philosophy inherent in the IBM Rational Unified Process.
+
+
+== Work ==
+
+
+=== Managing the development of large software systems ===
+The Waterfall model for software development is mistakenly attributed to Royce. Barry Boehm wrote in 1987:
+Royce's 1970 paper is generally considered to be the paper which defined the stagewise "waterfall" model of the software process. But it is surprising to see both that the earlier Benington and Hosier papers had good approximations to the waterfall model, and that Royce's paper already incorporates prototyping as an essential step compatible with the waterfall model.
+In fact Royce demonstrated that while the development of large software systems required a more thorough approach, there was inherent risk in a single-pass sequential approach. He proposed an iterative and incremental approach and advocated that projects should pass through this at least twice.
+
+Royce started his 1970 article 'Managing the development of large software systems' with a statement about the origin of his ideas:
+I am going to describe my personal views about managing large software developments. I have had various assignments during the past nine years, mostly concerned with the development of software packages for spacecraft mission planning, commanding and post-flight analysis. In these assignments I have experienced different degrees of success with respect to arriving at an operational state, on-time, and within costs. I have become prejudiced by my experiences and I am going to relate some of these prejudices in this presentation.
+Royce had determined that the development of computer programs regardless of size or complexity could be split into two development stages: Analysis and Coding. For small software development projects these two steps were sufficient, but not for the development of larger software systems. These require many additional steps back and forth, which gives the development an iterative character.
+To picture this iterative development Royce proposed a number of approaches, although he never used the term waterfall nor advocated it as an effective methodology. The earliest use of the term "waterfall" may have been a 1976 paper by Bell and Thayer.
+Royce pictured the waterfall model with the following seven steps:
+Systems requirements
+Software requirements
+Analysis
+Program design
+Coding
+Testing, and
+Operation
+He called them "implementation steps to develop a large computer program for delivery to a customer". Royce foresaw a major shortcoming in this methodology, which he described as:
+The testing phase which occurs at the end of the development cycle is the first event for which timing, storage, input/output transfers, etc., are experienced as distinguished from analyzed. These phenomena are not precisely analyzable. They are not the solutions to the standard partial differential equations of mathematical physics for instance. Yet if these phenomena fail to satisfy the various external constraints, then invariably a major redesign is required. A simple octal patch or redo of some isolated code will not fix these kinds of difficulties. The required design changes are likely to be so disruptive that the software requirements upon which the design is based and which provides the rationale for everything are violated...
+According to Royce in the process model "the design iterations are never confined to the successive step", and for that model without iteration is "risky and invites failure". As alternative Royce proposed a more incremental development, where every next step links back to the step before.
+
+
+=== Software system engineering ===
+In the early 1980s Winston Royce coined the term "software system engineering" (SwSE) at one of the seminars of the Management of Software Acquisition course at the Defense Systems Management College at Fort Belvoir, Va.
+According to Richard H. Thayer, emeritus professor in software engineering at California State University, Sacramento, software system engineering is concerned with "applying system engineering principles speciﬁcally to the development of large, complex software systems provides a powerful tool for process and product management." Software system engineers can take responsibility for the "overall technical management of the system and the verification of the final system products."
+
+
+=== Software architecture ===
+In the 1991 article Software Architecture: Integrating Process and Technology Royce and Royce describe the connection between architecture and the software development process. According to Philippe Kruchten et al. (2006) this article was the first "to position software architecture — in both title and perspective — between technology and process."
+
+
+== See also ==
+Dual Vee Model
+Systems Development Life Cycle
+
+
+== Publications ==
+Royce published several books and articles. Books
+1959. Transonic flow over a non-lifting, slender body of revolution. Pasadena : California Institute of Technology, 1959.
+1997. Software Engineering Project Management. 2nd edition. With R. Thayer & Ed Yourdon.
+Articles, a selection:
+1970. "Managing the Development of Large Software Systems", Proceedings of IEEE WESCON 26 (August): 1–9.
+1989. "Lockheed's Software Technology Center". In: Modern software engineering, foundations and current perspectives. Peter A. Ng (ed.). Van Nostrand Reinhold Co. p. 561–578.
+1991. "Current Problems." In: Aerospace Software Engineering, edited by Christine Anderson and Merlin Dorfman, 5–15. Washington, D.C.: American Institute of Aeronautics and Astronautics.
+1991. "Software Architecture: Integrating Process and Technology", with Walker Royce in TRW Quest, vol. 14, no. 1, p. 2–15.
+1992. "Status Report: Computer-Aided Prototyping". With Walker Royce. In: IEEE Software Vol 9 (6): p. 77–81
+
+
+== References ==

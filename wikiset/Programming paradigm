@@ -1,0 +1,62 @@
+A programming paradigm is a fundamental style of computer programming, serving as a way of building the structure and elements of computer programs. Capabilities and styles of various programming languages are defined by their supported programming paradigms; some programming languages are designed to follow only one paradigm, while others support multiple paradigms.
+Programming paradigms that are often distinguished include imperative, declarative, functional, object-oriented, procedural, logic and symbolic programming. With different paradigms, programs can be seen and built in different ways; for example, in object-oriented programming, a program is a collection of objects interacting in explicitly defined ways, while in declarative programming the computer is told only what the problem is, not how to actually solve it.
+
+
+== Overview ==
+
+Just as software engineering (as a process) is defined by differing methodologies, so the programming languages (as models of computation) are defined by differing paradigms. Some languages are designed to support one particular paradigm (Smalltalk supports object-oriented programming, Haskell supports functional programming), while other programming languages support multiple paradigms (such as Object Pascal, C++, Java, C#, Scala, Visual Basic, Common Lisp, Scheme, Perl, Python, Ruby, Oz and F#). For example, programs written in C++ or Object Pascal can be purely procedural, purely object-oriented, or they can contain elements of both or other paradigms. Software designers and programmers decide how to use those paradigm elements.
+In object-oriented programming, programmers can think of a program as a collection of interacting objects, while in functional programming a program can be thought of as a sequence of stateless function evaluations. When programming computers or systems with many processors, process-oriented programming allows programmers to think about applications as sets of concurrent processes acting upon logically shared data structures.
+Many programming paradigms are as well known for what techniques they forbid as for what they enable. For instance, pure functional programming disallows the use of side-effects, while structured programming disallows the use of the goto statement. Partly for this reason, new paradigms are often regarded as doctrinaire or overly rigid by those accustomed to earlier styles. Avoiding certain techniques can, though, make it easier to prove theorems about the correctness of a program, or simply to understand its behavior.
+Programming paradigms can also be compared with programming models that are abstractions of computer systems. For example, the "von Neumann model" is a programming model used in traditional sequential computers. For parallel computing, there are many possible models typically reflecting different ways processors can be interconnected. The most common are based on shared memory, distributed memory with message passing, or a hybrid of the two.
+Some programming language researchers criticise the notion of paradigms as a classification of programming languages, e.g. Krishnamurthi. They argue that many programming languages cannot be strictly classified into one paradigm, but rather include features from several paradigms.
+
+
+== History ==
+Different approaches to programming have developed over time, being identified as such either at the time or retrospectively. An early approach consciously identified as such is structured programming, advocated since the mid 1960s. The concept of a "programming paradigm" as such dates at least to 1978, in the Turing Award lecture of Robert W. Floyd, entitled The Paradigms of Programming, which cites the notion of paradigm as used by Thomas Kuhn in his The Structure of Scientific Revolutions (1962).
+
+
+=== Machine code ===
+The lowest level programming paradigms are machine code, which directly represents the instructions (the contents of program memory) as a sequence of numbers, and assembly language where the machine instructions are represented by mnemonics and memory addresses can be given symbolic labels. These are sometimes called first- and second-generation languages.
+In the 1960s, assembly languages were developed to support library COPY and quite sophisticated conditional macro generation and pre-processing capabilities, CALL to (subroutines), external variables and common sections (globals), enabling significant code re-use and isolation from hardware specifics via use of logical operators such as READ/WRITE/GET/PUT. Assembly was, and still is, used for time critical systems and frequently in embedded systems as it gives the most direct control of what the machine actually does.
+
+
+=== Procedural languages ===
+The next advance was the development of procedural languages. These third-generation languages (the first described as high-level languages) use vocabulary related to the problem being solved. For example,
+COBOL (COmmon Business Oriented Language) –  uses terms like file, move and copy.
+FORTRAN (FORmula TRANslation) –  using mathematical language terminology, it was developed mainly for scientific and engineering problems.
+ALGOL (ALGOrithmic Language) –  focused on being an appropriate language to define algorithms, while using mathematical language terminology and targeting scientific and engineering problems just like FORTRAN.
+PL/I (Programming Language One) –  a hybrid commercial/scientific general purpose language supporting pointers.
+BASIC (Beginners All purpose Symbolic Instruction Code) –  it was developed to enable more people to write programs.
+C –  a general-purpose programming language, initially developed by Dennis Ritchie between 1969 and 1973 at AT&T Bell Labs.
+All these languages follow the procedural paradigm. That is, they describe, step by step, exactly the procedure that should, according to the particular programmer at least, be followed to solve a specific problem. The efficacy and efficiency of any such solution are both therefore entirely subjective and highly dependent on that programmer's experience, inventiveness and ability.
+
+
+=== Object-oriented programming ===
+
+Following the widespread use of procedural languages, object-oriented languages like Simula, Smalltalk, C++, C#, Eiffel and Java were created. In these languages, data and methods of manipulating the data are kept as a single unit called an object. The only way that a user can access the data is via the object's "methods"; as a result, the inner workings of an object may be changed without affecting any code that uses the object. There is still some controversy raised by Alexander Stepanov, Richard Stallman and other programmers, concerning the efficacy of the OOP paradigm versus the procedural paradigm. The necessity of every object to have associative methods leads some skeptics to associate OOP with software bloat. Polymorphism was developed as one attempt to resolve this dilemma.
+Because object-oriented programming is considered a paradigm, not a language, it is possible to create even an object-oriented assembler language. High Level Assembly (HLA) is an example of this that fully supports advanced data types and object-oriented assembly language programming –  despite its early origins. Thus, differing programming paradigms can be thought of as more like "motivational memes" of their advocates –  rather than necessarily representing progress from one level to the next. Precise comparisons of the efficacy of competing paradigms are frequently made more difficult because of new and differing terminology applied to similar entities and processes together with numerous implementation distinctions across languages.
+
+
+=== Further paradigms ===
+Literate programming, as a form of imperative programming, structures programs as a human-centered web, as in a hypertext essay: documentation is integral to the program, and the program is structured following the logic of prose exposition, rather than compiler convenience.
+Independent of the imperative branch, declarative programming paradigms were developed. In these languages the computer is told what the problem is, not how to solve the problem –  the program is structured as a collection of properties to find in the expected result, not as a procedure to follow. Given a database or a set of rules, the computer tries to find a solution matching all the desired properties. The archetypical example of a declarative language is the fourth generation language SQL, as well as the family of functional languages and logic programming.
+Functional programming is a subset of declarative programming. Programs written using this paradigm use functions, blocks of code intended to behave like mathematical functions. Functional languages discourage changes in the value of variables through assignment, making a great deal of use of recursion instead.
+The logic programming paradigm views computation as automated reasoning over a corpus of knowledge. Facts about the problem domain are expressed as logic formulae, and programs are executed by applying inference rules over them until an answer to the problem is found, or the collection of formulae is proved inconsistent.
+Symbolic programming is a paradigm that describes programs able to manipulate formulas and program components as data. Programs can thus effectively modify themselves, and appear to "learn", making them suited for applications such as artificial intelligence, expert systems, natural language processing and computer games. Languages that support this paradigm include LISP and Prolog.
+
+
+== Multi-paradigm ==
+
+A multi-paradigm programming language is a programming language that supports more than one programming paradigm. The design goal of such languages is to allow programmers to use the most suitable programming style and associated language constructs for a particular job, considering that no single paradigm solves all problems in the easiest or most efficient way.
+One example is C#, which includes imperative and object-oriented paradigms as well as some support for functional programming with features like delegates (allowing functions to be treated as first-order objects), type inference, anonymous functions and Language Integrated Query. Other examples are F# and Scala, which provides similar functionality to C# but also includes full support for functional programming (including currying, pattern matching, algebraic data types, lazy evaluation, tail recursion, immutability, etc.). Perhaps the most extreme example is Oz, which has subsets that adhere to logic (Oz descends from logic programming), functional, object-oriented, dataflow concurrent, and other paradigms. Oz was designed over a ten-year period to combine in a harmonious way concepts that are traditionally associated with different programming paradigms. Lisp, while often taught as a functional language, is known for its malleability and thus its ability to engulf many paradigms.
+
+
+== See also ==
+
+
+== References ==
+
+
+== External links ==
+Classification of the principal programming paradigms
+How programming paradigms evolve and get adopted?

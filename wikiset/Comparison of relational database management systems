@@ -1,0 +1,122 @@
+The following tables compare general and technical information for a number of relational database management systems. Please see the individual products' articles for further information. Unless otherwise specified in footnotes, comparisons are based on the stable versions without any add-ons, extensions or external programs.
+
+
+== General information ==
+
+
+== Operating system support ==
+The operating systems that the RDBMSes can run on.
+
+
+== Fundamental features ==
+Information about what fundamental RDBMS features are implemented natively.
+Note (1): Currently only supports read uncommited transaction isolation. Version 1.9 adds serializable isolation and version 2.0 will be fully ACID compliant.
+Note (2): MySQL provides ACID compliance through the default InnoDB storage engine.
+Note (3): "For other [than InnoDB] storage engines, MySQL Server parses and ignores the FOREIGN KEY and REFERENCES syntax in CREATE TABLE statements. The CHECK clause is parsed but ignored by all storage engines."
+Note (4): Support for Unicode is new in version 10.0.
+Note (5): MySQL provides GUI interface through MySQL Workbench.
+
+
+== Limits ==
+Information about data size limits.
+Note (1): Firebird 2.x maximum database size is effectively unlimited with the largest known database size >980 GB. Firebird 1.5.x maximum database size: 32 TB.
+Note (2): Limit is 1038 using DECIMAL datatype.
+Note (3): InnoDB is limited to 8,000 bytes (excluding VARBINARY, VARCHAR, BLOB, or TEXT columns).
+Note (4): InnoDB is limited to 1,000 columns.
+Note (6): Using VARCHAR (MAX) in SQL 2005 and later.
+Note (7): When using a page size of 32 KB, and when BLOB/CLOB data is stored in the database file.
+Note (8): Java array size limit of 2,147,483,648 (231) objects per array applies. This limit applies to number of characters in names, rows per table, columns per table, and characters per CHAR/VARCHAR.
+Note (9): Despite the lack of a date datatype, SQLite does include date and time functions, which work for timestamps between 24 November 4714 B.C. and 1 November 5352.
+Note (10): Informix DATETIME type has adjustable range from YEAR only through 1/10000th second. DATETIME date range is 0001-01-01 00:00:00.00000 through 9999-12-31 23:59:59.99999.
+Note (11): Since version 12c. Earlier versions support up to 4000 B.
+
+
+== Tables and views ==
+Information about what tables and views (other than basic ones) are supported natively.
+Note (1): Server provides tempdb, which can be used for public and private (for the session) temp tables.
+Note (2): Materialized views are not supported in Informix; the term is used in IBM's documentation to refer to a temporary table created to run the view's query when it is too complex, but one cannot for example define the way it is refreshed or build an index on it. The term is defined in the Informix Performance Guide.
+Note (4): Materialized views can be emulated using stored procedures and triggers.
+Note (5): Materialized views are now standard but can be emulated in versions prior to 9.3 with stored procedures and triggers using PL/pgSQL, PL/Perl, PL/Python, or other procedural languages.
+
+
+== Indices ==
+Information about what indices (other than basic B-/B+ tree indices) are supported natively.
+Note (1): The users need to use a function from freeAdhocUDF library or similar.
+Note (2): Can be implemented for most data types using expression-based indexes.
+Note (3): Can be emulated by indexing a computed column (doesn't easily update) or by using an "Indexed View" (proper name not just any view works).
+Note (4): Can be implemented by using an indexed view.
+Note (5): InnoDB automatically generates adaptive hash index entries as needed.
+Note (6): Can be implemented using Function-based Indexes in Oracle 8i and higher, but the function needs to be used in the sql for the index to be used.
+Note (7): A PostgreSQL functional index can be used to reverse the order of a field.
+Note (10): B+ tree and full-text only for now.
+Note (11): R-Tree indexing available in base edition with Locator but some functionality requires Personal Edition or Enterprise Edition with Spatial option.
+
+
+== Database capabilities ==
+Note (1): Recursive CTEs introduced in 11gR2 supersedes similar construct called CONNECT BY.
+
+
+== Data types ==
+
+
+== Other objects ==
+Information about what other objects are supported natively.
+Note (1): Both function and procedure refer to internal routines written in SQL and/or procedural language like PL/SQL. External routine refers to the one written in the host languages, such as C, Java, Cobol, etc. "Stored procedure" is a commonly used term for these routine types. However, its definition varies between different database vendors.
+Note (2): In Derby, H2, LucidDB, and CUBRID, users code functions and procedures in Java.
+Note (3): ENUM datatype exist. CHECK clause is parsed, but not enforced in runtime.
+Note (4): In Drizzle the user codes functions and procedures in C++.
+Note (5): Informix supports external functions written in Java, C, & C++.
+
+
+== Partitioning ==
+Information about what partitioning methods are supported natively.
+Note (1): PostgreSQL 8.1 provides partitioning support through check constraints. Range, List and Hash methods can be emulated with PL/pgSQL or other procedural languages.
+Note (2): RDM Embedded 10.1 requires the application programs to select the correct partition (using range, hash or composite techniques) when adding data, but the database union functionality allows all partitions to be read as a single database.
+
+
+== Access control ==
+Information about access control functionalities (work in progress).
+Note (1): Network traffic could be transmitted in a secure way (not clear-text, in general SSL encryption). Precise if option is default, included option or an extra modules to buy.
+Note (2): Options are present to set a minimum size for password, respect complexity like presence of numbers or special characters.
+Note (3): How do you get security updates? Is it free access, do you need a login or to pay? Is there easy access through a Web/FTP portal or RSS feed or only through offline access (mail CD-ROM, phone).
+Note (4): Does database process run as root/administrator or unprivileged user? What is default configuration?
+Note (5): Is there a separate user to manage special operation like backup (only dump/restore permissions), security officer (audit), administrator (add user/create database), etc.? Is it default or optional?
+Note (6): Common Criteria certified product list.
+Note (7): FirebirdSQL seems to only have SYSDBA user and DB owner. There are no separate roles for backup operator and security administrator.
+Note (8): User can define a dedicated backup user but nothing particular in default install.
+Note (9): Authentication methods.
+Note (10): Informix Dynamic Server supports PAM and other configurable authentication. By default uses OS authentication.
+Note (11): Authentication methods.
+Note (12): With the use of Pervasive AuditMaster.
+Note (13): User-based security is optional in Polyhedra, but when enabled can be enhanced to a role-based model with auditing.
+
+
+== Databases vs schemas (terminology) ==
+The SQL specification makes clear what an "SQL schema" is; however, different databases implement it incorrectly. To compound this confusion the functionality can, when incorrectly implemented, overlap with that of the parent-database. An SQL schema is simply a namespace within a database, things within this namespace are addressed using the member operator dot ".". This seems to be a universal amongst all of the implementations.
+A true fully (database, schema, and table) qualified query is exemplified as such: SELECT * FROM database.schema.table
+Now, the issue, both a schema and a database can be used to isolate one table, "foo" from another like named table "foo". The following is pseudo code:
+SELECT * FROM db1.foo vs. SELECT * FROM db2.foo (no explicit schema between db and table)
+SELECT * FROM [db1.]default.foo vs. SELECT * FROM [db1.]alternate.foo (no explicit db prefix)
+The problem that arises is that former MySQL users will create multiple databases for one project. In this context, MySQL databases are analogous in function to Postgres-schemas, insomuch as Postgres lacks off-the-shelf cross-database functionality that MySQL has. Conversely, PostgreSQL has applied more of the specification implementing cross-table, cross-schema, and then left room for future cross-database functionality.
+MySQL aliases schema with database behind the scenes, such that CREATE SCHEMA and CREATE DATABASE are analogs. It can therefore be said that MySQL has implemented cross-database functionality, skipped schema functionality entirely, and provided similar functionality into their implementation of a database. In summary, Postgres fully supports schemas but lacks some functionality MySQL has with databases, while MySQL does not even attempt to support true schemas.
+Oracle has its own spin where creating a user is synonymous with creating a schema. Thus a database administrator can create a user called PROJECT and then create a table PROJECT.TABLE. Users can exist without schema objects, but an object is always associated with an owner (though that owner may not have privileges to connect to the database). With the Oracle 'shared-everything' RAC architecture, the same database can be opened by multiple servers concurrently. This is independent of replication, which can also be used, whereby the data is copied for use by different server. In the Oracle view, the 'database' is a set of files which contains the data while the 'instance' is a set of processes (and memory) through which a database is accessed.
+Informix supports multiple databases in a server instance, like MySQL. It supports the CREATE SCHEMA syntax as a way to group DDL statements into a single unit creating all objects created as a part of the schema as a single owner. Informix supports a database mode called ANSI mode which supports creating objects with the same name but owned by different users.
+The end result is confusion between the database factions. The Postgres and Oracle communities maintain that one database is all that is needed for one project, per the definition of database. MySQL and Informix proponents maintain that schemas have no legitimate purpose when the functionality can be achieved with databases. Postgres adheres to the SQL specification, in a more intuitive fashion (bottom-up), while MySQL's pragmatic counterargument allows their users to get the job done while creating conceptual confusion.
+
+
+== See also ==
+Relational database management system (includes market share data)
+List of relational database management systems
+Comparison of object-relational database management systems
+Comparison of database tools
+Object Database - some of which have relational (SQL/ODBC) interfaces.
+
+
+== References ==
+
+
+== External links ==
+Comparison of different SQL implementations against SQL standards. Includes Oracle, DB2, Microsoft SQL Server, MySQL and PostgreSQL. (08/Jun/2007)
+Features, strengths and weaknesses comparison between Oracle and MSSQL (independent).
+The SQL92 standard
+List of open-source SQL engines

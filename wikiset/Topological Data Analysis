@@ -1,0 +1,199 @@
+Topological data analysis (TDA) is a new and vastly growing branch of applied mathematics.
+Data analysis is of extreme importance in almost all areas of modern applied science. However, to extract information from real data which are usually large, high-dimensional, incomplete and noisy is challenging. TDA provides a general framework to analyze data, being successful in coordinate-freeness, insensitive to particular metric, dimension reduction and robustness to noise. Beyond, it inherits functorality, one of the keys to the modern mathematics, from its topological nature, which makes it adaptive to new tools from mathematics.
+The initial motivation is to study the shape of data. TDA has combined algebraic topology and other tools from pure mathematics to give mathematically strict and quantitative study of "shape". The main tool is persistent homology, a modified concept of homology group. Nowadays, this area has been proven to be successful in practice. It has been applied to many types of data input, and different data resource and numerous fields. Moreover, its mathematical foundation is also of theoretical importance to mathematics itself. Its unique features make it a promising bridge between topology and geometry.
+
+
+== Basic theory ==
+Basic concepts and theoretical results in TDA will be introduced. Specially, the focus would be on the standard paradigm, namely the barcode of point clouds. These results are widely used in applications. For the basic concepts of algebraic topology, please refer to section 2 of Carlsson for a short introduction, or to the standard textbooks, such as Hatcher.
+
+
+=== Intuition ===
+The intuition is that shape matters. Real data in high dimension is always sparse, and has some relevant low dimensional features. The task of TDA is to precisely characterize this observation. One illustrative example is a predator-prey system governed by a Lotka-Volterra equation. One can easily observe that data forms a closed circle, which is intuitively the shape of this data. TDA provides tools to detect such recurrent movement.
+Lacking prior knowledge, selection of the threshold of a parameter is blind. The main insight of persistent homology is to grab all the information obtained from all values of a parameter. Of course this insight alone is easy to make; the hard part is encoding this huge amount of information into an understandable and easy-to-represent way. With TDA, there is a mathematical interpretation when the information is a homology group.
+A common belief in this community is that true features would last longer (hence the meaning of "persistent"). Short persistence is nothing but noise, though no mathematical justification is made. The topological information can be inferred from the selected long-lasting features.
+
+
+=== Early history ===
+The idea of persistence emerged independently in three groups. Patrizio Frosini introduced size function, which is equivalent to the 0th persistent homology. Vanessa Robins studied the images of homomorphisms induced by inclusion.
+Edelsbrunner et al. introduced persistent homology together with a efficient algorithm and the presentation as persistent diagram. Carlsson et al. reformulated their definition of persistent homology and gave an equivalent visualization method called persistent barcodes. Carlsson has interpreted it into the language of commutative algebra.
+
+
+=== Concepts ===
+Some widely-used concepts are introduced below. Note that some definitions may vary from author to author.
+Point cloud is defined as a finite set of points in some Euclidean space.
+Čech complex is defined as the nerve of the cover of balls of a fixed radius around each point in the point cloud.
+Persistence module  indexed by  is defined as: a vector space  for each , and a linear map  whenever , such that  for all  and  whenever 
+Persistence homology group  is defined as , where  is the Čech complex of radius  of the point cloud  and  is the homology group.
+Persistence barcodes is a multiset of intervals in , and persistence diagram is points in () (if two points happen to the same, the node denoting that points would be bigger).
+Wasserstein distance between two persistent diagram  and  is defined as where  and  ranges over bijections between  and . Please refer to figure 3.1 in Munch  for illustration.
+Bottleneck distance is defined as which clearly is a special case when  in Wasserstein distance.
+
+
+=== Basic property ===
+
+
+==== Structure theorem ====
+The first form of classification theorem for persistent homology appeared in 2005: for a finitely generated persistent module  with field  coefficients, This theorem also has an intuitive explanation. The free parts correspond to the homology generators appear at radius  and never disappear, while the torsion parts correspond to those appear at radius  and last for  (equivalently, disappear at radius ).
+Its visualization is through barcode or diagram. Please refer to the further reading for illustrations, due to issue of copyrights. Barcode also has its root in mathematics, though not at first sight; essentially, the derived category of chain complexes over a field is equivalent to the graded category of vector spaces.
+
+
+==== Stability ====
+The interpretation of the mathematical concept stability in data analysis is robustness against noise. It has been that if  be any space which is homeomorphic to a simplicial complex, and suppose  are continuous tame functions, then the persistence vector spaces  and  are finitely presented, and .
+
+
+=== Workflow ===
+The basic workflow in TDA is:
+Let  be a point cloud, replace a point cloud with a nested family of simplicial complexes(such as Čech complex) , indexed by a parameter. This process converts the point cloud into a persistent module
+Apply the structure theorem to provide a parameterized version of Betti number, persistence diagram, or equivalently, barcode.
+Graphically speaking,
+
+
+== Computation ==
+The applied mathematics has to face the issue of computational complexity. The first algorithm of persistent homology over  is given by Edelsbrunner et al. Carlsson et al. gives the first practical algorithm to compute the persistent homology over all fields. Edelsbrunner and Harer's book serves as a great general guidance on computational topology.
+One issue concerning computation is the choice of complex. Čech complex and Vietoris-Rips complex are most natural at first glance, however, the computation complexity would be same as matrix multiplication. It is straightforward that Vietoris-Rips complex is preferred over Čech complex by their definitions, and Čech complex does require some efforts to make a general definition in metric space. Efficient ways to lower the computational cost have been studied. For example, α-complex and witness complex are invented to reduce the dimension of complexes.
+Two methods of theoretical novelty appeared recently. Discrete morse theory has shown its potential in the computation because it may reduce a given complex to a much smaller cellular complex which is homotopic to the original one. The basic idea of another algorithm is to ignore the homology classes of low persistence.
+Various software packages are available, such as javaPlex, Dionysus, Perseus, PHAT, DIPHA, and Gudhi. A comparison between these tool is done by Otter et al. Also, an R package TDA is capable of calculating recently invented concepts like landscape and kernel distance estimator.
+
+
+== Visualization ==
+High-dimensional data is impossible to visualize directly. Many methods have been invented to extract a low-dimensional structure from the data set, such as principal component analysis and multidimensional scaling. However, it is important to note that the very question is ill-posed, since different topological features can be found in the same data set. Thus, this technique is of central importance to TDA, although it doesn't involve the use of persistent homology(though attempts have been made on this direction).
+Carlsson et al. have proposed a general method called MAPPER. It inherits the idea of Serré that covering homotopy. A generalized definition of MAPPER is that
+Let  and  be topological spaces and let  be a continuous map. Let  be a finite open covering of . The mapper is defined as the nerve of the pullback cover . This is a very general concept, which Reeb graph and merge trees are special cases.
+Note that this is not that original definition. Carlsson et al. choose  as  or , and covers it with at most two would intersect. By doing so, the mapper would be in the form of a complex network. Because the samples would be finite, some clustering methods, for example, single linkage clustering(this clustering scheme is fairly interesting in mathematical viewpoint) , are required to form components of the inverse map of a single cover, which is similar to the connected components of .
+Mathematically speaking, this is a variation of Reeb graph. A mathematical jurisdiction is that if the  is at most one dimensional, then for each , The flexibility also has disadvantages. One problem is instability, that some change of the choice of the cover can lead to major change of the mapper. Some works are devoted to overcome this problem.
+Three successful applications of MAPPER can be found in Carlsson et al. A comment of these applications on this paper by J. Curry is that "a common feature of interest in applications is the presence of flares or tendrils."
+A good software of MAPPER is free available online written by Daniel Müllner and Aravindakshan Babu.
+
+
+== Mathematical foundation ==
+Although persistent homology is a "21st century child of algebraic homology", its mathematical foundation has been vastly developed. An incomplete list of active mathematicians working on this field may include leading figures Gunnar Carlsson, Herbert Edelsbrunner, Vin De Silva, Peter Bubenik, Frédéric Chazal,Robert Ghrist, and rising scholars such as Micheal Lesnick, Justin Curry, Jonathan Scott.
+
+
+=== Multidimensional persistence ===
+Without exaggeration, multidimensional persistence is of the utmost importance to TDA. It naturally arise from both theory and practice. The first investigation of multidimensional persistence was at the very easy stage of TDA, and is considered in one of the founding paper of modern TDA. Its first application appeared in literature is also on shape comparison, similar to the invention of TDA.
+Definition of an n-dimensional persistence module in  is
+vector space  is assigned to each point in 
+map  is assigned if (
+maps satisfy  for all 
+It might be worth noting that there are controversies on the definition of multidimensional persistence.
+One of the advantages of 1-dim persistence is its representability, namely diagram or barcode. However, it has been proved that discrete complete invariants don't exist. The main argument is that, the collection of isomorphism classes of the indecomposables are extremely complicated by Gabriel's theorem in the theory of quiver representations, although a finitely n-dim persistence module can be uniquely decomposed into a direct sum of indecomposables due to the Kull-Schmidt theorem.
+Nonetheless, many results have been established. Carlsson et al. introduced the rank invariant , defined as the , in which  is a finitely generated n-graded module. In 1-D, it is equivalent to the barcode. In literature, it is often referred as PBNs(persistent Betti numbers). In many theoretical works, authors would use more restricted definition, an analogue from the sublevel persistence. Specifically, PBNs (the persistence Betti numbers) of function  is the function , taking each  to , where  and .
+Some basic properties include monotony and diagonal jump. PBNs will be finite if  is assumed to be a compact and locally contractible subspace of .
+Based on a so-called foliation method, the k-dim PBNs can be decomposed into a family of 1-dim PBNs by dimensionality deduction. This method has also led to prove the stability of multi-dim PBNs are stable. the discontinuities of PBNs only occur in point  if either  is a discontinuous point of  or  is a discontinuous point of  under the assumption that  and  is a compact, triangulable topological space.
+Persistent space, a generalization of persistent diagram, is defined as multiset of all points with multiplicity larger than 0 and the diagonal. It provides a stable and complete representation of PBNs. An ongoing work by Carlsson et al. is trying to give geometric interpretation of persistent homology, which might provide insights on how to combine machine learning theory with TDA.
+The first practical algorithm to compute multidimensional persistence was invented very early. After then, many works have been laid, such as discrete morse theory, finite sample estimating.
+
+
+=== Other persistences ===
+The standard paradigm in TDA is often referred as sublevel persistence. Apart from multidimensional persistence, many works have been done to extend this special case.
+
+
+==== Zigzag persistence ====
+The nonzero maps in persistence module are restricted by the preorder relationship in the category. However, mathematicians have found that the unanimousness of direction is not essential to many results. "The philosophical point is that the decomposition theory of graph representations is somewhat independent of the orientation of the graph edges". Zigzag persistence is important to the theoretical side. The examples given in Carlsson's review paper to illustrate the importance of functorality all share some of its features.
+
+
+==== Extended persistence and levelset persistence ====
+Some attempts is to lose the stricter restriction of the function. Please refer to the Categorization and cosheaf and Impact on mathematics sections for more information.
+It's natural to extend persistence homology to other basic concepts in algebraic topology, such as cohomology and relative homology/cohomology. An interesting theoretical application is to produce the circular coordinates via the first persistent cohomology group.
+
+
+==== Circular persistence ====
+Normal persistence homology studies real-valued functions. The circle-valued map might be useful, "persistence theory for circle-valued maps promises to play the role for some vector fields as does the standard persistence theory for scalar fields", as commented in D. Burghelea et al. The main difference is that Jordan cells(very similar in format to the ones in linear algebra) are nontrivial in circle-valued functions, which would be zero in real-valued case, and combing with barcodes give the invariants of a tame map, under moderate conditions.
+Two techniques they use are More-Novikov theory and graph representation theory. More recent results can be found in D. Burghelea et al. For example, the tameness requirement can be replaced by the much weaker condition, continuous.
+
+
+==== Persistence with torsion ====
+The proof of the structure theorem relies on the base domain being field, so not many attempts have been made on persistence homology with torsion. Frosini defined a pseudometric on this specific module and proved its stability. One of its novelty is that it doesn't depend on some classification theory to define the metric.
+
+
+=== Categorization and cosheaf ===
+One advantage of category theory is that the truth can be elevated to a formal point. It usually provides a general platform to treat results that are seemingly unrelated. Bubenik et al. offers a short introduction of category theory fitted for TDA; and for general techniques please refer to the standard textbook.
+Category is the language of modern algebra, and has been widely used in the study of algebraic geometry and topology. It has been noted that "the key observation of  is that the persistence diagram produced by  depends only on the algebraic structure carried by this diagram." The use of category theory in TDA has proved to be fruitful.
+Following the notations made in Bubenik et al., the indexing category  is any preordered set (instead of the normally used  or ), the target category  is any category (instead of the commonly used ), and functors  are called generalized persistence modules, in , over .
+One nice thing of the introduction of category into TDA is to have a much more clarity understanding of concepts and find the similarity between many seemingly-unrelated proofs. Take two examples for illustration. The understanding of the correspondence between interleaving and matching is of huge importance, since matching has been the method used in the beginning (modified from Morse theory). A summary of works can be found in Vin de Silva et al. Many theorems can be proved much easier in an intuitive setting. Another example is on the relationships between different complexes constructions. It has long been noticed that Čech and Vietoris-Rips complexes are related. Specifically, . The essential relationship between Cech and Rips complexes can be seen in much clarity in category language. Many similar other examples will be discussed in the following sections.
+Another great thing is to put results under the language accepted by the mathematical society. Bottleneck distance is widely used in TDA because of the first stability theorem and other results on stability. A mathematical jurisdiction is that the interleaving distance(refer to the section of stability for definition) is the terminal object in a poset category of stable metrics on multidimensional persistence modules in a prime field.
+Sheaf, a central concept in modern algebraic geometry, is intrinsically related to category theory. Roughly speaking, sheaf is the mathematical tool to view how local information determines the global. Justin Curry regards level set persistence as the study of fibers of continuous functions. The objects that he studies are very similar to those by MAPPER (the one extended definition in the section of Visualization), but he has laid sheaf theory as the theoretical foundation. Although no groundbreaking in the theory of TDA has used this technique, it is promising since there are tons of beautiful theorems in algebraic geometry relating to sheaf theory. For example, A natural theoretical question is that whether filtration methods result the same out-coming.
+
+
+=== Stability ===
+Stability is of central importance to data analysis, since real data carry noises. By usage of category theory, Bubenik et al. have distinguished between soft and hard stability theorems, and proved that soft cases are formal. Specifically, general workflow of TDA is
+Soft stability theorem asserts that  is Lipschitz, and hard stability theorem asserts that  is Lipschitz.
+Bottleneck distance is widely used in TDA. The isometry theorem asserts that the interleaving distance  is equal to the bottleneck distance. Bubenik et al. have abstracted the definition to that between functors  when  is equipped with a sublinear projection or superlinear family, in which still remains a pseudometric. Considering the magnificent characters of interleaving distance, here we introduce the general definition of interleaving distance(instead of the first introduced one): Let (a function from  to  which is monotone and satisfies  for all ). A -interleaving between F and F consists of natural transformations  and , such that  and .
+The two main results are
+Let  be a preordered set with a sublinear projection or superlinear family. Let  be a functor between arbitrary categories . Then for any two functors , we have .
+Let  be a poset of a metric space  ,  be a topological space. And let (not necessarily continuous) be functions, and  to be the corresponding persistence diagram. Then .
+These two results summarize many results on stability of different models of persistence.
+For the stability theorem of multidimensional persistence, please refer to the subsection of persistence.
+
+
+=== Structure theorem ===
+The structure theorem is of central importance to TDA; as commented by G. Carlsson, "what makes homology useful as a discriminator between topological spaces is the fact that there is a classification theorem for finitely generated abelian groups."
+The main argument used in the proof of the original structure theorem is the standard classification theorem for finitely generated modules over a principal ideal domain. However, this argument fails in  since  is not a PID. Carlsson gave a detailed discussion in the most influential review paper in TDA.
+In general, not every persistence module can be decomposed into intervals. Many attempts have been made loosing the assumptions. The case for pointwise dimensional persistence modules indexed by a locally finite subset of  is solved based on the work of Webb. The most notable result is done by Crawley-Boevey, which solved the case of . Crawley-Boevey's theorem states that any pointwise finite-dimensional persistence module is a direct sum of interval modules.
+To understand the definition of his theorem, some concepts need introducing. An interval in  is defined as a subset  having the property that if  and if there is an  such that , then  as well. An interval module  assigns to each element  the vector space  and assigns the zero vector space to elements in . All maps  are the zero map, unless  and , in which case  is the identity map. Interval modules are indecomposable.
+Although this is a very powerful theorem, it still doesn't extend to the q-tame case. A persistence module is q-tame if the rank() is finite for all . There are examples that q-tame persistence module fails to be pointwise finite. However, it turns out that similar structure theorem still exists if the features that exist only at one index value are removed. Actually, the infinite dimension wouldn't persist. Specifically, the observable category  is defined as , in which  denotes the full subcategory of  whose objects are the ephemeral modules( whenever ).
+Note that all these extended results listed here don't apply to the zigzag persistence. There is some work on the stability of zigzag persistence.
+
+
+=== Statistics ===
+Real data is always finite, thus the study of it is stochastic in essence. To distinguish between true nature and artifacts is the power of statistics. Note that persistent homology has no mechanism to distinguish between low-probability features and high-probability features. An interesting comment cited in R. Adler is "I can think of no two topics in mathematics further away from one another than probability and algebraic topology. There is probably no way to connect them."
+One way of statistics is to study statistical properties of summaries on topological features of point cloud. A reference of the works done on "the study of random abstract simplicial complexes generated from stochastic processes and non-asymptotic bounds on the convergence or consistency of topological summaries as the number of points increase" can be found in K. Turner et al.
+Another way, and also the more important one, is to study the probability distribution on the persistence space. The persistence space  is the , where  are all the barcodes containing exactly  intervals and the equivalences are if that  . This space is fairly complicated, for example, not complete endowed with the bottleneck metric. The first attempt made on is by Y. Mileyko et al. The space of persistence diagrams  in their paper is defined as where  is the diagonal line in . A very nice property is that  is complete and separable in the Wasserstein metric. Expectation and variance and conditional probability, three basic concepts in probability theory, can be defined in the Fréchet sense. Since then, many statistical tools are converted into TDA. Works on null hypothesis significance test, confidence interval, and robust estimate are notable steps.
+An interesting concept, persistent landscape, invented by Peter Bubenik, has led another direction, namely the different representation of barcode. The persistent landscape over a persistent module  is defined as a function , , where  denotes the extended real line and . While it inherits all good properties of barcode representation (stability, easy representation, etc.), its space is very nice: not only statistical inferences can be defined, some problems in Y. Mileyko et al.'s work , such as the expectation is not necessarily unique, can be overcome. Effective algorithm is available. Another approach is to use revised persistence, which is Image, kernel and cokernel persistence.
+
+
+== Application ==
+
+
+=== Classification ===
+More than one way exist to classify the library of applications by TDA. Perhaps the most natural way is by its field. A very incomplete list of successful applications includes data skeletonization, shape study, graph reconstruction,   image analysis,  material, progression analysis of disease, sensor network, signal analysis, cosmic web, complex network, fractal geometry, viral evolution, and the propagation of contagions on networks. 
+Another way is by distinguishing the techniques by G. Carlsson,
+
+one being the study of homological invariants of data one individual data sets, and the other is the use of homological invariants in the study of databases where the data points themselves have geometric structure.
+
+
+=== Features ===
+TDA has also made huge impact on the industry. Cofounded by many leading scholars in TDA, Ayasdi is a data analysis company relying heavily on TDA. There are several notable interesting features of the recent applications of TDA:
+Combining tools from all main branches of mathematics. Besides obvious need for algebra and topology, PDE, algebraic geometry, presentation theory, statistics, combination, Riemannian geometry are all applied. Utilizing so many tools is rare in applied mathematics.
+Quantitative analysis. Topology is considered to be very soft since many concepts are invariant under homotopy. However, persistent topology is able to record the birth(appearance) and death(disappearance) of topological feature, thus extra geometric information is embedded in it. One evidence in theory is a partially positive result on the uniqueness of reconstruction of curves; two in application are on the quantitative analysis of Fullerene stability and quantitative analysis of self-similarity, separately.
+The role of short persistence. Short persistence has also been found useful, against the common belief that noise is the cause of the phenomena. This is interesting to the mathematical theory.
+One of the mainstreams of data analysis today is machine learning. Some examples of how it is possible can be found in Adcock et al. A conference is dedicated to the link between TDA and machine learning. organized by leading characters of TDA. In order to apply tools from machine leaning, the information should be represented in vector form. An ongoing and promising attempt is by persistence landscape, which has been discussed in the section of Statistics. Another attempt is by persistence images. However, one problem of this method is the loss of stability, since the hard stability depends on the representation, as noted in the section of stability.
+
+
+=== Impact on mathematics ===
+As for its impact on pure mathematics, one is on Morse theory. Morse theory has played a very important role in the theory of TDA, including on computation(mentioned above). Many works mentioned in the section of Mathematical Foundation extend results extend Morse function to tame function or, even more general, to continuous function. A forgotten effort done by R, Deheuvels long before the invention of persistent homology is to extent morse theory to all continuous functions which appeared in the top journal of pure mathematics, Annals of Mathematics.
+One recent work proves that the category of Reeb graphs is equivalent to a particular class of cosheaf. Note that nontrivial equivalence between different categories is always precious. This is motivated by the theoretical works in TDA, considering the importance of Reeb graph in TDA (Reeb graph is related to Morse theory and MAPPER is modified from it) and the proof of this theorem rely on the interleaving distance.
+There are two areas that the future studies might shed light on. It is evident to mathematicians that persistence homology is highly related to spectral sequence. The zigzag persistence might be of theoretical importance to spectral sequence. As for the second and the third features mention in the section of Features, it is promising that more works on narrowing the gap between geometry and topology are going to appear.
+
+
+== See also ==
+Dimensionality reduction
+Data mining
+Computer vision
+Computational topology
+Discrete Morse Theory
+Shape analysis
+Size theory
+Algebraic Topology
+
+
+== References ==
+
+
+== Further reading ==
+Brief Introduction
+Studying the Shape of Data Using Topology, by Michael Lesnick
+Why Topological Data Analysis Works, by Gunnar Carlsson
+Deep Dive: Topological Data Analysis, by Ayasdi Company
+Source Material for Topological Data Analysis by Mikael Vejdemo-Johansson
+Video Lecture
+Introduction to Persistent Homology and Topology for Data Analysis, by Matthew Wright
+The Shape of Data, by Gunnar Carlsson
+Textbook on Topology
+Algebraic Topology, by Allen Hatcher
+Computational Topology: An Introduction, by Herbert Edelsbrunner and John L. Harer
+Elementary Applied Topology, by Robert Ghrist
+Other Resources of TDA
+Blog of Ayasdi
+Applied Topology, by Stanford
+Applied algebraic topology research network , by the Institute for Mathematics and its Applications.

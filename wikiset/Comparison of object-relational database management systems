@@ -1,0 +1,28 @@
+This is a comparison of object-relational database management systems (ORDBMSs). Each system has at least some features of an object-relational database; they vary widely in their completeness and the approaches taken.
+The following tables compare general and technical information; please see the individual products' articles for further information. Unless otherwise specified in footnotes, comparisons are based on the stable versions without any add-ons, extensions or external programs.
+
+
+== Basic data ==
+
+
+== Object features ==
+Information about what fundamental ORDBMSes features are implemented natively.
+
+
+== Data types ==
+Information about what data types are implemented natively.
+
+
+== See also ==
+Comparison of database tools
+Comparison of object database management systems
+Comparison of relational database management systems
+List of relational database management systems
+
+
+== References ==
+^ No private methods, no way to call super method from a child.
+
+
+== External links ==
+Arvin.dk, Comparison of different SQL implementations

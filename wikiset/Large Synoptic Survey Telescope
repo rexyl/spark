@@ -1,0 +1,71 @@
+The Large Synoptic Survey Telescope (LSST) is a wide-field survey reflecting telescope with an 8.4-meter primary mirror, currently under construction, that will photograph the entire available sky every few nights. The telescope uses a novel 3-mirror design which delivers sharp images over a very wide 3.5-degree diameter field of view, feeding a 3.2 gigapixel CCD imaging camera, the largest digital camera ever constructed.
+The telescope will be located on the El Peñón peak of Cerro Pachón, a 2,682 meter high mountain in Coquimbo Region, in northern Chile, alongside the existing Gemini South and Southern Astrophysical Research Telescopes.
+The LSST was the top-ranked large ground-based project in the 2010 Astrophysics Decadal Survey. The project officially began construction 1 August 2014 when the NSF authorized the FY2014 portion ($27.5 million) of its construction budget. The ceremonial laying of the first stone was performed on 14 April 2015. Site construction began on April 14, 2015, with engineering first light anticipated in 2019, science first light in 2021, and full operations for a ten-year survey commencing in January 2022.
+
+
+== OverviewEdit ==
+
+The LSST design is unique among large telescopes (8 m-class primary mirrors) in having a very wide field of view: 3.5 degrees in diameter, or 9.6 square degrees. For comparison, both the Sun and the Moon, as seen from Earth, are 0.5 degrees across, or 0.2 square degrees. Combined with its large aperture (and thus light-collecting ability), this will give it a spectacularly large etendue of 319 m2∙degree2.
+To achieve this very wide, undistorted field of view requires three mirrors, rather than the two used by most existing large telescopes: the primary mirror (M1) is 8.4 metres (28 ft) in diameter, the secondary mirror (M2) is 3.4 metres (11.2 ft) in diameter, and the tertiary mirror (M3), located in a large hole in the primary, is 5.0 metres (16 ft) in diameter. The large hole reduces the primary mirror's light collecting area to 35 square metres (376.7 sq ft), equivalent to a 6.68-metre-diameter (21.9 ft) circle. (Multiplying this by the field of view produces an etendue of 336 m2∙degree2; the actual figure is reduced by vignetting.)
+The primary and tertiary mirrors (M1 and M3) are being constructed as a single piece of glass, the "M1M3 monolith".
+A 3.2-gigapixel prime focus digital camera will take a 15-second exposure every 20 seconds. Repointing such a large telescope (including settling time) within 5 seconds requires an exceptionally short and stiff structure. This in turn implies a very small f-number, which requires very precise focusing of the camera.
+Allowing for maintenance, bad weather and other contingencies, the camera is expected to take over 200,000 pictures (1.28 petabytes uncompressed) per year, far more than can be reviewed by humans. Managing and effectively data mining the enormous output of the telescope is expected to be the most technically difficult part of the project. Initial computer requirements are estimated at 100 teraflops of computing power and 15 petabytes of storage, rising as the project collects data.
+
+
+== Scientific goalsEdit ==
+Particular scientific goals of the LSST include:
+Measuring weak gravitational lensing in the deep sky to detect signatures of dark energy and dark matter.
+Mapping small objects in the Solar System, particularly near-Earth asteroids and Kuiper belt objects.
+Detecting transient optical events such as novae and supernovae.
+Mapping the Milky Way.
+It is also hoped that the vast volume of data produced will lead to additional serendipitous discoveries.
+Synoptic is derived from the Greek words σύν (syn "together") and ὄψις (opsis "view"), and describes observations that give a broad view of a subject at a particular time.
+Some of the data from the LSST (up to 30 terabytes per night) will be made available by Google as an up-to-date interactive night-sky map.
+
+
+== Construction progressEdit ==
+LSST construction is underway, with the NSF funding authorized as of 1 August 2014.
+Early development was funded by a number of small grants, with major contributions in January 2008 by software billionaires Charles Simonyi and Bill Gates of $20 and $10 million respectively. $7.5 million was included in the U.S. President's FY2013 NSF budget request. The Department of Energy is expected to fund construction of the digital camera component by the SLAC National Accelerator Laboratory, as part of its mission to understand dark energy.
+The LSST was greatly encouraged by its selection as the highest-priority ground-based instrument in the 2010 Astronomy and Astrophysics Decadal Survey.
+
+
+=== OpticsEdit ===
+The primary mirror, the most critical and time-consuming part of a large telescope's construction, was made over a 7-year period by the University of Arizona's Steward Observatory Mirror Lab. Construction of the mold began in November 2007, mirror casting was begun in March 2008, and the mirror blank was declared "perfect" at the beginning of September 2008. In January 2011, both M1 and M3 figures had completed generation and fine grinding, and polishing had begun on M3.
+The mirror was completed in December 2014. The M3 portion especially suffered from tiny air bubbles which, when they broke the surface, caused "crow's feet" defects in the surface. The bubbles trapped grinding abrasive, which produced scratches a few mm long radiating out from the bubble. Left as-is, these would enlarge the telescope's point spread function, reducing the sensitivity by 3% (to 97% of nominal) and increase the portion of the sky obscured by bright stars from 4% to 4.8% of the survey area. As of January 2015, the project was exploring ways to fill the holes and scratches.
+Despite this, the mirror was formally accepted on 13 February 2015. It was then placed in the mirror transport box and stored in an airplane hangar until it is shipped to Chile.
+The secondary mirror was manufactured by Corning of ultra low expansion glass and coarse-ground to within 40 μm of the desired shape. In November 2009, the blank was shipped to Harvard University for storage until funding to complete it was available. On October 21, 2014, the secondary mirror blank was delivered from Harvard to Exelis for fine grinding.
+
+
+=== BuildingEdit ===
+Site excavation began in earnest March 8, 2011, and the site had been leveled by the end of 2011. Also during that time, the design continued to evolve, with significant improvements to the mirror support system, stray-light baffles, wind screen, and calibration screen.
+In 2015, a large amount of broken rock and clay was found under the site of the support building adjacent to the telescope. This caused a 6 week construction delay while it was dug out and the space filled with concrete. This did not affect the telescope proper or its dome, whose much more important foundations were examined more thoroughly during site planning.
+
+
+=== CameraEdit ===
+In August 2015, the LSST camera project, which is separately funded by the U.S. Department of Energy, passed its "critical decision 3" design review, with the review committee recommending DoE formally approve start of construction. On August 31, the approval was given, and construction is beginning at SLAC.
+
+
+== NotesEdit ==
+
+
+== See alsoEdit ==
+List of largest optical reflecting telescopes
+Pan-STARRS
+The Dark Energy Survey
+VISTA (Visible and Infrared Survey Telescope for Astronomy)
+VLT Survey Telescope
+
+
+== ReferencesEdit ==
+
+
+== External linksEdit ==
+Official home page
+LSST construction site webcams
+LSST reports and documentation
+New Scientist SPACE Article
+LSST Tutorials for Experimental Particle Physicists is a detailed explanation of LSST's design (as of February 2006) and weak lensing science goals that does not assume a lot of astronomy background.
+The New Digital Sky is a video of a July 25, 2006 presentation at Google about the LSST, particularly the data management issues.
+HULIQ Google participation announcement
+Ž. Ivezić; et al. (2008-05-15), LSST: From Science Drivers to Reference Design and Anticipated Data Products (v1.0) 0805, p. 2366, arXiv:0805.2366, Bibcode:2008arXiv0805.2366I, retrieved 2015-08-05 , this is a comprehensive overview of the LSST.
+LSST Science Collaborations; Abell, Paul A.; Allison, Julius; Anderson, Scott F.; Andrew, John R.; Angel, J. Roger P.; Armus, Lee; Arnett, David; Asztalos, S. J. (2009-10-16), LSST Science Book, Version 2.0 0912, p. 201, arXiv:0912.0201, Bibcode:2009arXiv0912.0201L, retrieved 2011-01-16 , an updated and expanded overview.

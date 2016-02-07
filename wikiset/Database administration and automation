@@ -1,0 +1,68 @@
+Database administration is the function of managing and maintaining database management systems (DBMS) software. Mainstream DBMS software such as Oracle, IBM DB2 and Microsoft SQL Server need ongoing management. As such, corporations that use DBMS software often hire specialized IT (Information Technology) personnel called Database Administrators or DBAs.
+
+
+== DBA Responsibilities ==
+Installation, configuration and upgrading of Database server software and related products.
+Evaluate Database features and Database related products.
+Establish and maintain sound backup and recovery policies and procedures.
+Take care of the Database design and implementation.
+Implement and maintain database security (create and maintain users and roles, assign privileges).
+Database tuning and performance monitoring.
+Application tuning and performance monitoring.
+Setup and maintain documentation and standards.
+Plan growth and changes (capacity planning).
+Work as part of a team and provide 24x7 support when required.
+Do general technical troubleshooting and give cons.
+Database recovery.
+
+
+== Types of database administration ==
+There are three types of DBAs:
+Systems DBAs (also referred to as Physical DBAs, Operations DBAs or Production Support DBAs): focus on the physical aspects of database administration such as DBMS installation, configuration, patching, upgrades, backups, restores, refreshes, performance optimization, maintenance and disaster recovery.
+Development DBAs: focus on the logical and development aspects of database administration such as data model design and maintenance, DDL (data definition language) generation, SQL writing and tuning, coding stored procedures, collaborating with developers to help choose the most appropriate DBMS feature/functionality and other pre-production activities.
+Application DBAs: usually found in organizations that have purchased 3rd party application software such as ERP (enterprise resource planning) and CRM (customer relationship management) systems. Examples of such application software includes Oracle Applications, Siebel and PeopleSoft (both now part of Oracle Corp.) and SAP. Application DBAs straddle the fence between the DBMS and the application software and are responsible for ensuring that the application is fully optimized for the database and vice versa. They usually manage all the application components that interact with the database and carry out activities such as application installation and patching, application upgrades, database cloning, building and running data cleanup routines, data load process management, etc.
+While individuals usually specialize in one type of database administration, in smaller organizations, it is not uncommon to find a single individual or group performing more than one type of database administration.
+
+
+== Nature of database administration ==
+The degree to which the administration of a database is automated dictates the skills and personnel required to manage databases. On one end of the spectrum, a system with minimal automation will require significant experienced resources to manage; perhaps 5-10 databases per DBA. Alternatively an organization might choose to automate a significant amount of the work that could be done manually therefore reducing the skills required to perform tasks. As automation increases, the personnel needs of the organization splits into highly skilled workers to create and manage the automation and a group of lower skilled "line" DBAs who simply execute the automation.
+Database administration work is complex, repetitive, time-consuming and requires significant training. Since databases hold valuable and mission-critical data, companies usually look for candidates with multiple years of experience. Database administration often requires DBAs to put in work during off-hours (for example, for planned after hours downtime, in the event of a database-related outage or if performance has been severely degraded). DBAs are commonly well compensated for the long hours
+One key skill required and often overlooked when selecting a DBA is database recovery (under disaster recovery). It is not a case of “if” but a case of “when” a database suffers a failure, ranging from a simple failure to a full catastrophic failure. The failure may be data corruption, media failure, or user induced errors. In either situation the DBA must have the skills to recover the database to a given point in time to prevent a loss of data. A highly skilled DBA can spend a few minutes or exceedingly long hours to get the database back to the operational point.
+
+
+== Database administration tools ==
+Often, the DBMS software comes with certain tools to help DBAs manage the DBMS. Such tools are called native tools. For example, Microsoft SQL Server comes with SQL Server Management Studio and Oracle has tools such as SQL*Plus and Oracle Enterprise Manager/Grid Control. In addition, 3rd parties such as BMC, Quest Software, Embarcadero Technologies, EMS Database Management Solutions and SQL Maestro Group offer GUI tools to monitor the DBMS and help DBAs carry out certain functions inside the database more easily.
+Another kind of database software exists to manage the provisioning of new databases and the management of existing databases and their related resources. The process of creating a new database can consist of hundreds or thousands of unique steps from satisfying prerequisites to configuring backups where each step must be successful before the next can start. A human cannot be expected to complete this procedure in the same exact way time after time - exactly the goal when multiple databases exist. As the number of DBAs grows, without automation the number of unique configurations frequently grows to be costly/difficult to support. All of these complicated procedures can be modeled by the best DBAs into database automation software and executed by the standard DBAs. Software has been created specifically to improve the reliability and repeatability of these procedures such as Stratavia's Data Palette and GridApp Systems Clarity.
+
+
+== The impact of IT automation on database administration ==
+Recently, automation has begun to impact this area significantly. Newer technologies such as Stratavia's Data Palette suite and GridApp Systems Clarity have begun to increase the automation of databases causing the reduction of database related tasks. However at best this only reduces the amount of mundane, repetitive activities and does not eliminate the need for DBAs. The intention of DBA automation is to enable DBAs to focus on more proactive activities around database architecture, deployment, performance and service level management.
+Every database requires a database owner account that can perform all schema management operations. This account is specific to the database and cannot log in to Data Director. You can add database owner accounts after database creation. Data Director users must log in with their database-specific credentials to view the database, its entities, and its data or to perform database management tasks. Database administrators and application developers can manage databases only if they have appropriate permissions and roles granted to them by the organization administrator. The permissions and roles must be granted on the database group or on the database, and they only apply within the organization in which they are granted.
+
+
+== Learning database administration ==
+There are several education institutes that offer professional courses, including late-night programs, to allow candidates to learn database administration. Also, DBMS vendors such as Oracle, Microsoft and IBM offer certification programs to help companies to hire qualified DBA practitioners. College degree in Computer Science or related field is helpful but not necessarily a prerequisite.
+
+
+== See also ==
+Column-oriented DBMS
+Data warehouse
+Directory service
+Distributed database management system
+Hierarchical model
+Navigational database
+Network model
+Object model
+Object database (OODBMS)
+Object-relational database (ORDBMS)
+Run Book Automation (RBA)
+Relational model (RDBMS)
+Comparison of relational database management systems
+Comparison of database tools
+SQL is a language for database management
+
+
+== External links ==
+"A set theoretic data structure and retrieval language". SIGIR Forum (ACM Special Interest Group on Information Retrieval) 7 (4): 45–55. Winter 1972. 
+Thomas Haigh (June 2006). "Origins of the Data Base Management System" (PDF). SIGMOD Record (ACM Special Interest Group on Management of Data) 35 (2). 
+This article is based on material taken from the Free On-line Dictionary of Computing prior to 1 November 2008 and incorporated under the "relicensing" terms of the GFDL, version 1.3 or later.

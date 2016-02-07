@@ -1,0 +1,30 @@
+The associative model of data is an alternative data model for database systems. Other data models, such as the relational model and the object data model, are record-based. These models involve encompassing attributes about a thing, such as a car, in a record structure. Such attributes might be registration, colour, make, model, etc. In the associative model, everything which has “discrete independent existence” is modeled as an entity, and relationships between them are modeled as associations. The granularity at which data is represented is similar to schemes presented by Chen (Entity-relationship model); Bracchi, Paolini and Pelagatti (Binary Relations); and Senko (The Entity Set Model).
+A number of claims made about the model by Simon Williams, in his book The Associative Model of Data, distinguish the associative model from more traditional models.
+
+
+== Discussion ==
+In an associative database management system, data and metadata (data about data) are stored as two types of things:
+Items, each of which has a unique identifier and a name.
+Links, each of which has a unique identifier, together with the unique identifiers of three other things, that represent the source, verb and target of a fact that is recorded about the source in the database. Each of the three things identified by the source, verb and target may each be either a link or an item.
+Here's how the associative model would use these two structures to store the piece of information Flight BA1234 arrived at London Heathrow on 12-Dec-05 at 10:25 am. There are seven items: the four nouns Flight BA1234, London Heathrow, 12-Dec-05 and 10:25 am, and the three verbs arrived at, on and at. Three links are needed to store the data. They are:
+
+Flight BA1234 arrived at London Heathrow
+... on 12-Dec-05
+... at 10:25 am
+
+The first link has Flight BA1234 as its source, arrived at as its verb and London Heathrow as its target. The second link has the first link as its source, on as its verb and the item 12-Dec-05 as its target. (A link that begins with an ellipsis "..." has the previous link as its source.) The third link has the second link as its source, at as its verb and 10:25 am as its target.
+Here is an alternative way to write the same thing using parentheses:
+((Flight BA1234 arrived at London Heathrow) on 12-Dec-05) at 10:25 am
+An associative database may be regarded as comprising two tables: one for items and one for links. Each item and each link has an arbitrary number (called a surrogate) as an identifier:
+
+
+== See also ==
+Topic Maps
+Adjacency list
+Triplestore
+Attribute-value system
+Vocabulary OneSource
+
+
+== External links ==
+Simon Williams The Associative Model of Data

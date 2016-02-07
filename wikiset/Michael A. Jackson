@@ -1,0 +1,42 @@
+Michael Anthony Jackson (born 1936) is a British computer scientist, and independent computing consultant in London, England. He is also part-time researcher at AT&T Labs Research, Florham Park, NJ, U.S., and visiting research professor at the Open University in the UK.
+
+
+== Biography ==
+Jackson was educated at Harrow School where he was taught by Christopher Strachey and wrote his first program under Strachey's guidance. From 1954 to 1958 he studied classics (known as "Greats") at Merton College, Oxford; a fellow student, two years ahead of him, was C. A. R. Hoare. They shared an interest in logic, which was studied as part of Greats at Oxford.
+In the 1970s, Jackson developed Jackson Structured Programming (JSP). In the 1980s, with John Cameron, he developed Jackson System Development (JSD). Then, in the 1990s, he developed the Problem Frames Approach. In collaboration with Pamela Zave, he created "Distributed Feature Composition", a virtual architecture for specification and implementation of telecommunication services.
+Jackson received the Stevens Award for Software Development Methods in 1997.
+In 1961 Jackson married Judith Wendy Blackburn; they have four sons, one of whom, Daniel, is also a computer scientist based at MIT.
+
+
+== Work ==
+Jackson has developed a series of methods. Each of these methods covers a wider scope than the previous one, and builds on ideas that appeared, but were not fully developed, in the previous one. Reading his books in sequence allows you to follow the evolution of his thinking.
+
+
+=== Jackson Structured Programming ===
+Jackson Structured Programming (JSP) was the first software development method that Jackson developed. It is a program design method, and was described in his book Principles of Program Design. JSP covers the design of individual programs, but not systems.
+
+
+=== Jackson System Development ===
+The Jackson System Development (JSD) was the second software development method that Jackson developed. JSD is a system development method not just for individual programs, but for entire systems. JSD is most readily applicable to information systems, but it can easily be extended to the development of real-time embedded systems. JSD was described in his book System Development.
+
+
+=== Problem Frames Approach ===
+Problem Analysis or the Problem Frames Approach was the third software development method that Jackson developed. It concerns itself with aspects of developing all kinds of software, not just information systems. It was first sketched in his book Software Requirements and Specifications, and described much more fully in his book Problem Frames. The First International Workshop on Applications and Advances in Problem Frames was held as part of ICSE’04 held in Edinburgh, Scotland.
+
+
+== Publications ==
+His books include:
+1975. Principles of Program Design ISBN 0-12-379050-6.
+1983. System Development ISBN 0-13-880328-5.
+1995. Software Requirements & Specifications ISBN 0-201-87712-0.
+1997. Business Process Implementation
+2001. Problem Frames: Analysing and Structuring Software Development Problems ISBN 0-201-59627-X.
+
+
+== References ==
+
+
+== External links ==
+Michael Jackson home page
+The Jackson Software Development Methods
+Distributed Feature Composition

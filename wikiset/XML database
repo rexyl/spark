@@ -1,0 +1,52 @@
+An XML database is a data persistence software system that allows data to be specified, and sometimes stored, in XML format. These data can be queried, transformed, exported and returned to a calling system. XML databases are a flavor of document-oriented databases which are in turn a category of NoSQL database (meaning Not (only) SQL).
+
+
+== Rationale for XML in databases ==
+There are a number of reasons to directly specify data in XML or other document formats such as JSON. For XML in particular, they include: 
+An enterprise may have a lot of XML in an existing standard format
+Data may need to be exposed or ingested as XML, so using another format such as relational forces double-modeling of the data
+XML is very well suited to sparse data, deeply nested data and mixed content (such as text with embedded markup tags)
+XML is human readable whereas relational tables require expertise to access
+Metadata is often available as XML
+Semantic web data is available as RDF/XML
+Steve O'Connell gives one reason for the use of XML in databases: the increasingly common use of XML for data transport, which has meant that "data is extracted from databases and put into XML documents and vice-versa". It may prove more efficient (in terms of conversion costs) and easier to store the data in XML format. In content-based applications, the ability of the native XML database also minimizes the need for extraction or entry of metadata to support searching and navigation.
+
+
+== XML Enabled databases ==
+XML enabled databases typically offer one or more of the following approaches to storing XML within the traditional relational structure:
+XML is stored into a CLOB (Character large object)
+XML is `shredded` into a series of Tables based on a Schema
+XML is stored into a native XML Type as defined by ISO Standard 9075-14
+RDBMS that support the ISO XML Type are:
+IBM DB2 (pureXML)
+Microsoft SQL Server
+Oracle Database
+PostgreSQL 
+Typically an XML enabled database is best suited where the majority of data are non-XML. For datasets where the majority of data are XML, a native XML database is better suited.
+
+
+=== Example of XML Type Query in IBM DB2 SQL ===
+
+
+== Native XML databases ==
+These databases are typically better when much of the data is in XML or other non-relational formats.
+BaseX
+Berkeley DB XML Edition
+eXist
+MarkLogic Server
+All the above databases uses XML as an interface to specify documents as tree structured data that may contain unstructured text, but on disk the data is stored as "optimized binary files." This makes query and retrieval faster. For MarkLogic it also allows XML and JSON to co-exist in one binary format.
+Key features of native XML databases include:
+Has an XML document as at least one fundamental unit of (logical) storage, just as a relational database has a row in a table as a fundamental unit of (logical) storage.
+Need not have any particular underlying physical storage model. For example, NXDs can use optimized, proprietary storage formats. This is a key aspect of XML databases. Managing XML as large strings is inefficient due to the extra markup in XML. Compressing and indexing XML allows the illusion of directly accessing, querying and transforming XML while gaining the performance advantages of working with optimized binary tree structures.
+The standards for XML querying per W3C recommendation are XQuery 1.0 and XQuery 3.0. XQuery includes XPath as a sub-language and XML itself is a valid sub-syntax of XQuery.
+In addition to XPath, XML databases support XSLT as a method of transforming documents or query-results retrieved from the database. XSLT provides a declarative language written using an XML grammar. It aims to define a set of XPath filters that can transform documents (in part or in whole) into other formats including plain text, XML, or HTML.
+But big picture, XML persistence describes only one format in the larger, faster moving NoSQL movement at this time. Many databases support XML plus other formats, even if XML is internally stored as an optimized, high-performance format and is a first-class citizen within the database. (see Google Trends Link above to see relative popularity of terms).
+
+
+=== Language features ===
+
+
+=== Supported APIs ===
+
+
+== References ==

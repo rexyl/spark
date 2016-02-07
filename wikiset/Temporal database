@@ -1,0 +1,131 @@
+A temporal database is a database with built-in support for handling data involving time, being related to the slowly changing dimension concept, for example a temporal data model and a temporal version of Structured Query Language (SQL).
+More specifically the temporal aspects usually include valid time and transaction time. These attributes can be combined to form bitemporal data.
+Valid time is the time period during which a fact is true with respect to the real world.
+Transaction time is the time period during which a fact stored in the database is considered to be true.
+Bitemporal data combines both Valid and Transaction Time.
+It is possible to have timelines other than Valid Time and Transaction Time, such as Decision Time, in the database. In that case the database is called a multitemporal database as opposed to a bitemporal database. However, this approach introduces additional complexities such as dealing with the validity of (foreign) keys.
+Temporal databases are in contrast to current databases, which store only facts which are believed to be true at the current time.
+
+
+== Features ==
+Temporal databases support managing and accessing temporal data by providing one or more of the following features:
+A time period datatype, including the ability to represent time periods with no end (infinity or forever)
+The ability to define valid and transaction time period attributes and bitemporal relations
+System-maintained transaction time
+Temporal primary keys, including non-overlapping period constraints
+Temporal constraints, including non-overlapping uniqueness and referential integrity
+Update and deletion of temporal records with automatic splitting and coalescing of time periods
+Temporal queries at current time, time points in the past or future, or over durations
+Predicates for querying time periods, often based on Allen’s interval relations
+
+
+== History ==
+With the development of SQL and its attendant use in real-life applications, database users realized that when they added date columns to key fields, some issues arose. For example, if a table has a primary key and some attributes, adding a date to the primary key to track historical changes can lead to creation of more rows than intended. Deletes must also be handled differently when rows are tracked in this way. In 1992, this issue was recognized but standard database theory was not yet up to resolving this issue, and neither was the then-newly formalized SQL-92 standard.
+Richard Snodgrass proposed in 1992 that temporal extensions to SQL be developed by the temporal database community. In response to this proposal, a committee was formed to design extensions to the 1992 edition of the SQL standard (ANSI X3.135.-1992 and ISO/IEC 9075:1992); those extensions, known as TSQL2, were developed during 1993 by this committee. In late 1993, Snodgrass presented this work to the group responsible for the American National Standard for Database Language SQL, ANSI Technical Committee X3H2 (now known as NCITS H2). The preliminary language specification appeared in the March 1994 ACM SIGMOD Record. Based on responses to that specification, changes were made to the language, and the definitive version of the TSQL2 Language Specification was published in September, 1994
+An attempt was made to incorporate parts of TSQL2 into the new SQL standard SQL:1999, called SQL3. Parts of TSQL2 were included in a new substandard of SQL3, ISO/IEC 9075-7, called SQL/Temporal. The TSQL2 approach was heavily criticized by Chris Date and Hugh Darwen. The ISO project responsible for temporal support was canceled near the end of 2001.
+As of December 2011, ISO/IEC 9075, Database Language SQL:2011 Part 2: SQL/Foundation included clauses in table definitions to define "application-time period tables" (valid time tables), "system-versioned tables" (transaction time tables) and "system-versioned application-time period tables" (bitemporal tables). A substantive difference between the TSQL2 proposal and what was adopted in SQL:2011 is that there are no hidden columns in the SQL:2011 treatment, nor does it have a new data type for intervals; instead two date or timestamp columns can be bound together using a PERIOD FOR declaration. Another difference is replacement of the controversial (prefix) statement modifiers from TSQL2 with a set of temporal predicates.
+
+
+== Example ==
+For illustration, consider the following short biography of a fictional man, John Doe:
+John Doe was born on April 3, 1975 in the Kids Hospital of Medicine County, as son of Jack Doe and Jane Doe who lived in Smallville. Jack Doe proudly registered the birth of his first-born on April 4, 1975 at the Smallville City Hall. John grew up as a joyful boy, turned out to be a brilliant student and graduated with honors in 1993. After graduation he went to live on his own in Bigtown. Although he moved out on August 26, 1994, he forgot to register the change of address officially. It was only at the turn of the seasons that his mother reminded him that he had to register, which he did a few days later on December 27, 1994. Although John had a promising future, his story ends tragically. John Doe was accidentally hit by a truck on April 1, 2001. The coroner reported his date of death on the very same day.
+
+
+=== Using a current database ===
+To store the life of John Doe in a current (non-temporal) database we use a table Person (Name, Address). (In order to simplify Name is defined as the primary key of Person.)
+John's father officially reported his birth on April 4, 1975. On this date a Smallville official inserted the following entry in the database: Person(John Doe, Smallville). Note that the date itself is not stored in the database.
+After graduation John moves out, but forgets to register his new address. John's entry in the database is not changed until December 27, 1994, when he finally reports it. A Bigtown official updates his address in the database. The Person table now contains Person(John Doe, Bigtown). Note that the information of John living in Smallville has been overwritten, so it is no longer possible to retrieve that information from the database. An official accessing the database on December 28, 1994 would be told that John lives in Bigtown. More technically: if a database administrator ran the query SELECT ADDRESS FROM PERSON WHERE NAME='John Doe' on December 26, 1994, the result would be Smallville. Running the same query 2 days later would result in Bigtown.
+Until his death the database would state that he lived in Bigtown. On April 1, 2001 the coroner deletes the John Doe entry from the database. After this, running the above query would return no result at all.
+
+
+=== Using Valid time ===
+Valid time is the time for which a fact is true in the real world. A valid time period may be in the past, span the current time, or occur in the future.
+For the example above, to record valid time the Person table has two fields added, Valid-From and Valid-To. These specify the period when a person's address is valid in the real world. On April 4, 1975 John's father registered his son's birth. An official then inserts a new entry into the database stating that John lives in Smallville from April 3. Note that although the data was inserted on the 4th, the database states that the information is valid since the 3rd. The official does not yet know if or when John will move to another place, so the Valid-To field is set to infinity (∞). The entry in the database is:
+
+Person(John Doe, Smallville, 3-Apr-1975, ∞).
+
+On December 27, 1994 John reports his new address in Bigtown where he has been living since August 26, 1994. A new database entry is made to record this fact:
+
+Person(John Doe, Bigtown, 26-Aug-1994, ∞).
+
+The original entry Person (John Doe, Smallville, 3-Apr-1975, ∞) is not deleted, but has the Valid-To attribute updated to reflect that it is now known that John stopped living in Smallville on August 26, 1994. The database now contains two entries for John Doe
+
+Person(John Doe, Smallville, 3-Apr-1975, 26-Aug-1994).
+Person(John Doe, Bigtown, 26-Aug-1994, ∞).
+
+When John dies his current entry in the database is updated stating that John does not live in Bigtown any longer. The database now looks like this
+
+Person(John Doe, Smallville, 3-Apr-1975, 26-Aug-1994).
+Person(John Doe, Bigtown, 26-Aug-1994, 1-Apr-2001).
+
+
+=== Using Transaction time ===
+Transaction time records the time period during which a database entry is accepted as correct. This enables queries that show the state of the database at a given time. Transaction time periods can only occur in the past or up to the current time. In a transaction time table, records are never deleted. Only new records can be inserted, and existing ones updated by setting their transaction end time to show that they are no longer current.
+To enable transaction time in the example above, two more fields are added to the Person table: Transaction-From and Transaction-To. Transaction-From is the time a transaction was made, and Transaction-To is the time that the transaction was superseded (which may be infinity if it has not yet been superseded). This makes the table into a bitemporal table.
+What happens if the person's address as stored in the database is incorrect? Suppose an official accidentally entered the wrong address or date? Or, suppose the person lied about their address for some reason. Upon discovery of the error, the officials update the database to correct the information recorded.
+For example, from 1-Jun-1995 to 3-Sep-2000 John Doe moved to Beachy. But to avoid paying Beachy's exorbitant residence tax, he never reported it to the authorities. Later during a tax investigation it is discovered on 2-Feb-2001 that he was in fact in Beachy during those dates. To record this fact the existing entry about John living in Bigtown must be split into two separate records, and a new record inserted recording his residence in Beachy. The database would then appear as follows:
+
+Person(John Doe, Smallville, 3-Apr-1975, 26-Aug-1994).
+Person(John Doe, Bigtown, 26-Aug-1994, 1-Jun-1995).
+Person(John Doe, Beachy, 1-Jun-1995, 3-Sep-2000).
+Person(John Doe, Bigtown, 3-Sep-2000, 1-Apr-2001).
+
+However, this leaves no record that the database ever claimed that he lived in Bigtown during 1-Jun-1995 to 3-Sep-2000. This might be important to know for auditing reasons, or to use as evidence in the official's tax investigation. Transaction time allows capturing this changing knowledge in the database, since entries are never directly modified or deleted. Instead, each entry records when it was entered and when it was superseded (or logically deleted). The database contents then look like this:
+
+Person(John Doe, Smallville, 3-Apr-1975,  ∞,           4-Apr-1975,  27-Dec-1994).
+Person(John Doe, Smallville, 3-Apr-1975,  26-Aug-1994, 27-Dec-1994, ∞          ).
+Person(John Doe, Bigtown,    26-Aug-1994, ∞,           27-Dec-1994, 2-Feb-2001 ).
+Person(John Doe, Bigtown,    26-Aug-1994, 1-Jun-1995,  2-Feb-2001,  ∞          ).
+Person(John Doe, Beachy,     1-Jun-1995,  3-Sep-2000,  2-Feb-2001,  ∞          ).
+Person(John Doe, Bigtown,    3-Sep-2000,  ∞,           2-Feb-2001,  1-Apr-2001 ).
+Person(John Doe, Bigtown,    3-Sep-2000,  1-Apr-2001,  1-Apr-2001,  ∞          ).
+
+The database records not only what happened in the real world, but also what was officially recorded at different times.
+
+
+== Bitemporal relations ==
+A bitemporal relation contains both valid and transaction time. This provides both historical and rollback information. Historical information (e.g.: "Where did John live in 1992?") is provided by the valid time. Rollback (e.g.: "In 1992, where did the database believe John lived?") is provided by the transaction time. The answers to these example questions may not be the same - the database may have been altered since 1992, causing the queries to produce different results..
+The valid time and transaction time do not have to be the same for a single fact. For example, consider a temporal database storing data about the 18th century. The valid time of these facts is somewhere between 1701 and 1800. The transaction time would show when the facts were inserted into the database (for example, January 21, 1998).
+
+
+== Schema evolution ==
+A challenging issue is the support of temporal queries in a transaction time database under evolving schema. In order to achieve perfect archival quality it is of key importance to store the data under the schema version under which they firstly appeared. However even the most simple temporal query rewriting the history of an attribute value would be required to be manually rewritten under each of the schema versions, potentially hundreds as in the case of MediaWiki [1] This process would be particularly taxing for users. A proposed solution is to provide automatic query rewriting, although this is not part of SQL or similar standards.
+Another approach to minimize the complexities of schema evolution is to use a schema-agnostic NoSQL database which reduce the complexities of modeling bitemporal data.
+
+
+== Implementations in relational databases ==
+The following implementations provide temporal features in a relational database management system (RDBMS).
+Oracle Workspace Manager is a feature of Oracle Database which enables application developers and DBAs to manage current, proposed and historical versions of data in the same database.
+TimeDB is a free temporal relational DBMS by TimeConsult. It runs as a front end to Oracle that accepts TSQL2 statements and generates SQL92 statements.
+PostgreSQL
+PostgreSQL 9.2 added native ranged data types that are capable of implementing all of the features of the pgFoundry temporal contributed extension. The PostgreSQL range types are supported by numerous native operators and functions.
+For PostgreSQL 9.1 and earlier, there is the Temporal Contributed Package that can be installed in the database to manage temporal data. The temporal function reference lists all of the operations available.
+For PostgreSQL 9.2 and higher, there is the Temporal Tables Extension which mimics the temporal capabilities of the SQL:2011 standard.
+
+Teradata version 13.10 and Teradata version 14 has temporal features based on TSQL2 built into the database.
+Anchor Modeling emulates temporal features and automates the implementation in databases that lack support.
+IBM DB2 version 10 added a feature called "time travel query" which is based on the temporal capabilities of the SQL:2011 standard.
+Microsoft SQL Server introduced Temporal Tables as a feature for SQL Server 2016. The feature is described in a video on Microsoft's "Channel 9" web site.
+MarkLogic introduced Bitemporal feature in MarkLogic 8 Temporal Collections.
+
+
+== Implementations in non-relational databases ==
+The following implementations provide temporal features in non-relational database management systems, usually referred to as NoSQL (Not-only SQL) databases.
+Axibase Time Series Database (ATSD) is a clustered, non-relational time series database with versioning support for time-indexed objects. The database leverages multiversion features of the underlying key-value store to keep track of value changes over time. This enables traceability of changes introduced programmatically or by human operator and is particularly relevant in domains where observations are subject to data quality variations such as weather monitoring and smart metering.
+MarkLogic is a NoSQL database that added bitemporal data management capabilities in version 8.0. MarkLogic is schema-agnostic, storing data primarily as JSON or XML documents. This data model eliminates many of the challenges with schema evolution that are faced with bitemporal implementations in relational databases.
+
+
+== Further reading ==
+C.J. Date, Hugh Darwen, Nikos Lorentzos (2002). Temporal Data & the Relational Model, First Edition (The Morgan Kaufmann Series in Data Management Systems); Morgan Kaufmann; 1st edition; 422 pages. ISBN 1-55860-855-9.
+Joe Celko (2014). Joe Celko's SQL for Smarties: Advanced SQL Programming (The Morgan Kaufmann Series in Data Management); Morgan Kaufmann; 5th edition. ISBN 978-0-12-800761-7.—Chapters 12 and 35 in particular discuss temporal issues.
+Snodgrass, Richard T. (1999). Developing Time-Oriented Database Applications in SQL  PDF (4.77 MiB) (Morgan Kaufmann Series in Data Management Systems); Morgan Kaufmann; 504 pages; ISBN 1-55860-436-7
+
+
+== See also ==
+Anchor Modeling
+Database theory
+Spatiotemporal database
+Time series database
+
+
+== References ==

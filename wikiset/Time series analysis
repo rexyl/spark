@@ -1,0 +1,277 @@
+A time series is a sequence of data points that
+1) Consists of successive measurements made over a time interval
+2) The time interval is continuous
+3) The distance in this time interval between any two consecutive data point is the same
+4) Each time unit in the time interval has at most one data point
+Examples of time series are ocean tides, counts of sunspots, and the daily closing value of the Dow Jones Industrial Average.
+Non-Examples: The height measurements of a group of people where each height is recorded over a period of time and each person has only one record in the data set.
+Panel data set is sometimes difficult to be differentiated from time series data set. One data set may exhibit both characteristics of panel data set and time series data set. One way to differentiate is to ask: what makes one data record unique from the other records? If the answer is the time data field, then this is a time series data set candidate. If determining a unique records requires a time data field and an additional identifier which is unrelated to time (student ID, stock symbol, country code), then it is a panel data candidate. If the differentiation lies on the non time identifier, then the data set is a cross sectional data set candidate.
+Time series are very frequently plotted via line charts. Time series are used in statistics, signal processing, pattern recognition, econometrics, mathematical finance, weather forecasting, intelligent transport and trajectory forecasting, earthquake prediction, electroencephalography, control engineering, astronomy, communications engineering, and largely in any domain of applied science and engineering which involves temporal measurements.
+Time series analysis comprises methods for analyzing time series data in order to extract meaningful statistics and other characteristics of the data. Time series forecasting is the use of a model to predict future values based on previously observed values. While regression analysis is often employed in such a way as to test theories that the current values of one or more independent time series affect the current value of another time series, this type of analysis of time series is not called "time series analysis", which focuses on comparing values of a single time series or multiple dependent time series at different points in time.
+Time series data have a natural temporal ordering. This makes time series analysis distinct from cross-sectional studies, in which there is no natural ordering of the observations (e.g. explaining people's wages by reference to their respective education levels, where the individuals' data could be entered in any order). Time series analysis is also distinct from spatial data analysis where the observations typically relate to geographical locations (e.g. accounting for house prices by the location as well as the intrinsic characteristics of the houses). A stochastic model for a time series will generally reflect the fact that observations close together in time will be more closely related than observations further apart. In addition, time series models will often make use of the natural one-way ordering of time so that values for a given period will be expressed as deriving in some way from past values, rather than from future values (see time reversibility.)
+Time series analysis can be applied to real-valued, continuous data, discrete numeric data, or discrete symbolic data (i.e. sequences of characters, such as letters and words in the English language).
+
+
+== Methods for time series analyses ==
+Methods for time series analyses may be divided into two classes: frequency-domain methods and time-domain methods. The former include spectral analysis and recently wavelet analysis; the latter include auto-correlation and cross-correlation analysis. In time domain, correlation analyses can be made in a filter-like manner using scaled correlation, thereby mitigating the need to operate in frequency domain.
+Additionally, time series analysis techniques may be divided into parametric and non-parametric methods. The parametric approaches assume that the underlying stationary stochastic process has a certain structure which can be described using a small number of parameters (for example, using an autoregressive or moving average model). In these approaches, the task is to estimate the parameters of the model that describes the stochastic process. By contrast, non-parametric approaches explicitly estimate the covariance or the spectrum of the process without assuming that the process has any particular structure.
+Methods of time series analysis may also be divided into linear and non-linear, and univariate and multivariate.
+
+
+== Analysis ==
+There are several types of motivation and data analysis available for time series which are appropriate for different purposes.
+
+
+=== Motivation ===
+In the context of statistics, econometrics, quantitative finance, seismology, meteorology, and geophysics the primary goal of time series analysis is forecasting. In the context of signal processing, control engineering and communication engineering it is used for signal detection and estimation, while in the context of data mining, pattern recognition and machine learning time series analysis can be used for clustering, classification, query by content, anomaly detection as well as forecasting.
+
+
+=== Exploratory analysis ===
+
+The clearest way to examine a regular time series manually is with a line chart such as the one shown for tuberculosis in the United States, made with a spreadsheet program. The number of cases was standardized to a rate per 100,000 and the percent change per year in this rate was calculated. The nearly steadily dropping line shows that the TB incidence was decreasing in most years, but the percent change in this rate varied by as much as +/- 10%, with 'surges' in 1975 and around the early 1990s. The use of both vertical axes allows the comparison of two time series in one graphic. Other techniques include:
+Autocorrelation analysis to examine serial dependence
+Spectral analysis to examine cyclic behaviour which need not be related to seasonality. For example, sun spot activity varies over 11 year cycles. Other common examples include celestial phenomena, weather patterns, neural activity, commodity prices, and economic activity.
+Separation into components representing trend, seasonality, slow and fast variation, and cyclical irregularity: see trend estimation and decomposition of time series
+
+
+=== Curve fitting ===
+
+Curve fitting is the process of constructing a curve, or mathematical function, that has the best fit to a series of data points, possibly subject to constraints. Curve fitting can involve either interpolation, where an exact fit to the data is required, or smoothing, in which a "smooth" function is constructed that approximately fits the data. A related topic is regression analysis, which focuses more on questions of statistical inference such as how much uncertainty is present in a curve that is fit to data observed with random errors. Fitted curves can be used as an aid for data visualization, to infer values of a function where no data are available, and to summarize the relationships among two or more variables. Extrapolation refers to the use of a fitted curve beyond the range of the observed data, and is subject to a degree of uncertainty since it may reflect the method used to construct the curve as much as it reflects the observed data.
+The construction of economic time series involves the estimation of some components for some dates by interpolation between values ("benchmarks") for earlier and later dates. Interpolation is estimation of an unknown quantity between two known quantities (historical data), or drawing conclusions about missing information from the available information ("reading between the lines"). Interpolation is useful where the data surrounding the missing data is available and its trend, seasonality, and longer-term cycles are known. This is often done by using a related series known for all relevant dates. Alternatively polynomial interpolation or spline interpolation is used where piecewise polynomial functions are fit into time intervals such that they fit smoothly together. A different problem which is closely related to interpolation is the approximation of a complicated function by a simple function (also called regression).The main difference between regression and interpolation is that polynomial regression gives a single polynomial that models the entire data set. Spline interpolation, however, yield a piecewise continuous function composed of many polynomials to model the data set.
+Extrapolation is the process of estimating, beyond the original observation range, the value of a variable on the basis of its relationship with another variable. It is similar to interpolation, which produces estimates between known observations, but extrapolation is subject to greater uncertainty and a higher risk of producing meaningless results.
+
+
+=== Function Approximation ===
+
+In general, a function approximation problem asks us to select a function among a well-defined class that closely matches ("approximates") a target function in a task-specific way. One can distinguish two major classes of function approximation problems: First, for known target functions approximation theory is the branch of numerical analysis that investigates how certain known functions (for example, special functions) can be approximated by a specific class of functions (for example, polynomials or rational functions) that often have desirable properties (inexpensive computation, continuity, integral and limit values, etc.).
+Second, the target function, call it g, may be unknown; instead of an explicit formula, only a set of points ( a time series) of the form (x, g(x)) is provided. Depending on the structure of the domain and codomain of g, several techniques for approximating g may be applicable. For example, if g is an operation on the real numbers, techniques of interpolation, extrapolation, regression analysis, and curve fitting can be used. If the codomain (range or target set) of g is a finite set, one is dealing with a classification problem instead. A related problem of online time series approximation is to summarize the data in one-pass and construct an approximate representation that can support a variety of time series queries with bounds on worst-case error.
+To some extent the different problems (regression, classification, fitness approximation) have received a unified treatment in statistical learning theory, where they are viewed as supervised learning problems.
+
+
+=== Prediction and forecasting ===
+In statistics, prediction is a part of statistical inference. One particular approach to such inference is known as predictive inference, but the prediction can be undertaken within any of the several approaches to statistical inference. Indeed, one description of statistics is that it provides a means of transferring knowledge about a sample of a population to the whole population, and to other related populations, which is not necessarily the same as prediction over time. When information is transferred across time, often to specific points in time, the process is known as forecasting.
+Fully formed statistical models for stochastic simulation purposes, so as to generate alternative versions of the time series, representing what might happen over non-specific time-periods in the future
+Simple or fully formed statistical models to describe the likely outcome of the time series in the immediate future, given knowledge of the most recent outcomes (forecasting).
+Forecasting on time series is usually done using automated statistical software packages and programming languages, such as R, S, SAS, SPSS, Minitab, Pandas (Python) and many others.
+Also see: Statistical Prediction, Statistical Inference
+
+
+=== Classification ===
+
+Assigning time series pattern to a specific category, for example identify a word based on series of hand movements in sign language
+
+
+=== Regression analysis (method of prediction) ===
+
+Estimating future value of a signal based on its previous behavior, e.g. predict the price of AAPL stock based on its previous price movements for that hour, day or month, or predict position of Apollo 11 spacecraft at a certain future moment based on its current trajectory (i.e. time series of its previous locations). Regression analysis is usually based on statistical interpretation of time series properties in time domain, pioneered by statisticians George Box and Gwilym Jenkins in the 1950s: see Box–Jenkins
+
+
+=== Signal estimation ===
+
+This approach is based on harmonic analysis and filtering of signals in the frequency domain using the Fourier transform, and spectral density estimation, the development of which was significantly accelerated during World War II by mathematician Norbert Wiener, electrical engineers Rudolf E. Kálmán, Dennis Gabor and others for filtering signals from noise and predicting signal values at a certain point in time. See Kalman filter, Estimation theory, and digital signal processing
+
+
+=== Segmentation ===
+
+Splitting a time-series into a sequence of segments. It is often the case that a time-series can be represented as a sequence of individual segments, each with its own characteristic properties. For example, the audio signal from a conference call can be partitioned into pieces corresponding to the times during which each person was speaking. In time-series segmentation, the goal is to identify the segment boundary points in the time-series, and to characterize the dynamical properties associated with each segment. One can approach this problem using change-point detection, or by modeling the time-series as a more sophisticated system, such as a Markov jump linear system.
+
+
+== Models ==
+Models for time series data can have many forms and represent different stochastic processes. When modeling variations in the level of a process, three broad classes of practical importance are the autoregressive (AR) models, the integrated (I) models, and the moving average (MA) models. These three classes depend linearly on previous data points. Combinations of these ideas produce autoregressive moving average (ARMA) and autoregressive integrated moving average (ARIMA) models. The autoregressive fractionally integrated moving average (ARFIMA) model generalizes the former three. Extensions of these classes to deal with vector-valued data are available under the heading of multivariate time-series models and sometimes the preceding acronyms are extended by including an initial "V" for "vector", as in VAR for vector autoregression. An additional set of extensions of these models is available for use where the observed time-series is driven by some "forcing" time-series (which may not have a causal effect on the observed series): the distinction from the multivariate case is that the forcing series may be deterministic or under the experimenter's control. For these models, the acronyms are extended with a final "X" for "exogenous".
+Non-linear dependence of the level of a series on previous data points is of interest, partly because of the possibility of producing a chaotic time series. However, more importantly, empirical investigations can indicate the advantage of using predictions derived from non-linear models, over those from linear models, as for example in nonlinear autoregressive exogenous models. Further references on nonlinear time series analysis: (Kantz and Schreiber), and (Abarbanel) 
+Among other types of non-linear time series models, there are models to represent the changes of variance over time (heteroskedasticity). These models represent autoregressive conditional heteroskedasticity (ARCH) and the collection comprises a wide variety of representation (GARCH, TARCH, EGARCH, FIGARCH, CGARCH, etc.). Here changes in variability are related to, or predicted by, recent past values of the observed series. This is in contrast to other possible representations of locally varying variability, where the variability might be modelled as being driven by a separate time-varying process, as in a doubly stochastic model.
+In recent work on model-free analyses, wavelet transform based methods (for example locally stationary wavelets and wavelet decomposed neural networks) have gained favor. Multiscale (often referred to as multiresolution) techniques decompose a given time series, attempting to illustrate time dependence at multiple scales. See also Markov switching multifractal (MSMF) techniques for modeling volatility evolution.
+A Hidden Markov model (HMM) is a statistical Markov model in which the system being modeled is assumed to be a Markov process with unobserved (hidden) states. An HMM can be considered as the simplest dynamic Bayesian network. HMM models are widely used in speech recognition, for translating a time series of spoken words into text.
+
+
+=== Notation ===
+A number of different notations are in use for time-series analysis. A common notation specifying a time series X that is indexed by the natural numbers is written
+X = {X1, X2, ...}.
+Another common notation is
+Y = {Yt: t ∈ T},
+where T is the index set.
+
+
+=== Conditions ===
+There are two sets of conditions under which much of the theory is built:
+Stationary process
+Ergodic process
+However, ideas of stationarity must be expanded to consider two important ideas: strict stationarity and second-order stationarity. Both models and applications can be developed under each of these conditions, although the models in the latter case might be considered as only partly specified.
+In addition, time-series analysis can be applied where the series are seasonally stationary or non-stationary. Situations where the amplitudes of frequency components change with time can be dealt with in time-frequency analysis which makes use of a time–frequency representation of a time-series or signal.
+
+
+=== Models ===
+
+The general representation of an autoregressive model, well known as AR(p), is
+
+where the term εt is the source of randomness and is called white noise. It is assumed to have the following characteristics:
+
+With these assumptions, the process is specified up to second-order moments and, subject to conditions on the coefficients, may be second-order stationary.
+If the noise also has a normal distribution, it is called normal or Gaussian white noise. In this case, the AR process may be strictly stationary, again subject to conditions on the coefficients.
+
+Tools for investigating time-series data include:
+Consideration of the autocorrelation function and the spectral density function (also cross-correlation functions and cross-spectral density functions)
+Scaled cross- and auto-correlation functions to remove contributions of slow components
+Performing a Fourier transform to investigate the series in the frequency domain
+Use of a filter to remove unwanted noise
+Principal component analysis (or empirical orthogonal function analysis)
+Singular spectrum analysis
+"Structural" models:
+General State Space Models
+Unobserved Components Models
+
+Machine Learning
+Artificial neural networks
+Support Vector Machine
+Fuzzy Logic
+Gaussian Processes
+
+Hidden Markov model
+Queueing Theory Analysis
+Control chart
+Shewhart individuals control chart
+CUSUM chart
+EWMA chart
+
+Detrended fluctuation analysis
+Dynamic time warping
+Cross-correlation
+Dynamic Bayesian network
+Time-frequency analysis techniques:
+Fast Fourier Transform
+Continuous wavelet transform
+Short-time Fourier transform
+Chirplet transform
+Fractional Fourier transform
+
+Chaotic analysis
+Correlation dimension
+Recurrence plots
+Recurrence quantification analysis
+Lyapunov exponents
+Entropy encoding
+
+
+=== Measures ===
+Time series metrics or features that can be used for time series classification or regression analysis:
+Univariate linear measures
+Moment (mathematics)
+Spectral band power
+Spectral edge frequency
+Accumulated Energy (signal processing)
+Characteristics of the autocorrelation function
+Hjorth parameters
+FFT parameters
+Autoregressive model parameters
+Mann–Kendall test
+
+Univariate non-linear measures
+Measures based on the correlation sum
+Correlation dimension
+Correlation integral
+Correlation density
+Correlation entropy
+Approximate entropy
+Sample entropy
+Fourier entropy
+Wavelet entropy
+Rényi entropy
+Higher-order methods
+Marginal predictability
+Dynamical similarity index
+State space dissimilarity measures
+Lyapunov exponent
+Permutation methods
+Local flow
+
+Other univariate measures
+Algorithmic complexity
+Kolmogorov complexity estimates
+Hidden Markov Model states
+Surrogate time series and surrogate correction
+Loss of recurrence (degree of non-stationarity)
+
+Bivariate linear measures
+Maximum linear cross-correlation
+Linear Coherence (signal processing)
+
+Bivariate non-linear measures
+Non-linear interdependence
+Dynamical Entrainment (physics)
+Measures for Phase synchronization
+
+Similarity measures:Cross-correlation
+Dynamic Time Warping
+Hidden Markov Models
+Edit distance
+Total correlation
+Newey–West estimator
+Prais–Winsten transformation
+Data as Vectors in a Metrizable Space
+Minkowski distance
+Mahalanobis distance
+
+Data as Time Series with Envelopes
+Global Standard Deviation
+Local Standard Deviation
+Windowed Standard Deviation
+
+Data Interpreted as Stochastic Series
+Pearson product-moment correlation coefficient
+Spearman's rank correlation coefficient
+
+Data Interpreted as a Probability Distribution Function
+Kolmogorov–Smirnov test
+Cramér–von Mises criterion
+
+
+== Visualization ==
+Time series can be visualized with two categories of chart:Overlapping Charts and Separated Charts. Overlapping Charts display all time series on the same layout while Separated Charts presents them on different layouts (but aligned for comparison purpose)
+
+
+=== Overlapping Charts ===
+Braided Graphs
+Line Charts
+Slope Graphs
+GapChart
+
+
+=== Separated Charts ===
+Horizon Graphs
+Reduced Line Charts (small multiples)
+Silhouette Graph
+Circular Silhouette Graph
+
+
+== Applications ==
+Fractal geometry, using a deterministic Cantor structure, is used to model the surface topography, where recent advancements in thermoviscoelastic creep contact of rough surfaces are introduced. Various viscoelastic idealizations are used to model the surface materials, for example, Maxwell, Kelvin-Voigt, Standard Linear Solid and Jeffrey media. Asymptotic power laws, through hypergeometric series, were used to express the surface creep as a function of remote forces, body temperatures and time.
+
+
+== See also ==
+
+
+== References ==
+
+
+== Further reading ==
+Box, George; Jenkins, Gwilym (1976), Time Series Analysis: forecasting and control, rev. ed., Oakland, California: Holden-Day 
+Cowpertwait P.S.P., Metcalfe A.V. (2009), Introductory Time Series with R, Springer.
+Durbin J., Koopman S.J. (2001), Time Series Analysis by State Space Methods, Oxford University Press.
+Gershenfeld, Neil (2000), The Nature of Mathematical Modeling, Cambridge University Press, ISBN 978-0-521-57095-4, OCLC 174825352 
+Hamilton, James (1994), Time Series Analysis, Princeton University Press, ISBN 0-691-04289-6 
+Priestley, M. B. (1981), Spectral Analysis and Time Series, Academic Press. ISBN 978-0-12-564901-8
+Shasha, D. (2004), High Performance Discovery in Time Series, Springer, ISBN 0-387-00857-8 
+Shumway R. H., Stoffer (2011), Time Series Analysis and its Applications, Springer.
+Weigend A. S., Gershenfeld N. A. (Eds.) (1994), Time Series Prediction: Forecasting the Future and Understanding the Past. Proceedings of the NATO Advanced Research Workshop on Comparative Time Series Analysis (Santa Fe, May 1992), Addison-Wesley.
+Wiener, N. (1949), Extrapolation, Interpolation, and Smoothing of Stationary Time Series, MIT Press.
+Woodward, W. A., Gray, H. L. & Elliott, A. C. (2012), Applied Time Series Analysis, CRC Press.
+
+
+== External links ==
+Time series at Encyclopaedia of Mathematics.
+A First Course on Time Series Analysis — An open source book on time series analysis with SAS.
+Introduction to Time series Analysis (Engineering Statistics Handbook) — A practical guide to Time series analysis.
+MATLAB Toolkit for Computation of Multiple Measures on Time Series Data Bases.
+A Matlab tutorial on power spectra, wavelet analysis, and coherence on website with many other tutorials.
+TimeViz survey
+Gaussian Processes for Machine Learning: Book webpage

@@ -1,0 +1,38 @@
+The incremental build model is a method of software development where the product is designed, implemented and tested incrementally (a little more is added each time) until the product is finished. It involves both development and maintenance. The product is defined as finished when it satisfies all of its requirements. This model combines the elements of the waterfall model with the iterative philosophy of prototyping.
+The product is decomposed into a number of components, each of which is designed and built separately (termed as builds). Each component is delivered to the client when it is complete. This allows partial utilization of the product and avoids a long development time. It also avoids a large initial capital outlay and subsequent long waiting period. This model of development also helps ease the traumatic effect of introducing a completely new system all at once. There are, however, several problems with this model.
+
+
+== Incremental model ==
+The incremental model applies the waterfall model incrementally.
+The series of releases is referred to as “increments”, with each increment providing more functionality to the customers. After the first increment, a core product is delivered, which can already be used by the customer. Based on customer feedback, a plan is developed for the next increments, and modifications are made accordingly. This process continues, with increments being delivered until the complete product is delivered. The incremental philosophy is also used in the agile process model (see Agile Modeling).
+The Incremental model is also being applied to DevOps. In DevOps it centers around the idea of minimizing risk and cost of a DevOps Adoption whilst building the necessary in-house skillset and momentum needed to have widespread – successful implementation across the enterprise.
+Advantages
+After each iteration, regression testing should be conducted. During this testing, faulty elements of the software can be quickly identified because few changes are made within any single iteration.
+It is generally easier to test and debug than other methods of software development because relatively smaller changes are made during each iteration. This allows for more targeted and rigorous testing of each element within the overall product.
+Customer can respond to features and review the product for any needful changes.
+Initial product delivery is faster and costs lower.
+Disadvantages
+Resulting cost may exceed the cost of the organization.
+As additional functionality is added to the product, problems may arise related to system architecture which were not evident in earlier prototypes.
+
+
+== Tasks involved ==
+
+These tasks are common to all the models
+Communication: helps to understand the objective.
+Planning: required as many people (software teams) work on the same project but different function at same time.
+Modeling: involves business modeling, data modeling, and process modeling.
+Construction: this involves the reuse software components and automatic code.
+Deployment: integration of all the increments.
+
+
+== References ==
+
+
+== See also ==
+Iterative and incremental development
+Rapid Application Development
+
+
+== External links ==
+Methodology::Development ModelsIncremental lifecycle What is Incremental model - advantages, disadvantages and when to use it Incremental Model in Software Engineering

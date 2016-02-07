@@ -1,0 +1,41 @@
+In the context of a relational database table, a column is a set of data values of a particular simple type, one for each row of the table. The columns provide the structure according to which the rows are composed. When a column allows data values of a single type, it does not essentially mean it only has simple text values. Other databases go beyond and let the data be stored as a file on Operating System whereas the column data only covers a pointer or a link to the actual file. Also, databases mostly let columns to have more complex data for example whole documents, images or even video clips.
+In relational database terminology, column's equivalent is called attribute.
+For example, a table that represents companies might have the following columns:
+ID (integer identifier, unique to each row)
+Name (text)
+Address line 1 (text)
+Address line 2 (text)
+City (integer identifier, drawn from a separate table of cities, from which any state or country information would be drawn)
+Postal code (text)
+Industry (integer identifier, drawn from a separate table of industries)
+etc.
+Each row would provide a data value for each column and would then be understood as a single structured data value, in this case representing a company. More formally, each row can be interpreted as a relvar, composed of a set of tuples, with each tuple consisting of the two items: the name of the relevant column and the value this row provides for that column.
+Examples of database: PostgreSQL, MySQL, SQL Server, Access, Oracle, Sybase, DB2.
+Coding involved: SQL [Structured Query Language]
+See more at SQL.
+
+
+== Field ==
+The word 'field' is normally used interchangeably with 'column'. However, database perfectionists tends to favor to use the word 'field' to signify a specific value or single item of a column. Therefore, a field is joint of a row and column. 
+
+
+== Row Database vs Column Database ==
+Relational databases mainly use row-based data storage but column base storage is more useful for many business applications. Column database has faster access which simply affected columns can read throughout the range process of a query. Any of the columns are known to serve as an index. Row based application desires to progress an only record at one time and normally need to access a complete record or two. Column database has better compression as the data storage permits highly effective compression since the majority of the columns cover only few distinct values compared to number of rows. Furthermore, in a column store, data is already vertically divided. This results that operations on different columns can certainly be processed in parallel. If the multiple needs to be search or aggregated, each of these operations can be assigned to a different processor core. Overall, row based database in a row needs to check read though the obligation is to access data from a few columns. Therefore, these requests on a large amount of data take a lot of time whereas in column database tables, this information is kept physically next to each other, knowingly increasing the speed of certain data queries.
+
+
+== Advantages ==
+The main benefit is that keeping data in a column database is some of your queries could become really fast. For instance, if you want to know the average age of all users, you can easily jump to the area where the 'age' data is stored and read just the data you need instead of searching up the age for each record row by row. During querying, columnar storage avoids going over non-relevant data. Therefore, aggregation queries where you only need to lookup subsets of your total data develop quicker compared to row-oriented databases. 
+Furthermore, as the data type of each column is alike, you get better compression when running compression algorithms on each column which will help queries to become more faster. And it is highlighted the fact that your data-set become bigger and bigger. 
+
+
+== Disadvantages ==
+There are many situations where you want multiple fields from each row. Column databases are usually not good for these types of queries. The more fields you like to read per record, the less benefits you get from storing in a column-oriented fashion. Actually, if your queries are for looking up user-specific values only, row-oriented databases usually perform those queries quicker. Secondly, writing new data could take more time in columnar storage.  For instance, if you're inserting a new record into a row-oriented database, you can easily write that in one process. However, if you're inserting a new record to a column database, you need to write to each column one by one. This results as it will take longer time when loading new data or updating many values in a columnar database.
+
+
+== See also ==
+Column-oriented DBMS, optimization for column-centric queries
+Column (data store), a similar object used in distributed data stores
+Row (database)
+
+
+== References ==

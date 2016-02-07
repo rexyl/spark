@@ -1,0 +1,64 @@
+In software project management, software testing, and software engineering, verification and validation (V&V) is the process of checking that a software system meets specifications and that it fulfills its intended purpose. It may also be referred to as software quality control. It is normally the responsibility of software testers as part of the software development lifecycle.
+
+
+== Definitions ==
+Validation checks that the product design satisfies or fits the intended use (high-level checking), i.e., the software meets the user requirements. This is done through dynamic testing and other forms of review.
+Verification and validation are not the same thing, although they are often confused. Boehm succinctly expressed the difference between
+Verification: Are we building the product right?
+Validation: Are we building the right product?
+According to the Capability Maturity Model (CMMI-SW v1.1),
+Software Verification: The process of evaluating software to determine whether the products of a given development phase satisfy the conditions imposed at the start of that phase. [IEEE-STD-610]
+Software Validation: The process of evaluating software during or at the end of the development process to determine whether it satisfies specified requirements. [IEEE-STD-610]
+In other words, software verification is ensuring that the product has been built according to the requirements and design specifications, while software validation ensures that the product actually meets the user's needs, and that the specifications were correct in the first place. Software verification ensures that "you built it right". Software validation ensures that "you built the right thing". Software validation confirms that the product, as provided, will fulfill its intended use.
+From testing perspective:
+Fault – wrong or missing function in the code.
+Failure – the manifestation of a fault during execution.
+Malfunction – according to its specification the system does not meet its specified functionality.
+
+
+== Related concepts ==
+Both verification and validation are related to the concepts of quality and of software quality assurance. By themselves, verification and validation do not guarantee software quality; planning, traceability, configuration management and other aspects of software engineering are required.
+Within the modeling and simulation (M&S) community, the definitions of verification, validation and accreditation are similar:
+M&S Verification is the process of determining that a computer model, simulation, or federation of models and simulations implementations and their associated data accurately represent the developer's conceptual description and specifications.
+M&S Validation is the process of determining the degree to which a model, simulation, or federation of models and simulations, and their associated data are accurate representations of the real world from the perspective of the intended use(s).
+Accreditation is the formal certification that a model or simulation is acceptable to be used for a specific purpose.
+The definition of M&S validation focuses on the accuracy with which the M&S represents the real-world intended use(s). Determining the degree of M&S accuracy is required because all M&S are approximations of reality, and it is usually critical to determine if the degree of approximation is acceptable for the intended use(s). This stands in contrast to software validation.
+
+
+== Classification of methods ==
+In mission-critical software systems, where flawless performance is absolutely necessary, formal methods may be used to ensure the correct operation of a system. However, often for non-mission-critical software systems, formal methods prove to be very costly and an alternative method of software V&V must be sought out. In such cases, syntactic methods are often used.
+
+
+=== Test cases ===
+
+A test case is a tool used in the process. Test cases may be prepared for software verification and software validation to determine if the product was built according to the requirements of the user. Other methods, such as reviews, may be used early in the life cycle to provide for software validation.
+
+
+== Independent Verification and Validation ==
+Software verification and validation often is carried out by a separate group from the development team. In such cases, the process is called "independent verification and validation", or simply IV&V.
+
+
+== Regulatory environment ==
+Verification and validation must meet the compliance requirements of law regulated industries, which is often guided by government agencies or industrial administrative authorities. For instance, the FDA requires software versions and patches to be validated.
+
+
+== See also ==
+
+Compiler correctness
+Cross-validation
+Formal verification
+Functional specification
+Independent Verification and Validation Facility
+International Software Testing Qualifications Board
+Software verification
+Software requirements specification
+Validation (drug manufacture)
+Verification and validation – General
+Verification and Validation of Computer Simulation Models
+
+
+== Notes and references ==
+
+
+== External links ==
+Chapter on Software quality (including VnV) in SWEBOK

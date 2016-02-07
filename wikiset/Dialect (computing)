@@ -1,0 +1,17 @@
+A dialect of a programming language or a data exchange language is a (relatively small) variation or extension of the language that does not change its intrinsic nature. With languages such as Scheme and Forth, standards may be considered insufficient, inadequate or illegitimate by implementors, so often they will deviate from the standard, making a new dialect. In other cases, a dialect is created for use in a domain-specific language, often a subset. In the Lisp world, most languages that use basic S-expression syntax and Lisp-like semantics are considered Lisp dialects, although they vary wildly, as do, say, Racket and Clojure. As it is common for one language to have several dialects, it can become quite difficult for an inexperienced programmer to find the right documentation. The BASIC programming language has many dialects.
+The explosion of Forth dialects led to the saying "If you've seen one Forth... you've seen one Forth."
+
+
+== See also ==
+Domain-specific language
+Domain-specific modelling
+Extensible programming
+Language oriented programming
+List of BASIC dialects
+Modeling language
+Scripting language
+Reflection
+Metaprogramming
+Category:Extensible syntax programming languages
+Rebol § Dialects
+Ruby (programming language) § Metaprogramming

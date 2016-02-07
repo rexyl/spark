@@ -1,0 +1,30 @@
+NewSQL is a class of modern relational database management systems that seek to provide the same scalable performance of NoSQL systems for online transaction processing (OLTP) read-write workloads while still maintaining the ACID guarantees of a traditional database system.
+
+
+== HistoryEdit ==
+The term was first used by 451 Group analyst Matthew Aslett in a 2011 research paper discussing the rise of new database systems as challengers to established vendors. Many enterprise systems that handle high-profile data (e.g., financial and order processing systems) also need to be able to scale but are unable to use NoSQL solutions because they cannot give up strong transactional and consistency requirements. The only options previously available for these organizations were to either purchase a more powerful single-node machine or develop custom middleware that distributes queries over traditional DBMS nodes. Both approaches are prohibitively expensive and thus are not an option for many. Thus, in this paper, Aslett discusses how NewSQL upstarts are poised to challenge the supremacy of commercial vendors, in particular Oracle.
+
+
+== SystemsEdit ==
+Although NewSQL systems vary greatly in their internal architectures, the two distinguishing features common amongst them is that they all support the relational data model and use SQL as their primary interface. The applications targeted by these NewSQL systems are characterized as having a large number of transactions that (1) are short-lived (i.e., no user stalls), (2) touch a small subset of data using index lookups (i.e., no full table scans or large distributed joins), and (3) are repetitive (i.e. executing the same queries with different inputs). These NewSQL systems achieve high performance and scalability by eschewing much of the legacy architecture of the original IBM System R design, such as heavyweight recovery or concurrency control algorithms. One of the first known NewSQL systems is the H-Store parallel database system.
+NewSQL systems can be loosely grouped into three categories: 
+
+
+=== New architecturesEdit ===
+The first type of NewSQL systems are completely new database platforms. These are designed to operate in a distributed cluster of shared-nothing nodes, in which each node owns a subset of the data. These databases are often written from scratch with a distributed architecture in mind, and include components such as distributed concurrency control, flow control, and distributed query processing. Example systems in this category are Google Spanner, Clustrix, VoltDB, MemSQL, Pivotal's GemFire XD, SAP HANA, NuoDB, and Trafodion.
+
+
+=== SQL enginesEdit ===
+The second category are highly optimized storage engines for SQL. These systems provide the same programming interface as SQL, but scale better than built-in engines, such as InnoDB. Examples of these new storage engines include MySQL Cluster, Infobright, TokuDB and the now defunct InfiniDB.
+
+
+=== Transparent shardingEdit ===
+These systems provide a sharding middleware layer to automatically split databases across multiple nodes. Examples of this type of system includes dbShards and ScaleBase.
+
+
+== See alsoEdit ==
+Transaction processing
+Partition (database)
+
+
+== ReferencesEdit ==

@@ -1,0 +1,39 @@
+In computing, object model has two related but distinct meanings:
+The properties of objects in general in a specific computer programming language, technology, notation or methodology that uses them. Examples are the object models of Java, the Component Object Model (COM), or Object-Modeling Technique (OMT). Such object models are usually defined using concepts such as class, generic function, message, inheritance, polymorphism, and encapsulation. There is an extensive literature on formalized object models as a subset of the formal semantics of programming languages.
+A collection of objects or classes through which a program can examine and manipulate some specific parts of its world. In other words, the object-oriented interface to some service or system. Such an interface is said to be the object model of the represented service or system. For example, the Document Object Model (DOM) [1] is a collection of objects that represent a page in a web browser, used by script programs to examine and dynamically change the page. There is a Microsoft Excel object model [2] for controlling Microsoft Excel from another program, and the ASCOM Telescope Driver [3] is an object model for controlling an astronomical telescope.
+An object model consists of the following important features:
+Object Reference
+Objects can be accessed via object references. To invoke a method in an object, the object reference and method name are given, together with any arguments.
+Interfaces
+An interface provides a definition of the signature of a set of methods without specifying their implementation. An object will provide a particular interface if its class contains code that implement the method of that interface. An interface also defines types that can be used to declare the type of variables or parameters and return values of methods.
+Actions
+An action in object-oriented programming (OOP) is initiated by an object invoking a method in another object. An invocation can include additional information needed to carry out the method. The receiver executes the appropriate method and then returns control to the invoking object, sometimes supplying a result.
+Exceptions
+Programs can encounter various errors and unexpected conditions of varying seriousness. During the execution of the method many different problems may be discovered. Exceptions provide a clean way to deal with error conditions without complicating the code. A block of code may be defined to throw an exception whenever particular unexpected conditions or errors arise. This means that control passes to another block of code that catches the exception.
+
+
+== See also ==
+Object-oriented programming
+Object-oriented analysis and design
+Object database
+Object Management Group
+Domain-driven design
+Eigenclass model
+
+
+== Literature ==
+Weisfeld, Matt (2003). The Object-Oriented Thought Process (2nd Edition). Sams. ISBN 0-672-32611-6. 
+Fowler, Martin (1996). Analysis Patterns: Reusable Object Models. Addison-Wesley. ISBN 0-201-89542-0. 
+K. Fisher, F. Honsell, and J.C. Mitchell (1994). "A Lambda Calculus of Objects and Method Specialization". Nordic Journal of Computing 1: 3–37. 
+Marini, Joe (2002). Document Object Model: Processing Structured Documents. Osborne/McGray-Hill. ISBN 0-07-222436-3. 
+Lippman, Stanley (1996). Inside the C++ Object Model. Addison-Wesley Professional. ISBN 0-201-83454-5. 
+
+
+== External links ==
+Document Object Model (DOM) The official W3C definition of the DOM.
+"The Java Object Model"
+The Ruby Object Model: Data Structure in Detail
+Object Membership: The core structure of object-oriented programming
+Object Model Features Matrix A "representative sample of the design space of object models" (sense 1).
+ASCOM Standards web site
+[4]
